@@ -1,0 +1,4 @@
+*.gz
+*.bbl
+LaTeX/main.bbl
+LaTeX/main.synctex.gz
