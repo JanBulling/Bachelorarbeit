@@ -1,0 +1,241 @@
+%% ==== General ==============================================================
+
+\newcommand{\authorName}{Jan Bulling}
+\newcommand{\authorEmail}{jan.bulling@uni-ulm.de}
+\newcommand{\matrikelnummer}{1109395}
+\newcommand{\titleOfWork}{Title of the work}
+\newcommand{\dateOfWork}{\today}
+\newcommand{\subjectOfWork}{Bachelor Thesis}
+\newcommand{\publisherOfWork}{Universität Ulm}
+\newcommand{\institute}{Institute of Theoretical Physics}
+\newcommand{\faculty}{Fakultät für\\Naturwissenschaften}
+\newcommand{\supervisor}{Marit O. E. Steiner, Julen S. Pedernales, Martin B. Plenio}
+% more: see sections/titlepage and section/titlepage_2
+
+
+%% ===========================================================================
+%% ===========================================================================
+%% ===========================================================================
+\documentclass[a4paper, 12pt,
+bibliography=totoc,   %% references in contents
+numbers=noenddot,     %% no point after last number in outline
+% abstracton,         %% use abstract
+% ngerman,            %% german (new-german)
+% twocolumn,          %% two columns
+% DIV9,               %% dividing paper into 9 parts
+% BCOR7mm,            %% space on left for printing and binding
+% twoside,            %% like a book but not using the book class
+% chapterprefix,      %% the word "chapter" before each chapter
+% headsepline,        %% line after heading (see footsepline)
+captions=tableheading,  %% distance between table and text
+]{scrreprt} %% srreprt for report (chapters) or scrartcl for article (sections,...), scrbook for book
+
+\parindent 0pt	%% indent of new paragraphs
+\parskip 6pt	%% distance between paragraphs
+
+\pagestyle{headings} %% headings (empty, plain)
+
+
+\interfootnotelinepenalty=10000 %% footnotes are not split between pages
+
+\DeclareEmphSequence{\bfseries\itshape} %% \emph is bold and italic
+
+
+%% --- fonts ---
+\usepackage{lmodern}
+
+%% --- language ---
+% \usepackage[T1]{fontenc}
+% \usepackage[utf8]{inputenc}
+% \usepackage[ngerman]{babel}
+\usepackage[english]{babel}
+
+
+%% --- change font ---
+% \usepackage[scaled]{helvet}
+% \renewcommand{\familydefault}{\sfdefault} 
+% \KOMAoptions{DIV=last}
+
+
+%% --- graphics and images ---
+\usepackage{graphicx}
+
+
+%% --- sub-figures ---
+\usepackage[labelfont=bf]{caption}
+\usepackage{subcaption}
+
+
+%% --- math and physics ---
+\usepackage{amsfonts, amssymb, amsmath, amsthm}
+\usepackage{bbold} %% for \mathbb{1}
+\usepackage{mathrsfs}   %% use scripting (\mathscr{A})
+\numberwithin{equation}{chapter}    %% use chapter in equation numbering
+\usepackage{physics}
+\usepackage[version=4]{mhchem} %% chemical formulas (\ce{H_2O})
+
+
+%% footnotes keep counting and don't reset for each chapter
+\counterwithout{footnote}{chapter}
+
+
+%% --- Index ---- Usage: \index{word1}word1 - or -  \index{Abschlussarbeit!Bachelor!M. of Sc.}Abschlussarbeit
+%% At correct position in the document: \printindex
+% \usepackage{index}
+% \makeindex
+
+
+%% --- Acronym ---- Usage: \ac{USA}
+% \usepackage[printonlyused,withpage]{acronym} 
+
+
+%% --- Tikz and libraries ---
+% \usepackage{tikz}
+
+%% quantum circuits (https://mirrors.ibiblio.org/CTAN/graphics/pgf/contrib/quantikz/quantikz.pdf)
+% \usetikzlibrary{quantikz2}
+
+
+%% --- references --- Links and references in pdf document
+\usepackage[
+    hidelinks,
+    bookmarksopen=true, %% open bookmarks in e.g. Adobe reader
+    bookmarksopenlevel=1,
+    bookmarksnumbered=true,
+    pdfusetitle,
+    % pdfauthor={Jan Bulling},
+    % pdfsubject={},
+    % pdftitle={},
+    % pdfkeywords={},
+    % pdfproducer={Universität Ulm},
+]{hyperref}
+
+% \usepackage{varioref}   %% \vref for intelligent refs with page, \Vref for starting of sentence
+\usepackage{cleveref}   %% \cref for intelligent refs
+
+
+%% --- Tables ---
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+%% --- Biblatex ---
+%% (https://de.overleaf.com/learn/latex/Biblatex_bibliography_styles)
+%% https://mirror.dogado.de/tex-archive/macros/latex/contrib/biblatex-contrib/biblatex-phys/biblatex-phys.pdf
+\usepackage[]{csquotes}
+\usepackage[
+    backend=biber,
+    style=phys,     %% phys, nature, numeric-comp, apa
+    sorting=none,   %% none -> appearance, nty -> author, title, year, ...
+    natbib=true,
+    giveninits=true,
+    abbreviate=false,
+    block=space,
+    %% biblatex-phys options
+    url=false, isbn=false,
+    doi=true, 
+    eprint=true,
+    biblabel=brackets
+]{biblatex}
+\addbibresource{./../Paper/bachelorarbeit.bib}
+
+
+%% --- Custom commands ---
+\newcommand{\si}[1]{\, \mathrm{#1}}
+\newcommand{\Si}[1]{\mathrm{#1}}
+
+\renewcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\renewcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\mean}[1]{\left\langle#1\right\rangle}
+% \newcommand{\mean}[1]{\overline{#1}}
+\newcommand{\avg}[1]{\left\langle#1\right\rangle}
+\renewcommand{\op}[1]{\hat{#1}}
+\renewcommand{\deg}{\mathrm{^\circ}}
+
+%% --- vector notations (leaf commented for default arrow) ----
+\renewcommand{\Vec}[1]{\vectorbold{#1}}   %% bold font
+% \renewcommand{\Vec}[1]{\bar{#1}}          %% overline
+% \renewcommand{\Vec}[1]{\underline{#1}}    %% underline (Audenaert notation)
+\renewcommand{\vec}[1]{\Vec{#1}}
+
+%% --- Custom operators ---
+\DeclareMathOperator{\diag}{diag}
+
+%% --- Custom environments ---
+%% usage: \begin{theorem}[Pythagorean theorem] ..... \end{theorem}
+%% 
+%% Definition: an explanation of the mathematical meaning of a word.
+%% Theorem: A statement that has been proven to be true.
+%% Proposition: A less important but nonetheless interesting true statement.
+%% Lemma: A true statement used in proving other true statements (that is, a less important theorem that is helpful in the proof of other results).
+%% Corollary: A true statement that is a simple deduction from a theorem or proposition.
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}  %% shared counter with theorems
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}    %% unnumbered
+
+% \renewcommand{\qedsymbol}{$blacksquare$} %% redefine proof-end symbol
+
+
+
+%% ===========================================================================
+%% ===== Document ============================================================
+%% ===========================================================================
+\begin{document}
+
+%% ---- title page ------------------------------------------------
+%% choose title page (either sections/titlepage or sections/titlepage_2)
+\input{sections/titlepage_2}
+% \input{sections/titlepage.tex}
+
+
+%% ---- abstract ------------------------------------------------
+\newpage
+\input{sections/abstract}
+
+
+%% ---- table of contents, list of tables/figures ----------------
+\newpage
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+% ---- abbreviation --------------------------------------------
+% \input{sections/acronym}
+
+
+%% ---- content ------------------------------------------------
+\newpage
+\input{chapters/01_introduction.tex}
+\input{chapters/02_first_look.tex}
+\input{chapters/03_casimir.tex}
+
+
+%% ---- bibliography ------------------------------------------------
+\newpage
+\nocite{*}
+
+\printbibliography
+
+%% ---- appendix ------------------------------------------------
+\appendix
+\newpage
+
+\input{sections/apx_00_proofs.tex}
+
+
+%% ---- index --------------------------------------------------
+% \printindex
+
+\end{document}

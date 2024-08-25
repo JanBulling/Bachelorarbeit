@@ -1,0 +1,660 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Griffiths_2018}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=47c87e3553597a3c6f21f2ae72571491}{%
+           family={Schollwöck},
+           familyi={S\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hallbergmoos}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{editorbibnamehash}{47c87e3553597a3c6f21f2ae72571491}
+      \strng{editornamehash}{47c87e3553597a3c6f21f2ae72571491}
+      \strng{editorfullhash}{47c87e3553597a3c6f21f2ae72571491}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{isbn}{9783863268435}
+      \field{pagetotal}{1711}
+      \field{subtitle}{Eine {E}inführung}
+      \field{title}{Elektrodynamik}
+      \field{year}{2018}
+    \endentry
+    \entry{Pedernales_2023}{article}{}
+      \name{author}{2}{}{%
+        {{hash=01d2f24bb04144eafc30bca614798c79}{%
+           family={Pedernales},
+           familyi={P\bibinitperiod},
+           given={Julen\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=61d2613f6a81b1625f0841648794a854}{%
+           family={Plenio},
+           familyi={P\bibinitperiod},
+           given={Martin\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited}%
+      }
+      \strng{namehash}{c6cfae19419ce917ab9e1a8666371215}
+      \strng{fullhash}{c6cfae19419ce917ab9e1a8666371215}
+      \strng{bibnamehash}{c6cfae19419ce917ab9e1a8666371215}
+      \strng{authorbibnamehash}{c6cfae19419ce917ab9e1a8666371215}
+      \strng{authornamehash}{c6cfae19419ce917ab9e1a8666371215}
+      \strng{authorfullhash}{c6cfae19419ce917ab9e1a8666371215}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The detection of the quantum nature of gravity in the low-energy limit hinges on achieving an unprecedented degree of force sensitivity with mechanical systems. Against this background, we explore the relationship between the sensitivity of mechanical systems to external forces and the properties of the quantum states they are prepared in. We establish that the main determinant of the force sensitivity in pure quantum states is their spatial delocalisation and we link the force sensitivity to the rate at which two mechanical systems become entangled under a quantum force. We exemplify this at the hand of two commonly considered configurations. One that involves gravitationally interacting objects prepared in non-Gaussian states such as Schrödinger-cat states, where the generation of entanglement is typically ascribed to the accumulation of a dynamical phase between components in superposition. The other prepares particles in Gaussian states that are strongly squeezed in momentum and delocalised in position where entanglement generation is attributed to accelerations. We offer a unified description of these two arrangements using the phase-space representation and link their entangling rate to their force sensitivity, showing that both configurations get entangled at the same rate provided that they are equally delocalised in space. Our description in phase space and the established relation between force sensitivity and entanglement sheds light on the intricacies of why the equivalence between these two configurations holds, something that is not always evident in the literature, due to the distinct physical and analytical methods employed to study each of them. Notably, we demonstrate that while the conventional computation of entanglement via the dynamical phase remains accurate for Schrödinger-cat states, it yields erroneous estimations for systems in squeezed cat states.}
+      \field{day}{8}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1366-5812}
+      \field{journaltitle}{Contemporary Physics}
+      \field{month}{11}
+      \field{number}{2}
+      \field{title}{On the origin of force sensitivity in tests of quantum gravity with delocalised mechanical systems}
+      \field{volume}{64}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{147\bibrangedash 163}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1080/00107514.2023.2286074
+      \endverb
+      \verb{eprint}
+      \verb 2311.04745
+      \endverb
+      \verb{file}
+      \verb :Pedernales2023 - On the Origin of Force Sensitivity in Tests of Quantum Gravity with Delocalised Mechanical Systems.pdf:PDF:http\://arxiv.org/pdf/2311.04745v2
+      \endverb
+      \keyw{Quantum Physics (quant-ph),General Relativity and Quantum Cosmology (gr-qc),FOS: Physical sciences}
+      \warn{\item Overwriting field 'month' with month value from field 'date' for entry 'Pedernales_2023'}
+    \endentry
+    \entry{Plenio_2005}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4bfe0de166e1d44a31718aeec65d55cb}{%
+           family={Plenio},
+           familyi={P\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{4bfe0de166e1d44a31718aeec65d55cb}
+      \strng{fullhash}{4bfe0de166e1d44a31718aeec65d55cb}
+      \strng{bibnamehash}{4bfe0de166e1d44a31718aeec65d55cb}
+      \strng{authorbibnamehash}{4bfe0de166e1d44a31718aeec65d55cb}
+      \strng{authornamehash}{4bfe0de166e1d44a31718aeec65d55cb}
+      \strng{authorfullhash}{4bfe0de166e1d44a31718aeec65d55cb}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is proven that logarithmic negativity does not increase on average under a general positive partial transpose preserving operation (a set of operations that incorporate local operations and classical communication as a subset) and, in the process, a further proof is provided that the negativity does not increase on average under the same set of operations. Given that the logarithmic negativity is not a convex function this result is surprising, as it is generally considered that convexity describes the local physical process of losing information. The role of convexity and, in particular, its relation (or lack thereof) to physical processes is discussed and importance of continuity in this context is stressed.}
+      \field{day}{10}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1079-7114}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{5}
+      \field{number}{9}
+      \field{title}{Logarithmic negativity: a full entanglement monotone that is not convex.}
+      \field{volume}{95}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{pages}{090503}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.95.090503
+      \endverb
+      \verb{eprint}
+      \verb quant-ph/0505071
+      \endverb
+      \verb{file}
+      \verb :Plenio_2005a - Logarithmic Negativity_ a Full Entanglement Monotone That Is Not Convex..pdf:PDF:http\://arxiv.org/pdf/quant-ph/0505071v2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.semanticscholar.org/paper/64435b0cfa00fafcfdca6d566eaca7dd6a824169
+      \endverb
+      \verb{url}
+      \verb https://www.semanticscholar.org/paper/64435b0cfa00fafcfdca6d566eaca7dd6a824169
+      \endverb
+      \keyw{Quantum Physics (quant-ph),FOS: Physical sciences}
+      \warn{\item Overwriting field 'month' with month value from field 'date' for entry 'Plenio_2005'}
+    \endentry
+    \entry{Plenio_2005a}{article}{}
+      \name{author}{2}{}{%
+        {{hash=61d2613f6a81b1625f0841648794a854}{%
+           family={Plenio},
+           familyi={P\bibinitperiod},
+           given={Martin\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=e425f7e30506d72e9a4dd39611ca464a}{%
+           family={Virmani},
+           familyi={V\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Rinton Press, Incorporated}%
+      }
+      \strng{namehash}{3a69a17195c532ef3554f407011edbe9}
+      \strng{fullhash}{3a69a17195c532ef3554f407011edbe9}
+      \strng{bibnamehash}{3a69a17195c532ef3554f407011edbe9}
+      \strng{authorbibnamehash}{3a69a17195c532ef3554f407011edbe9}
+      \strng{authornamehash}{3a69a17195c532ef3554f407011edbe9}
+      \strng{authorfullhash}{3a69a17195c532ef3554f407011edbe9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We review the theory of entanglement measures, concentrating mostly on the finite dimensional two-party case. Topics covered include: single-copy and asymptotic entanglement manipulation; the entanglement of formation; the entanglement cost; the distillable entanglement; the relative entropic measures; the squashed entanglement; log-negativity; the robustness monotones; the greatest cross-norm; uniqueness and extremality theorems. Infinite dimensional systems and multi-party settings will be discussed briefly.}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1533-7146}
+      \field{journaltitle}{Quantum Information \& Computation}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{An introduction to entanglement measures}
+      \field{volume}{7}
+      \field{year}{2005}
+      \field{pages}{1\bibrangedash 51}
+      \range{pages}{51}
+      \verb{eprint}
+      \verb quant-ph/0504163
+      \endverb
+      \verb{file}
+      \verb :Plenio_2005b - An Introduction to Entanglement Measures.pdf:PDF:http\://arxiv.org/pdf/quant-ph/0504163v3
+      \endverb
+      \keyw{Quantum Physics (quant-ph),Other Condensed Matter (cond-mat.other),FOS: Physical sciences}
+    \endentry
+    \entry{Hartmann_2018}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=c1f553eb4406e096863be9c12ad1e331}{%
+           family={Hartmann},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universität Augsburg}%
+      }
+      \strng{namehash}{c1f553eb4406e096863be9c12ad1e331}
+      \strng{fullhash}{c1f553eb4406e096863be9c12ad1e331}
+      \strng{bibnamehash}{c1f553eb4406e096863be9c12ad1e331}
+      \strng{authorbibnamehash}{c1f553eb4406e096863be9c12ad1e331}
+      \strng{authornamehash}{c1f553eb4406e096863be9c12ad1e331}
+      \strng{authorfullhash}{c1f553eb4406e096863be9c12ad1e331}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Casimir effect in the plane-spheregeometry: {B}eyond the proximityforce approximation}
+      \field{type}{phdthesis}
+      \field{year}{2018}
+      \true{nocite}
+      \verb{file}
+      \verb :Hartmann_2018 - Casimir effect in the plane-spheregeometry - Beyond the proximityforce approximation.pdf:PDF
+      \endverb
+    \endentry
+    \entry{CanaguierDurand_2012}{article}{}
+      \name{author}{5}{}{%
+        {{hash=3d90fb2b59ca3450bfca1016cb7e1def}{%
+           family={Canaguier-Durand},
+           familyi={C\bibinithyphendelim D\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0d9d17f06ee5ae8fa8bc0c8540b24ad1}{%
+           family={Guérout},
+           familyi={G\bibinitperiod},
+           given={Romain},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ada231f66d617faa6e0e6e4d9cf17d5a}{%
+           family={Neto},
+           familyi={N\bibinitperiod},
+           given={Paulo\bibnamedelimb A.\bibnamedelimi Maia},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=9988664f1889cb1ef800dddf30064684}{%
+           family={Lambrecht},
+           familyi={L\bibinitperiod},
+           given={Astrid},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ce405f88908574eb327bfceb1bfbe48f}{%
+           family={Reynaud},
+           familyi={R\bibinitperiod},
+           given={Serge},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific Pub Co Pte Lt}%
+      }
+      \strng{namehash}{24ab5e4058bf8cc13b2947615154d241}
+      \strng{fullhash}{e5581e92b5ea68c6eb2c45806f289a4e}
+      \strng{bibnamehash}{e5581e92b5ea68c6eb2c45806f289a4e}
+      \strng{authorbibnamehash}{e5581e92b5ea68c6eb2c45806f289a4e}
+      \strng{authornamehash}{24ab5e4058bf8cc13b2947615154d241}
+      \strng{authorfullhash}{e5581e92b5ea68c6eb2c45806f289a4e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present calculations of the Casimir interaction between a sphere and a plane, using a multipolar expansion of the scattering formula. This configuration enables us to study the nontrivial dependence of the Casimir force on the geometry, and its correlations with the effects of imperfect reflection and temperature. The accuracy of the Proximity Force Approximation (PFA) is assessed, and is shown to be affected by imperfect reflexion. Our analytical and numerical results at ambient temperature show a rich variety of interplays between the effects of curvature, temperature, finite conductivity, and dissipation.}
+      \field{day}{15}
+      \field{eprinttype}{arXiv}
+      \field{issn}{2010-1945}
+      \field{journaltitle}{International Journal of Modern Physics Conference Series}
+      \field{month}{2}
+      \field{title}{The {C}asimir effect in the sphere-plane geometry}
+      \field{volume}{14}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{250\bibrangedash 259}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1142/s2010194512007374
+      \endverb
+      \verb{eprint}
+      \verb 1202.3272
+      \endverb
+      \verb{file}
+      \verb :CanaguierDurand_2012 - The Casimir Effect in the Sphere Plane Geometry.pdf:PDF:http\://arxiv.org/pdf/1202.3272v1
+      \endverb
+      \keyw{Quantum Physics (quant-ph),Other Condensed Matter (cond-mat.other),FOS: Physical sciences}
+      \warn{\item Overwriting field 'month' with month value from field 'date' for entry 'CanaguierDurand_2012'}
+    \endentry
+    \entry{Vidal_2001}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f62d54d12f1933af26fb09ba7084c940}{%
+           family={Vidal},
+           familyi={V\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7df4226ad6836bc4b6550f163091c7af}{%
+           family={Werner},
+           familyi={W\bibinitperiod},
+           given={R.\bibnamedelimi F.},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{d8b783b4609c032f78060254071d63eb}
+      \strng{fullhash}{d8b783b4609c032f78060254071d63eb}
+      \strng{bibnamehash}{d8b783b4609c032f78060254071d63eb}
+      \strng{authorbibnamehash}{d8b783b4609c032f78060254071d63eb}
+      \strng{authornamehash}{d8b783b4609c032f78060254071d63eb}
+      \strng{authorfullhash}{d8b783b4609c032f78060254071d63eb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a measure of entanglement that can be computed effectively for any mixed state of an arbitrary bipartite system. We show that it does not increase under local manipulations of the system, and use it to obtain a bound on the teleportation capacity and on the distillable entanglement of mixed states.}
+      \field{day}{22}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1094-1622}
+      \field{journaltitle}{Phys. Rev. A}
+      \field{month}{2}
+      \field{number}{3}
+      \field{title}{A computable measure of entanglement}
+      \field{volume}{65}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{pages}{032314}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/physreva.65.032314
+      \endverb
+      \verb{eprint}
+      \verb quant-ph/0102117
+      \endverb
+      \verb{file}
+      \verb :Vidal_2001 - A Computable Measure of Entanglement.pdf:PDF:http\://arxiv.org/pdf/quant-ph/0102117v1
+      \endverb
+      \keyw{Quantum Physics (quant-ph),FOS: Physical sciences}
+    \endentry
+    \entry{Nielsen_2010}{book}{}
+      \name{author}{2}{}{%
+        {{hash=afe17482fc813e497188aee3b3783879}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=415ddff2f58b25977b1a2dedf18f4501}{%
+           family={Chuang},
+           familyi={C\bibinitperiod},
+           given={Isaac\bibnamedelima L.},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{456599bb4a61c2e997e2a7e1a21b25b4}
+      \strng{fullhash}{456599bb4a61c2e997e2a7e1a21b25b4}
+      \strng{bibnamehash}{456599bb4a61c2e997e2a7e1a21b25b4}
+      \strng{authorbibnamehash}{456599bb4a61c2e997e2a7e1a21b25b4}
+      \strng{authornamehash}{456599bb4a61c2e997e2a7e1a21b25b4}
+      \strng{authorfullhash}{456599bb4a61c2e997e2a7e1a21b25b4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10th anniversary ed.}
+      \field{isbn}{9780511976667}
+      \field{pagetotal}{1676}
+      \field{title}{Quantum computation and quantum information}
+      \field{year}{2010}
+    \endentry
+    \entry{Vandenbosch_2022}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c3dccf93c7224c4a474990873d3d1296}{%
+           family={Vandenbosch},
+           familyi={V\bibinitperiod},
+           given={Guy\bibnamedelimb A.\bibnamedelimi E.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association of Physics Teachers (AAPT)}%
+      }
+      \strng{namehash}{c3dccf93c7224c4a474990873d3d1296}
+      \strng{fullhash}{c3dccf93c7224c4a474990873d3d1296}
+      \strng{bibnamehash}{c3dccf93c7224c4a474990873d3d1296}
+      \strng{authorbibnamehash}{c3dccf93c7224c4a474990873d3d1296}
+      \strng{authornamehash}{c3dccf93c7224c4a474990873d3d1296}
+      \strng{authorfullhash}{c3dccf93c7224c4a474990873d3d1296}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Shielding involves much more than just putting a conductive screen in between an emitting source and a susceptible device. Starting from Maxwell's equations, the concept of electromagnetic shielding is formally explained. The physical working mechanisms behind the two basic forms of shielding, electric field and magnetic field shielding, are given, and the link between them at higher frequencies is clarified. Several aspects, like the effect of gridding or weaving a shield, the effect of the finite size of a shield, and the penetration through the metal of a shield, are discussed based on very simple canonical shielding topologies that can be solved analytically. Although the classical paradigm to explain shielding based on the notions of skin depth and eddy current is not followed, conceptual links with this classical paradigm are explained.}
+      \field{issn}{0002-9505}
+      \field{journaltitle}{American Journal of Physics}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{The basic concepts determining electromagnetic shielding}
+      \field{volume}{90}
+      \field{year}{2022}
+      \true{nocite}
+      \field{pages}{672\bibrangedash 681}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1119/5.0087295
+      \endverb
+      \verb{file}
+      \verb :Vandenbosch_2022 - The Basic Concepts Determining Electromagnetic Shielding.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Pedernales_2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=01d2f24bb04144eafc30bca614798c79}{%
+           family={Pedernales},
+           familyi={P\bibinitperiod},
+           given={Julen\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=71cf6da995c8121413daff23274ee349}{%
+           family={Morley},
+           familyi={M\bibinitperiod},
+           given={Gavin\bibnamedelima W.},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=61d2613f6a81b1625f0841648794a854}{%
+           family={Plenio},
+           familyi={P\bibinitperiod},
+           given={Martin\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{a6c69fe38a708beaf3e33bbf450dc5c4}
+      \strng{fullhash}{decee0a7b831dfac10ac23e59dba305a}
+      \strng{bibnamehash}{decee0a7b831dfac10ac23e59dba305a}
+      \strng{authorbibnamehash}{decee0a7b831dfac10ac23e59dba305a}
+      \strng{authornamehash}{a6c69fe38a708beaf3e33bbf450dc5c4}
+      \strng{authorfullhash}{decee0a7b831dfac10ac23e59dba305a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Matter-wave interferometry provides a remarkably sensitive tool for probing minute forces and, potentially, the foundations of quantum physics by making use of interference between spatially separated matter waves. Furthering this development requires ever-increasing stability of the interferometer, typically achieved by improving its physical isolation from the environment. Here we introduce as an alternative strategy the concept of dynamical decoupling applied to spatial degrees of freedom of massive objects. We show that the superposed matter waves can be driven along paths in space that render their superposition resilient to many important sources of noise. As a concrete implementation, we present the case of matter-wave interferometers in a magnetic field gradient based on either levitated or free-falling nanodiamonds hosting a color center. We present an in-depth analysis of potential sources of decoherence in such a setup and of the ability of our protocol to suppress them. These effects include gravitational forces, interactions of the net magnetic and dipole moments of the diamond with magnetic and electric fields, surface dangling bonds, rotational degrees of freedom, Casimir-Polder forces, and diamagnetic forces. Contrary to previous analyses, diamagnetic forces are not negligible in this type of interferometers and, if not acted upon lead to small separation distances that scale with the inverse of the magnetic field gradient. We show that our motional dynamical decoupling strategy renders the system immune to such limitations while continuing to protect its coherence from environmental influences, achieving a linear-in-time growth of the separation distance independent of the magnetic field gradient. Hence, motional dynamical decoupling may become an essential tool in driving the sensitivity of matter-wave interferometry to the next level.}
+      \field{day}{3}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1079-7114}
+      \field{journaltitle}{Phy. Rev. Lett.}
+      \field{month}{6}
+      \field{number}{2}
+      \field{title}{Motional {D}ynamical {D}ecoupling for {M}atter-{W}ave {I}nterferometry}
+      \field{volume}{125}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{023602}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/physrevlett.125.023602
+      \endverb
+      \verb{eprint}
+      \verb 1906.00835
+      \endverb
+      \verb{file}
+      \verb :Pedernales_2019 - Motional Dynamical Decoupling for Matter Wave Interferometry.pdf:PDF:http\://arxiv.org/pdf/1906.00835v1
+      \endverb
+      \keyw{Quantum Physics (quant-ph),FOS: Physical sciences}
+      \warn{\item Overwriting field 'month' with month value from field 'date' for entry 'Pedernales_2019'}
+    \endentry
+    \entry{Carney_2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8507f71d88954cf03108b34837714a91}{%
+           family={Carney},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f9b17aa0c6ee8ddd41f87044380e5ace}{%
+           family={Stamp},
+           familyi={S\bibinitperiod},
+           given={Philip\bibnamedelimb C.\bibnamedelimi E.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=4eca1f62d57c81fb8debad515a92f6f8}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Jacob\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{dacafaebe1a0677725e84d5401e38be8}
+      \strng{fullhash}{d2fa89874da67d5deb559f759cb46afc}
+      \strng{bibnamehash}{d2fa89874da67d5deb559f759cb46afc}
+      \strng{authorbibnamehash}{d2fa89874da67d5deb559f759cb46afc}
+      \strng{authornamehash}{dacafaebe1a0677725e84d5401e38be8}
+      \strng{authorfullhash}{d2fa89874da67d5deb559f759cb46afc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recent advances in cooling, control, and measurement of mechanical systems in the quantum regime have opened the possibility of the first direct observation of quantum gravity, at scales achievable in experiments. This paper gives a broad overview of this idea, using some matter-wave and optomechanical systems to illustrate the predictions of a variety of models of low-energy quantum gravity. We first review the treatment of perturbatively quantized general relativity as an effective quantum field theory, and consider the particular challenges of observing quantum effects in this framework. We then move on to a variety of alternative models, such as those in which gravity is classical, emergent, or responsible for a breakdown of quantum mechanics.}
+      \field{day}{30}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1361-6382}
+      \field{journaltitle}{Classical and Quantum Gravity}
+      \field{month}{7}
+      \field{number}{3}
+      \field{title}{Tabletop experiments for quantum gravity: a user's manual}
+      \field{volume}{36}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{034001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1361-6382/aaf9ca
+      \endverb
+      \verb{eprint}
+      \verb 1807.11494
+      \endverb
+      \verb{file}
+      \verb :http\://arxiv.org/pdf/1807.11494v2:PDF
+      \endverb
+      \keyw{Quantum Physics (quant-ph),General Relativity and Quantum Cosmology (gr-qc),High Energy Physics - Theory (hep-th),FOS: Physical sciences}
+      \warn{\item Overwriting field 'month' with month value from field 'date' for entry 'Carney_2018'}
+    \endentry
+    \entry{Ford_1998}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9148563b4326fb6c62a5b3dd3bd8fde2}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={L.\bibnamedelimi H.},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{9148563b4326fb6c62a5b3dd3bd8fde2}
+      \strng{fullhash}{9148563b4326fb6c62a5b3dd3bd8fde2}
+      \strng{bibnamehash}{9148563b4326fb6c62a5b3dd3bd8fde2}
+      \strng{authorbibnamehash}{9148563b4326fb6c62a5b3dd3bd8fde2}
+      \strng{authornamehash}{9148563b4326fb6c62a5b3dd3bd8fde2}
+      \strng{authorfullhash}{9148563b4326fb6c62a5b3dd3bd8fde2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The interaction between a polarizable particle and a reflecting wall is examined. A macroscopic approach is adopted in which the averaged force is computed from the Maxwell stress tensor. The particular case of a perfectly reflecting wall and a sphere with a dielectric function given by the Drude model is examined in detail. It is found that the force can be expressed as the sum of a monotonically decaying function of position and of an oscillatory piece. At large separations, the oscillatory piece is the dominant contribution, and is much larger than the Casimir-Polder interaction that arises in the limit that the sphere is a perfect conductor. It is argued that this enhancement of the force can be interpreted in terms of the frequency spectrum of vacuum fluctuations. In the limit of a perfectly conducting sphere, there are cancellations between different parts of the spectrum which no longer occur as completely in the case of a sphere with frequency dependent polarizability. Estimates of the magnitude of the oscillatory component of the force suggest that it may be large enough to be observable.}
+      \field{day}{22}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1094-1622}
+      \field{journaltitle}{Phys. Rev. A}
+      \field{month}{4}
+      \field{number}{6}
+      \field{title}{Casimir {F}orce between a {D}ielectric {S}phere and a {W}all: {A} {M}odel for {A}mplification of {V}acuum {F}luctuations}
+      \field{volume}{58}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{4279\bibrangedash 4286}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1103/physreva.58.4279
+      \endverb
+      \verb{eprint}
+      \verb quant-ph/9804055
+      \endverb
+      \verb{file}
+      \verb :Ford_1998 - Casimir Force between a Dielectric Sphere and a Wall_ a Model for Amplification of Vacuum Fluctuations.pdf:PDF:http\://arxiv.org/pdf/quant-ph/9804055v2
+      \endverb
+      \keyw{Quantum Physics (quant-ph),Condensed Matter (cond-mat),High Energy Physics - Theory (hep-th),FOS: Physical sciences}
+      \warn{\item Overwriting field 'month' with month value from field 'date' for entry 'Ford_1998'}
+    \endentry
+    \entry{Kamp_2020}{article}{}
+      \name{author}{4}{}{%
+        {{hash=d93322585cec48c2f3d1d78438c9e72a}{%
+           family={Kamp},
+           familyi={K\bibinitperiod},
+           given={Thomas\bibnamedelima W.},
+           giveni={T\bibinitperiod\bibinitdelim W\bibinitperiod},
+           prefix={van\bibnamedelima de},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=2f8be3754a13bf31f9702b1faddf3494}{%
+           family={Marshman},
+           familyi={M\bibinitperiod},
+           given={Ryan\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5b58b45daa9ad154e311ba18603c612f}{%
+           family={Bose},
+           familyi={B\bibinitperiod},
+           given={Sougato},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8c632485ae0336b4d3fb34bca13e0679}{%
+           family={Mazumdar},
+           familyi={M\bibinitperiod},
+           given={Anupam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{1ebe921c96686e415a9f5db8c878e3de}
+      \strng{fullhash}{9398d9d24870500e5a1d7bc86952c15f}
+      \strng{bibnamehash}{9398d9d24870500e5a1d7bc86952c15f}
+      \strng{authorbibnamehash}{9398d9d24870500e5a1d7bc86952c15f}
+      \strng{authornamehash}{1ebe921c96686e415a9f5db8c878e3de}
+      \strng{authorfullhash}{9398d9d24870500e5a1d7bc86952c15f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A recently proposed experimental protocol for Quantum Gravity induced Entanglement of Masses (QGEM) requires in principle realizable, but still very ambitious, set of parameters in matter-wave interferometry. Motivated by easing the experimental realization, in this paper, we consider the parameter space allowed by a slightly modified experimental design, which mitigates the Casimir potential between two spherical neutral test-masses by separating the two macroscopic interferometers by a thin conducting plate. Although this set-up will reintroduce a Casimir potential between the conducting plate and the masses, there are several advantages of this design. First, the quantum gravity induced entanglement between the two superposed masses will have no Casimir background. Secondly, the matter-wave interferometry itself will be greatly facilitated by allowing both the mass $10^{-16}-10^{-15}$kg and the superposition size $\Delta x \sim 20 \mu$m to be a one-two order of magnitude smaller than those proposed earlier, and thereby also two orders of magnitude smaller magnetic field gradient of $10^4$Tm$^{-1}$ to create that superposition through the Stern-Gerlach effect. In this context, we will further investigate the collisional decoherences and decoherence due to vibrational modes of the conducting plate.}
+      \field{day}{12}
+      \field{eprinttype}{arXiv}
+      \field{issn}{2469-9934}
+      \field{journaltitle}{Phys. Rev. A}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Quantum {G}ravity {W}itness via {E}ntanglement of {M}asses: {C}asimir {S}creening}
+      \field{volume}{102}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{062807}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/physreva.102.062807
+      \endverb
+      \verb{eprint}
+      \verb 2006.06931
+      \endverb
+      \verb{file}
+      \verb :Kamp_2020 - Quantum Gravity Witness Via Entanglement of Masses_ Casimir Screening.pdf:PDF:http\://arxiv.org/pdf/2006.06931v2
+      \endverb
+      \keyw{Quantum Physics (quant-ph),Mesoscale and Nanoscale Physics (cond-mat.mes-hall),General Relativity and Quantum Cosmology (gr-qc),FOS: Physical sciences}
+      \warn{\item Overwriting field 'month' with month value from field 'date' for entry 'Kamp_2020'}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

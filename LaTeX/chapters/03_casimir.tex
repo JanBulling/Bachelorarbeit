@@ -1,0 +1,77 @@
+\chapter{Casimir effect}\label{cha:casimir-effect}
+
+General introduction and comparison with retarded van der Waals forces
+
+\begin{equation}
+  F_\mathrm{Casimir} = - \frac{\hbar c \pi^2}{240 L^4} A
+\end{equation}
+
+\begin{equation}
+  V_\mathrm{Casimir} = \frac{\hbar c \pi^2}{720 L^3} A
+\end{equation}
+
+
+\section{Proximity force approximation}
+
+
+
+
+
+\section{Imperfect plate and spheres}
+
+Python numerical approach, gaussian modes (vibration modes of a spherical plane), perlin noise
+
+
+
+\section{Casimir forces between a conducting plate and a dielectric sphere}
+\subsection{Polarizability of a dielectric sphere}
+To quantify the polarizability $\alpha = \abs{\vec{p}}/\abs{\vec{E_\infty}}$ of a homogenous sphere with $\varepsilon_r > 1$, the influence of an electric field $\vec{E_\infty}$ in (without loss of generality) is assumed to be in $\vec{e_z}$ direction.
+The electrostatic boundary conditions for the problem are given by
+\begin{equation}
+  V_\mathrm{in} \big|_{r=R} = V_\mathrm{out} \big|_{r=R} 
+  \quad \text{and} \quad 
+  \varepsilon_r\varepsilon_0\pdv{V_\mathrm{in}}{r}\bigg|_{r=R} = \varepsilon_0\pdv{V_\mathrm{out}}{r} \bigg|_{r=R}
+\end{equation}
+and the electric potential outside of the sphere at $r\rightarrow\infty$ should be equal to the homogenous electric field $V_\mathrm{out} = -\vec{E_\infty} \cdot \vec{r} = -E_\infty r\cos\theta$.
+The electric potential inside and outside the sphere can be calculated using the spherical decomposition of the general electric potential $V \propto 1/\abs{\vec{r} - \vec{r'}}$ into Legendre Polynomials $P_l$ \cite[p. 188-190]{Griffiths_2018}:
+\begin{align}
+  V_\mathrm{in}(r, \theta) &= -E_\infty r\cos\theta + \sum_{l=0}^{\infty} A_l r^l P_l(\cos\theta), \\
+  V_\mathrm{out}(r, \theta) &= -E_\infty r \cos\theta + \sum_{l=0}^{\infty} \frac{B_l}{r^{l+1}} P_l(\cos\theta).
+\end{align}
+Applying both boundary conditions, it follows that \cite[p. 249-251]{Griffiths_2018}
+\begin{equation}
+  \begin{cases}
+    A_l = B_l = 0 & \text{for } l \neq 1, \\
+  A_1 = -\frac{3}{\varepsilon_r + 2}E_\infty, \quad B_1 = \frac{\varepsilon_r-1}{\varepsilon_r + 2}R^3E_\infty
+  \end{cases}
+\end{equation}
+and the resulting  homogenous electric field $\vec{E_\mathrm{in}} = -\nabla V_\mathrm{in}$ inside the sphere is given as
+\begin{equation}
+  \vec{E_\mathrm{in}} = \frac{3}{\varepsilon_r + 2} \vec{E_\infty} .
+\end{equation}
+The polarizability $\alpha$ can be now calculated using $\alpha \vec{E_\infty} = \vec{p} = 4/3 \pi R^3 \vec{P} = 4/3 \pi R^3 \varepsilon_0(\varepsilon_r - 1)\vec{E_\mathrm{in}}$ to
+\begin{equation}
+  \alpha_\mathrm{sphere} = 4\pi \varepsilon_0 R^3 \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right).
+\end{equation}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{./../figures/field-dielectric-sphere.pdf}
+  \label{fig:field-dielectric-sphere}
+  \caption{Electric field lines through an dielectric sphere}
+\end{figure}
+
+\begin{figure}[!htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{./../figures/field-dielectric-sphere.pdf}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{./../figures/field-dielectric-sphere-small.pdf}
+  \end{subfigure}
+  \caption{Three simple graphs}
+  \label{fig:test-figure}
+\end{figure}
