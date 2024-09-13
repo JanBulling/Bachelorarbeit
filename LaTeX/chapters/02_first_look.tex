@@ -24,6 +24,9 @@ With the notation introduced in \cref{fig:2:simple-problem}, the initial state a
   \ket{\psi(t=0)} = \frac{1}{2}\left( \ket{\psi_A^1} + \ket{\psi_A^2} \right) \otimes \left( \ket{\psi_B^1} + \ket{\psi_B^2} \right) .
 \end{equation}
 
+
+
+\section{The Hamiltonian}
 The masses are assumed to interact only through their gravitational potential between each other. Any global factor of perturbation like the interaction with earth's gravitational field can be neglected. These kind of interactions manifests themselves only in a global phase factor for the evolved state.
 For now, all other local interactions like Casimir-Polder \cite{Casimir_1948} or Coulomb forces are reduced to a minimum and are not considered at this stage.
 
@@ -34,6 +37,8 @@ The particles are assumed to be held in place by e.g. an optical trap and moveme
 where $\op{D}$ is the distance operator between the masses depended on the individual positions $\op{x_A}$ and $\op{x_B}$.
 
 During time evolution, the different superposition states build up different phases due to their different positions. I am interested whether this phase build-up results in measurable entanglement. This can, of cause, only happen if gravity is able to mediate entanglement.
+
+
 
 \section{Time evolution under a gravitational potential}
 The time evolution for a constant Hamiltonian $\op{H} = \op{V}(\op{x_i}) = \mathrm{const.}$ is governed by the Schrödinger equation
@@ -82,6 +87,8 @@ The density matrix of this state expressed in the natural basis for the system i
 This state is entangled, if it cannot be represented in a product state $\ket{\psi} \neq \ket{\psi_A}\otimes\ket{\psi_B}$. Thus it is easy to see, that this condition is true if the two states multiplied by $\ket{\psi_A^i}$ not represent the same state i.e. they should not differ only by a phase factor.
 The evolved state is therefore entangled, if $\Delta \phi \neq k\pi$ with integer $k \in \mathbb{Z}$.
 
+
+
 %% FIDELITY
 \section{Fidelity of quantum states}
 In general, to compare the distance between two quantum states $\rho$ and $\sigma$ (\q{how similar they are}) the \emph{fidelity} $F(\rho, \sigma)$ is used. It is defined as \cite[p. 409-412]{Nielsen_2010} 
@@ -109,9 +116,11 @@ with equality being attained if the states are the same and only differ by a pha
 
 To quantify exactly how much the state $\psi(t)$ is entangled, a more sophisticated measurement for entanglement is necessary. In the next section, such a measurement - the \emph{logarithmic negativity} - is discussed and calculated for the present system.
 
-\section{Entanglement measures}
-To check whether an arbitrary state represented by a density matrix $\rho$ is entangled or not is no easy task. In fact, this problem is thought to be NP-hard \cite{Gurvits_2003}.
 
+
+\section{Entanglement measures}
+To check whether an arbitrary bipartite state $\rho$ is entangled or not is no easy task. In fact, this problem is known to be NP-hard \cite{Gurvits_2003}.
+In a mathematical context, entanglement can be understood as the \emph{non-separability} of a state $\rho_{AB} \in \mathcal{H}_A \otimes \mathcal{H}_B$ into two subsystems $\rho_A \in \mathcal{H}_A$ and $\rho_B \in \mathcal{H}_B$.
 
 
 

@@ -56,7 +56,7 @@
     \put(0,0){\includegraphics[width=\unitlength,page=1]{./../figures/proximity-force-approximation.pdf}}%
     \put(0.39248249,0.5964915){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$R$\end{tabular}}}}%
     \put(0.24144995,0.69829988){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\theta$\end{tabular}}}}%
-    \put(0.09918597,0.1412358){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L$\end{tabular}}}}%
+    \put(0.09918597,0.1412358){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathscr{L}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{./../figures/proximity-force-approximation.pdf}}%
     \put(0.83063806,0.65221702){\color[rgb]{0.6745098,0.19215686,0.19215686}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\dd A$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{./../figures/proximity-force-approximation.pdf}}%
