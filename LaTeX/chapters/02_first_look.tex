@@ -1,4 +1,42 @@
-\chapter{A first look at the problem}\label{cha:first-look}
+\chapter{A first look}\label{cha:first-look}
+
+Testing the quantum nature of gravity is no easy task any many proposals seek to detect gravitationally induced entanglement between two masses !!!CITATIONS!!! as a proof of quantum gravity. 
+If gravity believed to be mediated classically, the time evolution of a system exposed to a gravitational interaction should be representable as a sequence of local operations on each of the involved masses as well as classical communication between them (LOCC).
+LOCC operations however cannot turn an initial unentangled state into an entangled one \cite{Plenio_2005a}.
+If one therefore measures the involved masses to be entangled after some time evolution, gravity has to be quantized in some way.
+It is important to note, that the opposite of this statement is not true. Unentangled masses do not directly imply a classically mediated gravity.
+This can be seen by considering operations that are non-LOCC that produce unentangled states like for example the swap operation $\ket{\psi}_A\ket{\phi}_B \rightarrow \ket{\phi}_A\ket{\psi}_B$. This operations can't induce entanglement, but requires the perfect exchange of quantum information between the states - which is not possible using classical communication alone.
+In other words: If one prepares masses initially in a pure product state and after some time evolution measures \textit{any} state which cannot be obtained by LOCC-operations, gravity does not behave classical. One can even go so far and define the term \emph{quantum gravity} as any interaction mediated by gravity that cannot be described by LOCC operations alone \cite{Lami_2024}.
+
+A plausible and logical arising idea for an experiment to test for entanglement induced by a gravitational interaction - which is, as a reminder, enough to require gravity to be quantum - is described in this chapter.
+The idea requires the generation of coherent delocalized quantum superpositions of massive objects either as so-called Schrödinger-cat states or squeezed gaussian states \cite{Pedernales_2023}. Theses masses are brought close enough together for gravity to have a measurable effect. The distances between different parts of the spatial superpositions must have different distances to the delocalized second mass. As a result - and of cause \textit{if gravity behaves quantum} - the states should get entangled.
+To see this, consider two bodies with mass $m$ to be trapped in an harmonic potential wall with frequency $\omega$ separated by a distance $d$. The local Hamiltonian of the system is given by
+\begin{equation}
+  \op{H}_0 = \sum_{i = 1,2} \frac{\op{p}_i^2}{2m} + \frac{1}{2}m\omega^2\op{x}^2_i
+\end{equation}
+where $\op{x}$ and $\op{p}$ are the position and momentum operators satisfying the canonical commutation relation $[\op{x}_i, \op{p}_j] = i\hbar \delta_{ij}$.
+For now, all non-gravitational interactions between the masses have been ignored. In the low energy limit, the gravitational interaction can be described by a Newtonian potential acting on the center-of-mass positions where all classical quantities are replaced by quantum operators. The interaction Hamiltonian $\op{H}_G$ should therefore be given by
+\begin{equation}
+  \op{H}_G = - \frac{Gm^2}{\abs{d - \op{x}_1 + \op{x}_2}} ,
+\end{equation}
+where $G=6.6743 \times 10^{-11} \si{m^3 kg^{-1} s^{-2}}$ is the gravitational constant. The separation of the masses $d$ is chosen much larger than the extension of the delocalization (in this setup comparable to the position variance of the harmonic oscillator). This condition is realistic given that the biggest spatial delocalization is in the order of !!!SOURCES!!!.
+Expanding the Hamiltonian $H_G$ to the second order for small $\op{x}_i$, only the order $(\op{x}_1 - \op{x}_2)^2$ can induce entanglement. The zeroth order term is just a overall energy offset, the first order term $\propto (\op{x}_1 - \op{x}_2)$ as well as the terms $\op{x}^2_i$ result only in a local interaction for each mass separately. The coupled term $ - (\op{x}_1\op{x}_2 + \op{x}_2\op{x}_1) = -2\op{x}_1\op{x}_2$ however is very interesting.
+Introducing the ladder operators, the hamiltonian $H=H_0 + H_G$ can be expressed as \cite{Carney_2018}:
+\begin{equation}\label{eq:2:general-hamiltonian}
+  \op{H} = \sum_{i=1,2} \hbar \omega \op{a}_i^\dagger \op{a}_i - \frac{Gm^2}{d^3} \left(\sqrt{\frac{\hbar}{2m\omega}}\right)^2 \left( \op{a}_1\op{a}_2 + \op{a}_1\op{a}^\dagger_2 + \op{a}^\dagger_1\op{a}_2 + \op{a}^\dagger_1\op{a}^\dagger_2 \right)
+\end{equation}
+Applying the rotating-wave approximation, the terms $op{a}_1\op{a}_2 + \op{a}^\dagger_1\op{a}^\dagger_2$ can be dropped. Defining the coupling strength $g$ of the interaction as $g = Gm/\omega d^3$, eq \eqref{eq:2:general-hamiltonian} can be rewritten as
+\begin{equation}
+  \op{H} = \sum_{i=1,2} \hbar \omega \op{a}_i^\dagger \op{a}_i - \hbar g \left( \op{a}_1\op{a}^\dagger_2 + \op{a}^\dagger_1\op{a}_2 \right) .
+\end{equation}
+
+
+
+
+---------------------------------------
+
+
+
 
 The quantum aspects of gravity can be tested with entanglement conveyed by gravitational interaction. A possible and naturally arising experiment to observe gravitationally induced entanglement is described in this chapter.
 The rest of this thesis is about experimental issues with the descried procedure that are present in a real laboratory setting.
