@@ -1,0 +1,58 @@
+\chapter{TITLE TO BE DONE}
+\section{Evolution under a gravitational Hamiltonian}
+In this section the time evolution of a system under Hamiltonian eq. \eqref{eq:2:general-hamiltonian} is calculated a) using the gravitational interaction $\op{H}_G$ as a perturbation b) using an exact time evolution of coherent states.
+
+\subsection{Using time dependent perturbation theory}
+\label{apx:general-state-perturbation-theory}
+A general biparty Fock state $\ket{\psi_0} = \ket{kl}$ with $k, l \in \mathbb{N}_0$ can be evolved in time under a Hamiltonian eq. \eqref{eq:2:general-hamiltonian} treating the gravitational interaction $H_G = -\hbar g (\op{a}_1\op{a}_2^\dagger + \op{a}_1^\dagger\op{a}_2)$ as a perturbation. 
+The resulting state $\ket{\psi(t)}$ after some time $t$ is in the most general form given as
+\begin{equation}
+  \ket{\psi(t)} = \sum_{i, j \geq 0} c_{i,j}(t) \ket{i,j}
+\end{equation}
+where the coefficients $c_{i,j}(t)$ are given by first order perturbation theory as
+\begin{equation}
+  c_{i,j}(t) = c_{i,j}(t = 0) - \frac{i}{\hbar} \int_0^t \dd t' \bra{ij}\op{H}_G\ket{kl} e^{-i(E_{kl}-E_{ij})t'/\hbar} .
+\end{equation}
+The exponent is given by the energy of the appropriate Fock states $E_{kl}-E_{ij} = \hbar \omega (k+l - (i+j))$ and the matrix element in the integrand can be calculated to
+\begin{equation}
+  \bra{ij}\op{H}_G\ket{kl} =
+  \begin{cases}
+    -\hbar g & \text{if } i = k \pm 1 \text{ and } j = l \mp 1 \\
+    0 & \text{otherwise}
+  \end{cases}.
+\end{equation}
+The coefficients for $t=0$ are trivially given from the initial state as
+\begin{equation}
+  c_{i,j}(t=0) = \begin{cases}
+    1 & \text{for } i,j = k,l \\
+    0 & \text{otherwise}
+  \end{cases}.
+\end{equation}
+For the non-zero states the energies in the exponent equate to zero and the evolved state is given by (up to a normalization)
+\begin{equation}\label{eq:apx:perturbation-result}
+  \ket{\psi(t)} = \ket{kl} - i g t \ket{k-1,l+1} - i g t \ket{k+1,l-1} + \mathcal{O}(g^2).
+\end{equation}
+The result eq. \eqref{eq:2:general-evolved-state} is represented by eq. \eqref{eq:apx:perturbation-result} for the case of $k=1$ and $l=0$.
+
+
+\subsection{Using an exact time evolution}
+\label{apx:general-coherent-state-evolution}
+The Hamiltonian eq. \eqref{eq:2:general-hamiltonian} can be rewritten using symmetric and antisymmetric normal modes
+\begin{equation}
+  \op{a}_\pm = \frac{1}{\sqrt{2}} \left( \op{a}_1 \pm \op{a}_2 \right)
+\end{equation}
+in the form of 
+\begin{equation}
+  \op{H} = \hbar \omega_+ \op{a}^\dagger_+\op{a}_+ + \hbar \omega_- \op{a}^\dagger_-\op{a}_- ,  \quad  \omega_\pm = \omega \pm (-g)
+\end{equation}
+The time evolution of a state
+\begin{equation}\label{eq:apx:coherent-initial-state}
+  \ket{\psi(t)} = \ket{\alpha}_1\ket{\beta}_2 = \ket{\frac{1}{\sqrt{2}} (\alpha + \beta)}_+\ket{\frac{1}{\sqrt{2}} (\alpha - \beta)}_-
+\end{equation}
+A general coherent state $\ket{\gamma}$ evolves in time under an Hamiltonian $\op{H} = \hbar \omega \op{a}^\dagger \op{a}$ like $\ket{\gamma(t)} = \ket{e^{-i\omega t} \gamma}$ which can be used to evolve the state in eq. \eqref{eq:apx:coherent-initial-state}:
+\begin{align}
+  \ket{\psi(t)} 
+  &= \ket{ \frac{1}{\sqrt{2}} e^{-i\omega_+t} (\alpha + \beta) }_+\ket{ \frac{1}{\sqrt{2}} e^{-i\omega_-t} (\alpha - \beta) }_- \\
+  &= \ket{ e^{-i\omega t} \left( \alpha \cos gt - \beta \sin gt \right) }_1 \ket{ e^{-i\omega t} \left( - \alpha \sin gt + \beta \cos gt \right) }_2, 
+\end{align}
+where in the last line the back-transformation from the $\pm$-modes \eqref{eq:apx:coherent-initial-state} was used.
