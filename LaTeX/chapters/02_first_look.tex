@@ -1,16 +1,16 @@
 \chapter{A first look}\label{cha:first-look}
 
-Testing the quantum nature of gravity is no easy task and many proposals seek to detect gravitationally induced entanglement between two masses \cite{Bose_2017}!!!CITATIONS!!! as a form of proof. 
+Testing the quantum nature of gravity is no easy task and many proposals seek to detect gravitationally induced entanglement between two masses \cite{Krisnanda_2020,Chevalier_2020,Pedernales_2019,Bose_2017} as a form of proof. 
 For all these proposals, gravity is assumed to be mediated by a gravitational field.
-During a time evolution, this field (like any other external field) can only make local operations (LO) on the states of the test masses. If gravity is now assumed to behave classically, the propagation between the masses can be described by a classical communication (CC) channel \cite{Lami_2024,Bose_2017}.
-These LOCC operations however cannot turn an initial unentangled state into an entangled one \cite{Horodecki_2009, Plenio_2005a}.
-It immediately follows, that if one measures the involved masses to be entangled after some after a mutual gravitational interaction, gravity necessarily has to be quantum in some way.
-It is important to note, that the opposite of this statement is not true. Measuring unentangled masses does not directly imply a classical gravitational field.
+During a time evolution, this field (like any other external field) can only perform local operations (LO) on the states of the test masses. If gravity is now assumed to behave classically, the propagation between the masses can be described by a classical communication (CC) channel \cite{Lami_2024,Bose_2017}.
+These LOCC operations however cannot turn an initially unentangled state into an entangled one \cite{Horodecki_2009, Plenio_2005a}.
+It immediately follows, that if one measures the involved masses to be entangled after a mutual gravitational interaction, gravity necessarily has to be quantum in some way.
+It is important to note, that the opposite of this statement is not true. Measuring unentangled masses does not directly imply the classicality of the gravitational field.
 This can be seen by considering operations that are non-LOCC and also produce unentangled states like for example the swap operation $\ket{\psi}_A\ket{\phi}_B \rightarrow \ket{\phi}_A\ket{\psi}_B$. This operations obviously can't induce entanglement to initially unentangled states, but requires the perfect exchange of quantum information between the states - which is not possible using classical communication alone.
 In other words: If one prepares masses initially in a pure product state and measures \textit{any} state which cannot be obtained by LOCC-operations after some final time evolution, it is impossible for gravity to behave classical. One can even go so far and define the term \emph{quantum gravity} as any interaction mediated by gravity that cannot be described by LOCC operations alone \cite{Lami_2024}.
 
-A plausible and logical arising idea for an experiment to test for gravitational induced entanglement - which is, as a reminder, enough to require gravity to be quantum - is described in this chapter.
-The idea requires the generation of coherent delocalized quantum superpositions of massive objects either as so-called Schrödinger-cat states or squeezed gaussian states \cite{Bose_2017, Pedernales_2023}. Theses masses are brought close enough together for gravity to have a measurable effect. The distances between different parts of the spatial superpositions must have different distances to the delocalized second mass. As a result - and of course \textit{if gravity behaves quantum} - the states should get entangled.
+A plausible and logical idea for an experiment to test for gravitational induced entanglement is described in this chapter - which is, as a reminder, enough to prove a quantum nature of gravity.
+It requires the generation of coherent delocalized quantum superpositions of massive objects either as so-called Schrödinger-cat states or squeezed gaussian states \cite{Bose_2017, Pedernales_2023}. Theses masses are brought close enough together for gravity to have a measurable effect. The distances between different parts of the spatial superpositions must have different distances to the delocalized second mass. As a result - and of course \textit{if gravity behaves quantum} - the states should get entangled.
 To see this, consider the ideal simplification of a real experimental setup where two bodies with mass $m$ are trapped in an harmonic potential wall (like for example in an optical trap) with frequency $\omega$ separated by a distance $d$. The local Hamiltonian of the system is given by
 \begin{equation}
   \op{H}_0 = \sum_{i = 1,2} \frac{\op{p}_i^2}{2m} + \frac{1}{2}m\omega^2\op{x}^2_i
@@ -25,7 +25,7 @@ The interaction Hamiltonian $\op{H}_G$ should therefore be describable by
   \op{H}_G = - \frac{Gm^2}{\abs{d - \op{x}_1 + \op{x}_2}} ,
 \end{equation}
 where $G=6.6743 \times 10^{-11} \si{m^3 kg^{-1} s^{-2}}$ is the gravitational constant. The separation of the masses $d$ is chosen much larger than the extension of the delocalization (in this setup comparable to the position variance of the harmonic oscillator). This condition is realistic given that the biggest spatial delocalization is in the order of !!!SOURCES!!!.
-Expanding the Hamiltonian $\op{H}_G$ to the second order for small $\op{x}_i$, only the order $(\op{x}_1 - \op{x}_2)^2$ can induce entanglement. The zeroth order term is just a overall energy offset, the first order term $\propto (\op{x}_1 - \op{x}_2)$ as well as the terms $\op{x}^2_i$ result only in a local interaction for each mass separately. The coupling terms $ - (\op{x}_1\op{x}_2 + \op{x}_2\op{x}_1) = -2\op{x}_1\op{x}_2$ however are very interesting.
+Expanding the Hamiltonian $\op{H}_G$ for small $\op{x}_i$, only the second order term proportional to $(\op{x}_1 - \op{x}_2)^2$ can induce entanglement \cite{Krisnanda_2020}. The zeroth order term is just a overall energy offset, the first order term $\propto (\op{x}_1 - \op{x}_2)$ as well as the terms $\op{x}^2_i$ result only in a local interaction for each mass separately. The coupling term $ - (\op{x}_1\op{x}_2 + \op{x}_2\op{x}_1) = -2\op{x}_1\op{x}_2$ however is very interesting as it couples both oscillators and can thus mediate entanglement.
 Introducing the ladder operators, the Hamiltonian $\op{H}=\op{H}_0 + \op{H}_G$ can be expressed as \cite{Carney_2018}:
 \begin{equation}\label{eq:2:general-hamiltonian}
   \op{H} = \sum_{i=1,2} \hbar \omega \op{a}_i^\dagger \op{a}_i - \frac{Gm^2}{d^3} \left(\sqrt{\frac{\hbar}{2m\omega}}\right)^2 \left( \op{a}_1\op{a}_2 + \op{a}_1\op{a}^\dagger_2 + \op{a}^\dagger_1\op{a}_2 + \op{a}^\dagger_1\op{a}^\dagger_2 \right)
@@ -38,20 +38,20 @@ Now, for simplicity and as a simple example, the evolution of the initial Fock s
 \begin{equation} \label{eq:2:general-evolved-state}
   \ket{\psi(t = 0)} = \ket{10} \xrightarrow{\text{time }t} \ket{\psi(t)} =  \mathcal{N} \left(\ket{10} - i g t \ket{01} + \mathcal{O}(g^2) \right)
 \end{equation}
-where $\mathcal{N}$ is an appropriate normalization constant. The evolved state \eqref{eq:2:general-evolved-state} is entangled and cannot be reduced into a product state of the oscillator Fock states. The entanglement is very small since it is proportional to the gravitational coupling constant $gt$ \footnote{The amount of entanglement can for example be measured with the later introduced \textit{logarithmic negativity} $E_N$. For this state, this quantity is given as $E_N(\ketbra{\psi(t)}) \simeq 2tg/\log 2 + \mathcal{O}(g^2) \geq 0$.} but can still be measured by ???? !!!SOURCES!!!.
+where $\mathcal{N}$ is an appropriate normalization constant. The evolved state \eqref{eq:2:general-evolved-state} is entangled and cannot be reduced into a product of two oscillator Fock states. The entanglement is very small since it is proportional to the gravitational coupling constant $gt$ \footnote{The amount of entanglement can for example be measured with the later introduced \textit{logarithmic negativity} $E_N$. For this state, this quantity is given as $E_N(\ketbra{\psi(t)}) \simeq 2tg/\log 2 + \mathcal{O}(g^2) \geq 0$.} but can still be measured by ???? !!!SOURCES!!!.
 Another interesting result, which underlines the false inference of a classical gravity from observed non-entanglement discussed above can be seen by considering the time evolution of a coherent product state $\ket{\alpha} \otimes \ket{\beta}$ where $\op{a}\ket{\alpha} = \alpha\ket{\alpha}$. The time evolution is derived in appendix \ref{apx:general-coherent-state-evolution} and results in
 \begin{equation}
   e^{-i\op{H}t/\hbar} \left( \ket{\alpha} \otimes \ket{\beta} \right) = \ket{ e^{-i\omega t} \left( \alpha \cos gt - \beta \sin gt \right) }\otimes\ket{ e^{-i\omega t} \left( - \alpha \sin gt + \beta \cos gt \right) } .
 \end{equation}
 This state is clearly a product state and thus not entangled. But for a time $t_0 = \pi/2g$ the state is effectively the swapped initial state $\ket{\beta} \otimes \ket{\alpha}$ up to a local phase. This swap operation is however, as established earlier, not possible under a LOCC protocol. Thus, even if the resulting state after time evolution under a gravitational interaction is unentangled, we can role out the classicality of gravity \cite{Carney_2018,Lami_2024}. 
-Gravity must therefore be capable of transmitting quantum information, namely the superposition of one mass needs to be transmitted to the other mass.
+Gravity must therefore be capable of transmitting quantum information and must be described by a quantum channel.
 
 Experimentally, one requires the ability to generate spatial superpositions of two massive objects with large enough coherence times. Usually the weak gravitational interaction requires coherence times in the order of $100\si{ms} - 10\si{s}$ for any meaningful and measurable entanglement to built up. The masses should additionally be massive enough for their gravitational effects to be measurable.
-These requirements impose huge experimental and engineering challenges. To contextualize: The most massive object ever put into a spatial superposition is in the order of $4 \times 10^{-23}\si{kg}$, whereas the smallest object whose gravitational field has been measured was just below $100 \si{mg}$ \cite{Westphal_2021} - a difference of $19$ orders of magnitude, comparable to the difference between the mass of a car and the mass of the earth's moon.
-Such spatial superpositions can be created experimentally by giving the masses a spin-1/2 degree of freedom. For example a nitrogen-vacancy diamonds can be used \cite{Bose_2017}, where the NV site provides the required spin of 1/2. An applied magnetic gradient functions like a \q{beam splitter} and creates a delocalized state.
+These requirements impose huge experimental and engineering challenges. To contextualize: The most massive object ever put into a spatial superposition is in the order of $4 \times 10^{-23}\si{kg}$, whereas the smallest object whose gravitational field has been measured was just below $100 \si{mg}$ \cite{Westphal_2021} - a difference of $19$ orders of magnitude.
+One way to experimentally create such spatial superpositions is giving the masses a spin-1/2 degree of freedom. For example, a nitrogen-vacancy diamonds can be used \cite{Bose_2017}, where the NV site provides the required spin of 1/2. An applied magnetic gradient $\partial_x B$ functions like a \q{beam splitter} and creates a delocalized state.
 The extend of this superposition can be calculated and separations in the order of $100 \si{\mu m}$ are theoretically achievable \cite{Bose_2017}.
-Levitated particles in a trap or free-falling experiments isolated and shielded in a vacuum can increase environmental isolation by avoiding contact with surrounding noise. The additional forces due to the trapping potential or the gravitational acceleration can be studied in advance. 
-For now, I assume that all required states and superpositions can be experimentally prepared.
+Levitated, trapped particles isolated and shielded in a vacuum can increase environmental isolation by avoiding contact with surrounding noise. The additional forces due to the trapping potential or the gravitational acceleration can be studied in advance. 
+In this thesis, I assume that all required states and superpositions can be prepared experimentally.
 
 The general and idealized problem considered is illustrated in \cref{fig:2:simple-problem}.
 \begin{figure}[!htbp]
@@ -70,9 +70,9 @@ With the notation introduced in \cref{fig:2:simple-problem}, the initial state a
   \ket{\psi(t=0)} = \frac{1}{2}\left( \ket{\psi_A^1} + \ket{\psi_A^2} \right) \otimes \left( \ket{\psi_B^1} + \ket{\psi_B^2} \right) .
 \end{equation}
 The state evolves under a Hamiltonian $\op{H}$ and after some time the position of each mass is measured and checked for entanglement.
-For now I assume that all interactions expect gravity can be neglected. In reality, electromagnetic forces and Casimir-Polder interactions \cite{Casimir_1948, Casimir_1948a} need to be considered.
+For now I assume that all interactions except gravity can be neglected. In reality, electromagnetic forces and Casimir-Polder interactions \cite{Casimir_1948, Casimir_1948a} need to be considered.
 
-As established earlier in this chapter, gravitational interaction can generate entanglement. In the time scales of the experiment, the acceleration of the masses due to the mutual gravitational interaction can be neglected. The Hamiltonian therefore only needs to include the gravitational potential 
+As established earlier in this chapter, with some assumptions made, gravitational interaction can generate entanglement. In the time scales of the experiment, the acceleration of the masses due to the mutual gravitational interaction can be neglected \footnote{Take for example a silica sphere ($\rho = 2648 \si{kg/m^3}$) with $R=10^{-5}\si{m}$ separated by $L=2R$. The mutual gravitational acceleration for each sphere is around $a=GM/(2L)^2 = 5 \times 10^{-13}\si{m/s^2}$ which results for $t\sim 1 \si{s}$ in a distance traveled of $\sim 10^{-13}\si{m}$.}. The Hamiltonian therefore only needs to include the gravitational potential 
 \begin{equation} \label{eq:2:potential}
   \op{V} = -\frac{GM_AM_B}{\abs{\op{D}}}
 \end{equation}
@@ -83,7 +83,7 @@ During time evolution, the different parts of the superpositions built up differ
 \section{Time evolution under a gravitational potential}
 
 \begin{proposition} \label{proposition:time-evolution}
-  The time evolution under a static and constant Hamiltonian $\op{H} = \op{V}(\op{x}_i) = \mathrm{const.}$ is given by the eigenenergies of the system $\op{V}\ket{n} = V_n\ket{n}$ as $\sim e^{-iV_nt/\hbar}$.
+  The time evolution under a static and constant Hamiltonian $\op{H} = \op{V}(\op{x}_i) = \mathrm{const.}$ is given by the eigenenergies of the system $\op{V}\ket{n} = V_n\ket{n}$ proportional to $e^{-iV_nt/\hbar}$.
 \end{proposition}
 \begin{proof}
   This is a trivial statement. The time evolution is governed by the Schrödinger equation
@@ -162,10 +162,10 @@ In order to assess in a more quantitative way how entangled the state $\ket{\psi
 \section{Entanglement measures}
 Checking whether an arbitrary state $\rho$ is entangled or not is no easy task. In fact, this problem is known to be NP-hard \cite{Gurvits_2003}.
 A state $\rho_{AB} \in \mathcal{H}_A\otimes\mathcal{H}_B$ is called entangled, if it is \emph{non-separable}, that is, it cannot be expressed as a tensor product of two subsystems $\rho_A \in \mathcal{H}_A$ and $\rho_B \in \mathcal{H}_B$.
-In particular, it is very difficult to check if a mixed state is entangled or not. Only for specific cases - like the case of two qubits or qubit-qutrit - a simple sufficient criterion for determining separability is known:
-The positive partial transpose (PPT) criterion states, that if the partial transpose of the density matrix is positive ($\rho^{\Gamma_A} \geq 0$ \footnote{A matrix is defined as positive (\q{positive definite}), if all eigenvalues are positive.}), the state $\rho$ is separable \cite{Horodecki_2009,Plenio_2005a}. In other words, if $\rho^{\Gamma_A}$ has negative eigenvalues, $\rho$ is guaranteed to describe an entangled state.
-The inverse is true, if and only if the dimension of $\rho_A\otimes\rho_B$ is $2\times2$ or $3\times2$ \cite{Horodecki_2009} - only having non-negative eigenvalues doesn't necessarily result in an unentangled system (such states are called \q{bound states}).
-The partial transpose with respect to a subsystem $i$ can be understood in the same way as the partial trace, where the operation (in this case the transform) is performed only on indices corresponding the subsystem $\rho_i$ and can be interpreted as a partial time reversal.
+Only for specific cases - like the case of two qubits or qubit-qutrit - a simple sufficient criterion for determining the separability of a general mixed state is known:
+The positive partial transpose (PPT) criterion states, that if the partial transpose of the density matrix is positive ($\rho^{\Gamma_A} > 0$ \footnote{A matrix is defined as positive (\q{positive definite}), if all eigenvalues are positive.}), the state $\rho$ is separable \cite{Horodecki_2009,Plenio_2005a}. In other words, if $\rho^{\Gamma_A}$ has negative eigenvalues, $\rho$ is guaranteed to describe an entangled state.
+The inverse is true, if and only if the dimension of $\rho_A\otimes\rho_B$ is $2\times2$ or $3\times2$ \cite{Horodecki_2009} - otherwise, only having non-negative eigenvalues doesn't necessarily result in an unentangled system (such states are called \q{bound states}).
+The partial transpose with respect to a subsystem $i$ can be understood in the same way as the partial trace, where the operation (in this case the transform) is performed only on indices corresponding the subsystem $\rho_i$.
 To see the necessity of the PPT criterion, consider a separable mixed state $\rho$, which can be generally expressed as 
 \begin{equation}\label{eq:2:separable-state}
   \rho = \sum p_i \rho_{A}^i\otimes\rho_{B}^i .
@@ -174,18 +174,23 @@ The partial transpose is in this case trivial:
 \begin{equation}
   \rho^{\Gamma_A} = \sum p_i (\rho_{A}^i)^T \otimes \rho_{B}^i .
 \end{equation}
-Since the transpose preserves eigenvalues, the transposed subsystem $A$ is still positive $(\rho_{A}^i)^T \geq 0$ and thus describes again a valid quantum state. It follows, that $\rho^{\Gamma_A}$ is again positive.
+Since the transpose preserves eigenvalues, the transposed subsystem $A$ is still positive $(\rho_{A}^i)^T > 0$ and describes again a valid quantum state. It follows, that $\rho^{\Gamma_A}$ is positive as well.
 If somehow $\rho^{\Gamma_A}$ has any negative eigenvalues, this can only mean that the initial state $\rho$ is not separable and cannot be expressed in the form of eq. \eqref{eq:2:separable-state} and the necessity of the criterion is shown.
 
-For quantifying entanglement, a mathematical quantity called \emph{entanglement measure} can be used. A good measure should be able to capture the essential features of entanglement. With this property, one can axiomatically state what properties such a measure $E(\rho)$ should have \cite{Plenio_2005a,Horodecki_2009}:
+For quantifying entanglement in a more precise way, a mathematical quantity called \emph{entanglement measure} can be used. A good measure should be able to capture the essential features of entanglement. One can axiomatically state what properties such a measure $E(\rho)$ should have \cite{Plenio_2005a,Horodecki_2009}:
 \begin{description}
+  \item[Normalization] An entanglement measure should be a mapping from densities to real positive values between 0 and 1:
+  \begin{equation}
+    \rho \rightarrow E(\rho) \in \mathbb{R}^+
+  \end{equation}
+  where usually the maximally entangled state has $E=1$.
   \item[Monotonicity under LOCC] $E$ should not increase under local operations and classical communications. This is the most important postulate for an entanglement measure and often cited as the \textit{only} required postulate.
   \item[Vanishing on separable states] $E(\rho)=0$ if $\rho$ is separable
-  \item[] Often one finds additional properties useful like \textit{convexity} $E(\sum p_i \rho_i) \leq \sum p_i E(\rho_i)$, (full) \textit{additivity} $E(\rho \otimes \sigma) = E(\rho) + E(\sigma)$ or a normalization that the maximally entangled state has $E=1$.
+  \item[] Often one finds additional properties useful like \textit{convexity} $E(\sum p_i \rho_i) \leq \sum p_i E(\rho_i)$ or (full) \textit{additivity} $E(\rho \otimes \sigma) = E(\rho) + E(\sigma)$.
 \end{description}
 A function that satisfies the most important of these conditions is often called an \textit{entanglement monotone}.
 
-The \emph{negativity} $\mathcal{N}$ is such a entanglement monotone \cite{Plenio_2005a} that used the PPT criterion to determine if a state is entangled or not. It is defined as 
+The \emph{negativity} $\mathcal{N}$ is such an entanglement monotone \cite{Vidal_2001,Plenio_2005a} that used the PPT criterion to determine if a state is entangled or not. It is defined as 
 \begin{equation}\label{eq:2:negativity}
   \mathcal{N} = \frac{\norm{\rho^{\Gamma_A}}_1 - 1}{2}
 \end{equation}
@@ -237,7 +242,7 @@ For all numerical calculations in this thesis, I therefore opt for an alternativ
 \end{equation}
 \end{proposition}
 \begin{proof}
-  The proof is in parts given by Vidal \cite{Vidal_2001}. It is known that the density matrix is hermitian: $\rho = \rho^\dagger$. Using \cref{lemma:trace-norm-hermitian}, the trace norm of the density matrix is is given as $\norm{\rho}_1=\sum \lambda_i = \tr \rho = 1$. The partial transpose $\rho^{\Gamma}$ obviously also satisfies $\tr \rho^{\Gamma} = 1$ but might have negative eigenvalues. Since $\rho^{\Gamma}$ is still hermitian, the trace norm is given by
+  The proof is in parts given by Vidal and Werner \cite{Vidal_2001}. It is known that the density matrix is hermitian: $\rho = \rho^\dagger$. Using \cref{lemma:trace-norm-hermitian}, the trace norm of the density matrix is is given as $\norm{\rho}_1=\sum \lambda_i = \tr \rho = 1$. The partial transpose $\rho^{\Gamma}$ obviously also satisfies $\tr \rho^{\Gamma} = 1$ but might have negative eigenvalues. Since $\rho^{\Gamma}$ is still hermitian, the trace norm is given by
   \begin{equation*}
     \norm{\rho^{\Gamma}}_1 = \sum_i\abs{\lambda_i} = \sum_{\lambda_i \ge 0} \lambda_i + \sum_{\lambda_i < 0} \abs{\lambda_i} = \sum_i \lambda_i + 2\sum_{\lambda_i < 0} \abs{\lambda_i} = 1 + 2\sum_{\lambda_i < 0} \abs{\lambda_i} ,
   \end{equation*}
@@ -255,7 +260,7 @@ It is interesting to see, that the maximum entanglement $E_N = 1$ is reached for
 The complete entanglement dynamics are shown in \cref{fig:2:entanglement-dynamics}.
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{./../figures/EN-orientation-time.pdf}
+  \includegraphics[width=\textwidth]{./../figures/ideal-entanglement/EN-time.pdf}
   \caption{Entanglement dynamics quantified by the logarithmic negativity for two different orientations of the spatial superpositions. The parallel orientation was considered in this chapter (see eq. \eqref{eq:2:entanglement-dynamics-parallel}), the \q{orhtogonal} one in Ref. \cite{Pedernales_2023}. The time of maximum entanglement $t_\mathrm{max}$ for the orthogonal configuration is reached after $t_\mathrm{max} = 4\pi\hbar L^3 / (G M_A M_B \Delta x^2) \simeq 129\si{ms}$.}
   \label{fig:2:entanglement-dynamics}
 \end{figure}
