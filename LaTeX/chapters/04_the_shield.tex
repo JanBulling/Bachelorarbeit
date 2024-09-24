@@ -11,3 +11,38 @@
 
 Gravitational effect of the shield is neglectable
 PROOF:
+
+
+
+
+
+The modes $(k,l)$ have the shape
+\begin{equation}
+  u_{kl}(r, \theta, t) = A\left[J_k(\sqrt{\beta_l}r) - \frac{J_k(\sqrt{\beta_l}r_s)}{I_k(\sqrt{\beta_l}r_s)}I_k(\sqrt{\beta_l}r)\right]\cos(k\theta+\phi_1)\sin(\omega_{kl}t+\phi_2)
+\end{equation}
+with
+\begin{equation}
+  \beta_l = \frac{\tilde{x}_l^2}{r_s^2} \quad \quad \omega_{kl} = \frac{\tilde{x}_l^2}{r_s^2}\sqrt{\frac{D}{\rho d}} = \tilde{x}_l^2\frac{d}{r_s^2}\sqrt{\frac{E}{12\rho(1-\nu^2)}} ,
+\end{equation}
+where $\tilde{x}_l$ is the $l$-th solution of the equation
+\begin{equation}
+  J_k(\tilde{x}_l)I_{k+1}(\tilde{x}_l)+I_k(\tilde{x}_l)J_{k+1}(\tilde{x}_l) = 0 .
+\end{equation}
+The amplitude A of the vibrational mode $(k,l)$ is given by $A \sim \sqrt{\avg{x_{kl}^2}_T}$ where $\avg{x}$ is the variance of the oscillator mode
+\begin{equation}
+  \avg{x_{kl}^2}_T = \frac{\hbar}{2\tilde{m}\omega_{kl}} \coth(\frac{\hbar \omega_{kl}}{2 k_B T}) .
+\end{equation}
+Here, $\tilde{m}$ is the effective mass of the mode which depends on the shape of the mode. It can be calculated relative to the shield mass $m=\rho \pi r_s^2 d$ by
+\begin{equation}
+  \tilde{m} = m\frac{1}{\pi r_s^2}\int_0^{r_s} \dd r \int_0^{2\pi} r\dd\theta \, u_{kl}(r, \theta, t) .
+\end{equation}
+
+Shield vibrations can be understood like
+\begin{equation}
+  \alpha = \beta = \arctan{\max_{\substack{0 \leq r \leq r_s \\ \theta \in[0, 2\pi) \\ t \in [0,2\pi/\omega_{kl})}} \abs{\pdv{r}u_{kl}(r,\theta,t)}}
+\end{equation}
+and
+\begin{align}
+  \Delta L &= u_{kl}\left(\argmax_{\substack{0 \leq r \leq r_s \\ \theta, t}} \abs{\pdv{r}u_{kl}} \right) \lesssim \sqrt{\mean{x_{kl}^2}_T} \\
+  &\approx \frac{1}{r_s} \left(r_s - \argmax_{0 \leq r \leq r_s}\abs{\pdv{r}u_{kl}}\right)\sqrt{\mean{x_{kl}^2}_T}
+\end{align}

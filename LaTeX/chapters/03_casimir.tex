@@ -1,7 +1,7 @@
 \chapter{Casimir effect}\label{cha:casimir-effect}
 
 Casimir forces can be viewed in a very similar way to the \textit{van der Waals forces}. In fact, both phenomena describe just two different sides of the same coin. They define the so-called \emph{dispersion forces} between neutral atoms or bodies.
-The quantum theory of van der Waals forces between two neutral atoms was developed by London in 1930 who found the attractive potential $\propto 1/r^6$ for small separations.
+The quantum theory of van der Waals forces between two neutral atoms was developed by London in 1930 who found the attractive potential $\propto 1/r^6$ for small separations \cite{London_1930}.
 Casimir and Polder showed in 1948, that for separations larger than the resonance wavelength of the atoms, retardation effects need to be taken into account and the potential decays by a power law of $1/r^7$ \cite{Casimir_1948a}. 
 Additionally, they calculated the interaction with a atom or molecule and a perfectly conducting wall, showing that macroscopic objects could experience these \emph{Casimir-Polder interactions} as well.
 It becomes evident, that a full description of dispersion forces cannot be given by classical electrodynamics alone. Additional considerations regarding relativistic effects and quantum electrodynamics have to be made \cite{Bordag_2001,Klimchitskaya_2009,Lamoreaux_2004}.
@@ -27,7 +27,7 @@ The attractive force between the plates can now be simply expressed as
 It is remarkable, that such a simple relation arises out of the infinities of the vacuum.
 Up until now, these Casimir forces are topic of modern scientific research. They are generally very difficult to calculate for other geometries than two infinitely large plates or for real materials with dielectric properties. 
 Even for simple geometries, even the sign of the force is not always intuitively clear: As an example, the Casimir force can be repulsive for an ideal metal spherical shell \cite{Klimchitskaya_2009}.
-For other simple and important bodies like the sphere-plane or sphere-sphere geometry, no universally valid formula for any separation between the bodies exists. This is discussed in more detail in \cref{sec:3:sphere-plate}.
+For other simple and important bodies like the sphere-plane or sphere-sphere geometry, no universally valid formula for any separation between the bodies exists. This is discussed in more detail in \cref{sec:3:casimir-plate-sphere}.
 
 Almost ten years after the discovery of Casimir and Polder, Lifshitz was the first to find an expression for the Casimir force between two dielectric plates with arbitrary relative permittivity $\varepsilon_{r,\,1,2}$ for separations larger than the resonant wavelength \footnote{The \q{resonance wavelength} for a macroscopic body in this case can be understood as e.g. the plasma frequency in the Drude model \cite{Ford_1998}. Different models for light-matter interaction result in slightly different resonant wavelength. The Lifshitz formula however holds true for the cases of separations in the micro-meter regime for all practical materials \cite{Kamp_2020}.} \cite{Lifshitz_1956}.
 The expression he found facilitates the general complexity of the Casimir interactions and is only expressible as a complicated integral \cite{Lifshitz_1956}
@@ -91,67 +91,50 @@ For the following calculations, I choose $\dd A$ parallel to the plate and the a
 
 
 
+
+\section{Casimir forces between a conducting plate and a dielectric sphere}
+\label{sec:3:casimir-plate-sphere}
+
+- Empirical derivation of the 1/L**4 law
+
+- Ford \cite{Ford_1998}
+\begin{multline}
+  F = - \frac{\hbar c}{4 \pi L^4} \int_{0}^{\infty} \dd \omega \, \alpha(\omega) \left[3\sin 2 \omega L - 6L\omega \cos 2 \omega L \right. \\ 
+  \left. - 6L^2\omega^2 \sin 2 \omega L + 4L^3\omega^3 \cos 2 \omega L\right]
+\end{multline}
+For $\alpha=\mathrm{const.}$ this can be solved using an exponential convergence factor to
+\begin{equation}
+  F = -\frac{6 \hbar c}{4 \pi L^5} \alpha
+\end{equation}
+and thus 
+\begin{equation}
+  E = -\frac{3}{8}\frac{\hbar c}{\pi L^4} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)R^3
+\end{equation}
+
+- Series expansion
+
+- Comparison to PFA
+
+- Showing PFA is always the maximum
+
+\begin{theorem}
+  The PFA model predicts a stronger casimir potential for all separations $L/R$ than the LSL or the exact series expansion.
+\end{theorem}
+\begin{proof}
+  a) Series expansion in the one paper. $LSL/PFA \leq 1$ for all $L/R$.
+
+  b) Better than LSL (proof)
+\end{proof}
+
+
 \section{Imperfect plate and spheres}
+\label{sec:3:imperfect-plates}
 
 Python numerical approach, gaussian modes (vibration modes of a spherical plane), perlin noise
 
 
 
-\section{Casimir forces between a conducting plate and a dielectric sphere}
-\label{sec:3:sphere-plate}
+% \section{Discussion on Casimir interactions}
+% \label{sec:3:discussion}
 
-\subsection{Polarizability of a dielectric sphere}
-The polarizability $\alpha$ is defined via
-\begin{equation}
-  \vec{E_\infty} \alpha = \vec{p},
-\end{equation}
-where $\vec{p}$ is the induced dipole moment and $\vec{E_\infty}$ is the external electric field that induces the dipole moment. For a linear and uniform dielectric, it is given as $\vec{p} = \mathcal{V} \varepsilon_0 (\varepsilon_r - 1) \vec{E_\mathrm{in}}$ \cite[p. 220-226]{Griffiths_2018}. Here, $\mathcal{V}$ is the volume of the object and $\vec{E_\mathrm{in}}$ is the electric field inside the dielectric.
-The electrostatic boundary conditions for the problem are given by
-\begin{equation}
-  V_\mathrm{in} \big|_{r=R} = V_\mathrm{out} \big|_{r=R} 
-  \quad \text{and} \quad 
-  \varepsilon_r\varepsilon_0\pdv{V_\mathrm{in}}{r}\bigg|_{r=R} = \varepsilon_0\pdv{V_\mathrm{out}}{r} \bigg|_{r=R}
-\end{equation}
-and the electric potential outside of the sphere at $r\rightarrow\infty$ should be equal to the external dipole-inducing field $V_\mathrm{out} |_{r\rightarrow\infty} = -\vec{E_\infty} \cdot \vec{r} = -E_\infty r\cos\theta$.
-The electric potential inside and outside the sphere can be calculated using the spherical decomposition of the general electric potential $V \propto 1/\abs{\vec{r} - \vec{r'}}$ into Legendre Polynomials $P_l$ \cite[p. 188-190]{Griffiths_2018}:
-\begin{align}
-  V_\mathrm{in}(r, \theta) &= -E_\infty r\cos\theta + \sum_{l=0}^{\infty} A_l r^l P_l(\cos\theta), \\
-  V_\mathrm{out}(r, \theta) &= -E_\infty r \cos\theta + \sum_{l=0}^{\infty} \frac{B_l}{r^{l+1}} P_l(\cos\theta).
-\end{align}
-Applying both boundary conditions, it follows that \cite[p. 249-251]{Griffiths_2018}
-\begin{equation}
-  \begin{cases}
-    A_l = B_l = 0 & \text{for } l \neq 1, \\
-  A_1 = -\frac{3}{\varepsilon_r + 2}E_\infty, \quad B_1 = \frac{\varepsilon_r-1}{\varepsilon_r + 2}R^3E_\infty
-  \end{cases}
-\end{equation}
-and the resulting  homogenous electric field $\vec{E_\mathrm{in}} = -\vec{\nabla} V_\mathrm{in}$ inside the sphere is given as
-\begin{equation}
-  \vec{E_\mathrm{in}} = \frac{3}{\varepsilon_r + 2} \vec{E_\infty} .
-\end{equation}
-The field is shown on the right in \cref{fig:dielectric-sphere-field}.The polarizability $\alpha$ of the sphere can be now be determined to
-\begin{equation}
-  \alpha_\mathrm{sphere} = 4\pi \varepsilon_0 R^3 \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right).
-\end{equation}
-
-% \begin{figure}[!htbp]
-%   \centering
-%   \includegraphics[width=0.8\textwidth]{./../figures/field-dielectric-sphere.pdf}
-%   \label{fig:field-dielectric-sphere}
-%   \caption{Electric field lines through an dielectric sphere}
-% \end{figure}
-
-\begin{figure}[!htbp]
-  \centering
-  \begin{subfigure}[b]{0.48\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{./../figures/potential-dielectric-sphere-small.pdf}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.48\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{./../figures/field-dielectric-sphere-small.pdf}
-  \end{subfigure}
-  \caption{\textbf{left:} Electric potential $V$ of a dielectric sphere in a external electric field $\vec{E_\infty} \parallel \vec{e_z}$. \textbf{right:} The corresponding electric field lines inside and outside the dielectric sphere.}
-  \label{fig:dielectric-sphere-field}
-\end{figure}
+% Always using PFA as worst case
