@@ -9,9 +9,8 @@
 
 
 
-Gravitational effect of the shield is neglectable
-PROOF:
-
+% Gravitational effect of the shield is neglectable
+% PROOF:
 
 
 
@@ -28,13 +27,69 @@ where $\tilde{r}_k$ is the $k$-th solution of the equation
 \begin{equation}
   J_l(\tilde{r}_k)I_{l+1}(\tilde{r}_k)+I_l(\tilde{r}_k)J_{l+1}(\tilde{r}_k) = 0 .
 \end{equation}
+
+
+\section{Occupation of the modes}
+Because of the modes $u_{kl}$, both superposition states of delocalized cat-state in front of the shield are effected by a slightly different Casimir-force. This force depends on the surface-to-surface distance $\mathscr{L}$ between the shield and the mass.
+This distance changes slightly due to the thermal motion of the shield by a difference of $A \cdot u_{k,l}(r_\mathrm{pos})$ where $r_\mathrm{pos}$ is the position of the particle. 
+During time evolution, a slightly different phase is introduced for the two delocalized states. 
+I am interested, which modes matters the most and introduce the most dephasing in a parallel superposition in front of the shield. This information is useful for a worst-case estimate on how much angular and distance fluctuations in the positioning of the particle are introduced through thermal effects. 
+Experimentally, one therefore needs to find a regime in which entanglement can still be measured regardless of these thermal vibrations.
+
+Assuming a shield made out of copper with $\rho = 8960\si{kg/m^3}$, $E = 110\si{GPa}$ and $\nu = 1/3$, the vibrational frequencies for a thin shield ($d = 100\si{nm}$ and $r_s = 0.01\si{m}$) are given in the order of $\omega_{1,0}=11.0\si{s^{-1}}$ up to $\omega_{10,11} = 3108.9\si{s^{-1}}$.
+Because of these low frequencies, the energy $\hbar \omega$ of the mode vibrations are much smaller than the thermal energy $k_B T$ for a reasonable temperature. This means, that all modes are approximately occupied uniformly.
+The amplitude $z$ of each mode of the plate vibrations can be thought of as an quantum harmonic oscillator with frequency $\omega_{kl}$. At a temperature $T$, the expected amplitude is given by $\avg{z_{kl}} = 0$ with a variance of (a derivation is given in appendix \ref{apx:thermal-harmonic-oscillator})
+\begin{equation}\label{eq:4:amplitude-variance}
+  \avg{z_{kl}^2}_T = \frac{\hbar}{2\tilde{m}\omega_{kl}}\coth(\frac{\hbar \omega_{kl}}{2k_BT}) \approx \frac{k_B T}{\tilde{m}\omega_{kl}^2}
+\end{equation}
+where in the last step $\hbar\omega \ll k_B T$ was used. $\tilde{m}$ is the \textit{effective mass} of the mode in which the precise shape is considered. A intuitive estimation for this mass can be given by the average of the mode 
+\begin{equation}\label{eq:4:effective-mass}
+  \tilde{m} = m\frac{1}{\pi r_s^2}\int_0^{r_s} \dd r \int_0^{2\pi} r\dd\theta \, u_{kl}(r, \theta, t) .
+\end{equation}
+with $m=\rho \pi r_s^2 d$ being the total mass of the shield.
+Due to the high occupation number of oscillator modes, the probability $p(z)$ of finding an oscillation with amplitude $z$ is approximately a gaussian normal distribution around $\avg{z_{kl}} = 0$ with the standard deviation given by the square-root of $(\Delta z_{kl})_T^2 = \avg{z_{kl}^2}_T - \avg{z_{kl}}$.
+Luckily it seems that the on average, the standard deviation decreases with $1/\omega$ which means, that higher-order modes with larger frequencies are still highly occupied but should contribute less to the total vibration.
+To quantify this, I considered the dephasing of a single parallel delocalized cat-state in front of the plate. The phase difference $\Delta \phi$ is given by
+\begin{equation}\label{eq:4:phase-difference}
+  \Delta\phi(z) = \frac{t}{\hbar} \frac{\hbar c \pi^3}{720} R \left[\frac{1}{(\mathscr{L}-z \cdot u_{kl}(r- \Delta x/2))^2} - \frac{1}{(\mathscr{L}-z \cdot u_{kl}(r + \Delta x/2))^2} \right]
+\end{equation}
+when the particle is placed at a distance $r$ from the center of the plate. In the following the two cases are considered, where the particle is placed in the center at $r=0$ and in the worst-case position of mode $(1,0)$, where the gradient is maximized ($r \approx 0.5274 r_s$).
+The dephasing rate $\gamma$ is now given by
+\begin{equation}\label{eq:4:average-dephasing}
+  e^{-\gamma} = \avg{e^{-i\Delta\phi}} = \int_{-\infty}^{\infty} \dd z \, \frac{1}{\sqrt{2 \pi (\Delta z_{kl})_T^2}} \exp{-\frac{z^2}{2 (\Delta z_{kl})_T^2}} e^{-i \Delta\phi(z)} .
+\end{equation}
+In \cref{fig:4:dephasing} the dephasing $\gamma$ is shown.
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{./../figures/vibrations/vibrational-dephasing-1s.pdf}
+  \caption{Dephasing rate $\gamma$ of a delocalized cat-state positioned parallel to the shield at $T=4\si{K}$. \textbf{left:} the worst-case estimate where the state is placed in the point with the maximum gradient ($r\approx 0.5274 r_s$). \textbf{right:} realistic scenario with the state placed at the center.}
+  \label{fig:4:dephasing}
+\end{figure}
+The non-trivial behavior arises because of the different mode-shapes. Nevertheless, a clear trend is observable where all highly excited modes don't contribute to the dephasing.
+Assuming, that the amplitude $z$ is much smaller than $\mathscr{L}$ \footnote{Which is true, considering that $\sqrt{(\Delta z_{1,0}^2)_T}\approx 1.807 \times 10^{-9}\si{m}$ compared to $\mathscr{L} \approx R \sim 10^{-6}\si{m}$.}, the phase-difference eq. \eqref{eq:4:phase-difference} can be expanded to
+\begin{equation}
+  \Delta\phi(z) \approx \frac{c \pi^2 R}{720} \cdot 2 \frac{u_{kl}(r - \Delta x/2) -u_{kl}(r + \Delta x/2)}{\mathscr{L}^3} z t \equiv g z.
+\end{equation}
+Averaging over $z$ using again the probability distribution $p(z)$ like in eq. \eqref{eq:4:average-dephasing}, the resulting expression is given by
+\begin{equation}
+  e^{-\gamma} \approx \int_{-\infty}^{\infty} \dd z \, p(z) e^{-i g z} = \exp{-\frac{g^2 (\Delta z_{kl})^2_T}{2}} \approx \exp{-\Delta\phi^2\left(\sqrt{(\Delta z_{kl})^2_T}\right)} .
+\end{equation}
+It is therefore enough for further calculations, to actually use the thermal variance of the oscillator $(\Delta z_{kl})^2_T$ for the amplitude for all modes. The error done by this approximation is shown in \cref{fig:4:dephasing-approximation-error}.
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\textwidth]{./../figures/vibrations/vibrational-dephasing-approximation-error.pdf}
+  \caption{Relative error $\gamma_\mathrm{approx} / \gamma$ by using $\gamma_\mathrm{approx} = \Delta\phi^2\left(\sqrt{(\Delta z_{kl})^2_T}\right)$. Consider that all values are in the order of $10^{-6}$. Hardly any notable error is therefore made by these approximations.}
+  \label{fig:4:dephasing-approximation-error}
+\end{figure}
+Furthermore, the numerical results in \cref{fig:4:dephasing} suggest that only very low modes need to be taken into account for all further considerations.
+
+
+\section{Effects of the modes}
+
+
 The amplitude A of the vibrational mode $(k,l)$ is given by $A \sim \sqrt{(\Delta z_{kl})^2_T}$ where $(\Delta z)^2 = \avg{z^2} - \avg{z}^2$ is the variance of the oscillator mode
 \begin{equation}
   (\Delta z_{kl})^2_T = \frac{\hbar}{2\tilde{m}\omega_{kl}} \coth(\frac{\hbar \omega_{kl}}{2 k_B T}) .
-\end{equation}
-Here, $\tilde{m}$ is the effective mass of the mode which depends on the shape of the mode. It can be calculated relative to the shield mass $m=\rho \pi r_s^2 d$ by
-\begin{equation}
-  \tilde{m} = m\frac{1}{\pi r_s^2}\int_0^{r_s} \dd r \int_0^{2\pi} r\dd\theta \, u_{kl}(r, \theta, t) .
 \end{equation}
 
 Shield vibrations can be understood like
@@ -48,9 +103,3 @@ and
 \end{align}
 
 
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=\textwidth]{./../figures/vibrations/vibrations-mode-occupation.pdf}
-  \label{fig:4:occupation-probability}
-  \caption{Occupation probability of the modes at $T=4\si{K}$.}
-\end{figure}
