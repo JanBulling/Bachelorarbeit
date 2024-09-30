@@ -16,21 +16,21 @@ PROOF:
 
 
 
-The modes $(k,l)$ have the shape
+The modes $(k,l),\, 1 \leq k, \, 0 \leq l$ have the shape
 \begin{equation}
-  u_{kl}(r, \theta, t) = A\left[J_k(\sqrt{\beta_l}r) - \frac{J_k(\sqrt{\beta_l}r_s)}{I_k(\sqrt{\beta_l}r_s)}I_k(\sqrt{\beta_l}r)\right]\cos(k\theta+\phi_1)\sin(\omega_{kl}t+\phi_2)
+  u_{kl}(r, \theta, t) = A\left[J_l(\sqrt{\beta_k}r) - \frac{J_l(\sqrt{\beta_k}r_s)}{I_l(\sqrt{\beta_k}r_s)}I_l(\sqrt{\beta_k}r)\right]\cos(l\theta+\phi_1)\sin(\omega_{kl}t+\phi_2)
 \end{equation}
 with
 \begin{equation}
-  \beta_l = \frac{\tilde{x}_l^2}{r_s^2} \quad \quad \omega_{kl} = \frac{\tilde{x}_l^2}{r_s^2}\sqrt{\frac{D}{\rho d}} = \tilde{x}_l^2\frac{d}{r_s^2}\sqrt{\frac{E}{12\rho(1-\nu^2)}} ,
+  \beta_k = \frac{\tilde{r}_k^2}{r_s^2} \quad \quad \omega_{kl} = \frac{\tilde{r}_k^2}{r_s^2}\sqrt{\frac{D}{\rho d}} = \tilde{x}_l^2\frac{d}{r_s^2}\sqrt{\frac{E}{12\rho(1-\nu^2)}} ,
 \end{equation}
-where $\tilde{x}_l$ is the $l$-th solution of the equation
+where $\tilde{r}_k$ is the $k$-th solution of the equation
 \begin{equation}
-  J_k(\tilde{x}_l)I_{k+1}(\tilde{x}_l)+I_k(\tilde{x}_l)J_{k+1}(\tilde{x}_l) = 0 .
+  J_l(\tilde{r}_k)I_{l+1}(\tilde{r}_k)+I_l(\tilde{r}_k)J_{l+1}(\tilde{r}_k) = 0 .
 \end{equation}
-The amplitude A of the vibrational mode $(k,l)$ is given by $A \sim \sqrt{\avg{x_{kl}^2}_T}$ where $\avg{x}$ is the variance of the oscillator mode
+The amplitude A of the vibrational mode $(k,l)$ is given by $A \sim \sqrt{(\Delta z_{kl})^2_T}$ where $(\Delta z)^2 = \avg{z^2} - \avg{z}^2$ is the variance of the oscillator mode
 \begin{equation}
-  \avg{x_{kl}^2}_T = \frac{\hbar}{2\tilde{m}\omega_{kl}} \coth(\frac{\hbar \omega_{kl}}{2 k_B T}) .
+  (\Delta z_{kl})^2_T = \frac{\hbar}{2\tilde{m}\omega_{kl}} \coth(\frac{\hbar \omega_{kl}}{2 k_B T}) .
 \end{equation}
 Here, $\tilde{m}$ is the effective mass of the mode which depends on the shape of the mode. It can be calculated relative to the shield mass $m=\rho \pi r_s^2 d$ by
 \begin{equation}
