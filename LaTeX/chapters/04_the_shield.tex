@@ -61,24 +61,24 @@ The dephasing rate $\gamma$ is now given by
 In \cref{fig:4:dephasing} the dephasing $\gamma$ is shown.
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\textwidth]{./../figures/vibrations/vibrational-dephasing-1s.pdf}
-  \caption{Dephasing rate $\gamma$ of a delocalized cat-state positioned parallel to the shield at $T=4\si{K}$. \textbf{left:} the worst-case estimate where the state is placed in the point with the maximum gradient ($r\approx 0.5274 r_s$). \textbf{right:} realistic scenario with the state placed at the center.}
+  \includegraphics[width=\textwidth]{./../figures/vibrations/vibrational-dephasing-rate.pdf}
+  \caption{Dephasing rate $\gamma$ of a delocalized cat-state positioned parallel to the shield at $T=4\si{K}$. \textbf{left:} the worst-case estimate where the state is placed in the point with the maximum gradient ($r\approx 0.5274 r_s$). \textbf{right:} realistic scenario with the cat-state placed at the center.}
   \label{fig:4:dephasing}
 \end{figure}
 The non-trivial behavior arises because of the different mode-shapes. Nevertheless, a clear trend is observable where all highly excited modes don't contribute to the dephasing.
 Assuming, that the amplitude $z$ is much smaller than $\mathscr{L}$ \footnote{Which is true, considering that $\sqrt{(\Delta z_{1,0}^2)_T}\approx 1.807 \times 10^{-9}\si{m}$ compared to $\mathscr{L} \approx R \sim 10^{-6}\si{m}$.}, the phase-difference eq. \eqref{eq:4:phase-difference} can be expanded to
 \begin{equation}
-  \Delta\phi(z) \approx \frac{c \pi^2 R}{720} \cdot 2 \frac{u_{kl}(r - \Delta x/2) -u_{kl}(r + \Delta x/2)}{\mathscr{L}^3} z t \equiv g z.
+  \Delta\phi(z) \approx \frac{c \pi^3 R t}{720} \cdot \frac{2\left(u_{kl}(r - \Delta x/2) -u_{kl}(r + \Delta x/2)\right)z}{\mathscr{L}^3} \equiv g z
 \end{equation}
 Averaging over $z$ using again the probability distribution $p(z)$ like in eq. \eqref{eq:4:average-dephasing}, the resulting expression is given by
 \begin{equation}
-  e^{-\gamma} \approx \int_{-\infty}^{\infty} \dd z \, p(z) e^{-i g z} = \exp{-\frac{g^2 (\Delta z_{kl})^2_T}{2}} \approx \exp{-\Delta\phi^2\left(\sqrt{(\Delta z_{kl})^2_T}\right)} .
+  e^{-\gamma} \approx \int_{-\infty}^{\infty} \dd z \, p(z) e^{-i g z} = \exp{-\frac{g^2 (\Delta z_{kl})^2_T}{2}} \approx \exp{-\frac{\Delta\phi^2\left(\sqrt{(\Delta z_{kl})^2_T}\right)}{2}} .
 \end{equation}
 It is therefore enough for further calculations, to actually use the thermal variance of the oscillator $(\Delta z_{kl})^2_T$ for the amplitude for all modes. The error done by this approximation is shown in \cref{fig:4:dephasing-approximation-error}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/vibrations/vibrational-dephasing-approximation-error.pdf}
-  \caption{Relative error $\gamma_\mathrm{approx} / \gamma$ by using $\gamma_\mathrm{approx} = \Delta\phi^2\left(\sqrt{(\Delta z_{kl})^2_T}\right)$. Consider that all values are in the order of $10^{-6}$. Hardly any notable error is therefore made by these approximations.}
+  \caption{Relative error $\abs{\gamma_\mathrm{approx} / \gamma - 1}$ by using $\gamma_\mathrm{approx} = \Delta\phi^2\left(\sqrt{(\Delta z_{kl})^2_T}\right)/2$. Hardly any notable error is therefore made by these approximations for higher order modes. The approximation only overestimates the lowest modes by a factor of $\sim 3$.}
   \label{fig:4:dephasing-approximation-error}
 \end{figure}
 Furthermore, the numerical results in \cref{fig:4:dephasing} suggest that only very low modes need to be taken into account for all further considerations.
