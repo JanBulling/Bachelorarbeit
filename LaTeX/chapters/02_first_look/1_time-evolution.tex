@@ -1,0 +1,77 @@
+\section{Time evolution under a gravitational potential}\label{sec:2:time-evolution}
+
+\begin{proposition} \label{proposition:time-evolution}
+  The time evolution under a static and constant Hamiltonian $\op{H} = \op{V}(\op{x}_i) = \mathrm{const.}$ is given by the eigenenergies of the system $\op{V}\ket{n} = V_n\ket{n}$ proportional to $e^{-iV_nt/\hbar}$.
+\end{proposition}
+\begin{proof}
+  This is a trivial statement. The time evolution is governed by the Schrödinger equation
+  \begin{equation}
+    i\hbar \pdv{t}\ket{\psi(t)} = \op{H} \ket{\psi(t)} .
+  \end{equation}
+  The formal solution of this first order PDE is given by
+  \begin{equation}
+    \ket{\psi(t)} = e^{-i\op{V}t/\hbar} \ket{\psi(t=0)} .
+  \end{equation}
+  The constant (hermitian) potential operator can be expressed in the energy-eigenbasis $\left\{\ket{n}\right\}$ as $\op{V}\ket{n} = V_n\ket{n}$. The initial state can be expressed as a superposition in the same eigenstates like $\ket{\psi} = \sum_n c_n \ket{\psi_n}$. Putting both together and using the taylor expansion of the exponential function, one arrives at the simple form
+  \begin{align}
+    \ket{\psi(t)} &= \sum_n e^{-i\op{V}t/\hbar} \ket{n} \braket{n}{\psi} = \sum_{n,k} \frac{(-i\op{V}t/\hbar)^k}{k!} \ket{n} c_n \ket{\psi_n} \\
+    &= \sum_{n,k} \frac{(-iV_n t/\hbar)^k}{k!} c_n \ket{\psi_n} 
+    = \sum_n e^{-iV_nt/\hbar} c_n \ket{\psi_n}
+  \end{align}
+  where in the second to last step $\op{V}^k\ket{n} = \op{V}^{k-1}\op{V}\ket{n} = \op{V}^{k-1}\ket{n} V_n = \dots = V_n^k\ket{n}$ was used.
+\end{proof}
+
+Using the preceding proposition, the initial state eq. \eqref{eq:2:initial-state} can be evolved in time.
+The potential operator eq. \eqref{eq:2:potential} acts on every state in the $\left\{ \ket{\psi_A^1}, \ket{\psi_A^2} \right\}\otimes \left\{ \ket{\psi_B^1}, \ket{\psi_B^2} \right\}$ basis differently. This is because of the different distances between the states $\ket{\psi_A^i}$ and $\ket{\psi_B^j}$ for different $i,j \in \{1, 2\}$. This results in phases $\phi_{ij}$ to be built up during time evolution according to \cref{proposition:time-evolution}.
+The state $\ket{\psi(t)}$ after some time evolution is therefore given as
+\begin{equation}\label{eq:2:evolved-state}
+  \ket{\psi(t)} = \frac{1}{2}\bigl(
+    e^{i\phi_{11}} \ket{\psi_A^1}\ket{\psi_B^1} 
+    + e^{i\phi_{12}} \ket{\psi_A^1}\ket{\psi_B^2}
+    + e^{i\phi_{21}} \ket{\psi_A^2}\ket{\psi_B^1} 
+    + e^{i\phi_{22}} \ket{\psi_A^2}\ket{\psi_B^2} \bigr) ,
+\end{equation}
+where the $\otimes$ symbol was omitted. The phases are
+\begin{align}
+  \phi \equiv \phi_{11} = \phi_{22} = \frac{G M_A M_B}{2\hbar L}t 
+  \qquad \text{and} \qquad 
+  \phi_{12} = \phi_{21} = \frac{G M_A M_B}{\hbar \sqrt{4L^2 + (\Delta x)^2}}t .
+\end{align}
+Assuming again that the superposition size $\Delta x$ is much smaller than the distance $L$ between the masses - like before in eq. \eqref{eq:2:gravity-hamiltonian} - the phases $\phi_{12}=\phi_{21}$ can be expanded and a global phase $\phi$ can be factored:
+\begin{equation}\label{eq:2:definition-delta-phi}
+  \phi_{12} = \phi_{21} \approx \frac{GM_AM_B}{\hbar} \left[ \frac{1}{2L} - \frac{(\Delta x)^2}{16 L^3} \right] t \equiv \phi - \Delta\phi .
+\end{equation}
+The state eq. \eqref{eq:2:evolved-state} can now be expressed in the form
+\begin{equation}
+  \ket{\psi(t)} = e^{i\phi}\frac{1}{\sqrt{2}}\left[ 
+    \ket{\psi_A^1} \otimes \frac{\ket{\psi_B^1} + e^{-i\Delta\phi} \ket{\psi_B^2}}{\sqrt{2}}
+    + \ket{\psi_A^2} \otimes \frac{e^{-i\Delta\phi} \ket{\psi_B^1} + \ket{\psi_B^2}}{\sqrt{2}} \right] ,
+\end{equation}
+where the entanglement dynamics can be directly seen. This state is entangled, if it is not representable as a product state $\ket{\psi} \neq \ket{\psi_A}\otimes\ket{\psi_B}$. That is the case, if the states containing $\ket{\psi_B^i}$ are not both equal to each other (i.e. differ only by a phase) and thus cannot be factored. 
+The system is therefore entangled, if and only if $\Delta\phi \neq k\pi$ with integer $k \in \mathbb{Z}$.
+
+
+% \section{Fidelity of quantum states}
+% In general, to compare the distance between two quantum states $\rho$ and $\sigma$ (\q{how similar they are}) the \emph{fidelity} $F(\rho, \sigma)$ is used. It is defined as \cite[p. 409-412]{Nielsen_2010} 
+% \begin{equation}
+%   F(\rho, \sigma) = \tr \sqrt{\sqrt{\rho} \sigma \sqrt{\rho}}
+% \end{equation} 
+% and can be used as a distance measurement between quantum states. It is monotonic, concave and bounded between 0 and 1. If both states are equal $\rho = \sigma$, it is clear that $F(\rho, \sigma) = 1$, by using $\sqrt{\rho}\rho\sqrt{\rho} = \rho^2$. If both states commute, i.e. they are diagonalizable in the same orthogonal basis $\{ \ket{i} \}$, 
+% \begin{equation*}
+%   \rho = \sum_i r_i \ketbra{i}; \quad \sigma = \sum_i s_i \ketbra{i},
+% \end{equation*}
+% the fidelity is given by \cite[p. 409]{Nielsen_2010}
+% \begin{equation*}
+%   F(\rho, \sigma) = \tr \sqrt{\sum_i r_i s_i \ketbra{i}} = \sum_i \sqrt{r_i s_i}.
+% \end{equation*}
+% This can be seen immediately by the use of the spectral theorem $\tr \sqrt{\rho} = \tr{U \sqrt{\mathrm{diag}(r_i)} U^\dagger} = \tr \diag(\sqrt{r_i})$.
+% Another special case is given for the fidelity of a pure state $\rho=\ketbra{\psi}$ and an arbitrary state $\sigma$ \cite[p. 409]{Nielsen_2010}:
+% \begin{equation*}
+%   F(\ket{\psi}, \sigma) = \tr \sqrt{\bra{\psi}\sigma\ket{\psi} \ketbra{\psi}} = \sqrt{\bra{\psi}\sigma\ket{\psi}}.
+% \end{equation*}
+% If the state $\sigma = \ketbra{\phi}$ is also pure, the fidelity reduces to
+% \begin{equation*}
+%   F(\ket{\psi}, \ket{\phi}) = \abs{\braket{\psi}{\phi}} \le 1,
+% \end{equation*}
+% with equality being attained if the states are the same and only differ by a phase. 
+In order to assess in a more quantitative way how entangled the state $\ket{\psi}$ is, a more sophisticated entanglement measure is needed. In the next chapter, the \emph{logarithmic negativity} is motivated and introduced. In the rest of this thesis, I will repeatedly opt for this measure.

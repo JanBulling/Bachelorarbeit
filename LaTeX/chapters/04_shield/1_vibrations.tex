@@ -1,4 +1,5 @@
-\chapter{The shield}\label{cha:the-shield}
+\section{Shield vibrations}
+
 
 \begin{figure}[!htbp]
   \centering
@@ -6,13 +7,6 @@
   \label{fig:4:vibrational-modes}
   \caption{Vibrational modes of a spherical plate fixed at the edge with $R/d = 1000$.}
 \end{figure}
-
-
-
-% Gravitational effect of the shield is neglectable
-% PROOF:
-
-
 
 
 The modes $(k,l),\, 1 \leq k, \, 0 \leq l$ have the shape
@@ -29,7 +23,7 @@ where $\tilde{r}_k$ is the $k$-th solution of the equation
 \end{equation}
 
 
-\section{Occupation of the modes}
+\subsection{Occupation of the vibration-modes}
 Because of the modes $u_{kl}$, both superposition states of delocalized cat-state in front of the shield are effected by a slightly different Casimir-force. This force depends on the surface-to-surface distance $\mathscr{L}$ between the shield and the mass.
 This distance changes slightly due to the thermal motion of the shield by a difference of $A \cdot u_{k,l}(r_\mathrm{pos})$ where $r_\mathrm{pos}$ is the position of the particle. 
 During time evolution, a slightly different phase is introduced for the two delocalized states. 
@@ -83,8 +77,25 @@ It is therefore enough for further calculations, to actually use the thermal var
 \end{figure}
 Furthermore, the numerical results in \cref{fig:4:dephasing} suggest that only very low modes need to be taken into account for all further considerations.
 
+\subsection{The Hamiltonian}
+\begin{equation}
+  H = \hbar \omega \left(a^\dagger a + \frac{1}{2}\right) \otimes \mathbb{1} + f_A(\op{z})\otimes\ketbra{\psi_A} + f_B(\op{z})\otimes\ketbra{\psi_B}
+\end{equation}
+where $\op{z} = \sqrt{\hbar/2m\omega}(a + a^\dagger)$ is the amplitude of the plate. The coupling function $f$ is given by the PFA:
+\begin{equation}
+  f_{A,B}(\op{z}) = \frac{\hbar c \pi^3 R}{720} \frac{1}{(\mathscr{L}-\op{z}\cdot u(r_{A,B}))^2} \approx \frac{\hbar c \pi^3 R}{720} \left(\frac{1}{\mathscr{L}^2} + \frac{2 u(r_{A,B}) \op{z}}{\mathscr{L}^3}\right) .
+\end{equation}
+After this linearization, the hamiltonian can be solved for a system initially in the state
+\begin{equation}
+  \rho(t=0) = \rho_\mathrm{thermal\ oscillator}\otimes \frac{1}{2} \left(\ket{\psi_A} + \ket{\psi_B}\right)\left(\bra{\psi_A} + \bra{\psi_B}\right),
+\end{equation}
+where the $\rho_\mathrm{thermal\ oscillator}$ is the initial thermal state of the oscillator which can be expressed in the Fock-state basis as
+\begin{equation}
+  \rho_\mathrm{thermal\ oscillator} = \sum_{n} \frac{1}{Z} e^{-\beta \hbar \omega(n + 1/2)} \ketbra{n}.
+\end{equation}
 
-\section{Effects of the modes}
+
+% \section{Effects of the modes}
 
 
 The amplitude A of the vibrational mode $(k,l)$ is given by $A \sim \sqrt{(\Delta z_{kl})^2_T}$ where $(\Delta z)^2 = \avg{z^2} - \avg{z}^2$ is the variance of the oscillator mode

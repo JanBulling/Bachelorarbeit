@@ -1,0 +1,23 @@
+\chapter{The shield and its consequences}
+
+\section{Thermal harmonic oscillator}\label{apx:thermal-harmonic-oscillator}
+The amplitude $z$ of a single vibrational shield-mode $(k,l)$ with frequency $\omega_{kl} \equiv \omega$ behaves like a quantum harmonic oscillator. 
+The average amplitude $\avg{z}_n = 0$. 
+The variance $(\Delta z)^2 = \avg{z^2} - \avg{z}^2$ however is given by
+\begin{equation}
+  (\Delta z)^2_n = \avg{z^2}_n = \frac{\hbar}{2m\omega} (1+2n) .
+\end{equation}
+At a temperature $T$, the occupation of the modes is described by the boltzmann distribution:
+\begin{equation}\label{eq:apx:thermal-oscillator-variance}
+  \avg{z^2}_T = \sum_{n=0}^{\infty} \frac{1}{Z} e^{-\beta E_n} \avg{z^2}_n,
+\end{equation}
+where $\beta = 1/k_B T$, $E_n = \hbar \omega (n+1/2)$ is the energy of mode $n$ and
+\begin{equation}
+  Z = \sum_{n=0}^{\infty} e^{-\beta E_n} = \frac{e^{-\beta \frac{\hbar \omega}{2}}}{1-e^{-\beta \hbar \omega}}
+\end{equation}
+is the partition function. Using known series, the expression eq. \eqref{eq:apx:thermal-oscillator-variance} can be evaluated to
+\begin{align}
+  (\Delta z)^2_T = \avg{z^2}_T &= \frac{\hbar}{2m\omega} \sum_{n=0}^{\infty} \frac{1}{Z}\left[e^{-\beta E_n} + 2ne^{-\beta E_n}\right] \\
+  &= \frac{\hbar}{2m\omega} \left[1 + \frac{2}{Z}\sum_{n=0}^{\infty} n e^{-\beta E_n}\right] \\
+  &= \frac{\hbar}{2m\omega} \left[1 + \frac{2e^{-\beta\hbar\omega}}{1-e^{-\beta\hbar\omega}} \right] = \frac{\hbar}{2m\omega} \coth(\frac{\hbar \omega}{2 k_B T})
+\end{align}
