@@ -24,26 +24,37 @@ For large separations, much larger than the absorption wavelength of the dielect
   F = -\frac{6 \hbar c}{4 \pi L^5} \alpha
 \end{equation}
 and thus 
-\begin{equation}
+\begin{equation}\label{eq:3:casimir-sphere-plate}
   E = -\frac{3}{8}\frac{\hbar c}{\pi L^4} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)R^3 .
 \end{equation}
 For the large separation limit, the Casimir interaction between a sphere and a plate behaves like expected considering the motivation of the $1/L^4$-law above in this section.
 
-
-- Series expansion
-
-- Comparison to PFA
-
-- Showing PFA is always the maximum
-
+A second method to calculate the Casimir energy for arbitrary compact objects and a conducting wall was developed by Emig \textit{et. al.} \cite{Emig_2007}. For the sphere-plate geometry, this results in the large separation limit (LSL) in a infinite series, where the first-order term ($\propto 1/L^4$) is precisely given by eq. \eqref{eq:3:casimir-sphere-plate}. The first 8 terms of this series are shown in \cref{fig:3:casimir-behavior} as well as a few specific numerical points for higher terms.
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{./../figures/casimir-behavior.pdf}
+  \caption{Behavior of different approximations of the casimir interaction between a conducting sphere and a perfectly conducting plate. Additionally, a comparison between the PFA and an exact numerical series expansion from Ref. \cite{Emig_2007a} is shown.}
+  \label{fig:3:casimir-behavior}
+\end{figure}
+It becomes evident, that the series expansion converges to the LSL eq. \eqref{eq:3:casimir-sphere-plate} for large separations and to the PFA eq. \eqref{eq:3:PFA-sphere-plate} for small separations.
+However, quantitatively the numerics show, that $E/E_\mathrm{PFA} \leq 1$ and thus the PFA predicts a stronger Casimir energy fir all separations.
 \begin{theorem}
-  The PFA model predicts a stronger casimir potential for all separations $L/R$ than the LSL or the exact series expansion.
+  The PFA model for a \emph{conducting sphere} and a conducting plate predicts a stronger casimir energy for all separations $L/R$ than the LSL or the exact series expansion.
 \end{theorem}
 \begin{proof}
-  a) Series expansion in the one paper. $LSL/PFA \leq 1$ for all $L/R$ \cite{Emig_2007a}.
+  a) The numerical series expansion in \cref{fig:3:casimir-behavior} from Ref. \cite{Emig_2007a} shows that $\abs{E_\mathrm{series}} \leq \abs{E_\mathrm{PFA}}$ for all $L/R$.
 
-  b) Better than LSL (proof)
+  b) Comparing the PFA eq. \eqref{eq:3:PFA-sphere-plate} for a conducting sphere with a dielectric one, it becomes evident, that $\abs{E_\mathrm{cond.}} \geq \abs{E_\mathrm{diel.}}$. This can be seen by the fact that for $\varepsilon_r \in [1, \infty)$ $\varphi(\varepsilon_r) \leq 1$ and $(\varepsilon_r - 1)/(\varepsilon_r - 1) \leq 1$. Thus the PFA for conductors is always a worse approximation. 
+
+  c) Analytically, it can be shown that the energy predicted by the LSL eq. \eqref{eq:3:casimir-sphere-plate} is always smaller than the PFA:
+  \begin{align}
+    \abs{E_\mathrm{PFA}} &> \abs{E_\mathrm{LSL}}\\
+     \frac{\hbar c \pi^3}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r) \frac{R}{\mathscr{L}^2} &> \frac{3\hbar c}{8 \pi L^4}\left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right) R^3 \\
+    \frac{8 \pi^4}{3 \cdot 720} \frac{\varepsilon_r + 2}{\varepsilon_r + 1} \varphi(\varepsilon_r) &> \frac{(L-R)^2 R^2}{L^4} = \left(\frac{R}{L}\right)^2 - 2\left(\frac{R}{L}\right)^3 + \left(\frac{R}{L}\right)^4
+  \end{align}
+  Maximizing the RHS, and using the fact that $R/L \leq 1$, the maximum is $1/16$ at $R/L=1/2$. The minimum of the LHS is a little more complicated. The minimum of $\varphi(\varepsilon_r)$ is reached for $\varepsilon_r = 1$ and is at a minimum $0.46$. The minimum of $(\varepsilon_r + 2)/(\varepsilon_r + 1)$ is reached at $\varepsilon_r \rightarrow \infty$ and is $1$. Thus the LHS is at the absolute (unreachable) minimum $8\pi^4/2160 \cdot 0.46 \approx 0.166$ which is still larger than $1/16$.
 \end{proof}
 \begin{remark}
   This is rather unintuitive, because one would expect it to be the other way around. The $1/L^4$ dependence in the LSL should - for small separations - tend much faster to zero than the $1/\mathscr{L}^2$ dependence in the PFA. However considering the differences between $L$ and $\mathscr{L} = L-R$, this is no longer surprising.
 \end{remark}
+Admittedly, for separations $L/R \gtrsim 2$, the difference is not very large. Nevertheless will I use the PFA eq. \eqref{eq:3:PFA-sphere-plate} for the rest of the thesis as a worst-case estimation. Keep in mind, that the some quantities might be overestimated.
