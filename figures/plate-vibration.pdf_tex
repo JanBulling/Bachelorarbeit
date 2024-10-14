@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.3.2 (091e20e, 2023-11-25, custom), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'proximity-force-approximation.pdf' (pdf, eps, ps)
+%% Accompanies image file './../figures/plate-vibration.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{214.3439827bp}%
+    \setlength{\unitlength}{446.54401016bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,16 +50,20 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1)%
+  \begin{picture}(1,0.6999355)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{./../figures/proximity-force-approximation.pdf}}%
-    \put(0.39276819,0.59717205){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$R$\end{tabular}}}}%
-    \put(0.24162571,0.69905452){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\theta$\end{tabular}}}}%
-    \put(0.09925817,0.14158493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathscr{L}$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{./../figures/proximity-force-approximation.pdf}}%
-    \put(0.83124269,0.65293813){\color[rgb]{0.78431373,0.21568627,0.21568627}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\dd A$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{./../figures/proximity-force-approximation.pdf}}%
-    \put(0.05289577,0.52648029){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{./../figures/plate-vibration.pdf}}%
+    \put(0.10180331,0.50024798){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta L$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{./../figures/plate-vibration.pdf}}%
+    \put(0.05558619,0.20916404){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$r_s$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{./../figures/plate-vibration.pdf}}%
+    \put(0.85100302,0.62848591){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta\theta$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{./../figures/plate-vibration.pdf}}%
+    \put(0.41424267,0.49837096){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$r_s \gg R$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{./../figures/plate-vibration.pdf}}%
+    \put(0.66657452,0.46986452){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta L$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{./../figures/plate-vibration.pdf}}%
+    \put(0.69074959,0.38539772){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

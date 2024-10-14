@@ -1,0 +1,25 @@
+\section{Discussion on the optimal setup}\label{sec:4:discussion}
+
+- No global maximum
+
+- dependent on experimental stuff
+
+How can one find the best parameters depending on the experimental requirements?
+\begin{enumerate}
+  \item Specify maximum coherence time (how long the experiment can take)
+  \item This fixes $L^3/(M_A M_B \Delta x_A \Delta x_B)$
+  \item Look up, what maximum $\Delta \theta$ and $\Delta L$ you can get at this time (Dependent on the amount of entanglement you want to have at the end)
+  \item Take the minimum possible $L/R$ in account (dependent on trap stiffness and so on) Ideally, large enough to reduce casimir interactions
+\end{enumerate}
+
+
+-------------------------------------- 
+
+\begin{enumerate}
+  \item Given a target measuring time $t_\mathrm{target}$, this fixes the ratio
+  \begin{equation}\label{eq:4:fixed-ratio}
+    \frac{L^3}{M_A M_B \Delta x_A \Delta x_B} = 5.036\times 10^{22}\si{m/kg^2s} \cdot t_\mathrm{target} = \mathrm{const.}
+  \end{equation}
+  Most likely, the superposition size $\Delta x_{A,B}$ is also not changeable and one has to be satisfied by what can be achieved experimentally. The delocalized states of mass $M$ has to interact gravitationally with each other in a laboratory setting for at least the duration of the measuring process $t_\mathrm{target}$. These considerations limits the coherence time and usually, low times in the order of milliseconds to seconds are favorable.
+  \item In principle, one does not require to measure at the time of maximum entanglement where $E_N = 1$. If a lower quantity of entanglement is enough for a set experimental goal, I recommend, measuring at a lower time than $t_\mathrm{target} = \tau t_\mathrm{max}$ ($\tau < 1$) !!!!FIGURE!!!!. This on the other hand increases the fixed ratio eq. \eqref{eq:4:fixed-ratio} by a factor of $1/\tau$.
+\end{enumerate}
