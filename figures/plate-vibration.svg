@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.4083158"
-     inkscape:cx="202.72441"
-     inkscape:cy="272.31108"
+     inkscape:zoom="2.8166316"
+     inkscape:cx="251.71911"
+     inkscape:cy="229.52948"
      inkscape:window-width="2560"
      inkscape:window-height="1494"
      inkscape:window-x="-11"
@@ -236,32 +236,10 @@
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
        d="m 20.461687,35.028027 h 5.695614"
        id="path3-5" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       x="16.037157"
-       y="31.456936"
-       id="text3"><tspan
-         sodipodi:role="line"
-         id="tspan3"
-         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
-         x="16.037157"
-         y="31.456936">$\Delta L$</tspan></text>
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
        d="m 15.018082,57.04713 v 47.04804"
        id="path9" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       x="8.7565374"
-       y="77.311623"
-       id="text9"><tspan
-         sodipodi:role="line"
-         id="tspan9"
-         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
-         x="8.7565374"
-         y="77.311623">$r_s$</tspan></text>
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:2.00001, 0.5;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        d="M 132.42962,12.676714 V 80.136463"
@@ -279,17 +257,6 @@
        sodipodi:arc-type="arc"
        d="m 132.48846,13.771786 a 37.758724,37.758724 0 0 1 9.45403,1.202704"
        sodipodi:open="true" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       x="134.05919"
-       y="11.255512"
-       id="text11"><tspan
-         sodipodi:role="line"
-         id="tspan11"
-         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
-         x="134.05919"
-         y="11.255512">$\Delta\alpha$</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#3e3e3e;stroke-width:0.421616;stroke-miterlimit:3;stroke-dasharray:0.42161599,0.42161599;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        id="rect13"
@@ -321,6 +288,60 @@
        height="79.539467"
        x="97.982475"
        y="10.919736" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#a02c2c;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:1.00002, 0.5;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 142.53292,12.549686 -6.83629,26.158292"
+       id="path11"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
+       d="m 95.499315,35.666843 h 6.679225"
+       id="path15" />
+    <path
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9-5);marker-end:url(#marker16-9-5);paint-order:stroke fill markers"
+       d="M 95.166016,50.945424 H 131.04659"
+       id="path3-53" />
+    <path
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
+       d="m 122.17131,67.193813 5.49056,-1.986338"
+       id="path1" />
+    <path
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
+       d="M 20.726195,55.101305 H 27.40542"
+       id="path5" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="16.037157"
+       y="31.456936"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
+         x="16.037157"
+         y="31.456936">$\Delta L$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="8.7565374"
+       y="77.311623"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
+         x="8.7565374"
+         y="77.311623">$r_s$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="134.05919"
+       y="11.255512"
+       id="text11"><tspan
+         sodipodi:role="line"
+         id="tspan11"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
+         x="134.05919"
+         y="11.255512">$\Delta\alpha$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
@@ -332,15 +353,6 @@
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
          x="65.255981"
          y="31.752625">$r_s \gg R$</tspan></text>
-    <path
-       style="fill:none;fill-opacity:1;stroke:#a02c2c;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:1.00002, 0.5;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 142.53292,12.549686 -6.83629,26.158292"
-       id="path11"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
-       d="m 95.499315,35.666843 h 6.679225"
-       id="path15" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
@@ -352,10 +364,6 @@
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
          x="105.00602"
          y="36.243267">$\Delta L$</tspan></text>
-    <path
-       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9-5);marker-end:url(#marker16-9-5);paint-order:stroke fill markers"
-       d="M 95.166016,50.945424 H 131.04659"
-       id="path3-53" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
@@ -367,5 +375,27 @@
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
          x="108.81434"
          y="49.549389">$L$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="116.12086"
+       y="71.568565"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
+         x="116.12086"
+         y="71.568565">$R$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="16.957687"
+       y="52.404682"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
+         x="16.957687"
+         y="52.404682">$a+a^\dagger$</tspan></text>
   </g>
 </svg>
