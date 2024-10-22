@@ -22,9 +22,9 @@ The density matrix of a 2 qubit system however consists of 16 different entries 
 One cannot be sure that the masses are placed in the exact same position each run or if the superposition is extended in precisely the same orientation over and over again. Even if it was somehow possible, to place the particles at the \textit{exact} same position each measurement, thermal vibrations of the shield, the masses or the setup still induce small deviations in the placement.
 Thus, each run the entanglement of a slightly different system is measured creating effectively a result which looks like a mixed state
 \begin{equation}
-  \rho = \int_{-\infty}^{\infty} \dd \theta \frac{1}{\sqrt{2\pi}\Delta \theta} e^{-\theta^2/2(\Delta \theta)^2} \ketbra{\psi_\theta} .
+  \rho = \int_{-\infty}^{\infty} \dd \theta_i \frac{1}{\sqrt{2\pi}\Delta \theta_i} e^{-\theta_i^2/2(\Delta \theta_i)^2} \ketbra{\psi_\theta} .
 \end{equation}
-Here, $\ket{\psi_\theta}$ is the pure state of a single measurement dependent on the angular variations $\theta$. These variations are assumed to be gaussian distributed around mean $0$ and standard deviation $\Delta \theta_{A,B}$.
+Here, $\ket{\psi_\theta}$ is the pure state of a single measurement dependent on the angular variations $\theta_i$ ($i=A,B$). These variations are assumed to be gaussian distributed around mean $0$ and standard deviation $\Delta \theta_{A,B}$.
 The same argument can be made for variations in the distance, which are distributed with $\Delta L_{A,B}$ (compare with \cref{fig:4:complete-setup}).
 In some cases, like for example if the plate position moves slightly, the variations are correlated and $\Delta L_A = \Delta L_B$. But in the most general case, they are assumed to be independent and follow their own probability distribution.
 

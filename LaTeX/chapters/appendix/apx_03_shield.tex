@@ -1,22 +1,23 @@
 \chapter{The shield and its consequences}
 
 \section{Blocking of the shield}\label{apx:blocking-of-the-shield}
-Assume both spheres with charge $q$ separated by a distance $2L$ and a shield is placed perfectly in the center of the spheres orthogonal to the direct connection between them. The magnitude field at a distance $z$ from this connection line is given by 
+Assume two spheres $A$ and $B$ with charge $q_A$ and $q_B$ separated by a distance $2L$ on the $x$-axis. A circular shield is placed perfectly in the center of the spheres orthogonal to the direct connection between them. The magnitude of the field at a distance $z$ in the direction $\vec{e}_x$ from this connection line is given by 
 \begin{equation}
-  E(z) = \frac{2Lq}{4\pi\varepsilon_0 (L^2 + z^2)^{3/2}}
+  E_x(z) = \frac{L(q_A - q_B)}{4\pi\varepsilon_0 (L^2 + z^2)^{3/2}}
 \end{equation}
-The total flux a spherical region with radius $r_s$ is given by
+The total flux the circular shield with radius $r_s$ is given by
 \begin{equation}
-  \Phi = \int_{0}^{r_s}\dd z \int_{0}^{2\pi} z \dd \varphi \, E(z) = \frac{q}{\varepsilon_0} \left[ 1 - \frac{L}{\sqrt{L^2 + r_s^2}} \right] .
+  \Phi = \int_{0}^{r_s}\dd z \int_{0}^{2\pi} z \dd \varphi \, E_x(z) = \frac{(q_A - q_B)}{2 \varepsilon_0} \left[ 1 - \frac{L}{\sqrt{L^2 + r_s^2}} \right] .
 \end{equation}
-Comparing the total flux $\Phi_\mathrm{tot}$ for $r_s \rightarrow \infty$ with the flux through the shield, one can arrive at the effectiveness $\eta$ of the shield as
+Comparing the total flux for $r_s \rightarrow \infty$ with the flux through the shield, one can arrive at the charge-independent \emph{effectiveness} $\eta$ of the shield as
 \begin{equation}
-  \eta = \frac{\Phi}{\Phi_\mathrm{tot}} = 1 - \frac{L}{\sqrt{L^2 + r_s^2}}
+  \eta = \frac{\Phi}{\Phi_\infty} = 1 - \frac{L}{\sqrt{L^2 + r_s^2}}
 \end{equation}
-and thus
-\begin{eqnarray}
+and thus a shield with radius
+\begin{equation}
   r_s = L \sqrt{\frac{1 - (1-\eta)^2}{(1-\eta)^2}}
-\end{eqnarray}
+\end{equation}
+will block a fraction $\eta$ of the total field.
 
 \section{Thermal harmonic oscillator}\label{apx:thermal-harmonic-oscillator}
 The amplitude $z$ of a single vibrational shield-mode $(k,l)$ with frequency $\omega_{kl} \equiv \omega$ behaves like a quantum harmonic oscillator. 
