@@ -56,7 +56,7 @@
     \put(0,0){\includegraphics[width=\unitlength,page=1]{./../figures/problem.pdf}}%
     \put(0.48974719,0.01581272){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$d$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{./../figures/problem.pdf}}%
-    \put(0.27722653,0.34376469){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L+\Delta L_A$\end{tabular}}}}%
+    \put(0.29722653,0.34376469){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L+L_A$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{./../figures/problem.pdf}}%
     \put(0.17471959,0.02731415){\color[rgb]{0.62745098,0.17254902,0.17254902}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mass $A$\end{tabular}}}}%
     \put(0.74537516,0.02731415){\color[rgb]{0,0.26666667,0.66666667}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mass $B$\end{tabular}}}}%
@@ -64,11 +64,11 @@
     \put(0.01941265,0.27675378){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta x_A$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{./../figures/problem.pdf}}%
     \put(0.90557705,0.40486334){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta x_B$\end{tabular}}}}%
-    \put(0.59223414,0.34376469){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L+\Delta L_B$\end{tabular}}}}%
+    \put(0.59223414,0.34376469){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L+L_B$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{./../figures/problem.pdf}}%
-    \put(0.64009122,0.60324395){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta\theta_B$\end{tabular}}}}%
-    \put(0.01871792,0.60206726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta\theta_A$\end{tabular}}}}%
-    \put(0.13231329,0.58255308){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha$\end{tabular}}}}%
+    \put(0.66509122,0.60324395){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\theta_B$\end{tabular}}}}%
+    \put(0.03571792,0.60206726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\theta_A$\end{tabular}}}}%
+    \put(0.12231329,0.58255308){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha$\end{tabular}}}}%
     \put(0.74953694,0.57946698){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta$\end{tabular}}}}%
     \put(0.30162957,0.15621926){\color[rgb]{0.62745098,0.17254902,0.17254902}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_A^2}$\end{tabular}}}}%
     \put(0.01192024,0.48759122){\color[rgb]{0.62745098,0.17254902,0.17254902}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_A^1}$\end{tabular}}}}%

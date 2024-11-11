@@ -1,0 +1,37 @@
+\chapter{Calculations}\label{apx:average-density}
+
+The series expansions of the Casimir terms $1/(L^i_{A(B)})^2$ from eq. \eqref{eq:4:L-casimir} are given by:
+% \begin{multline}
+%   L^i_{A(B)} \approx \frac{4d-8L-4\Delta x_{A(B)} \sin\xi}{(d-2L-\Delta x \sin\xi)^3} \\
+%   + \theta_{A(B)} \left(\frac{8d\Delta x_{A(B)} \cos\xi - 16 L \Delta x \cos \xi - 8(\Delta x_{A(B)})^2\cos\xi \sin\xi}{(d - 2L \Delta x_{A(B)} \sin\xi)^4}\right) \\
+%   + L_{A(B)}\left(\theta_{A(B)} \frac{48\Delta x_{A(B)} \cos\xi}{(d - 2L - \Delta x_{A(B)} \sin \xi)^4} + \frac{16}{(d - 2L - \Delta x_{A(B)} \sin\xi)^3}\right)
+% \end{multline}
+\begin{multline}
+  L^i_{A(B)} \approx \frac{4(d - 2L + 2\Delta x_{A(B)} \sin\xi)}{(d-2L)^3}
+  + \theta_{A(B)}\left(\frac{8\Delta x_{A(B)} \cos\xi}{(d-2L)^3}\right) \\
+  + L_{A(B)}\left(\frac{16}{(d-2L)^3} + \frac{48\Delta x_{A(B)} \sin\xi}{(d-2L)^4}\right) + \theta_{A(B)}L_{A(B)}\frac{48\Delta x_{A(B)} \cos\xi}{(d-2L)^4}
+\end{multline}
+where again the abbreviation $\xi = \alpha,\beta$ was used. The series expansion for the gravitational terms $1/L^{ij}$ with $i,j = 1,2$ from eq. \eqref{eq:4:L-gravity} is given by
+\begin{multline}
+  L^{ij} = \frac{1}{L} + \frac{\Delta x_B \sin\beta - \Delta x_A \sin\alpha}{2L^2} + \theta_A\frac{\Delta x_A\cos\alpha}{2L^2} + \theta_B\frac{\Delta x_B\cos\beta}{2L^2} \\
+  + L_A \left(-\frac{1}{L^2} + \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{L^3}\right) \\
+  + L_B \left(-\frac{1}{L^2} + \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{L^3}\right) \\
+  + L_A L_B \left(\frac{2}{L^3} + \frac{3\Delta x_B \sin\beta - 3 \Delta x_A \sin\alpha}{L^4}\right)
+  + L_A \theta_A \frac{\Delta x_A \cos\alpha}{L^3} - L_A \theta_B \frac{\Delta x_B \cos\beta}{L^3} \\
+  + L_B \theta_A \frac{\Delta x_A \cos\alpha}{L^3} - L_B \theta_B \frac{\Delta x_B \cos\beta}{L^3} \\
+  - L_A L_B \theta_A \frac{3 \Delta x_A \cos\alpha}{L^4} + L_A L_B \theta_B \frac{3 \Delta x_B \cos\beta}{L^4}
+\end{multline}
+The resulting averaged integrals are in the form of
+\begin{equation}
+  \int_{-\infty}^{\infty} \dd \theta_A \dd \theta_B \dd L_A \dd L_B \, p(\theta_A) p(\theta_B) p(L_A) p(L_B) e^{i \phi}
+\end{equation}
+where $p(\,\cdot\,)$ is a gaussian probability distribution in the form of
+\begin{equation}
+  p(x) = \frac{1}{\sqrt{2\pi}\Delta x} e^{-\frac{x^2}{2(\Delta x)^2}}
+\end{equation}
+and $\phi$ is, as seen in the expansions above, linear in $\theta_i$ and $L_i$ with occasional mixed terms.
+These mixed terms can be neglected in first order because in the final result, they appear in the form of
+\begin{equation}
+  \sim \exp{-\frac{(\Delta \theta)^2}{2(\Delta \theta)^2(\Delta L)^2 + 2}} \rightarrow 1
+\end{equation}
+which tends to one for small variations $\Delta \theta$ and $\Delta L$.

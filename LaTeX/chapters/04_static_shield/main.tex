@@ -5,20 +5,21 @@ The generalized form of the system described in \cref{cha:first-look} with the a
   \centering
   \def\svgwidth{\textwidth}
   \input{./../figures/problem.pdf_tex}
-  \caption{Schematic depiction of a experimental setup for the detection of gravitationally induced entanglement between two masses $A$ and $B$. They are separated by a distance of $2L + \Delta L_A + \Delta L_B$ in arbitrary orientations given by the angles $\alpha$ and $\beta$ with small variations $\Delta \theta_{A(B)}$. All variations are assumed to be gaussian distributed. The masses are delocalized in a cat state with a separation $\Delta x_{A(B)}$ between the states $\psi_{A(B)}^1$ and $\psi_{A(B)}^2$. A conducting Faraday shield with thickness $d$ is placed in the center between the masses.}
+  \caption{Schematic depiction of a experimental setup for the detection of gravitationally induced entanglement between two masses $A$ and $B$. They are separated by a distance of $2L + L_A + L_B$ in arbitrary orientations given by the angles $\alpha$ and $\beta$ with small variations $\theta_{A(B)}$. All variations are assumed to be gaussian distributed around mean zero with standard deviation $\Delta L_{A(B)}$ and $\Delta \theta_{A(B)}$. The masses are delocalized in a cat state with a separation $\Delta x_{A(B)}$ between the states $\ket{\psi_{A(B)}^1}$ and $\ket{\psi_{A(B)}^2}$. A conducting Faraday shield with thickness $d$ is placed in the center between the masses.}
   \label{fig:4:complete-setup}
 \end{figure}
-The superpositions are extended in arbitrary orientations $\alpha$ and $\beta$ (due to symmetries, it is enough to consider $\alpha, \beta \in [0, \pi)$). Most notably, the orientation of $\alpha = \beta = 0$ represents the same \q{parallel configuration} as discussed earlier. The other extreme case $\alpha = \beta = \pi/2$, I will call the \q{orthogonal configuration}.
-As discussed earlier, if gravity is assumed to be able to mediate entanglement, the above system can generate entanglement between states $A$ and $B$ due to their mutual gravitational interaction.
+The superpositions are extended in arbitrary orientations $\alpha$ and $\beta$ (due to symmetries, it is enough to consider $\alpha, \beta \in [0, \pi)$). Most notably, the orientation of $\alpha = \beta = 0$ represents the same \q{parallel configuration} discussed earlier. 
+The case of $\alpha = \beta = \pi/2$ is referred to as the \q{orthogonal orientation}.
+If gravity is assumed to be able to mediate entanglement, the above system can generate entanglement between both particles $A$ and $B$ due to their mutual gravitational interaction.
 Placing a Faraday shield in the center between the masses should not influence the gravitational entanglement generation.
-However, Casimir interactions between the shield and the masses are still present at small separations as discussed in \cref{cha:casimir-effect}.
-It is straight forward to convince yourself, that these interactions induce local phases to each of the delocalized states depending only on the shield-mass distance.
-Such local interactions can - assuming a static shield e.g. at zero temperature - not induce any entanglement between the masses.
+However, Casimir interactions between the shield and the masses are still present at small separations.
+It is straightforward to convince yourself that these interactions can only give rise to local phases for each state, dependent only on their associated shield-mass distance.
+Such local interactions can - assuming a static shield e.g. at zero temperature - not induce any additional entanglement between the masses.
 
 For a complete picture, one has to consider experimental challenges and limitations in a real experiment. 
 Measuring the states after some time evolution to determine their entanglement requires knowledge of the states which can be obtained by e.g. \emph{full state tomography}. Some proposals aim to measure the entanglement using a suitable witness \cite{Bose_2017,Chevalier_2020}, but the creation of such a entanglement witness requires knowledge of the specifics on the experimental realization.
 In this thesis, I will focus on the most general and universally applicable case of measuring the complete density matrix of the system and checking for entanglement.
-The density matrix of a 2 qubit system consists of 16 different entries (only 9 of them are independent \footnote{Using the known characteristics of the density matrix like hermiticity $\rho^\dagger = \rho$ and $\tr \rho = 1$, it is possible to reconstruct $\rho$ by measuring only 9 specific entries.}).
+The density matrix of a 2 qubit system consists of 16 different entries (only 9 of them are independent \footnote{Using the known characteristics of the density matrix like hermiticity $\rho^\dagger = \rho$ and $\tr \rho = 1$, it is possible to reconstruct $\rho$ from only 9 specific entries.}).
 Tomography require a lot of measurements to be made on the system.
 During these measurements, one cannot be sure that the masses are placed in the exact same position and orientation each run or.
 Even if it was somehow possible, to place the particle at the \textit{exact} same position each measurement, thermal vibrations of the shield induce small variations over a lot of runs.
