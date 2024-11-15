@@ -112,6 +112,16 @@ The combination of both effects leads to the result shown in \cref{fig:4:theta-c
 Due to the strong distance dependence on the casimir model, both limits for either small separations $L \sim R$ (PFA) or large separations $L \gg R$ (LSL) have been compared. 
 The \q{real} casimir potential lies somewhere between the two models.
 In general, it can be said, that a large separation is desirable, as long as the required coherence times are still reachable.
+Looking at the final averaged density matrix $\mean{\rho}$, it is possible to deduce the dependence of $\Delta \theta_\mathrm{crit}$ on the separation $L$. The off-diagonal decoherence terms calculated in \cref{apx:average-density} and given by eq. \eqref{eq:apx:averagted-state-element} scale similar to
+\begin{equation}
+  \mean{\rho_{ij}} \sim \exp{-\left(\frac{2 \phi_\mathrm{Casimir} \Delta x}{(L - R - d/2)^3} \pm \frac{\phi_\mathrm{Gravity} \Delta x}{4 L^2} \right)^2 (\Delta \theta)^2 t^2}
+\end{equation}
+where the gravity term can be neglected for small $L$ ($\phi_\mathrm{Gravity} \ll \phi_\mathrm{Casimir}$).
+At the point $\Delta \theta_\mathrm{crit}$ all entanglement is lost leading to $\mean{\rho_{ij}} \rightarrow 0$. The resulting dependence on $\rho$
+\begin{equation}\label{eq:4:delta-theta-scaling-L}
+  \Delta \theta_\mathrm{crit} \sim \frac{1}{t_\mathrm{max}} (L - R - d/2)^3 \sim \frac{(L - R - d/2)^3}{L^3}
+\end{equation}
+which aligns very nicely with the blue curve for the PFA in \cref{fig:4:theta-crit-L} ($R^2 = 0.99$). Similar arguments show that for large separations in the LSL the critical angular variation scales with $\Delta \theta_\mathrm{crit} \sim L^2$.
 
 The mass of the particles is determined by their radius $R$ as well as their material.
 Most likely, the trapped and levitated particles are made of silica ($\mathrm{SiO_2}$) with a density of $\rho_\mathrm{Silica} = 2648\si{kg/m^3}$, as this material has been used widely in experiments on levitated nanoparticles \cite{Grass_2016,Slezak_2018}. Due to its transparency, silica is very easy to trap in strong optical traps, but even quantum control in magnetic traps has been demonstrated with silica \cite{Slezak_2018}.
@@ -127,6 +137,14 @@ The effect on angular stability of a larger and thus heavier particle is shown i
 It is important to note, that the time $t_\mathrm{max}$ scales with $M^{-2}$ and thus effectively with $R^{-6}$, making the effect of a slightly larger sphere very noticeable.
 One does need to find the ideal size of the sphere depending on what is possible experimentally: The mass must be large enough for gravity to have a measurable effect but simultaneously small enough for sufficient quantum control in the laboratory. 
 Estimations suggest the usage of masses around the order of $10^{-11}\si{kg} \approx 10^{-3}\,m_p$ as being possible \cite{Aspelmeyer_2024}.
+The scaling of $\Delta \theta_\mathrm{crit}$ with a changing size $R$ of the particles can be determined similar to before. It turns out, that for a constant separation $L$, the critical angular variation scales with 
+\begin{equation}
+  \Delta \theta_\mathrm{crit} \sim \frac{(L - R - d/2)^3}{\phi_\mathrm{Casimir}} \frac{1}{t_\mathrm{max}} \sim \frac{(L - R - d/2)^3 R^6}{R}
+\end{equation}
+whereas for $L \propto R$, the time $t_\mathrm{max} \propto L^3/R^6$ varies additionally resulting in
+\begin{equation}
+  \Delta \theta_\mathrm{crit} \sim (R - d/2)^3 R^2 .
+\end{equation}
 
 The final parameter that theoretically be freely modified, is the size of the superposition $\Delta x$. A larger superposition size would increase the entanglement generation due to gravity because the differences in the distances between all superposition states would increase. Such effects ultimately lead to a faster build-up of entanglement scaling with $t_\mathrm{max} \propto (\Delta x)^{-2}$.
 In matter wave experiments, superposition sizes of massive objects up to $\Delta x \approx 500\si{nm}$ were already achieved \cite{Fein_2019}.
@@ -140,7 +158,7 @@ The effect of the superposition size on stability is shown in \cref{fig:4:theta-
 \end{figure}
 For large superposition sizes, the time until maximal entanglement is reached, decreases drastically. In the shorter time, the dephasing due to the casimir effect between the shield and the states is less substantial, increasing the stability against variations in the placement.
 A larger superposition size on the other hand results in a greater effect of angular variations $\sim \Delta x \sin(\theta)$.
-Both of these effects result in a effective scaling of $\sim \Delta x$, which explains the linear curve\footnote{Here it is shown in a double-logarithmic plot. The relation between $\Delta x$ and $\Delta \theta_\mathrm{crit}$ is nevertheless linear. Proofing the linearity is not straightforward. The following argument can be made: $E_N = \log_2(1 + f(x)) \approx f(x)/\log(2)$ where $f(x)$ is related to the decoherences and the off-diagonal elements of the state $\mean{\rho}$. Thus, it is dependent on $t$ and to the angular variations $\sim \Delta x$ (see \cref{apx:average-density}) resulting in a decoherence of $\sim t \Delta x \propto 1/(\Delta x)$ and thus in a linear improvement for larger superposition sizes.}.
+Both of these effects result in a effective scaling of $\sim \Delta x$, which explains the linear curve\footnote{Here it is shown in a double-logarithmic plot. The relation between $\Delta x$ and $\Delta \theta_\mathrm{crit}$ is nevertheless linear, which can be seen with similar arguments as used previously.}.
 
 
 
