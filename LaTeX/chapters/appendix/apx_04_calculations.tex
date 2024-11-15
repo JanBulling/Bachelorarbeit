@@ -1,28 +1,23 @@
 \chapter{Calculations}\label{apx:average-density}
 
-The series expansions of the Casimir terms $1/(L^i_{A(B)})^2$ from eq. \eqref{eq:4:L-casimir} are given by:
-% \begin{multline}
-%   L^i_{A(B)} \approx \frac{4d-8L-4\Delta x_{A(B)} \sin\xi}{(d-2L-\Delta x \sin\xi)^3} \\
-%   + \theta_{A(B)} \left(\frac{8d\Delta x_{A(B)} \cos\xi - 16 L \Delta x \cos \xi - 8(\Delta x_{A(B)})^2\cos\xi \sin\xi}{(d - 2L \Delta x_{A(B)} \sin\xi)^4}\right) \\
-%   + L_{A(B)}\left(\theta_{A(B)} \frac{48\Delta x_{A(B)} \cos\xi}{(d - 2L - \Delta x_{A(B)} \sin \xi)^4} + \frac{16}{(d - 2L - \Delta x_{A(B)} \sin\xi)^3}\right)
-% \end{multline}
+The series expansions of the Casimir terms in the PFA $1/(\mathscr{L}^i_{A(B)})^2$ from eq. \eqref{eq:4:L-casimir} are given by:
 \begin{multline}
-  L^i_{A(B)} \approx \frac{4(d - 2L + 2\Delta x_{A(B)} \sin\xi)}{(d-2L)^3}
-  + \theta_{A(B)}\left(\frac{8\Delta x_{A(B)} \cos\xi}{(d-2L)^3}\right) \\
-  + L_{A(B)}\left(\frac{16}{(d-2L)^3} + \frac{48\Delta x_{A(B)} \sin\xi}{(d-2L)^4}\right) + \theta_{A(B)}L_{A(B)}\frac{48\Delta x_{A(B)} \cos\xi}{(d-2L)^4}
+  \frac{1}{(\mathscr{L}^i_{A(B)})^2} \approx \frac{4}{(d-2L+2R)^2} \pm \frac{8 \Delta x_{A(B)}\sin\delta}{(d-2L+2R)^3}
+  \pm \theta_{A(B)}\left(\frac{8\Delta x_{A(B)} \cos\delta}{(d-2L+2R)^3}\right) \\
+  + L_{A(B)}\left(\frac{16}{(d-2L+2R)^3} \pm \frac{48\Delta x_{A(B)} \sin\delta}{(d-2L+2R)^4}\right) \pm \theta_{A(B)}L_{A(B)}\frac{48\Delta x_{A(B)} \cos\delta}{(d-2L+2R)^4}
 \end{multline}
-where again the abbreviation $\xi = \alpha,\beta$ was used. The series expansion for the gravitational terms $1/L^{ij}$ with $i,j = 1,2$ from eq. \eqref{eq:4:L-gravity} is given by
+where again the abbreviation $\delta = \alpha,\beta$ was used and the $\pm$ terms align to the corresponding notation in eq. \eqref{eq:4:L-casimir}. The series expansion for the gravitational terms $1/L^{ij}$ with $i,j = 1,2$ from eq. \eqref{eq:4:L-gravity} is given by
 \begin{multline}
-  L^{ij} = \frac{1}{L} + \frac{\Delta x_B \sin\beta - \Delta x_A \sin\alpha}{2L^2} + \theta_A\frac{\Delta x_A\cos\alpha}{2L^2} + \theta_B\frac{\Delta x_B\cos\beta}{2L^2} \\
-  + L_A \left(-\frac{1}{L^2} + \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{L^3}\right) \\
-  + L_B \left(-\frac{1}{L^2} + \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{L^3}\right) \\
-  + L_A L_B \left(\frac{2}{L^3} + \frac{3\Delta x_B \sin\beta - 3 \Delta x_A \sin\alpha}{L^4}\right)
-  + L_A \theta_A \frac{\Delta x_A \cos\alpha}{L^3} - L_A \theta_B \frac{\Delta x_B \cos\beta}{L^3} \\
-  + L_B \theta_A \frac{\Delta x_A \cos\alpha}{L^3} - L_B \theta_B \frac{\Delta x_B \cos\beta}{L^3} \\
-  - L_A L_B \theta_A \frac{3 \Delta x_A \cos\alpha}{L^4} + L_A L_B \theta_B \frac{3 \Delta x_B \cos\beta}{L^4}
+  \frac{1}{L^{ij}} = \frac{1}{2L} \pm \frac{\Delta x_B \sin\beta - \Delta x_A \sin\alpha}{8L^2} \mp \theta_A\frac{\Delta x_A\cos\alpha}{8L^2} \pm \theta_B\frac{\Delta x_B\cos\beta}{8L^2} \\
+  + L_A \left(-\frac{1}{4L^2} \pm \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{8L^3}\right)
+  + L_B \left(-\frac{1}{4L^2} \pm \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{8L^3}\right) \\
+  \pm L_A \theta_A \frac{\Delta x_A \cos\alpha}{8L^3} \mp L_A \theta_B \frac{\Delta x_B \cos\beta}{8L^3}
+  \pm L_B \theta_A \frac{\Delta x_A \cos\alpha}{8L^3} \mp L_B \theta_B \frac{\Delta x_B \cos\beta}{8L^3} \\
+  + L_A L_B \left(\frac{2}{4L^3} \pm \frac{3\Delta x_B \sin\beta - 3 \Delta x_A \sin\alpha}{16L^4}\right) \\
+  \mp L_A L_B \theta_A \frac{3 \Delta x_A \cos\alpha}{16L^4} \pm L_A L_B \theta_B \frac{3 \Delta x_B \cos\beta}{16L^4}
 \end{multline}
-The resulting averaged integrals are in the form of
-\begin{equation}
+The resulting average over $\theta_{A(B)}$ and $L_{A(B)}$ can be computed by
+\begin{equation}\label{eq:apx:average-density-element}
   \int_{-\infty}^{\infty} \dd \theta_A \dd \theta_B \dd L_A \dd L_B \, p(\theta_A) p(\theta_B) p(L_A) p(L_B) e^{i \phi}
 \end{equation}
 where $p(\,\cdot\,)$ is a gaussian probability distribution in the form of
@@ -30,8 +25,34 @@ where $p(\,\cdot\,)$ is a gaussian probability distribution in the form of
   p(x) = \frac{1}{\sqrt{2\pi}\Delta x} e^{-\frac{x^2}{2(\Delta x)^2}}
 \end{equation}
 and $\phi$ is, as seen in the expansions above, linear in $\theta_i$ and $L_i$ with occasional mixed terms.
-These mixed terms can be neglected in first order because in the final result, they appear in the form of
+These mixed terms (here denoted by $\Delta A,\Delta B$ for either $\Delta\theta$ or $\Delta L$) can be neglected in first order because in the final result, they appear in the form of
 \begin{equation}
-  \sim \exp{-\frac{(\Delta \theta)^2}{2(\Delta \theta)^2(\Delta L)^2 + 2}} \rightarrow 1
+  \sim \exp{-\frac{a^2(\Delta A)^2}{2b^2(\Delta A)^2(\Delta B)^2 + 2}} \rightarrow 1
 \end{equation}
-which tends to one for small variations $\Delta \theta$ and $\Delta L$.
+which tends to one for small variations $\Delta A,\Delta B \ll 1$ ($a,b$ are constants).
+Each averaged element of the density matrix can therefore be analytically calculated using 
+\begin{equation} \label{eq:apx:average-density-element-calculation}
+  \prod_{\Delta A = \{\Delta \theta_{A(B)}, \Delta L_{A(B)}\}} \int_{-\infty}^{\infty} \dd A \, \frac{1}{\sqrt{2\pi}\Delta A} e^{-\frac{A^2}{2 (\Delta A)^2}} e^{i\phi_1 A} e^{i\phi_2} = \prod_{\Delta A} e^{-\frac{\phi^2 (\Delta A)^2}{2}} e^{i\phi_2}
+\end{equation}
+where again $\phi_1$ is the lengthy linearized phase proportional to the series expansions above \textit{and proportional to $t$} and $\phi_2$ is again the lengthy part of the phase independent of the integration parameter $A$.
+
+As an example, the value of the element $\mean{\rho_{12}}$ is given:
+During time evolution, this element corresponding to $\ketbra{\psi_A^1\psi_B^1}{\psi_A^1\psi_B^1}$ picks up the phase (notation from \cref{sec:4:entanglement-generation})
+\begin{equation}
+  \phi = \phi^1_\mathrm{A,Casimir} + \phi^1_\mathrm{B,Casimir} - \phi^1_\mathrm{A,Casimir} - \phi^2_\mathrm{B,Casimir} + \phi^{11}_\mathrm{Gravity} - \phi^{12}_\mathrm{Gravity} .
+\end{equation}
+According to \eqref{eq:apx:average-density-element} and \eqref{eq:apx:average-density-element-calculation}, the average density matrix element can be calculated analytically yielding
+\begin{align}
+  \mean{\rho_{12}} \approx & \exp{i \left( -\phi_\mathrm{Casimir}\frac{16\Delta x_B \sin\beta}{(d-2L+2R)^3} + \phi_\mathrm{Gravity}\frac{\Delta x_B\sin\beta}{4L^2} \right) t} \\
+  & \exp{-\left(\frac{16\Delta x_B \cos\beta}{(d-2L+2R)^3}\phi_\mathrm{Casimir} - \frac{\Delta x_B \cos\beta}{4L^2}\phi_\mathrm{Gravity}\right)^2 \frac{(\Delta \theta_B)^2}{2} t^2} \\
+  & \exp{-\left(\frac{\Delta x_B \sin\beta}{4L^3}\phi_\mathrm{Gravity}\right)^2 \frac{(\Delta L_A)^2}{2} t^2} \\
+  & \exp{-\left(\frac{96\Delta x_B \sin\beta}{(d-2L+2R)^4}\phi_\mathrm{Casimir} + \frac{\Delta x_B \sin\beta}{4L^3}\phi_\mathrm{Gravity}\right)^2 \frac{(\Delta L_B)^2}{2} t^2}
+\end{align}
+where
+\begin{equation}
+  \phi_\mathrm{Casimir} = \frac{c \pi^3}{720} \left(\frac{\varepsilon_r-1}{\varepsilon_r+1}\right) \varphi(\varepsilon_r) R
+  \quad \text{and}\quad 
+  \phi_\mathrm{Gravity} = \frac{GM_AM_B}{\hbar}
+\end{equation}
+was used.
+The resulting logarithmic negativity of $\mean{\rho}$ was calculated numerically.

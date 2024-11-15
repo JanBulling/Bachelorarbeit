@@ -68,7 +68,7 @@ For all numerical calculations in this thesis, I therefore opt for an alternativ
   The trace norm $\norm{A}_1 \equiv \tr \sqrt{A^\dagger A}$ of a hermitian matrix $A$ is equal to the sum of the absolute eigenvalues of $A$.
 \end{lemma}
 \begin{proof}
-  This can be immediately seen by the spectral theorem:
+  This can be immediately seen by the spectral decomposition $\operatorname{\lambda}(A) = \{\lambda_1,...\}$:
   \begin{equation*}
     \tr \sqrt{A^\dagger A} = \tr \sqrt{A^2} = \tr{U\sqrt{\diag(\lambda_1, \dots)^2}U^\dagger} = \sum_i \sqrt{\lambda_i^2} = \sum_i \abs{\lambda_i}.
   \end{equation*}
@@ -85,7 +85,7 @@ For all numerical calculations in this thesis, I therefore opt for an alternativ
   \begin{equation*}
     \norm{\rho^{\Gamma}}_1 = \sum_i\abs{\lambda_i} = \sum_{\lambda_i \ge 0} \lambda_i + \sum_{\lambda_i < 0} \abs{\lambda_i} = \sum_i \lambda_i + 2\sum_{\lambda_i < 0} \abs{\lambda_i} = 1 + 2\sum_{\lambda_i < 0} \abs{\lambda_i} ,
   \end{equation*}
-  where in the last step $\sum \lambda_i = \tr \rho^{\Gamma} = 1$ was used. The negativity can be defined as $\mathscr{N}(\rho) = \abs{\sum_{\lambda_i < 0} \lambda_i}$ and the statement is shown.
+  where in the last step $\sum \lambda_i = \tr \rho^{\Gamma} = 1$ was used.
 \end{proof}
 \begin{remark}
   The PPT criterion states, that if $\rho^{\Gamma}$ has negative eigenvalues, the state $\rho$ is entangled. The negativity uses this criterion for a quantification of entanglement. This proposition makes sense of the name \textit{negativ}ity.
