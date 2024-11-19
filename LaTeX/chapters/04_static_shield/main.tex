@@ -26,12 +26,38 @@ Even if it was somehow possible, to place the particle at the \textit{exact} sam
 
 Thus, even if the masses get entangled in each run of the measurement, due to the slightly different system measured the result of many measurement looks like a mixed state
 \begin{equation}
-  \rho = \int_{-\infty}^{\infty} \dd \theta_i \frac{1}{\sqrt{2\pi}\Delta \theta_i} e^{-\theta_i^2/2(\Delta \theta_i)^2} \ketbra{\psi_\theta} .
+  \rho = \int\limits_{-\infty}^{\infty} \dd \theta_i \frac{1}{\sqrt{2\pi}\Delta \theta_i} e^{-\theta_i^2/2(\Delta \theta_i)^2} \ketbra{\psi_\theta} .
 \end{equation}
 Here, $\ket{\psi_\theta}$ is the pure state of a single measurement dependent on the angular variations $\theta_i$ ($i=A,B$). These variations are assumed to be gaussian distributed around mean $0$ and standard deviation $\Delta \theta_{A,B}$.
 The same argument can be made for variations in the distance, which are distributed with $\Delta L_{A,B}$.
 In some cases, as for example if the plate is not placed exactly in the center or at an angle, the variations $\theta_i$ and $L_i$ are correlated and $L_A = -L_B$ holds.
 In the most general case, all variations are assumed to be independent and follow their own probability distribution.
+
+\subsection*{Convergence for finite measurements}
+Experimentally it would be very interesting to know, how fast the averaged density matrix $\bar{\rho}$ after a finite number of $\#$ measurements converges to the idealized asymptotic mean $\mean{\rho}$ eq. \eqref{eq:4:average-density}, which is calculated and analyzed in the next two sections.
+After $\#$ measurements, the mean is given by
+\begin{equation}
+  \bar{\rho} = \frac{1}{\#} \sum_{k=1}^{\#} \rho(X_k)
+\end{equation}
+where $\rho(X)$ depends on the random variable $X \in \{\theta_{A(B)}, L_{A(B)}\}$ and $X_k$ is the $k$-th sample drawn from the normal distribution $\mathcal{N}(0, (\Delta X)^2)$.
+As $\# \rightarrow \infty$, the law of large numbers and in particular the central limit theorem (CLT) ensures that $\bar{\rho} \rightarrow \mean{\rho}$ \cite[p. 1195]{Riley_2018}.
+According to the CLT, the sample average $\bar{\rho}(X)$ fluctuates around $\mean{\rho}$ with a standard deviation given by the Berry-Esseen theorem for independent and identically distributed random variables $X_k$ by $\sigma \sim \#^{-1/2}$ \cite{Berry_1941}.
+Thus, if the placements for each measurement are completely independent from each other, the rate of convergence to the ideal mean $\mean{\rho}$ is governed by $\mathcal{O}(1/\sqrt{\#})$.
+
+It is however very likely that measurements are mostly performed consecutively so that the placement in successive measurements changes very little.
+This correlation $\mathrm{Cov}[\rho(X_i), \rho(X_j)] = \delta_{\abs{i-j}}$ between the $i$-th and $j$-th measurement should therefore decrease with increasing $\abs{i-j}$.
+The variance of $\bar{\rho}$ is now dependent in these correlations in the form \cite[p. 1227]{Riley_2018}
+\begin{equation}\label{eq:4:correlation-variance}
+  \mathrm{Var}[\bar{\rho}] = \frac{1}{\#^2} \sum_{i,j=1}^{\#} \mathrm{Cov}[\rho(X_i), \rho(X_j)] = \frac{1}{\#}\mathrm{Var}[\rho] + \frac{2}{\#^2}\sum_{n=1}^{\# - 1}(\# - n) \delta_n
+\end{equation}
+where $\mathrm{Cov}[\rho, \rho] = \mathrm{Var}[\rho]$ was used for the variance of the mean density matrix $\mean{\rho}$.
+The standard deviation of the sample average $\sqrt{\mathrm{Var}[\bar{\rho}]}$ therefore scales like $\mathcal{O}(1/\sqrt{\#})$ for small $\#$ as before.
+In the asymptotic limit, if decays slowly with $\delta_n \sim n^{-\alpha}$ ($\alpha < 1$) the sum in eq. \eqref{eq:4:correlation-variance} scales like
+\begin{equation}
+  \sum_{n=1}^{\# - 1}(\# - n)n^{-\alpha} \xlongrightarrow{\#\rightarrow\infty} \int_1^{\#}\dd n \, (\#-n)n^{-\alpha} \sim \#^{2-\alpha}
+\end{equation}
+which results in $\mathrm{Var}[\bar{\rho}] \sim \#^{-\alpha}$ and thus in a convergence rate to the mean $\mean{\rho}$ of $\mathcal{O}(1/\sqrt{\#^\alpha})$.
+This convergence is very slow for small $\alpha$ (if the setup does not change a lot between individual measurements) and thus the following calculations are just a worst-case estimation of the actual experimental results.
 
 
 

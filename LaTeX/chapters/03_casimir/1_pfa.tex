@@ -1,14 +1,14 @@
 \section{Proximity force approximation}\label{sec:3:pfa}
 
-The Casimir-Polder force cannot be computed easily for different shapes. There even exists no analytic expression for the simple (and for this thesis relevant) plate-sphere geometry for all ratios $L/R$ and plate-sphere separations.
-For a general shape, even the sign of the force, i.e. whether it is attractive or repulsive, is often unknown.
+The Casimir-Polder force cannot be computed easily for arbitrary shapes. There even exists no analytic expression for the simple (and for this thesis relevant) plate-sphere geometry for all separations $L/R$.
+For a general shape, even the sign of the force, i.e. whether it is attractive or repulsive, is often unknown \cite{Klimchitskaya_2009}.
 Fortunately, approximation methods exist and in particular the \emph{proximity-force-approximation (PFA)} can be calculated very easily \cite{Hartmann_2018,Emig_2007a,Bulgac_2006}.
-The PFA is only valid for small separations ($L/R \approx 1$) between the considered smooth bodies.
+The PFA is only valid for small separations ($L/R \approx 1$) between the considered smooth bodies, where $R$ is the size of the bodies i.e. the radius of the sphere for the sphere-plate geometry.
 The idea of this approximation is to divide the surfaces of the two bodies into infinitesimal small parallel plates with area $\dd A$ and summing over the forces $\dd F$ (or the Casimir-energy $\dd E$) between them (see \cref{fig:3:PFA}):
 \begin{equation}\label{eq:3:pfa}
   E_\mathrm{PFA} = \iint_A \dd A \, \frac{E_\mathrm{plate-plate}}{A}
 \end{equation}
-where for the casimir energy per unit area $E_\mathrm{plate-plate}/A$ either eq. \eqref{eq:3:casimir-energy-pp-conducting} or any of the Lifshitz equations \eqref{eq:3:casimir-pp-F-DD-lifshitz}, \eqref{eq:3:casimir-pp-F-DM-lifshitz} can be chosen.
+where for the casimir energy per unit area $E_\mathrm{plate-plate}/A$ either eq. \eqref{eq:3:casimir-energy-pp-conducting} or any of the Lifshitz equations \eqref{eq:3:casimir-pp-F-DD-lifshitz}, \eqref{eq:3:casimir-pp-F-DM-lifshitz} can be used.
 \begin{figure}[!htbp]
   \centering
   \def\svgwidth{0.55\textwidth}
