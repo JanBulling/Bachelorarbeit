@@ -1,14 +1,14 @@
 \section{Entanglement generation}\label{sec:4:entanglement-generation}
-If the state $\rho$ is reconstructed using repeated measurements, but the initial placement of the particles were slightly different for each measurement, this is effectively comparable to an averaging process over all variations of the setup.
-As mentioned above, this averaging results in a mixed state and for large variations $\Delta \theta$ and $\Delta L$, this process can destroy entanglement.
+If the state $\rho$ is reconstructed using repeated measurements, but the initial placement of the particles were slightly different for each measurement, this is effectively comparable to an averaging process over all variations of the initial parameters in the setup.
+As mentioned above, this averaging results in a mixed state and for large variations $\Delta \theta$ and $\Delta L$ this process can destroy entanglement.
 To see this, I calculate the effective measured state $\mean{\rho}$ using
 \begin{equation}\label{eq:4:average-density}
   \mean{\rho} = \int_{-\infty}^{\infty} \dd \theta_A p(\theta_A) \int_{-\infty}^{\infty} \dd \theta_B p(\theta_B) \int_{-\infty}^{\infty} \dd L_A p(L_A) \int_{-\infty}^{\infty} \dd L_B p(L_B) \ \rho(\theta_A, \theta_B, L_A, L_B)
 \end{equation} 
 where $p(\,\cdot\,)$ is the gaussian probability distribution. Both $\theta$ and $L$ are distributed normally with mean $0$ and standard deviation $\Delta \theta$ or $\Delta L$ respectively. $\rho(\theta_A, \theta_B, L_A, L_B)$ is the state of a single measurement, dependent on the initial parameters $\theta_{A(B)}$ and $L_{A(B)}$ of the setup.
-The initial state $\rho_0$ at $t=0$ is given similarly as before in eq. \eqref{eq:2:initial-state} at the beginning of \cref{cha:first-look}.
-During time evolution, not only the mutual gravitational interaction between the particles has to be considered, but additionally the dephasing due to the Casimir interaction between the particles and the Faraday shield.
-A single superposition state $\ket{\psi^i_{A(B)}}$ ($i = 1, 2$) accumulates the phase $\phi^i_{A(B),\,\mathrm{Cas}}(t)$ during time evolution due to the casimir interaction which is given as
+The initial state $\rho_0$ at $t=0$ is given similarly as before by eq. \eqref{eq:2:initial-state} at the beginning of \cref{cha:first-look}.
+During the time evolution, not only the mutual gravitational interaction between the particles must be taken into account, but also the dephasing due to the Casimir interaction between the particles and the Faraday shield.
+A single superposition state $\ket{\psi^i_{A(B)}}$ ($i = 1, 2$) accumulates the phase $\phi^i_{A(B),\,\mathrm{Cas}}(t)$ during time evolution due to the casimir interaction where the phases are given by
 \begin{equation}
   \phi^i_{A(B),\,\mathrm{Cas}}(t) = \frac{t}{\hbar}
   \begin{cases}
@@ -27,11 +27,11 @@ The mutual gravitational interaction of the state $\ket{\psi^i_A}\otimes\ket{\ps
 \begin{equation}
   \phi^{ij}_\mathrm{Grav}(t) = \frac{t}{\hbar} \frac{G M_A M_B}{L^{ij}} .
 \end{equation}
-The separation distance $L^{ij}$ between the masses $A_i$ and $B_j$ in full generality is given by
+The separation distance $L^{ij}$ between the states $A_i$ and $B_j$ in full generality is given by
 \begin{multline}\label{eq:4:L-gravity}
   L^{ij} = \sqrt{\left(2L + L_A + L_B \pm \frac{\Delta x_A}{2}\sin(\alpha + \theta_A) \mp \frac{\Delta x_B}{2}\sin(\beta + \theta_B)\right)^2 +} \\ \overline{\left(\frac{\Delta x_A}{2}\cos(\alpha + \theta_A) \pm \frac{\Delta x_B}{2}\cos(\beta + \theta_B)\right)^2} .
 \end{multline}
-Expanding the accumulated gravitational- and Casimir phases to first order in $\Delta x_{A(B)} \ll L$, $\theta_{A(B)} \ll 1$ and $L_{A(B)} \ll 1$ (which is possible since all these variations are very small, as seen later), the averaging of the evolved state $\mean{rho}$ eq. \eqref{eq:4:average-density} can be performed analytically (for an exemplary calculation see \cref{apx:average-density}).
+Expanding the accumulated gravitational- and Casimir phases to first order in $\Delta x_{A(B)} \ll L$, $\theta_{A(B)} \ll 1$ and $L_{A(B)} \ll 1$ (which is possible since all these variations are very small, as seen later), the averaging of the evolved state $\mean{\rho}$ eq. \eqref{eq:4:average-density} can be performed analytically (for an exemplary calculation see \cref{apx:average-density}).
 It turns out that with $\Delta \theta_A = \Delta \theta_B \equiv \Delta\theta$ and $\Delta L_A = \Delta L_B \equiv \Delta L$ all off-diagonal elements of the averaged state $\mean{\rho}$ (the so-called \emph{coherences}) are given in the form
 \begin{equation}\label{eq:4:average-density-element}
   \mean{\rho_{kl}} = \frac{1}{4} e^{i \Delta \phi_{kl}(t)} \exp{-\frac{(\Delta\theta)^2}{2} (\Delta\phi_{kl,\,\theta})^2 t^2} \exp{-\frac{(\Delta L)^2}{2} (\Delta\phi_{kl,\,L})^2 t^2}
@@ -61,7 +61,7 @@ The resulting logarithmic negativity of the averaged state $E_N(\mean{\rho})$ wa
   \caption{Entanglement quantified by the logarithmic negativity (eq. \eqref{eq:2:logarithmic-negativity}) dependent on the angular variation $\Delta\theta$ and the distance variation $\Delta L$ in the parallel configuration. The entanglement is shown at different times, where $t_\mathrm{max} \approx 258\si{ms}$ is the time of maximal entanglement from eq. \eqref{eq:2:t-max-parallel}. At the critical point $\Delta \theta_\mathrm{crit}$ or $\Delta L_\mathrm{crit}$ all entanglement is lost.}
   \label{fig:4:EN-delta-theta}
 \end{figure}
-For this figure, the parallel orientation $\alpha = \beta = 0$ was used at times given by the time of maximum entanglement $t_\mathrm{max}$ from eq. \eqref{eq:2:t-max-parallel}.
+For this figure, the parallel orientation $\alpha = \beta = 0$ was used at times relative to the time of maximum entanglement $t_\mathrm{max}$ from eq. \eqref{eq:2:t-max-parallel}.
 The radius of the particles was set to $R=1\times 10^{-5}\si{m}$ with corresponding mass $M_A = M_B = 4/3\, \pi R^3 \rho_\mathrm{Silica} \approx 1.1\times 10^{-11}\si{kg}$.
 A particle-shield separation of $L=2R$ and a superposition size of $\Delta x_A = \Delta x_B = 100\si{nm}$ were chosen.
 In the rest of the thesis, if not otherwise specified, these parameters are used as a default.

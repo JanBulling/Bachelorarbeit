@@ -1,13 +1,9 @@
-\section{Issues with the experimental procedure}\label{sec:2:experimental-problems}
+\section{Issues with the idealized experimental procedure}\label{sec:2:experimental-problems}
 
-Additional effects:
-- Casimir forces entangle as well
-- Coulomb forces
-
--> solution: conducting faraday shield, UV discharge \cite{Kamp_2020}
-
-How to measure? Many measurements are necessary -> Entanglement witness? Measure density directly -> Small variations for each measurement in angle of the superposition and in distance to the newly introduced shield
-
+For the realization of an experiment to measure quantum gravity induced entanglement of masses, one can only consider parameter spaces in which most of the expected and measured entanglement ultimately arises due to the gravitational interaction between the masses.
+Other forms of interactions and in particular electromagnetic forces have to be suppressed sufficiently.
+In particular, the short range \emph{Casimir interactions} (\cref{cha:casimir-effect}) have to be shielded as they induce a much greater attraction force than gravity at small separations.
+It is however not clear, that Casimir interactions can entangle real macroscopic masses at all as it is not even known whether the Casimir force field between bodies is conservative, although most researchers belief it is \cite{DeBiase_2012,Yi_2023}.
 As a estimation of the minimal separation distance $L_\mathrm{min}$, requiring that the gravitational potential should be stronger by a factor $\chi$ than the Casimir potential between the two massive spherical particles \cite{Emig_2007}, the following inequality can be stated:
 \begin{align}
   \chi \abs{V_\mathrm{Casimir}} &\leq \abs{V_\mathrm{Gravity}} \\
@@ -17,3 +13,11 @@ Using $M = 4/3 \pi R^3\rho_\mathrm{Silica}$, this results in a minimum separatio
 \begin{equation}
   L_\mathrm{min} \geq \left(\chi \times \frac{207}{64} \frac{\hbar c}{\pi^3 G \rho_\mathrm{Silica}^2}\right)^{1/6} \approx 140\si{\mu m} \times \sqrt[6]{\chi} .
 \end{equation}
+For the same particles used before, this would require very large measurement times of $t_\mathrm{max} \approx 90\si{s} \times \sqrt{\chi}$.
+It would therefore be beneficial to screen the Casimir interactions by placing a conducting Faraday shield between the particles so that they can be moved closer together \cite{Kamp_2020}.
+Such a conducting shield would simultaneously shield all other forms of electromagnetic interactions such as Coulomb interactions, if the particles are charged.
+
+This thesis is focused around the problem which arise by trying to measure the entanglement as a lot of individual measurements are required and it is virtually impossible to ensure that each measurement started with identical initial conditions.
+Small variations in the placement of the particles can ultimately destroy the entanglement in the final averaged measurement result due to Casimir interactions between the particles and the newly placed shield. 
+In \cref{cha:entanglement-generation} this effect is studied in detail and the space of possible parameters for the particle-shield separation as well as for the superposition size and the particles mass is reduced.
+Thermal vibrations and noise due to the shield are considered in \cref{cha:the-shield}

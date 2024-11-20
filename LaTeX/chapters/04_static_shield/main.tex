@@ -1,63 +1,66 @@
 \chapter{The particle in front of a static shield}\label{cha:entanglement-generation}
 
-The generalized form of the system described in \cref{cha:first-look} with the addition of a conducting Faraday shield is shown in \cref{fig:4:complete-setup}. As before, the masses are delocalized in cat-states with superposition separations $\Delta x_A$ for mass $A$ and $\Delta x_B$ for mass $B$ respectively.
+The generalized setup of the system described in \cref{cha:first-look} with the addition of a conducting Faraday shield is shown in \cref{fig:4:complete-setup}. As before, the particles $A$ and $B$ are delocalized in cat-states with superposition sizes $\Delta x_A$ and $\Delta x_B$ respectively.
 \begin{figure}[!htbp]
   \centering
   \def\svgwidth{\textwidth}
   \input{./../figures/problem.pdf_tex}
-  \caption{Schematic depiction of a experimental setup for the detection of gravitationally induced entanglement between two particles $A$ and $B$. They are separated by a distance of $2L + L_A + L_B$ in arbitrary orientations given by the angles $\alpha$ and $\beta$ with small variations $\theta_{A(B)}$. All variations are assumed to be gaussian distributed around mean zero with standard deviation $\Delta L_{A(B)}$ and $\Delta \theta_{A(B)}$. The masses are delocalized in a cat state with a separation $\Delta x_{A(B)}$ between the states $\ket{\psi_{A(B)}^1}$ and $\ket{\psi_{A(B)}^2}$. A conducting Faraday shield with thickness $d$ is placed in the center between the masses.}
+  \caption{Schematic depiction of a experimental setup for the detection of gravitationally induced entanglement between two particles $A$ and $B$ with radius $R$. They are separated by a distance of $2L + L_A + L_B$ in arbitrary orientations given by the angles $\alpha$ and $\beta$ with small variations $\theta_{A(B)}$. All variations are assumed to be normally distributed around mean zero with standard deviation $\Delta L_{A(B)}$ and $\Delta \theta_{A(B)}$. The particles are delocalized in a cat state with a separation $\Delta x_{A(B)}$ between the states $\ket{\psi_{A(B)}^1}$ and $\ket{\psi_{A(B)}^2}$. A conducting Faraday shield with thickness $d$ is placed in the center between the particles.}
   \label{fig:4:complete-setup}
 \end{figure}
-The superpositions are extended in arbitrary orientations $\alpha$ and $\beta$ (due to symmetries, it is enough to consider $\alpha, \beta \in [0, \pi)$). Most notably, the orientation of $\alpha = \beta = 0$ represents the same \q{parallel configuration} discussed earlier. 
-The case of $\alpha = \beta = \pi/2$ is referred to as the \q{orthogonal orientation}.
+The superpositions are extended in arbitrary orientations $\alpha,\beta \in [0,\pi)$ a distance $L$ away from the shield. Most notably, the configuration of $\alpha = \beta = 0$ represents the same \q{parallel orientation} discussed earlier in \cref{cha:first-look}. 
+In the following, the case of $\alpha = \beta = \pi/2$ is referred to as the \q{orthogonal orientation}.
 If gravity is assumed to be able to mediate entanglement, the above system can generate entanglement between both particles $A$ and $B$ due to their mutual gravitational interaction.
-Placing a Faraday shield in the center between the masses should not influence the gravitational entanglement generation.
+Placing a Faraday shield in the center between the masses should not substantially influence the gravitational entanglement generation.
 However, Casimir interactions between the shield and the masses are still present at small separations.
-It is straightforward to convince yourself that these interactions can only give rise to local phases for each state, dependent only on their associated shield-mass distance.
+It is straightforward to convince yourself that these interactions can only give rise to local phases for each cat-state, dependent only on their associated particle-shield separations $L^i_{A(B)}$ ($i = 1,2$).
 Such local interactions can - assuming a static shield e.g. at zero temperature - not induce any additional entanglement between the masses.
 
 For a complete picture, one has to consider experimental challenges and limitations in a real experiment. 
-Measuring the states after some time evolution to determine their entanglement requires knowledge of the states which can be obtained by e.g. \emph{full state tomography}. Some proposals aim to measure the entanglement using a suitable witness \cite{Bose_2017,Chevalier_2020}, but the creation of such a entanglement witness requires knowledge of the specifics on the experimental realization.
-In this thesis, I will focus on the most general and universally applicable case of measuring the complete density matrix of the system and checking for entanglement.
+Measuring the states after some time to determine their entanglement requires knowledge of the states which can be obtained by e.g. \emph{full state tomography}.
+Some proposals aim at measuring entanglement by means of a suitable witness \cite{Bose_2017,Chevalier_2020}, but the generation of such an entanglement witness requires insight into the specifics of the experimental realization.
+In this thesis, I will focus on the most general and universally applicable case of measuring the complete density matrix of the system and checking for entanglement using a convenient entanglement measure like the \q{logarithmic negativity} \cite{Plenio_2005} introduced in \cref{sec:2:entanglement-measures}.
 The density matrix of a 2 qubit system consists of 16 different entries (only 9 of them are independent \footnote{Using the known characteristics of the density matrix like hermiticity $\rho^\dagger = \rho$ and $\tr \rho = 1$, it is possible to reconstruct $\rho$ from only 9 specific entries.}).
-Tomography require a lot of measurements to be made on the system.
-During these measurements, one cannot be sure that the masses are placed in the exact same position and orientation each run or.
-Even if it was somehow possible, to place the particle at the \textit{exact} same position each measurement, thermal vibrations of the shield induce small variations over a lot of runs.
+For a full tomography, a lot of measurements of the system have to be made to determine the state in the required precision.
+During these measurements, engineering challenges of recreating the identical initial conditions, i.e. the placement of the particles in each consecutive run have to be considered.
+But even if it was somehow possible to place the particle at the \textit{exact} same position each measurement, thermal vibrations of the shield induce small noisy variations in the shield-particle separation over a lot of runs.
 
-Thus, even if the masses get entangled in each run of the measurement, due to the slightly different system measured the result of many measurement looks like a mixed state
+Thus even if the masses get entangled in each run of the measurement, the measured results might differ slightly due to the varying initial placements of the particles resulting in a final measurement that looks like a mixed state
 \begin{equation}
-  \rho = \int\limits_{-\infty}^{\infty} \dd \theta_i \frac{1}{\sqrt{2\pi}\Delta \theta_i} e^{-\theta_i^2/2(\Delta \theta_i)^2} \ketbra{\psi_\theta} .
+  \rho = \int\limits_{-\infty}^{\infty} \dd X \frac{1}{\sqrt{2\pi}\Delta X} e^{-X^2/2(\Delta X)^2} \ketbra{\psi_X} .
 \end{equation}
-Here, $\ket{\psi_\theta}$ is the pure state of a single measurement dependent on the angular variations $\theta_i$ ($i=A,B$). These variations are assumed to be gaussian distributed around mean $0$ and standard deviation $\Delta \theta_{A,B}$.
-The same argument can be made for variations in the distance, which are distributed with $\Delta L_{A,B}$.
-In some cases, as for example if the plate is not placed exactly in the center or at an angle, the variations $\theta_i$ and $L_i$ are correlated and $L_A = -L_B$ holds.
-In the most general case, all variations are assumed to be independent and follow their own probability distribution.
+Here, $\ket{\psi_X}$ is the pure state of a single measurement dependent on the random variable $X = \{\theta_{A(B)}, L_{A(B)}\}$ corresponding to placement inaccuracies between multiple measurements.
+These variations are assumed to be normally distributed with mean $\mean{X} = 0$ and standard deviation $\Delta X$ on the basis of the central limit theorem \cite[p. 1195]{Riley_2018}.
+In some cases, as for example if the plate is not placed exactly in the center or at a tilt, the variations $\theta_{A(B)}$ and $L_{A(B)}$ are correlated and $L_A = -L_B$ holds true.
+In the most general case, all placement variations are assumed to be independent and are drawn from their respective probability distribution.
 
-\subsection*{Convergence for finite measurements}
-Experimentally it would be very interesting to know, how fast the averaged density matrix $\bar{\rho}$ after a finite number of $\#$ measurements converges to the idealized asymptotic mean $\mean{\rho}$ eq. \eqref{eq:4:average-density}, which is calculated and analyzed in the next two sections.
-After $\#$ measurements, the mean is given by
+
+
+\subsection*{Convergence for a finite number of measurements}
+Experimentally, it would be very interesting to know how fast the averaged density matrix $\bar{\rho}$ after a finite number of $\#$ measurements converges to the idealized asymptotic mean $\mean{\rho}$ given by eq. \eqref{eq:4:average-density}, which is calculated and analyzed in depth in the next two sections.
+After $\#$ measurements, the sample average is given by
 \begin{equation}
   \bar{\rho} = \frac{1}{\#} \sum_{k=1}^{\#} \rho(X_k)
 \end{equation}
-where $\rho(X)$ depends on the random variable $X \in \{\theta_{A(B)}, L_{A(B)}\}$ and $X_k$ is the $k$-th sample drawn from the normal distribution $\mathcal{N}(0, (\Delta X)^2)$.
+where $\rho(X)$ depends on the random variable $X \in \{\theta_{A(B)}, L_{A(B)}\}$ and $X_k$ is the $k$-th sample drawn from the normal distribution $\mathcal{N}(0, (\Delta X)^2)$ \footnote{Here it isn't strictly required that $X_k$ are normally distributed. As long as they are i.i.d. random variables, any distribution is sufficient for the following argumentation \cite[p. 1195]{Riley_2018}.}.
 As $\# \rightarrow \infty$, the law of large numbers and in particular the central limit theorem (CLT) ensures that $\bar{\rho} \rightarrow \mean{\rho}$ \cite[p. 1195]{Riley_2018}.
 According to the CLT, the sample average $\bar{\rho}(X)$ fluctuates around $\mean{\rho}$ with a standard deviation given by the Berry-Esseen theorem for independent and identically distributed random variables $X_k$ by $\sigma \sim \#^{-1/2}$ \cite{Berry_1941}.
-Thus, if the placements for each measurement are completely independent from each other, the rate of convergence to the ideal mean $\mean{\rho}$ is governed by $\mathcal{O}(1/\sqrt{\#})$.
+Thus, if the placements of the particles in each measurement are completely independent from each other, the rate of convergence to the ideal mean $\mean{\rho}$ is governed by $\mathcal{O}(1/\sqrt{\#})$.
 
-It is however very likely that measurements are mostly performed consecutively so that the placement in successive measurements changes very little.
-This correlation $\mathrm{Cov}[\rho(X_i), \rho(X_j)] = \delta_{\abs{i-j}}$ between the $i$-th and $j$-th measurement should therefore decrease with increasing $\abs{i-j}$.
-The variance of $\bar{\rho}$ is now dependent in these correlations in the form \cite[p. 1227]{Riley_2018}
+It is however very likely that measurements are mostly performed consecutively in the same trap so that the placements in successive measurements are correlated.
+This correlation $\mathrm{Cov}[\rho(X_i), \rho(X_j)] = c_{\abs{i-j}}$ between the $i$-th and $j$-th measurement should therefore decrease with increasing $\abs{i-j}$.
+The variance of $\bar{\rho}$ is now dependent of these correlations in the form \cite[p. 1227]{Riley_2018}
 \begin{equation}\label{eq:4:correlation-variance}
-  \mathrm{Var}[\bar{\rho}] = \frac{1}{\#^2} \sum_{i,j=1}^{\#} \mathrm{Cov}[\rho(X_i), \rho(X_j)] = \frac{1}{\#}\mathrm{Var}[\rho] + \frac{2}{\#^2}\sum_{n=1}^{\# - 1}(\# - n) \delta_n
+  \mathrm{Var}[\bar{\rho}] = \frac{1}{\#^2} \sum_{i,j=1}^{\#} \mathrm{Cov}[\rho(X_i), \rho(X_j)] = \frac{1}{\#}\mathrm{Var}[\rho] + \frac{2}{\#^2}\sum_{n=1}^{\# - 1}(\# - n) c_n
 \end{equation}
 where $\mathrm{Cov}[\rho, \rho] = \mathrm{Var}[\rho]$ was used for the variance of the mean density matrix $\mean{\rho}$.
-The standard deviation of the sample average $\sqrt{\mathrm{Var}[\bar{\rho}]}$ therefore scales like $\mathcal{O}(1/\sqrt{\#})$ for small $\#$ as before.
-In the asymptotic limit, if decays slowly with $\delta_n \sim n^{-\alpha}$ ($\alpha < 1$) the sum in eq. \eqref{eq:4:correlation-variance} scales like
+For correlations $c_n \sim n^{-\alpha}$ ($\alpha < 1$) the sum in eq. \eqref{eq:4:correlation-variance} scales like
 \begin{equation}
   \sum_{n=1}^{\# - 1}(\# - n)n^{-\alpha} \xlongrightarrow{\#\rightarrow\infty} \int_1^{\#}\dd n \, (\#-n)n^{-\alpha} \sim \#^{2-\alpha}
 \end{equation}
-which results in $\mathrm{Var}[\bar{\rho}] \sim \#^{-\alpha}$ and thus in a convergence rate to the mean $\mean{\rho}$ of $\mathcal{O}(1/\sqrt{\#^\alpha})$.
-This convergence is very slow for small $\alpha$ (if the setup does not change a lot between individual measurements) and thus the following calculations are just a worst-case estimation of the actual experimental results.
+which results in $\mathrm{Var}[\bar{\rho}] \sim \#^{-\alpha}$. In the asymptotic limit the standard deviation of the sample average $\sqrt{\mathrm{Var}[\bar{\rho}]}$ and thus in a convergence rate to the mean $\mean{\rho}$ scales with $\mathcal{O}(1/\sqrt{\#^\alpha})$.
+This convergence is arbitrary slow for small $\alpha$ (if the setup does not change a lot between individual measurements) and thus the following calculations are just a worst-case estimation of the actual experimental results.
+If a weaker correlation in the form of $c_n \sim e^{-\alpha n}$ is used, the convergence rate is again asymptotically governed by $\mathcal{O}(1/\sqrt{\#})$.
 
 
 
