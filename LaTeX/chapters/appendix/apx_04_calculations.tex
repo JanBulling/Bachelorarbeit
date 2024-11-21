@@ -1,4 +1,6 @@
-\chapter{Calculations}\label{apx:average-density}
+\chapter{Calculations}
+
+\section{Average density matrix}\label{apx:average-density}
 
 The series expansions of the Casimir terms in the PFA $1/(\mathscr{L}^i_{A(B)})^2$ from eq. \eqref{eq:4:L-casimir} are given by:
 \begin{multline}
@@ -56,3 +58,25 @@ where
 \end{equation}
 was used.
 The resulting logarithmic negativity of $\mean{\rho}$ was calculated numerically.
+
+\section{Density matrix vibrating plate} \label{apx:density-matrix-vibrating-plate}
+The separations between the shield and the Particle state $A(B)_i$ in the parallel configuration are given by
+\begin{equation}
+  d^i_{A(B)} = L \pm_{A(B)} z \left(\abs{u} \mp_i \abs{\nabla u} \frac{\Delta x}{2}\right)
+\end{equation}
+where the first $\pm$ distinguishes between particle $A$ and $B$ and the second one between $i=1$ and $i=2$. The gravitational interaction is given as before in \cref{cha:first-look}.
+After averaging over $z$ (normally distributed around $\mean{z} = 0$ and std. $\Delta z$) the resulting density matrix is now given by
+\begin{equation}
+  \mean{\rho} = \frac{1}{4} \begin{pmatrix}
+    1 & e^{i \phi_\mathrm{Grav}} e^{- \frac{1}{2} \phi_\mathrm{Cas}^2 (\Delta z)^2} & e^{i \phi_\mathrm{Grav}} e^{- \frac{1}{2} \phi_\mathrm{Cas}^2 (\Delta z)^2} & 1 \\
+    & 1 & e^{- \frac{1}{2} (2 \phi_\mathrm{Cas})^2 (\Delta z)^2} & e^{-i \phi_\mathrm{Grav}} e^{- \frac{1}{2} \phi_\mathrm{Cas}^2(\Delta z)^2} \\
+    & & 1 & e^{-i \phi_\mathrm{Grav}} e^{- \frac{1}{2} \phi_\mathrm{Cas}^2 (\Delta z)^2} \\
+    & & & 1
+  \end{pmatrix}
+\end{equation}
+with
+\begin{align}
+  \phi_\mathrm{Grav} &= \frac{G M_A M_B}{\hbar} \left(\frac{1}{4L^2} - \frac{1}{\sqrt{4L^2 + (\Delta x)^2}}\right) t \\
+  \phi_\mathrm{Cas} &= \frac{c \pi^3 R}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r)\cdot \frac{2 \abs{\nabla u} \Delta x}{\mathscr{L}^3} t
+\end{align}
+which is only dependent on the gradient of the shape $\abs{\nabla u}$.
