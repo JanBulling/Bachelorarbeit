@@ -1,10 +1,27 @@
+\newpage
 \section{The optimal setup}\label{sec:4:optimal-setup}
 With the general framework in hand, the next logical question to ask is, if the stability against placement-variations can be improved.
-The general rule of thumb for these optimizations is the following:
+The rule of thumb for these optimizations is the following:
 Increase the gravitational interaction by either heavier and larger particles or by reducing the separation distance $L$ without substantial sacrifices of experimental realization.
 As an example, the stability increases intuitively by increasing the separation distance $L$. However, this does also increase the time $t_\mathrm{max}$ until the maximum amount of entanglement can be measured which would increase the total time  $\sim \# t_\mathrm{max}$ of the experiment with $\#$ individual measurements.
 It is not immediately obvious, how the stability and the maximum possible variations $\Delta \theta_\mathrm{crit}$ and $\Delta L_\mathrm{crit}$ behave for the change in parameters.
-In the following section, precisely the changing of this stability is discussed for changing the orientation $\alpha, \beta$, the separation $L$, the mass $M_A = M_B \equiv M$ and the superposition size $\Delta x_A = \Delta x_B \equiv \Delta x$.
+In the following section, precisely the changing of this stability is discussed for altering the orientation $\alpha, \beta$, the particle-shield separation $L$, the mass $M_A = M_B \equiv M$ and the superposition size $\Delta x_A = \Delta x_B \equiv \Delta x$.
+
+\begin{table}[!h]
+  \centering
+  \caption{Default parameters for the setup in \cref{fig:4:complete-setup} used in the next sections. The parameters were chosen in accordance with multiple proposals \cite{Aspelmeyer_2024,Rijavec_2021}. Both particles are assumed to be identical with the same mass and superposition size. The thickness $d$ and radius $r_s$ of the shield is estimated in \cref{sec:5:shield-size}.}
+  \label{tab:paramters}
+  \begin{tabular}{c c c c c c c}
+    \toprule
+    \multirow{2}{*}{Orientation} & \multicolumn{2}{c}{Particle size} & \multirow{2}{*}{$L$} & \multirow{2}{*}{$\Delta x$} & \multicolumn{2}{c}{Shield size $^b$} \\ \cline{2-3} \cline{6-7}
+     & Radius $R$ & Mass $M$ $^a$ & & & $d$ & $r_s$\\
+    \midrule
+    \begin{tabular}{@{}c@{}}Parallel \\ ($\alpha=\beta=0$) \end{tabular} & \begin{tabular}{@{}c@{}}$10\si{\mu m}$ \\ $=10^{-5}\si{m}$\end{tabular} & \begin{tabular}{@{}c@{}}$\approx 10^{-11}\si{kg}$ \\ $=5\times 10^{-4} \, m_p$\end{tabular} & $2R=20\si{\mu m}$ & $100\si{nm}$ & $100\si{nm}$ & $1\si{cm}$ \\
+    \bottomrule
+    \multicolumn{7}{l}{\footnotesize $^a$ Here $m_p = \sqrt{c\hbar/G}\approx 2.17\times 10^{-8}\si{kg}$ is the Planck mass. $^b$ The required size of the shield} \\[-4pt]
+    \multicolumn{7}{l}{\footnotesize is later estimated in section 5.1.}
+  \end{tabular}
+\end{table}
 
 
 \subsection{Orientation}
@@ -17,7 +34,7 @@ The previous results from \cref{cha:first-look} can be further generalized for a
   E_N = \log_2\left(1+\abs{\sin\Delta\phi}\right)
 \end{equation}
 where $\Delta\phi$ is now dependent on the orientation and is defined as (for $\Delta x \ll L$)
-\begin{equation}
+\begin{equation}\label{eq:4:delta-phi}
   \Delta \phi = \frac{G M_A M_B t \Delta x_A \Delta x_B}{8\hbar L^3} \left(\sin\alpha\sin\beta-\frac{1}{2}\cos\alpha\cos\beta\right) .
 \end{equation}
 The maximum entanglement $E_N=1$ is reached for $\Delta\phi = \pm \pi/2$ and thus after a time
@@ -114,14 +131,14 @@ The \q{real} casimir potential lies somewhere between the two models.
 In general, it can be said, that a large separation is desirable, as long as the required coherence times are still reachable.
 Looking at the final averaged density matrix $\mean{\rho}$, it is possible to deduce the dependence of $\Delta \theta_\mathrm{crit}$ on the separation $L$. The off-diagonal decoherence terms calculated in \cref{apx:average-density} and given by eq. \eqref{eq:apx:averagted-state-element} scale similar to
 \begin{equation}
-  \mean{\rho_{ij}} \sim \exp{-\left(\frac{2 \phi_\mathrm{Casimir} \Delta x}{(L - R - d/2)^3} \pm \frac{\phi_\mathrm{Gravity} \Delta x}{4 L^2} \right)^2 (\Delta \theta)^2 t^2}
+  \mean{\rho_\mathrm{off-diagonal}} \sim \exp{-\left(\frac{2 \xi_\mathrm{Casimir} \Delta x}{(L - R - d/2)^3} \pm \frac{\zeta_\mathrm{Gravity} \Delta x}{4 L^2} \right)^2 (\Delta \theta)^2 t^2}
 \end{equation}
-where the gravity term can be neglected for small $L$ ($\phi_\mathrm{Gravity} \ll \phi_\mathrm{Casimir}$).
-At the point $\Delta \theta_\mathrm{crit}$ all entanglement is lost leading to $\mean{\rho_{ij}} \rightarrow 0$. The resulting dependence on $\rho$
+where the second term corresponding to gravitational interactions is much smaller than the first term and thus can be neglected for small $L$.
+At the point $\Delta \theta_\mathrm{crit}$ all entanglement is lost leading to $\mean{\rho_{ij}} \rightarrow 0$. Using the analytical results from eq. \eqref{eq:4:theta-crit-analytical} it is possible to get the dependence of $\Delta \theta_\mathrm{crit}$ on $L$ as
 \begin{equation}\label{eq:4:delta-theta-scaling-L}
-  \Delta \theta_\mathrm{crit} \sim \frac{1}{t_\mathrm{max}} (L - R - d/2)^3 \sim \frac{(L - R - d/2)^3}{L^3}
+  \Delta \theta_\mathrm{crit} \sim \frac{1}{t_\mathrm{max}} (L - R - d/2)^3 \sim \frac{(L - R - d/2)^3}{L^3} ,
 \end{equation}
-which aligns very nicely with the blue curve for the PFA in \cref{fig:4:theta-crit-L} ($R^2 = 0.99$). Similar arguments show that for large separations in the LSL the critical angular variation scales with $\Delta \theta_\mathrm{crit} \sim L^2$.
+which aligns very nicely with the blue curve for the PFA in \cref{fig:4:theta-crit-L} ($R^2 = 0.99$ as it is only a approximation). Similar arguments show that for large separations in the LSL the critical angular variation scales with $\Delta \theta_\mathrm{crit} \sim L^2$.
 
 The mass of the particles is determined by their radius $R$ as well as their material.
 Most likely, the trapped and levitated particles are made of silica ($\mathrm{SiO_2}$) with a density of $\rho_\mathrm{Silica} = 2648\si{kg/m^3}$, as this material has been used widely in experiments on levitated nanoparticles \cite{Grass_2016,Slezak_2018}. Due to its transparency, silica is very easy to trap in strong optical traps, but even quantum control in magnetic traps has been demonstrated with silica \cite{Slezak_2018}.

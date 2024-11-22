@@ -34,9 +34,9 @@ These mixed terms (here denoted by $\Delta A,\Delta B$ for either $\Delta\theta$
 which tends to one for small variations $\Delta A,\Delta B \ll 1$ ($a,b$ are constants).
 Each averaged element of the density matrix can therefore be analytically calculated using 
 \begin{equation} \label{eq:apx:average-density-element-calculation}
-  \prod_{\Delta A = \{\Delta \theta_{A(B)}, \Delta L_{A(B)}\}} \int_{-\infty}^{\infty} \dd A \, \frac{1}{\sqrt{2\pi}\Delta A} e^{-\frac{A^2}{2 (\Delta A)^2}} e^{i\phi_1 A} e^{i\phi_2} = \prod_{\Delta A} e^{-\frac{\phi^2 (\Delta A)^2}{2}} e^{i\phi_2}
+  \prod_{\Delta A = \{\Delta \theta_{A(B)}, \Delta L_{A(B)}\}} \int_{-\infty}^{\infty} \dd A \, \frac{1}{\sqrt{2\pi}\Delta A} e^{-\frac{A^2}{2 (\Delta A)^2}} e^{i\xi A} e^{i\phi} = \prod_{\Delta A} e^{-\frac{\xi^2 (\Delta A)^2}{2}} e^{i\phi}
 \end{equation}
-where again $\phi_1$ is the lengthy linearized phase proportional to the series expansions above \textit{and proportional to $t$} and $\phi_2$ is again the lengthy part of the phase independent of the integration parameter $A$.
+where again $\xi$ is the lengthy linearized phase proportional to the series expansions above \textit{and proportional to $t$} and $\phi$ is again the lengthy part of the phase independent of the integration parameter $A$.
 
 As an example, the value of the element $\mean{\rho_{12}}$ is given:
 During time evolution, this element corresponding to $\ketbra{\psi_A^1\psi_B^1}{\psi_A^1\psi_B^1}$ picks up the phase (notation from \cref{sec:4:entanglement-generation})
@@ -45,19 +45,40 @@ During time evolution, this element corresponding to $\ketbra{\psi_A^1\psi_B^1}{
 \end{equation}
 According to \eqref{eq:apx:average-density-element} and \eqref{eq:apx:average-density-element-calculation}, the average density matrix element can be calculated analytically yielding
 \begin{align} \label{eq:apx:averagted-state-element}
-  \mean{\rho_{12}} \approx & \exp{i \left( -\phi_\mathrm{Casimir}\frac{16\Delta x_B \sin\beta}{(d-2L+2R)^3} + \phi_\mathrm{Gravity}\frac{\Delta x_B\sin\beta}{4L^2} \right) t} \\
-  & \exp{-\left(\frac{16\Delta x_B \cos\beta}{(d-2L+2R)^3}\phi_\mathrm{Casimir} - \frac{\Delta x_B \cos\beta}{4L^2}\phi_\mathrm{Gravity}\right)^2 \frac{(\Delta \theta_B)^2}{2} t^2} \\
-  & \exp{-\left(\frac{\Delta x_B \sin\beta}{4L^3}\phi_\mathrm{Gravity}\right)^2 \frac{(\Delta L_A)^2}{2} t^2} \\
-  & \exp{-\left(\frac{96\Delta x_B \sin\beta}{(d-2L+2R)^4}\phi_\mathrm{Casimir} + \frac{\Delta x_B \sin\beta}{4L^3}\phi_\mathrm{Gravity}\right)^2 \frac{(\Delta L_B)^2}{2} t^2}
+  \mean{\rho_{12}} \approx & \exp{i \left( -\xi_\mathrm{Casimir}\frac{16\Delta x_B \sin\beta}{(d-2L+2R)^3} + \zeta_\mathrm{Gravity}\frac{\Delta x_B\sin\beta}{4L^2} \right) t + \mathcal{O}(\Delta x_A \Delta x_B)} \\
+  & \exp{-\left(\frac{16\Delta x_B \cos\beta}{(d-2L+2R)^3}\xi_\mathrm{Casimir} - \frac{\Delta x_B \cos\beta}{4L^2}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta \theta_B)^2}{2} t^2} \\
+  & \exp{-\left(\frac{\Delta x_B \sin\beta}{4L^3}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta L_A)^2}{2} t^2} \\
+  & \exp{-\left(\frac{96\Delta x_B \sin\beta}{(d-2L+2R)^4}\xi_\mathrm{Casimir} + \frac{\Delta x_B \sin\beta}{4L^3}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta L_B)^2}{2} t^2}
 \end{align}
 where
 \begin{equation}
-  \phi_\mathrm{Casimir} = \frac{c \pi^3}{720} \left(\frac{\varepsilon_r-1}{\varepsilon_r+1}\right) \varphi(\varepsilon_r) R
+  \xi_\mathrm{Casimir} = \frac{c \pi^3}{720} \left(\frac{\varepsilon_r-1}{\varepsilon_r+1}\right) \varphi(\varepsilon_r) R
   \quad \text{and}\quad 
-  \phi_\mathrm{Gravity} = \frac{GM_AM_B}{\hbar}
+  \zeta_\mathrm{Gravity} = \frac{GM_AM_B}{\hbar}
 \end{equation}
 was used.
-The resulting logarithmic negativity of $\mean{\rho}$ was calculated numerically.
+
+In the special case of $\Delta L_A = \Delta L_B$ and $\Delta \theta_A = \Delta \theta_B$ (or due to symmetry the other way around), $\Delta x_A = \Delta x_B$ and $\alpha = \pm \beta \equiv \delta$ the averaged density matrix is given by
+\begin{equation}
+  \mean{\rho} = \frac{1}{4}\begin{pmatrix}
+    1 & e^{i \Delta \phi_1}e^{-\gamma} & e^{i \Delta \phi_2}e^{-\gamma} & e^{i(\Delta \phi_1 + \Delta \phi_2)}e^{-2\gamma}\\
+     & 1 & e^{-i(\Delta \phi_1 - \Delta \phi_2)}e^{-2\gamma} & e^{i \Delta \phi_2}e^{-\gamma} \\
+     & & 1 & e^{i \Delta \phi_1}e^{-\gamma} \\
+     & & & 1
+  \end{pmatrix}
+\end{equation}
+where $\Delta \phi_{1} = \pm \Delta \phi_{2}$ are the phases due to gravity, dependent on the orientation $\alpha, \beta$ which are in the parallel orientation given by eq. \eqref{eq:2:definition-delta-phi} and
+\begin{multline}
+  \gamma = \left(\frac{16\Delta x \cos\delta}{(d - 2L + 2R)^3}\xi_\mathrm{Casimir} - \frac{\Delta x \cos\delta}{4 L^3}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta \theta)^2}{2} t^2 \\
+  + \left(\frac{96\Delta x \sin\delta}{(d - 2L + 2R)^4}\xi_\mathrm{Casimir} + \frac{\Delta x \sin\delta}{2 L^3}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta L)^2}{2} t^2
+\end{multline}
+The resulting logarithmic negativity can be computed with \texttt{Mathematica} using $\Delta \phi$ defined in eq. \eqref{eq:4:delta-phi} to
+\begin{align}
+  E_N(\mean{\rho}) &\approx \max\left\{0, \log_2\left(e^{-\gamma}\left(\cosh(\gamma) + \abs{\sin(\Delta \phi)}\right)\right)\right\} \\
+  &= \log_2\left(\frac{1}{2}e^{-\gamma}\left(\abs{\sin\Delta \phi-\sinh\gamma} + \abs{\sin\Delta \phi+\sinh\gamma} + 2\cosh\gamma\right)\right)
+\end{align}
+For general combinations of $\Delta L_A, \Delta L_B, \Delta \theta_A,\Delta \theta_B$, and more complex orientations, the logarithmic negativity of $\mean{\rho}$ was computed numerically.
+
 
 \section{Density matrix vibrating plate} \label{apx:density-matrix-vibrating-plate}
 The separations between the shield and the Particle state $A(B)_i$ in the parallel configuration are given by
@@ -68,15 +89,85 @@ where the first $\pm$ distinguishes between particle $A$ and $B$ and the second 
 After averaging over $z$ (normally distributed around $\mean{z} = 0$ and std. $\Delta z$) the resulting density matrix is now given by
 \begin{equation}
   \mean{\rho} = \frac{1}{4} \begin{pmatrix}
-    1 & e^{i \phi_\mathrm{Grav}} e^{- \frac{1}{2} \phi_\mathrm{Cas}^2 (\Delta z)^2} & e^{i \phi_\mathrm{Grav}} e^{- \frac{1}{2} \phi_\mathrm{Cas}^2 (\Delta z)^2} & 1 \\
-    & 1 & e^{- \frac{1}{2} (2 \phi_\mathrm{Cas})^2 (\Delta z)^2} & e^{-i \phi_\mathrm{Grav}} e^{- \frac{1}{2} \phi_\mathrm{Cas}^2(\Delta z)^2} \\
-    & & 1 & e^{-i \phi_\mathrm{Grav}} e^{- \frac{1}{2} \phi_\mathrm{Cas}^2 (\Delta z)^2} \\
+    1 & e^{i \Delta \phi} e^{- \frac{1}{2} (\xi_\mathrm{Cas})^2 (\Delta z)^2} & e^{i \Delta \phi} e^{- \frac{1}{2} (\xi_\mathrm{Cas})^2 (\Delta z)^2} & 1 \\
+    & 1 & e^{- \frac{1}{2} (2 \xi_\mathrm{Cas})^2 (\Delta z)^2} & e^{-i \Delta \phi} e^{- \frac{1}{2} (\xi_\mathrm{Cas})^2(\Delta z)^2} \\
+    & & 1 & e^{-i \Delta \phi} e^{- \frac{1}{2} (\xi_\mathrm{Cas})^2 (\Delta z)^2} \\
     & & & 1
   \end{pmatrix}
 \end{equation}
 with
 \begin{align}
-  \phi_\mathrm{Grav} &= \frac{G M_A M_B}{\hbar} \left(\frac{1}{4L^2} - \frac{1}{\sqrt{4L^2 + (\Delta x)^2}}\right) t \\
-  \phi_\mathrm{Cas} &= \frac{c \pi^3 R}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r)\cdot \frac{2 \abs{\nabla u} \Delta x}{\mathscr{L}^3} t
+  \Delta \phi &= \frac{G M_A M_B}{\hbar} \left(\frac{1}{4L^2} - \frac{1}{\sqrt{2L + (\Delta x)^2}}\right) t \\
+  \xi_\mathrm{Cas} &= \frac{c \pi^3 R}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r)\cdot \frac{2 \abs{\nabla u} \Delta x}{\mathscr{L}^3} t
 \end{align}
 which is only dependent on the gradient of the shape $\abs{\nabla u}$.
+The logarithmic negativity is given by
+\begin{equation}
+  E_N(\mean{\rho}) = \log_2\left\{\frac{1}{4}\left(3 + e^{-4 \gamma}+\sqrt{(1-e^{-4\gamma})^2 + 16e^{-2\gamma}\sin^2\Delta\phi}\right)\right\}
+\end{equation}
+where 
+\begin{equation}
+  \gamma = \frac{1}{2}(\xi_\mathrm{Cas})^2(\Delta z)^2 .
+\end{equation}
+
+
+\section{Time evolution in front of a thermal plate}
+The time evolution operator $\op{U}=e^{-i\op{H}t/\hbar}$ of the hamiltonian eq. \eqref{eq:5:hamiltonian} can be calculated in the interaction picture using the \q{Magnus expansion} \cite{Blanes_2009}.
+In the following calculation, the gravitational interaction is neglected as it is independent of the shields movement.
+The interaction picture hamiltonian in the $\{\ket{\psi^1_A\psi^1_B},\ket{\psi^1_A\psi^2_B},\ket{\psi^2_A\psi^1_B},\ket{\psi^2_A\psi^2_B}\}$-basis is given by
+\begin{equation}
+  \op{H}_\mathrm{int} = \sum_{m\in\{(k,l)\}} \begin{pmatrix}
+    g^1_\mathrm{A,m} + g^1_\mathrm{B,m}& & & \\
+    & g^1_\mathrm{A,m} + g^2_\mathrm{B,m}& & \\
+    & & g^2_\mathrm{A,m} + g^1_\mathrm{B,m}& \\
+    & & & g^2_\mathrm{A,m} + g^2_\mathrm{B,m}
+  \end{pmatrix}(\op{a}e^{-i\omega_m t}+\op{a}^\dagger e^{i\omega_m t})
+\end{equation}
+The operator at the beginning is referred to as $\op{G}$ in the following.
+The time evolution in the Magnus expansion here given by \cite{Blanes_2009}
+\begin{equation}
+  \op{U}(t) = \exp{-\frac{i}{\hbar}\int_{0}^{t}\dd t_1 \op{H}_\mathrm{int}(t)-\frac{1}{2\hbar^2}\int_{0}^{t}\dd t_1 \int_{0}^{t_1}\dd t_2 [\op{H}_\mathrm{int}(t_1),\op{H}_\mathrm{int}(t_2)]} .
+\end{equation}
+All higher order terms vanish, so this is an exact result.
+After substitution, the result is given by
+\begin{align}
+  \op{U}(t) &= \exp{\op{G}(f_1\op{a}^\dagger - f_1^*\op{a}) + i \op{G}^2 f_2} \\ 
+  &= \op{D}\left(f_1(g^1_\mathrm{A,m} + g^1_\mathrm{B,m})\right) \exp{i f_2 (g^1_\mathrm{A,m} + g^1_\mathrm{B,m})^2} \ketbra{\psi^1_A\psi^1_B} + \dots
+\end{align}
+with
+\begin{equation}
+  f_1 = \frac{(1-e^{i\omega_m t})}{\hbar \omega_m}
+  \quad \text{and} \quad
+  f_2 = \frac{t\omega_m - \sin(t \omega_m)}{\hbar^2 \omega_m^2}
+\end{equation}
+and the displacement operator $\op{D}(\alpha)=\exp{\alpha \op{a}^\dagger - \alpha^*\op{a}}$. The evolved state $\rho(t)=\op{U}(t)\rho_0\op{U}^\dagger(t)$ is now given by
+\begin{align}
+\begin{split}
+  \rho(t) =& \bigotimes_{m\in\{(k,l)\}} \op{D}\left(f_1(g^1_A + g^1_B)\right)\rho_\mathrm{th,m}\op{D}^\dagger\left(f_1(g^1_A + g^1_B)\right) \otimes \frac{1}{4} \ketbra{\psi^1_A\psi^1_B} \\
+  +& \op{D}\left(f_1(g^1_A + g^1_B)\right)\rho_\mathrm{th,m}\op{D}^\dagger\left(f_1(g^1_A + g^2_B)\right) \otimes \frac{1}{4} e^{if_2(g^1_A + g^1_B)^2} \ketbra{\psi^1_A\psi^1_B}{\psi^1_A\psi^2_B} e^{-if_2(g^1_A + g^2_B)^2} \\
+  +& \dots \\
+  +& \op{D}\left(f_1(g^2_A + g^2_B)\right)\rho_\mathrm{th,m}\op{D}^\dagger\left(f_1(g^2_A + g^1_B)\right) \otimes \frac{1}{4} e^{if_2(g^2_A + g^2_B)^2} \ketbra{\psi^2_A\psi^2_B}{\psi^2_A\psi^1_B} e^{-if_2(g^2_A + g^1_B)^2} \\
+  +& \op{D}\left(f_1(g^2_A + g^2_B)\right)\rho_\mathrm{th,m}\op{D}^\dagger\left(f_1(g^2_A + g^2_B)\right) \otimes \frac{1}{4}\ketbra{\psi^2_A\psi^2_B}
+\end{split}
+\end{align}
+We are interested in the evolution of the two-particle system. This is given by tracing out the thermal shield $\rho_\mathrm{sys.} = \tr_{th}\left\{\rho(t)\right\}$. Using $\tr{A\cdot B} = \tr{A}\tr{B}$, it follows:
+\begin{equation}
+  \rho_\mathrm{sys.} = \frac{1}{4}\begin{pmatrix}
+    1 & \prod_{m}\tr{\op{D}\left(f_1(g^1_A + g^1_B)\right)\rho_\mathrm{th,m}\op{D}^\dagger\left(f_1(g^1_A + g^2_B)\right)} e^{i f_2((g^1_A + g^1_B)^2 - (g^1_A + g^2_B)^2)} & \dots \\
+    \vdots & \ddots & \\
+    & & 
+  \end{pmatrix}
+\end{equation}
+To calculate $\tr{\op{D}(\zeta_i)\rho_\mathrm{th}\op{D}^\dagger(\zeta_j)}$, we expand $\rho_\mathrm{th}$ into coherent states \cite{Steiner_2024}
+\begin{equation}
+  \rho_\mathrm{th} = \int \dd \alpha^2 \, \frac{1}{\bar{n}\pi} e^{-\frac{\abs{\alpha}^2}{\bar{n}}} \ketbra{\alpha}
+\end{equation}
+and calculate the required trace \cite{Steiner_2024}:
+\begin{equation}
+  \tr{\op{D}(\zeta_i)\rho_\mathrm{th}\op{D}^\dagger(\zeta_j)} = \exp{\phi - \abs{\Delta \zeta}^2 \left(\frac{1}{2} + \bar{n}\right)}
+\end{equation}
+where $\Delta \zeta = \zeta_i - \zeta_j$ and $\phi = (\zeta_j^*\zeta_i - \zeta_j\zeta_i^*)/2 = 0$.
+The final decoherence elements of the evolved state therefore all have the form
+\begin{equation}
+  e^{-\gamma_{1,2}} = \exp{- \sum_{m} \abs{(g^1_{A,m} + g^1_{B,m})-(g^1_{A,m} + g^2_{B,m})}^2 f_1f^*_1 (\frac{1}{2} + \bar{n}_m)}
+\end{equation}

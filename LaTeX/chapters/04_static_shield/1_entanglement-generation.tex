@@ -34,9 +34,9 @@ The separation distance $L^{ij}$ between the states $A_i$ and $B_j$ in full gene
 Expanding the accumulated gravitational- and Casimir phases to first order in $\Delta x_{A(B)} \ll L$, $\theta_{A(B)} \ll 1$ and $L_{A(B)} \ll 1$ (which is possible since all these variations are very small, as seen later), the averaging of the evolved state $\mean{\rho}$ eq. \eqref{eq:4:average-density} can be performed analytically (for an exemplary calculation see \cref{apx:average-density}).
 It turns out that with $\Delta \theta_A = \Delta \theta_B \equiv \Delta\theta$ and $\Delta L_A = \Delta L_B \equiv \Delta L$ all off-diagonal elements of the averaged state $\mean{\rho}$ (the so-called \emph{coherences}) are given in the form
 \begin{equation}\label{eq:4:average-density-element}
-  \mean{\rho_{kl}} = \frac{1}{4} e^{i \Delta \phi_{kl}(t)} \exp{-\frac{(\Delta\theta)^2}{2} (\Delta\phi_{kl,\,\theta})^2 t^2} \exp{-\frac{(\Delta L)^2}{2} (\Delta\phi_{kl,\,L})^2 t^2}
+  \mean{\rho_{kl}} = \frac{1}{4} e^{i \Delta \phi_{kl}(t)} \exp{-\frac{(\xi_{kl})^2}{2} (\Delta\theta)^2 t^2} \exp{-\frac{(\zeta_{kl})^2}{2} (\Delta L)^2 t^2}
 \end{equation}
-where all $\Delta \phi$-terms are substitutes for rather lengthy phase expressions that depend on the particle-shield separation $L$, the orientation of the cat-state $\alpha, \beta$, the masses of the particles $M_{A(B)}$ and the superposition size $\Delta x_{A(B)}$.
+where $\Delta \phi$, $\xi$ and $\zeta$ are substitutes for rather lengthy expressions that depend on the particle-shield separation $L$, the orientation of the cat-state $\alpha, \beta$, the masses of the particles $M_{A(B)}$ and the superposition size $\Delta x_{A(B)}$.
 It becomes evident that for large times $t\rightarrow \infty$ or for large variations in the placement $\Delta \theta, \Delta L \rightarrow \infty$ these off-diagonal elements tend to zero which leads to a continuous and monotonic loss of purity, resulting in the maximally mixed state $\tr\rho^2 = 1/4$ - which obviously is not entangled.
 % \begin{theorem}
 %   Let $\rho$ be an $N\times N$ density matrix with $\rho_{ii} = 1/N$ and $\rho_{ij} = f_{ij}(t)$ ($i\neq j$) with an arbitrary functions $f\in C^1(\mathbb{R}^+\rightarrow\mathbb{C})$ with properties $\lim_{t\rightarrow\infty}f(t)=0$ and $\Re{f}$ decreasing. Then the purity $\pur{\rho}$ is continuously decreasing.
@@ -62,10 +62,17 @@ The resulting logarithmic negativity of the averaged state $E_N(\mean{\rho})$ wa
   \label{fig:4:EN-delta-theta}
 \end{figure}
 For this figure, the parallel orientation $\alpha = \beta = 0$ was used at times relative to the time of maximum entanglement $t_\mathrm{max}$ from eq. \eqref{eq:2:t-max-parallel}.
-The radius of the particles was set to $R=1\times 10^{-5}\si{m}$ with corresponding mass $M_A = M_B = 4/3\, \pi R^3 \rho_\mathrm{Silica} \approx 1.1\times 10^{-11}\si{kg}$.
+In this special case, the entanglement is given by
+\begin{equation}\label{eq:4:log-neg-analytical}
+  E_N(\mean{\rho}) = \max\left\{ 0, \log_2\left(e^{-\gamma}\left(\cosh\gamma + \abs{\sin \Delta \phi}\right)\right) \right\}
+\end{equation}
+where the definition of the decoherences $\gamma$ can be found in \cref{apx:average-density} and $\Delta \theta$ in the parallel orientation is given by eq. \eqref{eq:2:definition-delta-phi}.
+For \cref{fig:4:EN-delta-theta} the radius of the particles was set to $R=1\times 10^{-5}\si{m}$ with corresponding mass $M_A = M_B = 4/3\, \pi R^3 \rho_\mathrm{Silica} \approx 1.1\times 10^{-11}\si{kg}$.
 A particle-shield separation of $L=2R$ and a superposition size of $\Delta x_A = \Delta x_B = 100\si{nm}$ were chosen.
 In the rest of the thesis, if not otherwise specified, these parameters are used as a default.
+For convenance, they are displayed in \cref{tab:paramters}.
 They are chosen in the specific orders of magnitude, because they result in a feasible low experiment-time $t_\mathrm{max}\approx 258\si{ms}$ and are in the region of what is soon\footnote{\q{Soon} in this context means still a long time, but the experiment could be doable within this century.} possible \cite{Aspelmeyer_2024}.
+Other proposals suggest a similar parameter set generally differing only by a single magnitude (see e.g. the Tab. 1 in Ref. \cite{Rijavec_2021}).
 It is important however to stress out, that all these parameters are orders of magnitude away of from what is experimentally reachable today.
 The largest mass that was studied in matter-wave interferometry is in the order of $4\times 10^{-23}\si{kg}$ \cite{Fein_2019} with an superposition size of $\Delta x \gtrsim 500\si{nm}$.
 For solid state mechanical systems quantum control and in particular groundstate cooling up to masses in the order of $10^{-13}\si{kg}$ \cite{OConnell_2010}, $10^{-11}\si{kg}$ \cite{Lee_2011} and $10^{-8}\si{kg}$ \cite{Bild_2023} with very short coherence times $\lesssim 1\si{\mu s}$ have been demonstrated.
@@ -73,12 +80,16 @@ On the contrary, the smallest mass with a measurable gravitational coupling is a
 Levitated particles combine the best of both world with quantum control of large and heavy trapped solid objects as well as long coherence times up to the order of seconds \cite{Aspelmeyer_2024}.
 
 The entanglement of the system shown in \cref{fig:4:EN-delta-theta} behaves as expected. At some critical point $\Delta \theta_\mathrm{crit}$ and $\Delta L_\mathrm{crit}$, the entanglement is completely lost.
+This critical point is analytically can in special cases be computed analytically using eq. \eqref{eq:4:log-neg-analytical} and is given by
+\begin{equation}\label{eq:4:theta-crit-analytical}
+  \theta_\mathrm{crit} = \frac{\log(1 + \sqrt{2})}{\gamma} \propto \gamma^{-1} .
+\end{equation}
 For the used parameters and in the parallel orientation, this threshold is around $\Delta \theta_\mathrm{crit} \approx 6 \times 10^{-10} \si{rad}$ and $\Delta L_\mathrm{crit} \approx 1.4 \times 10^{-10} \si{m}$, which seems quite challenging experimentally.
 However, it seems like that for smaller times $t<t_\mathrm{max}$ larger variations can be tolerated for the cost of having less total entanglement.
 This again is expected. For smaller times, the gravitational force did not have enough time to fully entangle the two particles, but also the decoherences (dependent on $\propto t^2$; see eq. \eqref{eq:4:average-density-element} and \cref{apx:average-density}) did not have enough time to built up. 
 It is therefore logical, that if one does not require to measure a fully entangled state and less entanglement $E_N < 1$ is also sufficient, it may be beneficial to measure at a time $t < t_\mathrm{max}$. In theory, it would be enough to measure \textit{any} entanglement $E_N > 0$ but one has to make sure that no other mechanisms such as direct or indirect entanglement trough other couplings or noise sources have smaller entanglement rates (for a discussion see \cref{cha:the-shield}). 
 Measuring at a earlier point in time does not only reduce the duration of a single experimental measurement, but also increases the stability against displacement variations. This optimal time of measuring for a certain required amount of entanglement is shown in \cref{fig:4:time-delta-theta}.
-\begin{figure}[!htb]
+\begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/theta-variance/time-delta-theta-crit-EN.pdf}
   \caption{Maximal angular variation for a given time and a given required amount of entanglement. The outer most black line corresponds to the time dependence of $\Delta \theta_\mathrm{crit}$. The top left as well as the red curve in the main figure shows the optimal measuring time for a sufficient amount of entanglement.
