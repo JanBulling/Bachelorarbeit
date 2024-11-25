@@ -18,20 +18,20 @@ Such local interactions can - assuming a static shield e.g. at zero temperature 
 
 For a complete picture, one has to consider experimental challenges and limitations in a real experiment. 
 Measuring the states after some time to determine their entanglement requires knowledge of the states which can be obtained by e.g. \emph{full state tomography}.
-Some proposals aim at measuring entanglement by means of a suitable witness \cite{Bose_2017,Chevalier_2020}, but the generation of such an entanglement witness requires insight into the specifics of the experimental realization.
+Some proposals aim to measure a quantity that breaks the CHSH-inequality \cite{Clauser_1969} (i.e. an \q{entanglement wittness}) to proof entanglement that way \cite{Bose_2017,Chevalier_2020}, but the generation of such a witness requires insight into the specifics of the experimental realization.
 In this thesis, I will focus on the most general and universally applicable case of measuring the complete density matrix of the system and checking for entanglement using a convenient entanglement measure like the \q{logarithmic negativity} \cite{Plenio_2005} introduced in \cref{sec:2:entanglement-measures}.
-The density matrix of a 2 qubit system consists of 16 different entries (only 9 of them are independent \footnote{Using the known characteristics of the density matrix like hermiticity $\rho^\dagger = \rho$ and $\tr \rho = 1$, it is possible to reconstruct $\rho$ from only 9 specific entries.}).
+The density matrix of a 2 qubit system consists of 16 different entries where only 9 of them are independent \footnote{Using the known characteristics of the density matrix like hermiticity $\rho^\dagger = \rho$ and $\tr \rho = 1$, it is possible to reconstruct $\rho$ from only 9 specific entries.}.
 For a full tomography, a lot of measurements of the system have to be made to determine the state in the required precision.
 During these measurements, engineering challenges of recreating the identical initial conditions, i.e. the placement of the particles in each consecutive run have to be considered.
-But even if it was somehow possible to place the particle at the \textit{exact} same position each measurement, thermal vibrations of the shield induce small noisy variations in the shield-particle separation over a lot of runs.
-
-Thus even if the masses get entangled in each run of the measurement, the measured results might differ slightly due to the varying initial placements of the particles resulting in a final measurement that looks like a mixed state
+Especially stochastic variations in the initial angle $\theta_{A(B)}$ and the separation distance $L_{A(B)}$ for individual measurements are important to consider. Other fluctuations in preparing the experiment such as the measurement time were already considered previously in Ref. \cite{Nguyen_2020}.
+Even if it was somehow possible to place the particle at the \textit{exact} same position each measurement, thermal vibrations of the shield induce small noisy variations in the shield-particle separation over a lot of runs.
+The masses might get entangled in each run of the measurement, however the measurements might differ slightly due to the varying initial placements of the particles resulting in a final reconstructed state that looks like a mixed state
 \begin{equation}
   \rho = \int\limits_{-\infty}^{\infty} \dd X \frac{1}{\sqrt{2\pi}\Delta X} e^{-X^2/2(\Delta X)^2} \ketbra{\psi_X} .
 \end{equation}
 Here, $\ket{\psi_X}$ is the pure state of a single measurement dependent on the random variable $X = \{\theta_{A(B)}, L_{A(B)}\}$ corresponding to placement inaccuracies between multiple measurements.
 These variations are assumed to be normally distributed with mean $\mean{X} = 0$ and standard deviation $\Delta X$ on the basis of the central limit theorem \cite[p. 1195]{Riley_2018}.
-In some cases, as for example if the plate is not placed exactly in the center or at a tilt, the variations $\theta_{A(B)}$ and $L_{A(B)}$ are correlated and $L_A = -L_B$ holds true.
+In some cases, as for example if the plate is not placed exactly in the center or at a tilt, the variations $\theta_{A(B)}$ and $L_{A(B)}$ are correlated as for example $L_A = -L_B$ holds.
 In the most general case, all placement variations are assumed to be independent and are drawn from their respective probability distribution.
 
 
@@ -45,10 +45,10 @@ After $\#$ measurements, the sample average is given by
 where $\rho(X)$ depends on the random variable $X \in \{\theta_{A(B)}, L_{A(B)}\}$ and $X_k$ is the $k$-th sample drawn from the normal distribution $\mathcal{N}(0, (\Delta X)^2)$ \footnote{Here it isn't strictly required that $X_k$ are normally distributed. As long as they are i.i.d. random variables, any distribution is sufficient for the following argumentation \cite[p. 1195]{Riley_2018}.}.
 As $\# \rightarrow \infty$, the law of large numbers and in particular the central limit theorem (CLT) ensures that $\bar{\rho} \rightarrow \mean{\rho}$ \cite[p. 1195]{Riley_2018}.
 According to the CLT, the sample average $\bar{\rho}(X)$ fluctuates around $\mean{\rho}$ with a standard deviation given by the Berry-Esseen theorem for independent and identically distributed random variables $X_k$ by $\sigma \sim \#^{-1/2}$ \cite{Berry_1941}.
-Thus, if the placements of the particles in each measurement are completely independent from each other, the rate of convergence to the ideal mean $\mean{\rho}$ is governed by $\mathcal{O}(1/\sqrt{\#})$.
+Thus, if the placements of the particles in each measurement are completely independent from each other, the rate of convergence to the ideal mean $\mean{\rho}$ is governed similar to the shot-noise limit by $\mathcal{O}(1/\sqrt{\#})$.
 
 It is however very likely that measurements are mostly performed consecutively in the same trap so that the placements in successive measurements are correlated.
-This correlation $\mathrm{Cov}[\rho(X_i), \rho(X_j)] = c_{\abs{i-j}}$ between the $i$-th and $j$-th measurement should therefore decrease with increasing $\abs{i-j}$.
+The correlations $\mathrm{Cov}[\rho(X_i), \rho(X_j)] = c_{\abs{i-j}}$ between the $i$-th and $j$-th measurement should therefore decrease with increasing $\abs{i-j}$.
 The variance of $\bar{\rho}$ is now dependent of these correlations in the form \cite[p. 1227]{Riley_2018}
 \begin{equation}\label{eq:4:correlation-variance}
   \mathrm{Var}[\bar{\rho}] = \frac{1}{\#^2} \sum_{i,j=1}^{\#} \mathrm{Cov}[\rho(X_i), \rho(X_j)] = \frac{1}{\#}\mathrm{Var}[\rho] + \frac{2}{\#^2}\sum_{n=1}^{\# - 1}(\# - n) c_n
@@ -58,9 +58,9 @@ For correlations $c_n \sim n^{-\alpha}$ ($\alpha < 1$) the sum in eq. \eqref{eq:
 \begin{equation}
   \sum_{n=1}^{\# - 1}(\# - n)n^{-\alpha} \xlongrightarrow{\#\rightarrow\infty} \int_1^{\#}\dd n \, (\#-n)n^{-\alpha} \sim \#^{2-\alpha}
 \end{equation}
-which results in $\mathrm{Var}[\bar{\rho}] \sim \#^{-\alpha}$. In the asymptotic limit the standard deviation of the sample average $\sqrt{\mathrm{Var}[\bar{\rho}]}$ and thus in a convergence rate to the mean $\mean{\rho}$ scales with $\mathcal{O}(1/\sqrt{\#^\alpha})$.
-This convergence is arbitrary slow for small $\alpha$ (if the setup does not change a lot between individual measurements) and thus the following calculations are just a worst-case estimation of the actual experimental results.
-If a weaker correlation in the form of $c_n \sim e^{-\alpha n}$ is used, the convergence rate is again asymptotically governed by $\mathcal{O}(1/\sqrt{\#})$.
+which results in $\mathrm{Var}[\bar{\rho}] \sim \#^{-\alpha}$. In the asymptotic limit the standard deviation of the sample average $\sqrt{\mathrm{Var}[\bar{\rho}]}$ and thus the convergence rate to the mean $\mean{\rho}$ scales with $\mathcal{O}(1/\sqrt{\#^\alpha})$.
+This convergence is arbitrary slow for small $\alpha$ (if the setup does not change a lot between individual measurements) and thus the calculations in the next sections are just a worst-case estimation of the actual experimental results.
+If a weaker correlation in the form of $c_n \sim e^{-\alpha n}$ is assumed, the convergence rate is again asymptotically governed by $\mathcal{O}(1/\sqrt{\#})$.
 
 
 

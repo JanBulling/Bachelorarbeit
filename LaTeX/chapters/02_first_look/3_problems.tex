@@ -1,23 +1,23 @@
 \section{Issues with the idealized experimental procedure}\label{sec:2:experimental-problems}
 
-For the realization of an experiment to measure quantum gravity induced entanglement of masses, one can only consider parameter spaces in which most of the expected and measured entanglement ultimately arises due to the gravitational interaction between the masses.
-Other forms of interactions and in particular electromagnetic forces have to be suppressed sufficiently.
-In particular, the short range \emph{Casimir interactions} (\cref{cha:casimir-effect}) have to be shielded as they induce a much greater attraction force than gravity at small separations.
-It is however not clear, that Casimir interactions can entangle real macroscopic masses at all as it is not even known whether the Casimir force field between bodies is conservative, although most researchers belief it is \cite{DeBiase_2012,Yi_2023}.
-As a estimation of the minimal separation distance $L_\mathrm{min}$, requiring that the gravitational potential should be stronger by a factor $\chi$ than the Casimir potential between the two massive spherical particles \cite{Emig_2007}, the following inequality can be stated:
+For the practical realization of an experiment on measuring gravitationally induced entanglement of masses, other forms of direct or indirect interaction between the particles must be suppressed such that the measured entanglement ultimately arises only due to their gravitational interaction.
+In particular, the short-range \emph{Casimir interactions} \cite{Casimir_1948} discussed in \cref{cha:casimir-effect} have to be shielded as they exert a much grater attraction force on the particles at small separations than gravity.
+It is still a hot topic of discussions whether Casimir interactions can even entangle macroscopic bodies at all, as it is not even clear if it is a conservative force in the first place - although most researchers believe it is \cite{DeBiase_2012,Yi_2023}.
+To estimate the minimal particle-particle separation $2L$ requiring that the gravitational interaction $V_\mathrm{Gravity}$ is stronger than the Casimir interactions $V_\mathrm{Casimir}$ by a factor $\chi > 1$, the following inequality can be stated:
 \begin{align}
   \chi \abs{V_\mathrm{Casimir}} &\leq \abs{V_\mathrm{Gravity}} \\
-  \chi \times \frac{23 \hbar c}{4 \pi L^7} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)^2 R^6 &\leq  \frac{G M^2}{L}.
+  \chi \times \frac{23 \hbar c}{4 \pi (2L)^7} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)^2 R^6 &\leq  \frac{G M^2}{2L} .
 \end{align}
-Using $M = 4/3 \pi R^3\rho_\mathrm{Silica}$, this results in a minimum separation distance independent of the size of the particles of
+Using $M = 4/3 \pi R^3\rho_\mathrm{Silica}$, the minimum separation distance is independent of the size of the particle and is given by
 \begin{equation}
-  L_\mathrm{min} \geq \left(\chi \times \frac{207}{64} \frac{\hbar c}{\pi^3 G \rho_\mathrm{Silica}^2}\right)^{1/6} \approx 140\si{\mu m} \times \sqrt[6]{\chi} .
+  L \geq \sqrt[6]{\chi} \times \left(\frac{207}{4096} \frac{\hbar c}{\pi^3 G \rho_\mathrm{Silica}^2}\right)^{1/6} \approx 69\si{\mu m} \times \sqrt[6]{\chi} .
 \end{equation}
-For the same particles used before, this would require very large measurement times of $t_\mathrm{max} \approx 90\si{s} \times \sqrt{\chi}$.
-It would therefore be beneficial to screen the Casimir interactions by placing a conducting Faraday shield between the particles so that they can be moved closer together \cite{Kamp_2020}.
-Such a conducting shield would simultaneously shield all other forms of electromagnetic interactions such as Coulomb interactions, if the particles are charged.
+For the same particle as used before, the time for a single measurement, i.e. the coherence time $t_\mathrm{max} \approx 30\si{s}\times \sqrt{\chi}$ is very large.
+The field of levitated particles is promising for these experiments as it offers an isolated, noise-reduced environment while still allowing for exceptional force sensitivity as well as precise quantum control and thus long coherence times \cite{Aspelmeyer_2024,GonzalezBallestero_2021}.
+Nevertheless would it be beneficial to reduce the separation distance between the particles for shorter measurement time.
+For this, usually a conducting \emph{Faraday shield} between the particles is proposed \cite{Kamp_2020}.
+Such a shield would simultaneously suppress all other forms of electromagnetic interactions such as Coulomb forced, if the particles are happened to be charged.
 
-This thesis is focused around the problem which arise by trying to measure the entanglement as a lot of individual measurements are required and it is virtually impossible to ensure that each measurement started with identical initial conditions.
-Small variations in the placement of the particles can ultimately destroy the entanglement in the final averaged measurement result due to Casimir interactions between the particles and the newly placed shield. 
-In \cref{cha:entanglement-generation} this effect is studied in detail and the space of possible parameters for the particle-shield separation as well as for the superposition size and the particles mass is reduced.
-Thermal vibrations and noise due to the shield are considered in \cref{cha:the-shield}
+This thesis is focused around the problems which arise in the generation of entanglement in the presence of the Faraday shield.
+Generally a lot of measurements are required to reconstruct the evolved state and small variations in the initial placement of the particles can ultimately destroy the entanglement in the final averaged measurement.
+This effect is discussed in \cref{cha:entanglement-generation}. Thermal vibrations of the shield are then considered in \cref{cha:the-shield}.

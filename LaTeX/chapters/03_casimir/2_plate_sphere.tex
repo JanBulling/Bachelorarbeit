@@ -1,7 +1,8 @@
 \section{Casimir forces between a conducting plate and a dielectric sphere}
 \label{sec:3:casimir-plate-sphere}
 
-An empirical derivation for power law of the casimir energy between a sphere and a conducting plate can be made directly from the energy between two atoms with static polarizability $\alpha_i$ given by Casimir and Polder \cite{Casimir_1948a}. They derived an expression for the Casimir-Polder potential of \footnote{For two macroscopic spheres, the casimir potential looks very similar to eq. \eqref{eq:3:casimir-polder-atom-atom}. The polarizability of a sphere is given by eq. \eqref{eq:3:polarizability-sphere}. Using this result, the Casimir energy between two identical dielectric spheres in the large separation limit is given as $-\frac{23\hbar c}{4\pi L^7}\left(\frac{\varepsilon_r-1}{\varepsilon_r+2}\right)^2R^6$ \cite{Emig_2007}.}
+An empirical derivation for a power law of the Casimir energy between a sphere and a conducting plate can be given directly using the energy between two atoms with static polarizability $\alpha_i$ given by Casimir and Polder \cite{Casimir_1948a}.
+They derived an expression for the Casimir-Polder potential of \footnote{For two macroscopic spheres, the casimir potential looks very similar to eq. \eqref{eq:3:casimir-polder-atom-atom}. The polarizability of a sphere is given by eq. \eqref{eq:3:polarizability-sphere}. Using this result, the Casimir energy between two identical dielectric spheres in the large separation limit is given as $-\frac{23\hbar c}{4\pi L^7}\left(\frac{\varepsilon_r-1}{\varepsilon_r+2}\right)^2R^6$ \cite{Emig_2007}.}
 \begin{equation}\label{eq:3:casimir-polder-atom-atom}
   E = -\frac{23\hbar c \alpha_1 \alpha_2}{4 \pi L^7} .
 \end{equation}
@@ -10,16 +11,15 @@ The polarizability of a sphere with radius $R$ is derived in appendix \ref{apx:p
   \alpha_\mathrm{sphere} \propto \left(\frac{\varepsilon_r-1}{\varepsilon_r+2}\right)R^3 .
 \end{equation}
 If one atom is now replaced by a conducting sphere ($\varepsilon_r \rightarrow \infty$) of radius $\sim L$ (much larger than the atom) with a polarizability of $L^3$, it get obvious that between this big sphere and the atom, the energy is given by a power law of $1/L^4$.
-It is therefore natural to assume, that for a macroscopic sphere and a macroscopic plate, the Casimir energy behaves similar to a $1/L^4$ law - at least for the \emph{large separation limit (LSL)}.
+It is therefore natural to assume, that for a macroscopic sphere and a macroscopic plate, the Casimir energy behaves similar to a $1/L^4$ law - at least for $L\gg R$ in the \emph{large separation limit (LSL)}.
 The exact calculation for this problem is very hard. In fact, no analytic solution is known.
-
-Ford was able to determine an integral expression using a macroscopic approach in 1998 \cite{Ford_1998}:
+It is possible to write down an integral expression using a macroscopic approach \cite{Ford_1998}:
 \begin{multline}
   F = - \frac{\hbar c}{4 \pi L^4} \int_{0}^{\infty} \dd \omega \, \alpha(\omega) \left[3\sin 2 \omega L - 6L\omega \cos 2 \omega L \right. \\ 
   \left. - 6L^2\omega^2 \sin 2 \omega L + 4L^3\omega^3 \cos 2 \omega L\right].
 \end{multline}
 The expression depends on the polarizability, which is generally not constant for a dielectric. Especially for small separations between the sphere and the plate, this dependence and the non-constant polarizability make this integral nearly unsolvable.
-For large separations, much larger than the absorption wavelength of the dielectric or much larger than the wavelength corresponding to the plasma frequency in the Drude-Model, the polarizability can be assumed to be static $\alpha=\mathrm{const}$ \cite{Ford_1998,Kamp_2020}. In this simplifying case, the integral can be solved using an exponential convergence factor and results in
+For large separations, much larger than the absorption wavelength of the dielectric or much larger than the wavelength corresponding to the plasma frequency in the Drude-Model, the polarizability can be assumed to be static \cite{Ford_1998,Kamp_2020}. In this simplifying case, the integral can be solved using an exponential convergence factor and results in
 \begin{equation}
   F = -\frac{6 \hbar c}{4 \pi L^5} \alpha
 \end{equation}
@@ -37,7 +37,7 @@ A second method to calculate the Casimir energy for arbitrary compact objects an
   \label{fig:3:casimir-behavior}
 \end{figure}
 It becomes evident, that the series expansion converges to the LSL eq. \eqref{eq:3:casimir-sphere-plate} for large separations and to the PFA eq. \eqref{eq:3:PFA-sphere-plate} for small separations.
-However, quantitatively the numerics show, that $E/E_\mathrm{PFA} \leq 1$ and thus the PFA predicts a stronger Casimir energy for all separations.
+Quantitatively the numerics show, that $E/E_\mathrm{PFA} \leq 1$ and thus the PFA predicts a stronger Casimir energy for all separations.
 
 \begin{theorem}
   The PFA model for the Casimir energy between a conducting sphere and a conducting plate is an upper bound for the actual Casimir potential for any separation $L/R$.
@@ -58,4 +58,4 @@ However, quantitatively the numerics show, that $E/E_\mathrm{PFA} \leq 1$ and th
 \begin{remark}
   For later calculations, only the difference in the Casimir energy for slightly different separations $L$ and thus effectively the gradient $\nabla E_\mathrm{Casimir}$ is required. The same arguments as above can be made to see that the gradient of the PFA is an upper bound for all separations as well.
 \end{remark}
-During the rest of the thesis, I therefore opt for the use of the proximity force approximation as a worst-case estimation. If it is appropriate, I will compare both Casimir models - the PFA and the LSL.
+During the rest of this thesis, therefore the proximity force approximation is used as a worst-case estimation. If appropriate, both Casimir models - the PFA and the LSL - are compared.

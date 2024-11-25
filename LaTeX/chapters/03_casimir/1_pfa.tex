@@ -1,14 +1,13 @@
 \section{Proximity force approximation}\label{sec:3:pfa}
 
 The Casimir-Polder force cannot be computed easily for arbitrary shapes. There even exists no analytic expression for the simple (and for this thesis relevant) plate-sphere geometry for all separations $L/R$.
-For a general shape, even the sign of the force, i.e. whether it is attractive or repulsive, is often unknown \cite{Klimchitskaya_2009}.
 Fortunately, approximation methods exist and in particular the \emph{proximity-force-approximation (PFA)} can be calculated very easily \cite{Hartmann_2018,Emig_2007a,Bulgac_2006}.
 The PFA is only valid for small separations ($L/R \approx 1$) between the considered smooth bodies, where $R$ is the size of the bodies i.e. the radius of the sphere for the sphere-plate geometry.
-The idea of this approximation is to divide the surfaces of the two bodies into infinitesimal small parallel plates with area $\dd A$ and summing over the forces $\dd F$ (or the Casimir-energy $\dd E$) between them (see \cref{fig:3:PFA}):
+The idea of this approximation is to divide the surfaces of the two bodies into infinitesimal small parallel plates with area $\dd A$ and summing over the forces $\dd F$ (or the Casimir energy $\dd E$) between them (see \cref{fig:3:PFA}):
 \begin{equation}\label{eq:3:pfa}
   E_\mathrm{PFA} = \iint_A \dd A \, \frac{E_\mathrm{plate-plate}}{A}
 \end{equation}
-where for the casimir energy per unit area $E_\mathrm{plate-plate}/A$ either eq. \eqref{eq:3:casimir-energy-pp-conducting} or any of the Lifshitz equations \eqref{eq:3:casimir-pp-F-DD-lifshitz}, \eqref{eq:3:casimir-pp-F-DM-lifshitz} can be used.
+where for the Casimir energy per unit area $E_\mathrm{plate-plate}/A$ either eq. \eqref{eq:3:casimir-energy-pp-conducting} or alternatively any of the Lifshitz equations eq. \eqref{eq:3:casimir-pp-F-DD-lifshitz} or eq. \eqref{eq:3:casimir-pp-F-DM-lifshitz} can be used.
 \begin{figure}[!htbp]
   \centering
   \def\svgwidth{0.55\textwidth}
@@ -18,11 +17,11 @@ where for the casimir energy per unit area $E_\mathrm{plate-plate}/A$ either eq.
 \end{figure}
 For the following calculations, it is important to distinguish between the distance between the plates center and the spheres center $L$ (like used before) and the edge-to-edge distance $\mathscr{L} = L - R$.
 
-The problem with this approximation is, that it is ambiguous, what surface the area element $\dd A$ represents. For the plate-sphere geometry, the element can be either chosen tangential to the sphere or parallel to the plate (or in theory any other fictitious surface somewhere in between) \cite{Bulgac_2006}.
-For the plate-sphere geometry, in the limit of the validity of the PFA $\mathscr{L} \ll R$ both methods yield the same result.
-For the following calculations, I choose $\dd A$ parallel to the plate and the area can be parameterized with $r\in [0, R]$ and $\varphi \in [0, 2\pi]$ resulting in a distance $z$ between the infinitesimal area elements $z(r) = \mathscr{L} + R - \sqrt{R^2 - r^2}$ \footnote{Taking $\dd A$ tangential to the sphere, it can be parameterized with $\theta \in [0, \pi/2]$ and $\varphi \in [0, 2\pi]$ resulting in $z(\theta) = \mathscr{L} + R - R\cos\theta$. The PFA eq. \eqref{eq:3:pfa} yields with $\dd A = R^2\sin\theta\dd\theta\dd\varphi$ the result $\propto \frac{\pi R^2(R + 2\mathscr{L})}{\mathscr{L}^2(R+\mathscr{L})^2}$ which in the limit of $\mathscr{L} \ll R$ results in the same expression as eq. \eqref{eq:3:PFA-sphere-plate}.}. The PFA eq. \eqref{eq:3:pfa} then yields for a dielectric sphere against a perfectly conducting plate
+The problem with this approximation is, that it is ambiguous what surface the area element $\dd A$ represents. For the plate-sphere geometry, $\dd A$ can be either chosen either tangential to the sphere or parallel to the plate (or in theory any other fictitious surface somewhere in between) \cite{Bulgac_2006}.
+In the limit of the validity of the PFA $\mathscr{L} \ll R$ both methods usually yield the same result.
+For the following calculations, $\dd A$ was chosen parallel to the plate and the area can be parameterized with $r\in [0, R]$ and $\varphi \in [0, 2\pi]$ resulting in a distance $z$ between the infinitesimal area elements $L(r) = \mathscr{L} + R - \sqrt{R^2 - r^2}$ \footnote{Taking $\dd A$ tangential to the sphere, it can be parameterized with $\theta \in [0, \pi/2]$ and $\varphi \in [0, 2\pi]$ resulting in $z(\theta) = \mathscr{L} + R - R\cos\theta$. The PFA eq. \eqref{eq:3:pfa} yields with $\dd A = R^2\sin\theta\dd\theta\dd\varphi$ the result $\propto \frac{\pi R^2(R + 2\mathscr{L})}{\mathscr{L}^2(R+\mathscr{L})^2}$ which in the limit of $\mathscr{L} \ll R$ results in the same expression as eq. \eqref{eq:3:PFA-sphere-plate}.}. The PFA eq. \eqref{eq:3:pfa} yields for a dielectric sphere against a perfectly conducting plate
 \begin{align}
-  E_\mathrm{plate-sphere} &= -\frac{\hbar c \pi^2}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \int_0^R \dd r \int_0^{2\pi} r\dd \varphi \frac{1}{z(r)^3} \\
+  E_\mathrm{plate-sphere} &= -\frac{\hbar c \pi^2}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \int_0^R \dd r \int_0^{2\pi} r\dd \varphi \frac{1}{L(r)^3} \\
   &= -\frac{\hbar c \pi^3}{360} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \frac{R^2}{2\mathscr{L}^2(R + \mathscr{L})} \\
   &\approx -\frac{\hbar c \pi^3}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \frac{R}{\mathscr{L}^2} \label{eq:3:PFA-sphere-plate}
 \end{align}

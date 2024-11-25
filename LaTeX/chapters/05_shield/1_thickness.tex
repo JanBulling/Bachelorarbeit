@@ -1,15 +1,18 @@
 \section{Thickness and size of the shield}\label{sec:5:shield-size}
 The thickness and radius $r_s$ of the shield can be estimated by considering a real shield made of a conducting material with large conductivity $\sigma$. 
-Even a superconducting shield could be considered for a almost perfect shielding against electrostatic field.
-For a real shield made of e.g. copper, the transmission $T$ of electromagnetic waves is given by \cite{Vandenbosch_2022}
+Even a superconducting shield could be considered for a almost perfect shielding of electromagnetic fields.
+For a shield made of e.g. copper, the transmission $T$ of electromagnetic waves is given by \cite{Vandenbosch_2022}
 \begin{equation}
   T = \abs{\frac{\vec{E}_\mathrm{after}}{\vec{E}_\mathrm{before}}} = \frac{2}{Z_0 \sigma d}
 \end{equation}
 where $Z_0 = 377\si{\Omega}$ the impedance of free space (provided the shield is placed in a vacuum or air) and $d$ the thickness of the shield.
-The electric conductivity has a strong dependence on temperature and decreases with $1/T^5$ \footnote{This behavior is only true for temperatures below the Debye temperature. For copper, this limit is around $\Theta_D = 343\si{K}$. In the experiment, the shield is cooled down, so the low-temperature limit of the electric conductivity for metals is very valid \cite{Berman_1952}.} with increasing temperatures \cite[p. 284-286]{Gross_2018}. The electric conductivity for copper at room temperature ($\sigma = 59.6\times 10^6 \si{S/m}$) should therefore be a very valid worst-case approximation. 
+The electric conductivity has a strong dependence on temperature and decreases with $1/T^5$ \footnote{This behavior is only true for temperatures below the Debye temperature. For copper, this limit is around $\Theta_D = 343\si{K}$. In the experiment, the shield is cooled down, so the low-temperature limit of the electric conductivity for metals is very valid \cite{Berman_1952}.} with increasing temperatures \cite[p. 284-286]{Gross_2018}. For copper at room temperature, it is given by $\sigma = 59.6\times 10^6 \si{S/m}$, which should be a highly underestimation of the actual conductivity. 
 Measured data suggest a conductivity of $\sigma(T = 10) \approx 1.5\times 10^{10}\si{S/m}$ \cite{Berman_1952}.
 
-The general goal is to place the particles as close as possible to increase the gravitational interaction between them, requiring to choose the thickness of the shield as thin as possible.
+The general hoped-for goal of the presence of the Faraday shield is to  place the particles closer together than without it.
+This limit was already calculated in \cref{sec:2:experimental-problems} and usually particle separations of $L = $
+
+The general goal is, to place the particles as close as possible to increase the gravitational interaction between them, requiring to choose the thickness of the shield as thin as possible.
 To estimate the thickness of the shield, the condition that entanglement between the masses should be built up faster mainly due to gravity is used.
 All other possible interactions like Coulomb or Casimir forces, should be suppressed sufficiently by the shield.
 To quantify the amount of entanglement built-up over time, I obt for a measure I call \emph{entanglement rate}
@@ -19,10 +22,10 @@ To quantify the amount of entanglement built-up over time, I obt for a measure I
 where $E_N$ is an appropriate entanglement measure - in this case the logarithmic negativity \cite{Plenio_2005} introduced in \cref{sec:2:entanglement-measures}.
 For the gravitational entanglement, the entanglement rate can be calculated in the parallel orientation using eq. \eqref{eq:2:entanglement-dynamics-parallel}:
 \begin{equation}\label{eq:5:entanglement-rate-gravity}
-  \Gamma_\mathrm{Gravity} = \frac{G M_A M_B \Delta x_A \Delta x_B}{16 \hbar L^3 \log 2} .
+  \Gamma_\mathrm{Gravity} = \frac{G M_A M_B \Delta x_A \Delta x_B}{16 \hbar L^3 \log 2} = \frac{G \pi^2 R^6 \rho_\mathrm{Silica}^2 (\Delta x)^2}{9 \hbar L^3 \log 2} .
 \end{equation}
-The entanglement rate for other interactions should be smaller (and ideally a lot smaller) than the entanglement rate due to gravity, otherwise the eventually measured entanglement may not be solely due to gravitational interactions.
-In the following, the required size of the shield is estimated for undesired Coulomb- and Casimir interactions.
+The entanglement rate for other interactions should be smaller (and ideally a lot smaller by a factor $\chi > 1$) than the entanglement rate due to gravity, otherwise the eventually measured entanglement may not be solely due to gravitational interactions.
+In the following, the required size of the shield is estimated for screening undesired direct Coulomb- and Casimir forces.
 
 \subsection{Shielding Coulomb-Interactions}
 The main focus of the shield is to block electromagnetic interactions between the particles.
@@ -37,14 +40,13 @@ The entanglement rate $\Gamma_\mathrm{Coulomb}$ is therefore easily calculable i
 \begin{equation}\label{eq:5:entanglement-rate-coulomb}
   \Gamma_\mathrm{Coulomb} = \frac{T \abs{q_A q_B} (\Delta x)^2}{64 \pi \varepsilon_0 \hbar L^3 \log 2}
 \end{equation}
-Requiring that $\Gamma_\mathrm{Gravity} > \Gamma_\mathrm{Coulomb}$, this inequality yields a maximum transmission and thus a minimum thickness of
+Requiring that $\Gamma_\mathrm{Gravity} > \chi \Gamma_\mathrm{Coulomb}$, this inequality yields a maximum transmission and thus a minimum thickness of
 \begin{align}\label{eq:5:coulomb-gravity-condition}
-  T \frac{\abs{q_A q_B}}{4 \pi \varepsilon_0} \, &< \, G M_A M_B \\
-  \Longleftrightarrow \quad\quad\quad\quad d \, &> \, \frac{1}{2 \pi \varepsilon_0 Z_0 \sigma G} \frac{\abs{q_A q_B}}{M_A M_B} = \frac{9}{32}\frac{1}{Z_0 \sigma} \frac{1}{\pi^3 \varepsilon_0 G \rho^2} \frac{e^2}{R^6}
+  T \frac{\abs{q_A q_B}}{64 \pi \varepsilon_0} \times \chi \, &< \, \frac{G \pi^2 R^6 \rho_\mathrm{Silica}^2}{9} \\
+  \Longleftrightarrow \quad\quad\quad\quad d \, &> \, \frac{9}{32}\frac{1}{Z_0 \sigma} \frac{1}{\pi^3 \varepsilon_0 G \rho_\mathrm{Silica}^2} \frac{e^2}{R^6} \times \chi .
 \end{align}
-where in the last step $M_A = M_B$ and $q_A = q_B = e$ has been assumed.
-The shield thickness heavily depends on the radius of the particle where small and light masses make the shield unworkably thick.
-A silica sphere with a radius of $R=10^{-5}\si{m}$ would require a shield around the thickness of $10\si{nm}$ at $4\si{K}$ up to $2.5\si{\mu m}$ at room temperature.
+The shield thickness heavily depends on the radius of the particle and small and light masses would make the shield unworkably thick.
+A silica sphere with a radius of $R=10^{-5}\si{m}$ would require a shield thickness of $\approx 10\si{nm}\times\chi$ at $4\si{K}$ and of $2.5\si{\mu m}\times\chi$ at room temperature.
 A realistic thickness for the shield at low temperatures could therefore be $d=100\si{nm}$.
 
 Electric fields however can still propagate around a Faraday shield of finite size and induce entanglement. It is however possible, to estimate the required radius $r_s$ of the shield to block a specific amount $\eta$ of the electric field.
@@ -78,13 +80,12 @@ The entanglement rate can be obtained similarly as before by expanding the casim
   \Gamma_\mathrm{Casimir} = T^2 \frac{161}{4096} \frac{c R^6 (\Delta x)^2}{\pi L^9 \log 2}\left( \frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)^2 .
 \end{equation}
 The dependence on $T^2$ is only a systematic guess but should be sufficient for a basic estimation. Casimir and van der Waals forces are second order effects in the dipole-dipole interaction \cite{Bordag_2001}.
-Demanding again, that the entanglement due to gravity should be mediated faster than due to Casimir interactions $\Gamma_\mathrm{Gravity} > \Gamma_\mathrm{Casimir}$, one arrives at the expression
+Demanding again, that the entanglement due to gravity should be mediated faster than due to Casimir interactions $\Gamma_\mathrm{Gravity} > \chi \Gamma_\mathrm{Casimir}$, one arrives at the expression
 \begin{align}
-  T^2 \frac{161 c R^6}{256 \pi L^6} \left( \frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)^2 \, &< \, \frac{G M_A M_B}{\hbar} \\
-  \Longleftrightarrow \quad\quad\quad d^2 \, &> \, \frac{4 \cdot 161 c \hbar R^6}{256 Z_0^2 \sigma^2 \pi L^6 G M_A M_B} \left( \frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)^2 \\
-  \Longleftrightarrow \quad\quad\quad\  d \, &> \, \sqrt{\frac{1449}{4096} \frac{c \hbar}{G \pi^3}} \frac{2}{Z_0 \sigma \rho L^3} \frac{\varepsilon_r - 1}{\varepsilon_r + 2}
+  T^2 \frac{161 c R^6}{4096 \pi L^6} \left( \frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)^2 \times \chi \, &< \, \frac{G \pi^2 \rho_\mathrm{Silica}^2 R^6}{9\hbar} \\
+  \Longleftrightarrow \quad\quad\quad\  d \, &> \, \sqrt{\frac{1449}{4096} \frac{c \hbar}{G \pi^3}} \frac{2}{Z_0 \sigma \rho L^3} \frac{\varepsilon_r - 1}{\varepsilon_r + 2} \times \sqrt{\chi} .
 \end{align}
-where again in the last step I assume $M_A = M_B$. For large separations, the shield thickness can go arbitrary low because of the weakness of the casimir interactions at larger distances. Between two silica spheres separated in the order of magnitude as the radius ($L = 2\times 10^{-5}\si{m}$), the required minimum thickness is between $4\times 10^{-11}\si{m}$ at $4\si{K}$ and $10 \si{nm}$ at room temperature.
+For large separations, the shield thickness can go arbitrary low because of the weakness of the casimir interactions at larger distances. Between two silica spheres separated in the order of magnitude as the radius ($L = 2\times 10^{-5}\si{m}$), the required minimum thickness is between $4\times 10^{-11}\si{m} \times \sqrt{\chi}$ at $4\si{K}$ and $10 \si{nm}\times \sqrt{\chi}$ at room temperature.
 Either way, it is much thinner than a Faraday shield required to shield electrostatic Coulomb interactions. The effect of $\varepsilon_r$ was neglected in these numbers. The minimum thickness only changes by a factor between $0$ and $1$ due to dielectric materials.
 In fact, these thicknesses are much thinner than recommended, because the shield loses rigidity.
 It turns out that the vibrational frequency and thus the energy of a thermal shield depends linearly on the thickness and a thinner shield would excite more and larger vibrations. A more detailed discussion of this matter is given in the next section.

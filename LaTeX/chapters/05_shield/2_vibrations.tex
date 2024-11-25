@@ -1,5 +1,5 @@
 \section{Thermal shield vibrations}\label{sec:5:thermal-vibrations}
-A spherical plate with radius $r_s$ that is fixed at the edge can vibrate in different vibrational modes labeled by the indices $(k,l)$ where $k \in [1,\infty)$ and $l \in [0, \infty)$.
+A spherical plate with radius $r_s$ that is fixed at the edge can vibrate in different vibrational modes labeled by the indices $(k,l)$, where $k \in [1,\infty)$ and $l \in [0, \infty)$.
 The exact vibrational frequency and the mode shape can only be given in terms of the Bessel functions. In fact, one of the first occurrences of these functions can be traced back to Euler trying to solve the very similar problem of a vibrating perfectly flexible membrane \cite{Dutka_1995}.
 In general, the vibrations of a plate made out of a real material with thickness $d$ can be described by the differential equation \cite[p. 490]{Rao_2019}
 \begin{equation}
@@ -29,25 +29,25 @@ The phases $\phi_1$ and $\phi_2$ can be determined by initial conditions and ref
   \label{fig:5:vibrational-modes}
 \end{figure}
 In general, every possible vibration of the plates can be expressed as a sum of these default modes $u_{kl}$.
-The amplitude $z$ of the vibrations are determined by the temperature $T$ and can be calculated by treating the amplitude of each vibration as a separate quantum harmonic oscillator with frequency $\omega_{kl}$.
-The expectation value of the amplitude $\avg{z}$ is obviously zero and the variance $(\Delta z)^2 = \avg{z^2} - \avg{z}^2$ at temperature $T$ is given by (derivation in \cref{apx:thermal-harmonic-oscillator})
+The amplitude $\op{z}$ of the vibrations are determined by the temperature $T$ and can be calculated by treating the amplitude of each vibration as a separate quantum harmonic oscillator with frequency $\omega_{kl}$.
+The expectation value of the amplitude $\avg{z\op{z}}$ is obviously zero and the variance $(\Delta \op{z})^2 = \avg{\op{z}^2} - \avg{\op{z}}^2$ at temperature $T$ is given by (derivation in \cref{apx:thermal-harmonic-oscillator})
 \begin{equation}\label{eq:5:amplitude-variance}
-  (\Delta \op{z}_{kl})^2_T = \frac{\hbar}{2\tilde{m}\omega_{kl}}\coth(\frac{\hbar \omega_{kl}}{2k_BT}) \approx \frac{k_B T}{\tilde{m}\omega_{kl}^2} .
+  (\Delta \op{z}_{kl})^2_T = \frac{\hbar}{2\tilde{m}\omega_{kl}}\coth(\frac{\hbar \omega_{kl}}{2k_BT}) \approx \frac{k_B T}{\tilde{m}\omega_{kl}^2}
 \end{equation}
-In the last step $\hbar\omega \ll k_B T$ was used. $\tilde{m}$ is the \textit{effective mass} of the mode in which the precise shape is considered. A intuitive estimation for this mass can be given by the average amplitude of the mode 
+where in the last step $\hbar\omega \ll k_B T$ was used. $\tilde{m}$ is the \textit{effective mass} of the mode in which the precise shape is considered. A intuitive estimation for this mass can be given by the average amplitude of the mode 
 \begin{equation}\label{eq:5:effective-mass}
   \tilde{m} = m\frac{1}{\pi r_s^2}\int\limits_0^{r_s} \dd r \int\limits_0^{2\pi} r\dd\theta \, u_{kl}(r, \theta, t)
 \end{equation}
 with $m=\rho \pi r_s^2 d$ being the total mass of the shield.
-The amplitude of the plate vibrations are therefore in the order of $\Delta z_{kl} \propto \omega^{-1}$ at high temperatures or for low frequencies.
+The amplitude of the plate vibrations scale therefore with $\Delta z_{kl} \propto \omega^{-1}$ at high temperatures or for low frequencies.
 
 
 
 
-\subsection*{The effect of individual modes}
-For a shield with radius $r_s = 1\si{cm}$ (in the following referred to as the \q{large shield}) and thickness $d=100\si{nmm}$ made out of Copper with $E = 110\si{GPa}$ and $\nu = 1/3$, the frequencies for the first few modes are between $11.0\si{s^{-1}}$ for $(1,0)$ up to $1018\si{s^{-1}}$ for like $(7,6)$.
-These frequencies and thus the energy of the vibration $\hbar \omega$ is very small compared to the thermal energy $k_B T$ at all reasonable temperatures.
-This means, that one expects a lot of modes to be substantially populated. Even at temperatures of $10^{-6} \si{K}$, the first $600$ modes are all equally likely to occur with a probability of $\approx 1/Z$ where $Z$ is the partition function
+\subsection*{The effect of infinite modes}
+For a shield with radius $r_s = 1\si{cm}$ (in the following referred to as the \q{large shield}) and thickness $d=100\si{nmm}$ made out of Copper with $E = 110\si{GPa}$ and $\nu = 1/3$, the frequencies for the first few modes are between $11.0\si{s^{-1}}$ for $(1,0)$ up to $1018\si{s^{-1}}$ for $(7,6)$.
+These frequencies are very low and thus the energy of the vibration $\hbar \omega$ is small compared to the thermal energy $k_B T$ at all reasonable temperatures.
+This means, that one expects a lot of modes to be highly populated. Even at temperatures of $10^{-6} \si{K}$, the first $600$ modes are all equally likely to occur with a probability of $\approx 1/Z$ where $Z$ is the partition function
 \begin{equation}
   Z = \sum_{m\in\{(k,l)\}} e^{-\beta \hbar \omega_m} .
 \end{equation}

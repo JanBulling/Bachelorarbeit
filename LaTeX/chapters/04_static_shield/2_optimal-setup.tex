@@ -1,6 +1,6 @@
 \newpage
 \section{The optimal setup}\label{sec:4:optimal-setup}
-With the general framework in hand, the next logical question to ask is, if the stability against placement-variations can be improved.
+With the general framework in hand, the next logical question to ask is, whether the stability against placement-variations can be improved.
 The rule of thumb for these optimizations is the following:
 Increase the gravitational interaction by either heavier and larger particles or by reducing the separation distance $L$ without substantial sacrifices of experimental realization.
 As an example, the stability increases intuitively by increasing the separation distance $L$. However, this does also increase the time $t_\mathrm{max}$ until the maximum amount of entanglement can be measured which would increase the total time  $\sim \# t_\mathrm{max}$ of the experiment with $\#$ individual measurements.
@@ -25,7 +25,7 @@ In the following section, precisely the changing of this stability is discussed 
 
 
 \subsection{Orientation}
-The arguably easiest parameter to change experimentally is the orientation of the superpositions, which is quantified by $\alpha$ and $\beta$ in \cref{fig:4:complete-setup}.
+One of the arguably easiest parameter to change experimentally is the orientation of the superpositions, which is quantified by $\alpha$ and $\beta$ in \cref{fig:4:complete-setup}.
 As already seen in \cref{fig:2:entanglement-dynamics}, the entanglement dynamics are dependent on the orientation.
 In the parallel orientation, the states take twice as long as in the orthogonal orientation to become maximally entangled.
 In general, it is advantageous to aim for the highest entanglement rate and thus the smallest $t_\mathrm{max}(\alpha, \beta)$, as this requires a shorter coherence time and thus reduces the total time of the experiment.
@@ -67,7 +67,7 @@ There does not exist a straight-forward geometric interpretation why no entangle
   \label{fig:4:harmonic-mean}
   % COLORFUL:: $\textcolor[HTML]{aa0000}{\blacksquare} = \displaystyle\frac{2}{\frac{1}{\textcolor[HTML]{0044aa}{\blacksquare}}+\frac{1}{\textcolor[HTML]{447821}{\blacksquare}}}$
 \end{figure}
-Here, in the limit $\Delta x \ll L$ everything local phase precisely cancels out resulting in a loss of entanglement. 
+Here, in the limit $\Delta x \ll L$ every local phase precisely cancels out resulting in a loss of entanglement. 
 To avoid all these singularities, it is advisable to always take $\alpha=-\beta$, where all orientations result in roughly similar entanglement times $t_\mathrm{max}$, at most only differing by a factor of $2$.
 
 It should come as no surprise that the different orientations exhibit different stabilities. Logically, one would expect the orthogonal configuration to be much more sensitive to angular variations than the parallel one.
@@ -93,13 +93,13 @@ Respectively, the stability against distance variations $\Delta L_\mathrm{crit}$
 \end{figure}
 Again aligning with expectations, the parallel configuration is (in theory) exhibits an infinite stability.
 One however could argue, that a for this to hold, the uncertainties in the angular placement have to be zero. As could be seen in \cref{fig:4:theta-crit-orientation}, these variations are at most around $\sim 5 \times 10^{-5}\si{rad}$ and thus a realistic upper bound for the minimum required distance variations is given by $\Delta L_\mathrm{crit,parallel} = \Delta L_\mathrm{crit}(\alpha \approx 5\times 10^{-5}\si{rad}) \simeq 4\times 10^{-11}\si{m}$.
-It is important to keep in mind, that these stability values can be improved substantially by changing e.g. the separation distance $L$ or the particle size $R$.
+It is important to keep in mind, that these stability values can be improved substantially by e.g. increasing the separation distance $L$, the particle size $R$ or the superposition size $\Delta x$.
 
 Considering these results, the parallel orientation seems to be the only realistic experimental option, even if it requires slightly larger coherence times $t_\mathrm{max}$.
-Keeping particle-shield separation variations below $0.01\si{nm}$ - approximately the size of a single atom - is practically impossible,  
+Keeping particle-shield separation variations below $0.01\si{pm}$ - even smaller than size of a single atom - is practically impossible,  
 especially under the additional consideration of the thermal vibrations of the shield and the particles, which are in the same order of magnitude as seen later in \cref{cha:the-shield}.
 With this data on hand, it is possible to generate the stability diagram in \cref{fig:4:optimal-orientation}, showing the optimal orientation in which the most entanglement can be measured.
-For most combinations of $\Delta L$ and $\Delta \theta$, entanglement is only given in one certain orientation.
+For most combinations of $\Delta L$ and $\Delta \theta$, entanglement is exclusively given in either the parallel or orthogonal orientation.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/optimize/optimized-orientation-advanced.pdf}

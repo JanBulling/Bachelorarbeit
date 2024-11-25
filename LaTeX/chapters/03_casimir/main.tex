@@ -3,18 +3,18 @@
 Casimir forces can be viewed in a very similar way to the \textit{van der Waals forces}. In fact, both phenomena describe just two different sides of the same coin. They define the so-called \emph{dispersion forces} between neutral atoms or bodies.
 The quantum theory of van der Waals forces between two neutral atoms was developed by London in 1930 who found the attractive potential $\propto 1/r^6$ for small separations \cite{London_1930}.
 Casimir and Polder showed in 1948, that for separations larger than the resonance wavelength of the atoms, retardation effects need to be taken into account and the potential decays by a power law of $1/r^7$ \cite{Casimir_1948a}. 
-Additionally, they calculated the interaction with a atom or molecule and a perfectly conducting plate, showing that macroscopic objects could experience these \emph{Casimir-Polder interactions} as well.
+Additionally, they calculated the interaction with an atom or molecule and a perfectly conducting plate, showing that macroscopic objects could experience these \emph{Casimir-Polder interactions} as well.
 It becomes evident, that a full description of dispersion forces cannot be given by classical electrodynamics alone. Additional considerations regarding relativistic effects and quantum electrodynamics have to be made \cite{Bordag_2001,Klimchitskaya_2009,Lamoreaux_2004}.
 Casimir, following a suggestion by Bohr \cite{Bordag_1999}, found a simple derivation using the zero-point energy of the vacuum to calculate the attraction between two conducting plates.
 In quantum electrodynamics each point in the electromagnetic field can be described by an quantized harmonic oscillator with ground state energy $E_0 = \hbar\omega/2$.
-The total \textit{zero-point energy} of the ground state of the field (the vacuum) is therefore given by summing over the energies $E_0$ for each possible mode $n$
+The total \textit{zero-point energy} of the ground state (the vacuum) of the field is therefore given by summing over the energies $E_0$ for each possible mode $n$
 \begin{equation}
   E_\mathrm{vacuum} = \frac{\hbar}{2} \sum_n \omega_n.
 \end{equation} 
 These sums are clearly divergent since there are infinitely many possible excitations.
 Electrostatic boundary conditions require the field to be zero at the surface of conductors restricting the possible modes between two parallel plates.
 Precisely the finite difference between the infinite vacuum energy with and without the macroscopic plates give rise to the \emph{Casimir forces}.
-Often, this divergence is simply dropped, motivated by the fact that energy is normally defined only up to a constant \cite{Bordag_2001}. 
+Often, this divergence is simply dropped, motivated by the fact that energy is usually only defined up to a constant \cite{Bordag_2001}. 
 Casimir was able to use regularization techniques to deal with the infinite quantities and arrived at his famous formula \cite{Casimir_1948}
 \begin{equation}\label{eq:3:casimir-energy-pp-conducting}
   E_\mathrm{Casimir} = -\frac{\hbar c \pi^2}{720 L^3} A
@@ -26,10 +26,10 @@ The attractive force $F=-\nabla E$ between the plates can now be simply expresse
 \end{equation}
 It is remarkable, that such a simple relation arises out of the infinities of the vacuum.
 To this day, these Casimir forces are a major topic of modern scientific research. They are generally very difficult to calculate for geometries other than two infinitely large plates or for real materials with dielectric properties. 
-For simple geometries, even the sign of the force is not always intuitively clear: As an example, the Casimir force can be repulsive for an ideal metal spherical shell \cite{Klimchitskaya_2009}.
+For simple geometries, even the sign of the force is not always intuitively clear: As an example, the Casimir force for an ideal conducting spherical shell leads to an expansion of the sphere \cite{Boyer_1968,Klimchitskaya_2009}.
 Between other simple and important objects like the sphere-plane or sphere-sphere geometry, no universally valid closed formula for any separation $L/R$ between the bodies exists. This is discussed in more detail in \cref{sec:3:casimir-plate-sphere}.
 
-Almost ten years after the discovery of Casimir and Polder, Lifshitz was the first to find an expression for the Casimir force between two dielectric plates with arbitrary relative permittivity $\varepsilon_{r,\,1,2}$ for separations larger than the resonant wavelength \footnote{The \q{resonance wavelength} for a macroscopic body in this case can be understood as e.g. the plasma frequency in the Drude model \cite{Ford_1998}. Different models for light-matter interaction result in slightly different resonant wavelength. The Lifshitz formula however holds true for the cases of separations in the micro-meter regime for all practical materials \cite{Kamp_2020}.} \cite{Lifshitz_1956}.
+Almost ten years after the discovery of Casimir and Polder, Lifshitz was the first to find an expression for the Casimir force between two dielectric plates with arbitrary relative permittivity $\varepsilon_{r,\,1(2)}$ for separations larger than the resonant wavelength \footnote{The \q{resonance wavelength} for a macroscopic body in this case can be understood as e.g. the plasma frequency in the Drude model \cite{Ford_1998}. Different models for light-matter interaction result in slightly different resonant wavelength. The Lifshitz formula however holds true for the cases of separations in the micro-meter regime for all practical materials \cite{Kamp_2020}.} \cite{Lifshitz_1956}.
 The expression he found facilitates the general complexity of the Casimir interactions and is only expressible as a complicated integral \cite{Lifshitz_1956}
 \begin{multline}\label{eq:3:lifshitz-general-integral}
   F/A = -\frac{\hbar c}{32 \pi^2 L^4} \int\limits_0^\infty \dd x \int\limits_1^\infty \dd p \ \frac{x^3}{p^2}\biggl\{ \left[ \frac{(s_1+p)(s_2+p)}{(s_1-p)(s_2-p)} e^x - 1 \right]^{-1} + \\
@@ -37,7 +37,7 @@ The expression he found facilitates the general complexity of the Casimir intera
 \end{multline}
 with
 \begin{equation*}
-  s_{1,2} = \sqrt{\varepsilon_{r,\,1,2} - 1 + p^2} .
+  s_{1(2)} = \sqrt{\varepsilon_{r,\,1(2)} - 1 + p^2} .
 \end{equation*}
 In the limit of two perfectly conducting plates ($\varepsilon_{r,\,1} = \varepsilon_{r,\,2} \rightarrow \infty$), the integral can be solved analytically resulting in the same expression already obtained by Casimir
 \begin{equation}
@@ -48,14 +48,14 @@ Lifshitz determined the Casimir force between a conducting metal plate and a die
   F_\mathrm{DM} &= -\frac{\hbar c \pi^2}{240 L^4} \frac{\varepsilon_r - 1}{\varepsilon_r + 1} \varphi(\varepsilon_r) \\
   F_\mathrm{DD} &= -\frac{\hbar c \pi^2}{240 L^4} \left( \frac{\varepsilon_r - 1}{\varepsilon_r + 1} \right)^2 \varphi(\varepsilon_r)\label{eq:3:casimir-pp-F-DD-lifshitz}
 \end{align}
-where $\varphi(\varepsilon_r)$ is a numerical function obtained by solving eq. \eqref{eq:3:lifshitz-general-integral}, which approaches $1$ for a perfect conductor \cite{Lifshitz_1956}. I calculated the function numerically and the result is shown in \cref{fig:3:lifshitz-function}.
+where $\varphi(\varepsilon_r)$ is a numerical function obtained by solving eq. \eqref{eq:3:lifshitz-general-integral}, which approaches $1$ for a perfect conductor \cite{Lifshitz_1956}. The function was numerically calculated and the result is shown in \cref{fig:3:lifshitz-function}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{./../figures/casimir/casimir-lifshitz-function.pdf}
-  \caption{Numeric calculations of the function $\varphi(\varepsilon)$ used in the Lifshitz formula eq. \eqref{eq:3:casimir-pp-F-DM-lifshitz} and \eqref{eq:3:casimir-pp-F-DD-lifshitz}. The function was calculated for \textbf{(blue)} a dielectric and a metal plates and \textbf{(orange)} two dielectric plates. The function approaches unity for $\varepsilon_r\rightarrow\infty$ and a finite value for $\varepsilon_r\rightarrow 1$.}
+  \caption{Numeric calculations of the function $\varphi(\varepsilon)$ used in the Lifshitz formula eq. \eqref{eq:3:casimir-pp-F-DM-lifshitz} and \eqref{eq:3:casimir-pp-F-DD-lifshitz}. The function was calculated for a dielectric and a metal plates \textbf{(blue)} and two dielectric plates \textbf{(orange)}. The function approaches unity for $\varepsilon_r\rightarrow\infty$ and a finite value for $\varepsilon_r\rightarrow 1$.}
   \label{fig:3:lifshitz-function}
 \end{figure}
-For a dielectric and metal plate, the function $\varphi$ approaches the finite value $\varphi(\varepsilon_r \rightarrow 1) \approx 0.46$ for small dielectric constants. This limit is practically already reached at $\varepsilon_r \approx 4$ and $\varphi$ stays approximately constant for smaller $\varepsilon_r$.
+For a dielectric and metal plate, $\varphi$ approaches the finite value $\varphi(\varepsilon_r \rightarrow 1) \approx 0.46$ for small dielectric constants. This limit is practically already reached at $\varepsilon_r \approx 4$ and $\varphi$ stays approximately constant for smaller $\varepsilon_r$.
 
 \input{chapters/03_casimir/1_pfa.tex}
 
