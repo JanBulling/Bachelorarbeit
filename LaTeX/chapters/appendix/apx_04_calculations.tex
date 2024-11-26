@@ -102,7 +102,7 @@ with
 \end{align}
 which is only dependent on the gradient of the shape $\abs{\nabla u}$.
 The logarithmic negativity is given by
-\begin{equation}
+\begin{equation}\label{eq:apx:en-thermal-shield}
   E_N(\mean{\rho}) = \log_2\left\{\frac{1}{4}\left(3 + e^{-4 \gamma}+\sqrt{(1-e^{-4\gamma})^2 + 16e^{-2\gamma}\sin^2\Delta\phi}\right)\right\}
 \end{equation}
 where 
@@ -111,9 +111,9 @@ where
 \end{equation}
 
 
-\section{Time evolution in front of a thermal plate}
+\section{Time evolution in front of a thermal plate}\label{apx:thermal-shield-time-evolution}
 The time evolution operator $\op{U}=e^{-i\op{H}t/\hbar}$ of the hamiltonian eq. \eqref{eq:5:hamiltonian} can be calculated in the interaction picture using the \q{Magnus expansion} \cite{Blanes_2009}.
-In the following calculation, the gravitational interaction is neglected as it is independent of the shields movement.
+In the following calculations, the direct gravitational interactions between the two particles are ignored as they don't depend on the shield vibrations at all. The final evolution due to these couplings were already studied in \cref{cha:entanglement-generation} and can just be added in the end. 
 The interaction picture hamiltonian in the $\{\ket{\psi^1_A\psi^1_B},\ket{\psi^1_A\psi^2_B},\ket{\psi^2_A\psi^1_B},\ket{\psi^2_A\psi^2_B}\}$-basis is given by
 \begin{equation}
   \op{H}_\mathrm{int} = \sum_{m\in\{(k,l)\}} \begin{pmatrix}
@@ -171,3 +171,11 @@ The final decoherence elements of the evolved state therefore all have the form
 \begin{equation}
   e^{-\gamma_{1,2}} = \exp{- \sum_{m} \abs{(g^1_{A,m} + g^1_{B,m})-(g^1_{A,m} + g^2_{B,m})}^2 f_1f^*_1 (\frac{1}{2} + \bar{n}_m)}
 \end{equation}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./../figures/vibrations/entanglement-multiple-modes_rs-5mm.pdf}
+  \caption{Similar to \cref{fig:5:entanglement-multiple-modes} at $T=20\si{mK}$ for a slightly smaller shied with $r_s = 5\si{mm}$.}
+  \label{fig:apx:entanglement-thermal-shield-rs-5mm}
+\end{figure}
