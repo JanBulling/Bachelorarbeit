@@ -1,9 +1,64 @@
 \chapter{Discussion and outlook}\label{cha:discussion-outlook}
+Testing the quantum nature of gravity is notoriously difficult due to its relative weakness compared to the other fundamental forces.
+The concept of gravitationally induced entanglement as evidence for the non-classicality of gravity was first proposed by Feynman at the 1957 Chapel Hill Conference.
+Since then, several experimental proposals have emerged \cite{Bose_2017, Krisnanda_2020}, all aiming on measuring entanglement between macroscopic delocalized masses after direct gravitational coupling.
+A common approach to prevent electromagnetic interactions such as Coulomb or Casimir forces, involves placing a conductive Faraday shield between the particles \cite{Kamp_2020}.
 
-- Squeezed states (similar to cat states) \cite{Pedernales_2023}
+In this work, it was shown by calculating the relative dynamical phase build-up, that Casimir interactions between two macroscopic Schrödinger-cat states and a conducting Faraday shield can destroy all measurable entanglement if small stochastic variations in the initial setup or thermal motion of the shield are present.
+Placement accuracies in the initialization of the cat-states should stay below a threshold, depending on the achievable magnitudes in superposition size and particle masses, usually well below $\Delta \theta \lesssim 10^{-8}\si{rad}$ and $\Delta L \lesssim 10^{-9}\si{m}$.
+To mitigate the decoherence effects of the thermal shield, measurements at very precise points in time are required, where the particular effects of the first vibrational mode minimize.
 
-- Possible to measure casimir interactions using dephasing and so on with similar methods
+The calculated bounds for the placement parameters and the measurement accuracy appears to be very difficult or even practically impossible to implement experimentally in near future.
+In general, the entanglement generation can be improved by increasing either the particles superposition size, its mass or by choosing lager particle-shield separations, which reduces the relative effect of the variations in the placement as well as decoherence effects of the thermal shield.
+The primary goal of the Faraday shield is to allow for tighter particle separations as the gravitational coupling is no longer dominated by the inter-particle Casimir forces.
+This is however only partially possible under specific circumstances, as established in this work, as certain setups would perform better without the shield.
+In \cref{sec:4:discussion} a schema for choosing the optimal parameters is presented, given known experimental constraints in the preparation of the delocalized Schrödinger-cat states and in the placement accuracy.
+By choosing the shield as small as possible and temperatures as low as physically reachable, thermal decoherence weakens, improving entanglement generation.
+Uncharged particles - requiring a much smaller shield in the size of the silica-nanospheres - are therefore preferable over charged particles.
 
-- Decoherence effects due to thermal black-body radiation
 
-- superconducting shield
+
+For a more precise characterization of the experimental challenges, squeezed gaussian states \cite[p. 33-64]{Serafini_2017} should be considered in addition to Schrödinger-cat-like states.
+Most experimental realizations of spatial superpositions of massive objects, especially in the world of high mass levitated particles, are going to be ideally close to squeezed gaussian states \cite[Timestamp: 23:00]{Aspelmeyer_2024} as they can be naturally prepared by ground state cooling in a harmonic trap \cite{Weiss_2021}.
+However, the findings in Ref. \cite{Pedernales_2023} suggest that the results derived from cat-states should remain largely applicable.
+
+Other forms of decoherence, such as undamped vibrations of the setup - potentially due to complex cooling mechanisms like dilution refrigerators - and black-body radiation of the particles can also be considered.
+It is possible to estimate the decoherence due to thermal radiation \cite[p. 127-136]{Schlosshauer_2007} between the cat-states as well as with the thermal environment at temperature $T$ as \cite{RomeroIsart_2011}
+\begin{equation}
+  \Gamma_\mathrm{decoherence} \propto 1 - \exp{-\frac{(\Delta x)^2}{\lambda^2_\mathrm{th}}} \sim (\Delta x)^2
+\end{equation}
+where $\lambda_\mathrm{th} = \pi^{2/3} \hbar c / k_B T$ is the thermal wavelength with values of $\lambda_\mathrm{th} \approx 1\si{mm}$ at $4\si{K}$. 
+For $\Delta x \ll \lambda_\mathrm{th}$, the decoherence scales quadratically in $\Delta x$, resulting in a similar increase as the gravitational entanglement rate $\Gamma_\mathrm{Gravity}$ from eq. \eqref{eq:5:entanglement-rate-gravity}.
+For very large superposition sizes, decoherence stays constant resulting in a domination of gravitational entanglement generation.
+Similarly to variations in the initial particle placement for each run, variations in other parameters, such as the measurement time (i.e. the time of gravitational interaction between the states) can be considered.
+A brief investigation of this effect was presented in Ref. \cite{Nguyen_2020}, showing results consistent with those obtained in this thesis.
+
+Another avenue worth looking into with potentially large experimental improvements lies in the enhancement of the results by knowing the exact initial placement of each separate run - or at least a skewed probability distribution of the parameters.
+The decoherence effects in the average measurement can then be corrected for during the data analysis step.
+This would allow for greater tolerance of variations in the initial setup.
+
+The findings in this thesis have broader implications beyond gravitationally induced entanglement, as a new method for the precise measurement of Casimir forces can be developed utilizing spatial delocalizations.
+The idea of using levitated particles for observing Casimir interactions is a current research topic \cite{Xu_2024}.
+By positioning a single Schrödinger-cat superposition state close to a large thermally vibrating plate, dephasing effects similar to the ones discussed in \cref{subsec:5:entanglement-analytical} are expected due to the slightly different interactions of each superposition component with the plate.
+Measuring this dephasing offers a way to determine the Casimir coupling strength between arbitrarily shaped objects and a flat plane with high precision.
+Moreover, this approach could be extended to measure Casimir-Polder interactions between atoms or molecules and a plane.
+Current technologies, as demonstrated in matter-wave experiments \cite{Fein_2019}, could be sufficient even today.
+Experimental setups designated for gravitational entanglement sensing can be adapted for these measurements, providing a new and precise tool for testing modern theories of Casimir interactions.
+
+
+
+In essence, this thesis offers an overview and an estimation of previously overlooked experimental issues with proposed experiments on quantum gravity.
+By addressing these problems, this work partially paves the way for the possible experimental realization of measuring gravitationally induced entanglement, which ultimately advances the quest for a grand unifying theory of quantum gravity. 
+% This work paves the way for the possible experimental realization of measuring gravitationally induced entanglement, which ultimately advances the quest for a grand unifying theory of quantum gravity. 
+
+
+
+% --- Outlook ---- 
+
+% - Other Decoherence effects e.g. due to thermal black-body radiation
+
+% - superconducting shield
+
+% - Effects of fluctuations in time \cite{Nguyen_2020}
+
+% - Maybe if position of the particle is known for each run, it can be corrected for this in the post-analysis

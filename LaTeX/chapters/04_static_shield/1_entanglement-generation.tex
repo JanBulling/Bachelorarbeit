@@ -1,43 +1,42 @@
 \section{Entanglement generation}\label{sec:4:entanglement-generation}
-If the state $\rho$ is reconstructed using repeated measurements, but the initial placement of the particles were slightly different and fluctuate stochastically for each experimental run, this is effectively comparable to an averaging process over all variations of the initial parameters in the setup.
-As mentioned above, this averaging results in a mixed state and for large variations $\Delta \theta$ and $\Delta L$ this process can destroy entanglement.
-To see this, I calculate the effective measured state $\mean{\rho}$ using
+The averaged state $\mean{\rho}$ after multiple measurements can be calculated as
 \begin{equation}\label{eq:4:average-density}
   \mean{\rho} = \int_{-\infty}^{\infty} \dd \theta_A p(\theta_A) \int_{-\infty}^{\infty} \dd \theta_B p(\theta_B) \int_{-\infty}^{\infty} \dd L_A p(L_A) \int_{-\infty}^{\infty} \dd L_B p(L_B) \ \rho(\theta_A, \theta_B, L_A, L_B)
 \end{equation} 
-where $p(\,\cdot\,)$ is the gaussian probability distribution. Both $\theta$ and $L$ are distributed normally with mean $0$ and standard deviation $\Delta \theta$ or $\Delta L$ respectively. $\rho(\theta_A, \theta_B, L_A, L_B)$ is the state of a single measurement, dependent on the initial parameters $\theta_{A(B)}$ and $L_{A(B)}$ of the setup.
+where $p(\,\cdot\,)$ is the gaussian probability distribution of the random variables $\theta_{A(B)}$ and $L_{A(B)}$ with standard deviation $\Delta \theta$ or $\Delta L$ respectively. 
+$\rho(\theta_A, \theta_B, L_A, L_B)$ is the state of a single measurement, dependent on the initial setup parameters.
 The initial state $\rho_0$ at $t=0$ is given similarly as before by eq. \eqref{eq:2:initial-state} at the beginning of \cref{cha:first-look}.
-During the time evolution, not only the mutual gravitational interaction between the particles must be taken into account, but also the dephasing due to the Casimir forces between the particles and the Faraday shield.
-A single superposition state $\ket{\psi^i_{A(B)}}$ ($i = 1, 2$) accumulates the phase $\phi^i_{A(B),\,\mathrm{Cas}}(t)$ during time evolution due to these Casimir interaction where the phases are given by
+During time evolution, additionally to the mutual gravitational interaction, Casimir forces between the particle and the Faraday shield must be taken into account.
+A single superposition state $\ket{\psi^{(i)}_{A(B)}}$ ($i = 1, 2$) accumulates the phase $\phi^{(i)}_{A(B),\,\mathrm{Cas}}(t)$ during time evolution due to these Casimir interaction, where the phases are given by
 \begin{equation}
-  \phi^i_{A(B),\,\mathrm{Cas}}(t) = \frac{t}{\hbar}
+  \phi^{(i)}_{A(B),\,\mathrm{Cas}}(t) = \frac{t}{\hbar}
   \begin{cases}
-     \frac{3 \hbar c}{8 \pi} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right) \frac{R^3}{(L^i_{A(B)})^4} & \text{for large separations (LSL)} \\
-    \frac{\hbar c \pi^3}{720} \varphi(\varepsilon_r) \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \frac{R}{(\mathscr{L}^i_{A(B)})^2} & \text{for small separations (PFA)}
+     \frac{3 \hbar c}{8 \pi} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right) \frac{R^3}{(L^{(i)}_{A(B)})^4} & \text{for large separations (LSL)} \\
+    \frac{\hbar c \pi^3}{720} \varphi(\varepsilon_r) \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \frac{R}{(\mathscr{L}^{(i)}_{A(B)})^2} & \text{for small separations (PFA)}
   \end{cases}
 \end{equation}
 Here, both analytical limits - the PFA for $L \ll R$ and the LSL for $L \gg R$ - of the Casimir force discussed in \cref{cha:casimir-effect} have been used.
-The function $\varphi(\varepsilon_r)$ is necessary to describe Casimir interactions between dielectric materials and reaches unity for a perfectly conducting particle \cite{Lifshitz_1956}.
-The particle-shield separations $L^i_{A(B)}$ and $\mathscr{L}^i_{A(B)} = L^i_{A(B)}-R$ are dependent on the initial (varying) positions of each particle.
-In full generality, they are given by
-\begin{equation}\label{eq:4:L-casimir}
-  L^i_{A(B)} = L + L_{A(B)} - \frac{d}{2} \pm \frac{\Delta x_{A(B)}}{2} \sin(\delta + \theta_{A(B)})
-\end{equation}
-where $\pm$ distinct between the cat-states $\ket{\psi^1_{A(B)}}$ and $\ket{\psi^2_{A(B)}}$ and $\delta = \alpha, \beta$ was used as an abbreviation.
-The mutual gravitational coupling of the state $\ket{\psi^i_A}\otimes\ket{\psi^j_B}$ is given similar as in the previous calculations in \cref{cha:first-look} by the accumulated phase
+The tabulated function $\varphi(\varepsilon_r)$ is necessary to describe Casimir interactions between dielectric materials and reaches unity for a perfectly conducting particle \cite{Lifshitz_1956}.
+The separations $L^{(i)}_{A(B)}$ and $\mathscr{L}^{(i)}_{A(B)} = L^{(i)}_{A(B)}-R$ between the particle and the shield's surface are placement dependent and in full generality given by
+\begin{align}\label{eq:4:L-casimir}
+  L^{(i)}_{A} &= L + L_{A} - \frac{d}{2} \pm_i \frac{\Delta x_{A}}{2} \sin(\alpha + \theta_{A}) \\
+  L^{(i)}_{B} &= L + L_{B} - \frac{d}{2} \mp_i \frac{\Delta x_{B}}{2} \sin(\beta + \theta_{B})
+\end{align}
+where $\pm_i$ distinct between the two cat-states of a single particle.
+The mutual gravitational coupling of the state $\ket{\psi^{(i)}_A}\otimes\ket{\psi^{(j)}_B}$ is given similar as in the previous calculations in \cref{cha:first-look} by the accumulated phase
 \begin{equation}\label{eq:4:phi-grav}
-  \phi^{ij}_\mathrm{Grav}(t) = \frac{t}{\hbar} \frac{G M_A M_B}{L^{ij}} .
+  \phi^{(ij)}_\mathrm{Grav}(t) = \frac{t}{\hbar} \frac{G M_A M_B}{L^{(ij)}} .
 \end{equation}
-The separation distance $L^{ij}$ between the states $A_i$ and $B_j$ in full generality is given by
+The separation distance $L^{(ij)}$ between the states $A^{(i)}$ and $B^{(j)}$ is given by
 \begin{multline}\label{eq:4:L-gravity}
-  L^{ij} = \sqrt{\left(2L + L_A + L_B \pm \frac{\Delta x_A}{2}\sin(\alpha + \theta_A) \mp \frac{\Delta x_B}{2}\sin(\beta + \theta_B)\right)^2 +} \\ \overline{\left(\frac{\Delta x_A}{2}\cos(\alpha + \theta_A) \pm \frac{\Delta x_B}{2}\cos(\beta + \theta_B)\right)^2} .
+  L^{(ij)} = \sqrt{\left(2L + L_A + L_B \pm \frac{\Delta x_A}{2}\sin(\alpha + \theta_A) \mp \frac{\Delta x_B}{2}\sin(\beta + \theta_B)\right)^2 +} \\ \overline{\left(\frac{\Delta x_A}{2}\cos(\alpha + \theta_A) \pm \frac{\Delta x_B}{2}\cos(\beta + \theta_B)\right)^2} .
 \end{multline}
 Expanding the accumulated gravitational- and Casimir phases to first order in $\Delta x_{A(B)} \ll L$, $\theta_{A(B)} \ll 1$ and $L_{A(B)} \ll 1$ (which is possible since all these variations are very small, as seen later), the averaging of the evolved state $\mean{\rho}$ in eq. \eqref{eq:4:average-density} can be performed analytically (for an exemplary calculation see \cref{apx:average-density}).
 It turns out that with $\Delta \theta_A = \Delta \theta_B \equiv \Delta\theta$ and $\Delta L_A = \Delta L_B \equiv \Delta L$ all off-diagonal elements of the averaged state $\mean{\rho}$ (the so-called \emph{coherences}) are given in the form
 \begin{equation}\label{eq:4:average-density-element}
   \mean{\rho_{kl}} = \frac{1}{4} e^{i \Delta \phi_{kl}(t)} \exp{-\frac{(\xi_{kl})^2}{2} (\Delta\theta)^2 t^2} \exp{-\frac{(\zeta_{kl})^2}{2} (\Delta L)^2 t^2}
 \end{equation}
-where $\Delta \phi$, $\xi$ and $\zeta$ are substitutes for rather lengthy expressions that depend on the particle-shield separation $L$, the orientation of the cat-state $\alpha, \beta$, the masses of the particles $M_{A(B)}$ and the superposition size $\Delta x_{A(B)}$.
+where $\Delta \phi$, $\xi$ and $\zeta$ are substitutes for rather lengthy expressions that depend on the particle-shield separation $L$, the orientation of the cat-state $\alpha, \beta$, the masses of the particles $M_{A(B)}$ and their superposition size $\Delta x_{A(B)}$.
 It becomes evident that for large times $t\rightarrow \infty$ or for large variations in the placement $\Delta \theta, \Delta L \rightarrow \infty$ these off-diagonal elements tend to zero which leads to a continuous and monotonic loss of purity, resulting in the maximally mixed state $\tr\rho^2 = 1/4$ - which obviously is not entangled.
 % \begin{theorem}
 %   Let $\rho$ be an $N\times N$ density matrix with $\rho_{ii} = 1/N$ and $\rho_{ij} = f_{ij}(t)$ ($i\neq j$) with an arbitrary functions $f\in C^1(\mathbb{R}^+\rightarrow\mathbb{C})$ with properties $\lim_{t\rightarrow\infty}f(t)=0$ and $\Re{f}$ decreasing. Then the purity $\pur{\rho}$ is continuously decreasing.
@@ -72,7 +71,7 @@ For \cref{fig:4:EN-delta-theta} the radius of the particles was set to $R=1\time
 A particle-shield separation of $L=2R$ and a superposition size of $\Delta x_A = \Delta x_B = 100\si{nm}$ were chosen.
 In the rest of the thesis, if not otherwise specified, these parameters are used as a default.
 For convenance, they are collectively displayed in \cref{tab:paramters} for easy retrieval.
-They are chosen in the specific orders of magnitude, because they result in a feasible low experiment-time $t_\mathrm{max}\approx 258\si{ms}$ and are in the region of what is soon\footnote{\q{Soon} in this context means still a long time, but the experiment could be doable within this century.} possible \cite{Aspelmeyer_2024}.
+They are chosen in the specific orders of magnitude, because they result in a feasible low experiment-time $t_\mathrm{max}\approx 258\si{ms}$ and are in the region of what is soon\footnote{\q{Soon} in this context means still a long time, but the experiment could be doable within this century.} possible \cite[Timestamp: 51:00]{Aspelmeyer_2024}.
 Other proposals suggest a similar parameter set generally differing only by a single magnitude (see e.g. the Tab. 1 in Ref. \cite{Rijavec_2021}).
 It is important however to stress out, that all these parameters are orders of magnitude away of from what is experimentally reachable today.
 The largest mass that was studied in matter-wave interferometry is in the order of $4\times 10^{-23}\si{kg}$ \cite{Fein_2019} with an superposition size of $\Delta x \gtrsim 500\si{nm}$.

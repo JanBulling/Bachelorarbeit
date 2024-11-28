@@ -1,6 +1,6 @@
 \section{Entanglement in front of a thermal shield}\label{sec:5:thermal-entanglement}
-The generation of entanglement between two particles depends significantly on variations in the particle-shield separation, as discussed in \cref{cha:entanglement-generation}.
-A vibrating shield effectively alters the separation and angle of the cat-state relative to it, as depicted in \cref{fig:5:vibrating-translation-to-variations}.
+The generation of entanglement between two particles depends heavily on variations in the placement of the particles and the shield, as seen in \cref{cha:entanglement-generation}.
+Shield vibrations can effectively be understood to alter the separation and angle of the cat-state relative to shield, as depicted in \cref{fig:5:vibrating-translation-to-variations}.
 \begin{figure}[!htbp]
   \centering
   \def\svgwidth{\textwidth}
@@ -8,10 +8,11 @@ A vibrating shield effectively alters the separation and angle of the cat-state 
   \caption{For a large ($r_s \gg R$) and locally linearizable shield, thermal vibrations with amplitude $z$ can be interpreted as a static shield where particle $A$ (shown in the figure) is positioned at $L+\Delta L$ with angle $\theta$ and particle $B$ at $L-\Delta L$ with angle $-\theta$. Both variations depend solely on the vibrational amplitude. At low vibrational frequencies ($1/\omega \approx t_\mathrm{max}$), the amplitude remains nearly static during an experimental run, with thermal fluctuations distributed around $\mean{z}=0$ and variance $\Delta z$ given by eq. \eqref{eq:5:amplitude-variance}.}
   \label{fig:5:vibrating-translation-to-variations}
 \end{figure}
-This approximation is only valid for shields significantly larger than the particle radius ($r_s \gg R$) and for low vibrational frequencies ($1/\omega \approx t_\mathrm{max}$), effectively capturing the impact of the first vibrational modes and especially the mode $(1,0)$. 
+This approximation is only valid for shields significantly larger than the particle radius ($r_s \gg R$) and for low vibrational frequencies ($1/\omega \approx t_\mathrm{max}$), effectively capturing the impact of the first vibrational modes for small $l$ and $k$.
+Especially the effect of the first mode $(1,0)$ can be put into the same framework from \cref{cha:entanglement-generation}. 
 The interpretation is further supported by findings in \cref{sec:3:imperfect-plates}, showing that the Casimir interaction between a sphere and a tilted plane closely resembles that between a sphere and a flat plane.
-Contrary to the problem considered in \cref{cha:entanglement-generation}, in this case only the thermal amplitude $z_{kl}$ is an independent random variable distributed around $\mean{z_{kl}}=0$ with a standard deviation $\Delta z_{kl}$ given by eq. \eqref{eq:5:amplitude-variance}. 
-Variations in particle-shield separation ($\Delta L$) and angle ($\theta$) are correlated to the vibration amplitude $z$.
+Contrary to the problem considered in \cref{cha:entanglement-generation}, here only the thermal amplitude $z_{kl}$ is an independent random variable distributed around $\mean{z_{kl}}=0$ with a standard deviation $\Delta z_{kl}$ given by eq. \eqref{eq:5:amplitude-variance}. 
+Variations in the particle-shield separation ($\Delta L$) and angle ($\theta$) are correlated to the vibration amplitude $z$.
 For a large and linearizable shield, this can be understood as
 \begin{equation}
   \theta = \arctan(z \abs{\nabla u}) \approx z \abs{\nabla u} \quad \text{and} \quad \Delta L = z \abs{u}
@@ -47,6 +48,8 @@ If the particle is positioned exactly at the center of the shield, only specific
 For $l \neq 1$, this effect becomes however numerically negligible.
 If the particle is placed in the worst-case position for the first mode $(1,0)$, which corresponds to the point of maximum gradient and thus the largest decoherence  (approximately at $r \approx 0.0.527 r_s$), all modes are relevant.
 It becomes clear that only the first few modes significantly affect entanglement, as higher modes do not disrupt entanglement even at temperatures much higher than those required for entanglement loss.
+
+This method on calculating the decoherence induced due to the thermal shield is only accurate in the specific cases of a large and slow vibrating shield ....
 
 
 \subsection{Analytic dynamics}\label{subsec:5:entanglement-analytical}

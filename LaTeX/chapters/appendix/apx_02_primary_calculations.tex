@@ -1,4 +1,4 @@
-\chapter{Calculations}
+\chapter{Primary calculations}
 
 \section{Average density matrix}\label{apx:average-density}
 
@@ -150,7 +150,7 @@ and the displacement operator $\op{D}(\alpha)=\exp{\alpha \op{a}^\dagger - \alph
   +& \op{D}\left(f_1(g^2_A + g^2_B)\right)\rho_\mathrm{th,m}\op{D}^\dagger\left(f_1(g^2_A + g^2_B)\right) \otimes \frac{1}{4}\ketbra{\psi^2_A\psi^2_B}
 \end{split}
 \end{align}
-We are interested in the evolution of the two-particle system. This is given by tracing out the thermal shield $\rho_\mathrm{sys.} = \tr_{th}\left\{\rho(t)\right\}$. Using $\tr{A\cdot B} = \tr{A}\tr{B}$, it follows:
+We are interested in the evolution of the two-particle system. This is given by tracing out the thermal shield $\rho_\mathrm{sys.} = \tr_{th}\left\{\rho(t)\right\}$. Using $\tr{A \otimes B} = \tr{A}\tr{B}$, it follows:
 \begin{equation}
   \rho_\mathrm{sys.} = \frac{1}{4}\begin{pmatrix}
     1 & \prod_{m}\tr{\op{D}\left(f_1(g^1_A + g^1_B)\right)\rho_\mathrm{th,m}\op{D}^\dagger\left(f_1(g^1_A + g^2_B)\right)} e^{i f_2((g^1_A + g^1_B)^2 - (g^1_A + g^2_B)^2)} & \dots \\
@@ -171,11 +171,3 @@ The final decoherence elements of the evolved state therefore all have the form
 \begin{equation}
   e^{-\gamma_{1,2}} = \exp{- \sum_{m} \abs{(g^1_{A,m} + g^1_{B,m})-(g^1_{A,m} + g^2_{B,m})}^2 f_1f^*_1 (\frac{1}{2} + \bar{n}_m)}
 \end{equation}
-
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{./../figures/vibrations/entanglement-multiple-modes_rs-5mm.pdf}
-  \caption{Similar to \cref{fig:5:entanglement-multiple-modes} at $T=20\si{mK}$ for a slightly smaller shied with $r_s = 5\si{mm}$.}
-  \label{fig:apx:entanglement-thermal-shield-rs-5mm}
-\end{figure}
