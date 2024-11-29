@@ -1,12 +1,23 @@
 \chapter{Ancillary calculations}\label{apx:ancillary-calculations}
 
 
-\section{Evolution under a gravitational Hamiltonian}
-In this section the time evolution of a system under Hamiltonian eq. \eqref{eq:2:general-hamiltonian} is calculated a) using the gravitational interaction $\op{H}_G$ as a perturbation b) using an exact time evolution of coherent states.
-
-\subsection{Using time dependent perturbation theory}
-\label{apx:general-state-perturbation-theory}
-A general biparty Fock state $\ket{\psi_0} = \ket{kl}$ with $k, l \in \mathbb{N}_0$ can be evolved in time under a Hamiltonian eq. \eqref{eq:2:general-hamiltonian} treating the gravitational interaction $H_G = -\hbar g (\op{a}_1\op{a}_2^\dagger + \op{a}_1^\dagger\op{a}_2)$ as a perturbation. 
+\section{Evolution under a gravitational Hamiltonian}\label{apx:general-state-gravitaional-hamiltonian}
+In this section the time evolution of a system under Hamiltonian eq. \eqref{eq:2:gravity-hamiltonian} is calculated for two particles $A$ and $B$ (mass $m$) separated by $L$ in a harmonic trap (frequency $\omega$). A example from Ref. \cite{Carney_2018} is followed.
+The total Hamiltonian describing the dynamics is given by
+\begin{equation}
+  \op{H} = \sum_{i=A,B} \frac{\op{p}_i}{2m} + \frac{1}{2} m \omega^2 \op{x}_i^2 + \op{H}_G
+\end{equation}
+where $\op{x}$ and $\op{p}$ are the position and momentum operators of the particle satisfying the canonical commutator relation $[\op{x}_i, \op{p}_j] = i \hbar \delta_{ij}$.
+Introducing ladder operators $\op{x}_i = \sqrt{\hbar/2m\omega} \left(\op{a_i}^\dagger + \op{a_i}\right)$, $\op{p}_i = \sqrt{\hbar m \omega /2} \left(\op{a_i}^\dagger - \op{a_i}\right)$, the Hamiltonian can be rewritten:
+\begin{equation}
+  \op{H} = \sum_{i=A,B} \hbar \omega \op{a}_i^\dagger\op{a}_i - \frac{Gm^2}{L^3}\left(\sqrt{\frac{\hbar}{2m\omega}}\right)^2 \left(\op{a}_A\op{a}_B + \op{a}_A\op{a}^\dagger_B + \op{a}^\dagger_A\op{a}_B + \op{a}^\dagger_A\op{a}^\dagger_B\right) .
+\end{equation}
+Applying the rotating wave approximation, the term $\op{a}_A\op{a}_B + \op{a}^\dagger_A\op{a}^\dagger_B$ can be dropped. The effective Hamiltonian is therefore in the form
+\begin{equation}
+  \op{H}_\mathrm{eff} = \sum_{i=A,B} \hbar \omega \op{a}_i^\dagger\op{a}_i - \hbar g \left(\op{a}_A\op{a}^\dagger_B + \op{a}^\dagger_A\op{a}_B\right)
+\end{equation}
+with coupling strength $g=Gm/\omega L^3$.
+A general biparty Fock state $\ket{\psi_0} = \ket{kl}$ with $k, l \in \mathbb{N}_0$ can be evolved in time under this hamiltonian, treating the gravitational interaction $H_G = -\hbar g (\op{a}_1\op{a}_2^\dagger + \op{a}_1^\dagger\op{a}_2)$ as a perturbation. 
 The resulting state $\ket{\psi(t)}$ after some time $t$ is in the most general form given as
 \begin{equation}
   \ket{\psi(t)} = \sum_{i, j \geq 0} c_{i,j}(t) \ket{i,j}
@@ -34,35 +45,15 @@ For the non-zero states the energies in the exponent equate to zero and the evol
 \begin{equation}\label{eq:apx:perturbation-result}
   \ket{\psi(t)} = \ket{kl} - i g t \ket{k-1,l+1} - i g t \ket{k+1,l-1} + \mathcal{O}(g^2).
 \end{equation}
-The result eq. \eqref{eq:2:general-evolved-state} is represented by eq. \eqref{eq:apx:perturbation-result} for the case of $k=1$ and $l=0$.
-
-\subsection{Using an exact time evolution}
-\label{apx:general-coherent-state-evolution}
-The Hamiltonian eq. \eqref{eq:2:general-hamiltonian} can be rewritten using symmetric and antisymmetric normal modes
+For $k=1$ and $l=0$, the evolved state is in the form (with normalization $\mathcal{N}$)
 \begin{equation}
-  \op{a}_\pm = \frac{1}{\sqrt{2}} \left( \op{a}_1 \pm \op{a}_2 \right)
+  \ket{\psi(t)} = \mathcal{N} \left(\ket{10} - igt\ket{01 + \mathcal{O}(g^2)}\right)
 \end{equation}
-in the form of 
-\begin{equation}
-  \op{H} = \hbar \omega_+ \op{a}^\dagger_+\op{a}_+ + \hbar \omega_- \op{a}^\dagger_-\op{a}_- ,  \quad  \omega_\pm = \omega \pm (-g)
-\end{equation}
-The initial state consisting of two coherent oscillator states is in the new modes given by
-\begin{equation}\label{eq:apx:coherent-initial-state}
-  \ket{\psi(t)} = \ket{\alpha}_1\ket{\beta}_2 = \ket{\frac{1}{\sqrt{2}} (\alpha + \beta)}_+\ket{\frac{1}{\sqrt{2}} (\alpha - \beta)}_-
-\end{equation}
-A general coherent state $\ket{\gamma}$ evolves in time under an Hamiltonian $\op{H} = \hbar \omega \op{a}^\dagger \op{a}$ like $\ket{\gamma(t)} = \ket{e^{-i\omega t} \gamma}$ which can be used to evolve the state in eq. \eqref{eq:apx:coherent-initial-state}:
-\begin{align}
-  \ket{\psi(t)} 
-  &= \ket{ \frac{1}{\sqrt{2}} e^{-i\omega_+t} (\alpha + \beta) }_+\ket{ \frac{1}{\sqrt{2}} e^{-i\omega_-t} (\alpha - \beta) }_- \\
-  &= \ket{ e^{-i\omega t} \left( \alpha \cos gt - \beta \sin gt \right) }_1 \ket{ e^{-i\omega t} \left( - \alpha \sin gt + \beta \cos gt \right) }_2, 
-\end{align}
-where in the last line the back-transformation from the $\pm$-modes \eqref{eq:apx:coherent-initial-state} was used.
+which is entangled with logarithmic negativity $E_N(\ketbra{\psi(t)}) \simeq 2tg/\log 2 + \mathcal{O}(g^2) \geq 0$.
 
 
 
-
-\section{Exemplary calculation of $E_N$}
-\label{apx:E_N-exemplary}
+\section{Exemplary calculation of $E_N$}\label{apx:E_N-exemplary}
 In this section, the logarithmic negativity $E_N$ eq. \eqref{eq:2:logarithmic-negativity} is exemplary calculated for the state eq. \eqref{eq:2:evolved-state}.
 The density matrix of this system is given by
 \begin{equation}

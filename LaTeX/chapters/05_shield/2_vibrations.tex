@@ -57,7 +57,7 @@ Consequently many vibrational modes are highly populated and even for temperatur
   Z = \sum_{m\in\{(k,l)\}} e^{-\beta \hbar \omega_m} .
 \end{equation}
 
-It is possible to determine the asymptotic increase of frequencies $\omega_{kl}$ for high modes $k \rightarrow \infty$.
+It is possible to determine the asymptotic increase of frequencies $\omega_{kl}$ for high modes $k,l \rightarrow \infty$.
 Using the expansion of the Bessel functions for large arguments \cite[eq. 10.17.3]{DLMF}
 \begin{equation}
   J_l(x) \sim \cos(x - \frac{l \pi}{2} - \frac{\pi}{4}) \quad \text{for} \ x \rightarrow \infty
@@ -70,7 +70,13 @@ the asymptotic expansion of eq. \eqref{eq:5:bessel-zeros} can be expressed as
 \begin{equation}
   \sim \frac{e^x}{\sqrt{2\pi x}} \left[\cos(x - \frac{l \pi}{2} - \frac{\pi}{4}) + \cos(x - \frac{l \pi}{2} - \frac{3 \pi}{4})\right] = 0 .
 \end{equation}
-Considering the scaling of $J_l$ for large orders $l\rightarrow \infty$ \cite[eq. 10.19.1]{DLMF}, the distribution of the zeros $\tilde{r}_k$ becomes periodic for large $k$ and $l$ resulting in an asymptotic scaling of the frequencies $\omega_{kl}$ in the order of $\mathcal{O}(k^2 + l^2)$.
+For large $k\rightarrow\infty$, the zeros $\tilde{r}_k$ occur periodically.
+For large orders $l\rightarrow \infty$, the Bessel functions $J_l$ scale like \cite[eq. 10.19.1]{DLMF}
+\begin{equation}
+  J_l(x) \sim \frac{1}{\sqrt{l}} \left(\frac{ex}{2l}\right)^l \quad \text{for} \ l \rightarrow \infty
+\end{equation}
+implying that the first zero shift outwards with $\tilde{r}_1 \gtrsim 2l/e$.
+For high modes $k$ and $l$ this results in an linear asymptotic distribution of zeros and thus, the frequencies $\omega_{kl}$ scale in the order of $\mathcal{O}((k + l)^2)$.
 
 Since the amplitude scales inversely with frequency $\Delta z_{kl} \propto 1/\omega_{kl}$, higher modes exhibit a quadratic decrease in amplitude.
 Additionally, the shape function $u_{kl}$ of higher modes has more bulges, limiting the amplitude further as the available shield-material is distributed over smaller segments of the plate.

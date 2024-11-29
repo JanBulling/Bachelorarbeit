@@ -54,7 +54,7 @@ The variance of $\bar{\rho}$ is now dependent of these correlations in the form 
   \mathrm{Var}[\bar{\rho}] = \frac{1}{\#^2} \sum_{i,j=1}^{\#} \mathrm{Cov}[\rho(X_i), \rho(X_j)] = \frac{1}{\#}\mathrm{Var}[\rho] + \frac{2}{\#^2}\sum_{n=1}^{\# - 1}(\# - n) c_n
 \end{equation}
 where $\mathrm{Cov}[\rho, \rho] = \mathrm{Var}[\rho]$ was used for the variance of the mean density matrix $\mean{\rho}$.
-For correlations $c_n \sim n^{-\alpha}$ ($\alpha < 1$) the sum in eq. \eqref{eq:4:correlation-variance} scales like
+For correlations $c_n \sim n^{-\alpha}$ ($\alpha < 1$) the sum in eq. \eqref{eq:4:correlation-variance} can by asymptotically calculated by the Euler-Maclaurin formula and scales like
 \begin{equation}
   \sum_{n=1}^{\# - 1}(\# - n)n^{-\alpha} \xlongrightarrow{\#\rightarrow\infty} \int_1^{\#}\dd n \, (\#-n)n^{-\alpha} \sim \#^{2-\alpha}
 \end{equation}
