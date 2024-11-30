@@ -1,9 +1,12 @@
 \section{Proximity force approximation}\label{sec:3:pfa}
 
-The Casimir-Polder force cannot be computed easily for arbitrary shapes. There even exists no analytic expression for the simple (and for this thesis relevant) plate-sphere geometry for all separations $L/R$.
-Fortunately, approximation methods exist and in particular the \emph{proximity-force-approximation (PFA)} can be calculated very easily \cite{Hartmann_2018,Emig_2007a,Bulgac_2006}.
-The PFA is only valid for small separations ($L/R \approx 1$) between the considered smooth bodies, where $R$ is the size of the bodies i.e. the radius of the sphere for the sphere-plate geometry.
-The idea of this approximation is to divide the surfaces of the two bodies into infinitesimal small parallel plates with area $\dd A$ and summing over the forces $\dd F$ (or the Casimir energy $\dd E$) between them (see \cref{fig:3:PFA}):
+While the macroscopic Casimir force has an analytical description for two plates, it is not possible to find such an expression for arbitrary geometries. There even exists no analytic expression for the
+simple (and for this thesis relevant) plate-sphere geometry for all separations of the bodies.
+Fortunately, approximation methods exist and in particular the \emph{proximity-force-approximation (PFA)} can, in many cases, be calculated easily as long as the involved surfaces are smooth \cite{Hartmann_2018,Emig_2007a,Bulgac_2006}.
+The PFA is only valid for small separations ($L/R \approx 1$) where $R$ is the typical length scale of the bodes and $L$ die distance between the surfaces.
+In the sphere-plate geometry, $R$ would be the radius of the sphere and $L$ the center-to-plate distance.
+In the PFA, the surfaces of the two bodies are divided into infinitesimal small parallel segments with area $\dd A$ as depicted in \cref{fig:3:PFA}.
+Finally, one sums over the forces each of the surface elements experiences to estimate the force on the whole body. This is given by
 \begin{equation}\label{eq:3:pfa}
   E_\mathrm{PFA} = \iint_A \dd A \, \frac{E_\mathrm{plate-plate}}{A}
 \end{equation}
@@ -15,13 +18,13 @@ where for the Casimir energy per unit area $E_\mathrm{plate-plate}/A$ either eq.
   \caption{In the proximity force approximation the sphere is divided into infinitesimal plane areas $\dd A$ which all exert a force $\dd F$ according to eq. \eqref{eq:3:casimir-force-pp-conducting}. All the contributions are added up together.}
   \label{fig:3:PFA}
 \end{figure}
-For the following calculations, it is important to distinguish between the distance between the plates center and the spheres center $L$ (like used before) and the edge-to-edge distance $\mathscr{L} = L - R$.
+For the following calculations, it is important to distinguish the distance between the plate and the spheres center of mass donated by $L$ and the edge-to-edge separation $\mathscr{L} = L - R$.
 
 The problem with this approximation is, that it is ambiguous what surface the area element $\dd A$ represents. For the plate-sphere geometry, $\dd A$ can be either chosen either tangential to the sphere or parallel to the plate (or in theory any other fictitious surface somewhere in between) \cite{Bulgac_2006}.
-In the limit of the validity of the PFA $\mathscr{L} \ll R$ both methods usually yield the same result.
-For the following calculations, $\dd A$ was chosen parallel to the plate and the area can be parameterized with $r\in [0, R]$ and $\varphi \in [0, 2\pi]$ resulting in a distance $z$ between the infinitesimal area elements $L(r) = \mathscr{L} + R - \sqrt{R^2 - r^2}$ \footnote{Taking $\dd A$ tangential to the sphere, it can be parameterized with $\theta \in [0, \pi/2]$ and $\varphi \in [0, 2\pi]$ resulting in $z(\theta) = \mathscr{L} + R - R\cos\theta$. The PFA eq. \eqref{eq:3:pfa} yields with $\dd A = R^2\sin\theta\dd\theta\dd\varphi$ the result $\propto \frac{\pi R^2(R + 2\mathscr{L})}{\mathscr{L}^2(R+\mathscr{L})^2}$ which in the limit of $\mathscr{L} \ll R$ results in the same expression as eq. \eqref{eq:3:PFA-sphere-plate}.}. The PFA eq. \eqref{eq:3:pfa} yields for a dielectric sphere against a perfectly conducting plate
+In the limit of the validity of the PFA $\mathscr{L} \ll R$ all methods usually yield the same result.
+For the following calculations, $\dd A$ is chosen parallel to the plate and the area can be parametrized with $r\in [0, R]$ and $\varphi \in [0, 2\pi]$ resulting in a distance $L$ between the infinitesimal area elements $L(r) = \mathscr{L} + R - \sqrt{R^2 - r^2}$ \footnote{Taking $\dd A$ tangential to the sphere, it can be parametrized with $\theta \in [0, \pi/2]$ and $\varphi \in [0, 2\pi]$ resulting in $z(\theta) = \mathscr{L} + R - R\cos\theta$. The PFA eq. \eqref{eq:3:pfa} yields with $\dd A = R^2\sin\theta\dd\theta\dd\varphi$ the result $\propto \frac{\pi R^2(R + 2\mathscr{L})}{\mathscr{L}^2(R+\mathscr{L})^2}$ which in the limit of $\mathscr{L} \ll R$ results in the same expression as eq. \eqref{eq:3:PFA-sphere-plate}.}. The PFA eq. \eqref{eq:3:pfa} yields for a dielectric sphere abd a perfectly conducting plate
 \begin{align}
-  E_\mathrm{plate-sphere} &= -\frac{\hbar c \pi^2}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \int_0^R \dd r \int_0^{2\pi} r\dd \varphi \frac{1}{L(r)^3} \\
+  E_\mathrm{PFA} &= -\frac{\hbar c \pi^2}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \int_0^R \dd r \int_0^{2\pi} r\dd \varphi \frac{1}{L(r)^3} \\
   &= -\frac{\hbar c \pi^3}{360} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \frac{R^2}{2\mathscr{L}^2(R + \mathscr{L})} \\
   &\approx -\frac{\hbar c \pi^3}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \frac{R}{\mathscr{L}^2} \label{eq:3:PFA-sphere-plate}
 \end{align}
