@@ -1,86 +1,138 @@
 \chapter{Primary calculations}
 
-\section{Average density matrix}\label{apx:average-density}
+\section{Entanglement in different orientations}\label{apx:entanglement-orientation}
+Expanding the separations $1/L^{(ij)}$ between the states $\ket{\psi^{(i)}_{A}}$ and $\ket{\psi^{(j)}_{B}}$ in second order in $\Delta x$ and calculating the dynamic phases, the following represents the time-evolved state:
+\begin{equation}
+  \rho_\mathrm{Phase} = \frac{1}{4} \begin{pmatrix}
+    1 & e^{i(\phi_B + \phi_{AB})} & e^{-i(\phi_A - \phi_{AB})} & e^{-i(\phi_A - \phi_{B})} \\
+    & 1 & e^{-i(\phi_A + \phi_{B})} & e^{-i(\phi_A + \phi_{AB})} \\
+    & & 1 & e^{i(\phi_B - \phi_{AB})} \\
+    & & & 1
+  \end{pmatrix}
+\end{equation}
+with the substitutions
+\begin{align}\label{eq:apx:phi-definition}
+  &\phi_A = g_\mathrm{Grav} \frac{\Delta x_A \sin\alpha}{4L^2},\quad
+  \phi_B = g_\mathrm{Grav} \frac{\Delta x_B \sin\beta}{4L^2},\\ \label{eq:apx:phi-AB}
+  &\phi_{AB} = g_\mathrm{Grav} \frac{\Delta x_A \Delta x_B}{8 L^3} \left(\frac{1}{2}\cos\alpha\cos\beta - \sin\alpha\sin\beta \right)
+\end{align}
+and the gravitational coupling strength
+\begin{equation}
+  g_\mathrm{Grav} = \frac{G M_A M_B t}{\hbar} .
+\end{equation}
+Eigenvalues of $\rho^{\Gamma}$ are
+\begin{equation}
+  \left\{ \sin^2\left(\frac{\phi_{AB}}{2}\right), \cos^2\left(\frac{\phi_{AB}}{2}\right), \frac{\sin(\phi_{AB})}{2}, -\frac{\sin(\phi_{AB})}{2}\right\}
+\end{equation}
+and thus the logarithmic negativity is given by the sum of negative eigenvalues as
+\begin{equation}
+  E_N = \log_2\left\{ 1 + \abs{\sin(\frac{G M_A M_B \Delta x_A \Delta x_B t}{8\hbar L^3}\left[\sin\alpha\sin\beta-\frac{1}{2}\cos\alpha\cos\beta\right])} \right\} .
+\end{equation}
+Due to Casimir interactions between the particles and the shield, in first order only the additional term ($\delta = \alpha, \beta$)
+\begin{equation}
+  \phi_\mathrm{Cas.,\,A(B)} = \frac{c \pi^3}{720}\left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r) R \frac{2 \Delta x_{A(B)} \sin\delta}{(L - R - d/2)^3} t
+\end{equation}
+is added to the phase $\phi_{A(B)}$, leaving the resulting logarithmic negativity unchanged.
 
-The series expansions of the Casimir terms in the PFA $1/(\mathscr{L}^i_{A(B)})^2$ from eq. \eqref{eq:4:L-casimir} are given by:
+
+\section{Density matrix with stochastic placement variations}\label{apx:placement-average-density-matrix}
+Expanding the separations $1/(\mathscr{L}^{(i)}_{A(B)})^2$ for the PFA from eq. \eqref{eq:4:L-casimir} in first order in $\theta_{A(B)}$ and $L_{A(B)}$ (here exemplary for mass $A^{(1)}$):
 \begin{multline}
-  \frac{1}{(\mathscr{L}^i_{A(B)})^2} \approx \frac{4}{(d-2L+2R)^2} \pm \frac{8 \Delta x_{A(B)}\sin\delta}{(d-2L+2R)^3}
-  \pm \theta_{A(B)}\left(\frac{8\Delta x_{A(B)} \cos\delta}{(d-2L+2R)^3}\right) \\
-  + L_{A(B)}\left(\frac{16}{(d-2L+2R)^3} \pm \frac{48\Delta x_{A(B)} \sin\delta}{(d-2L+2R)^4}\right) \pm \theta_{A(B)}L_{A(B)}\frac{48\Delta x_{A(B)} \cos\delta}{(d-2L+2R)^4}
+  \frac{1}{\left(\mathscr{L}^{(1)}_{A}\right)^2} \approx \frac{4}{(d-2L+2R)^2} + \frac{8 \Delta x_{A(B)}\sin\delta}{(d-2L+2R)^3}
+  + \theta_{A(B)}\left(\frac{8\Delta x_{A(B)} \cos\delta}{(d-2L+2R)^3}\right) \\
+  + L_{A(B)}\left(\frac{16}{(d-2L+2R)^3} + \frac{48\Delta x_{A(B)} \sin\delta}{(d-2L+2R)^4}\right) + \theta_{A(B)}L_{A(B)}\frac{48\Delta x_{A(B)} \cos\delta}{(d-2L+2R)^4}
 \end{multline}
-where again the abbreviation $\delta = \alpha,\beta$ was used and the $\pm$ terms align to the corresponding notation in eq. \eqref{eq:4:L-casimir}. The series expansion for the gravitational terms $1/L^{ij}$ with $i,j = 1,2$ from eq. \eqref{eq:4:L-gravity} is given by
+Similar results can be obtained for expanding the gravitational couplings $1/L^{(ij)}$ from eq. \eqref{eq:4:L-gravity}:
 \begin{multline}
-  \frac{1}{L^{ij}} = \frac{1}{2L} \pm \frac{\Delta x_B \sin\beta - \Delta x_A \sin\alpha}{8L^2} \mp \theta_A\frac{\Delta x_A\cos\alpha}{8L^2} \pm \theta_B\frac{\Delta x_B\cos\beta}{8L^2} \\
-  + L_A \left(-\frac{1}{4L^2} \pm \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{8L^3}\right)
-  + L_B \left(-\frac{1}{4L^2} \pm \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{8L^3}\right) \\
-  \pm L_A \theta_A \frac{\Delta x_A \cos\alpha}{8L^3} \mp L_A \theta_B \frac{\Delta x_B \cos\beta}{8L^3}
-  \pm L_B \theta_A \frac{\Delta x_A \cos\alpha}{8L^3} \mp L_B \theta_B \frac{\Delta x_B \cos\beta}{8L^3} \\
-  + L_A L_B \left(\frac{2}{4L^3} \pm \frac{3\Delta x_B \sin\beta - 3 \Delta x_A \sin\alpha}{16L^4}\right) \\
-  \mp L_A L_B \theta_A \frac{3 \Delta x_A \cos\alpha}{16L^4} \pm L_A L_B \theta_B \frac{3 \Delta x_B \cos\beta}{16L^4}
+  \frac{1}{L^{(11)}} \approx \frac{1}{2L} + \frac{\Delta x_B \sin\beta - \Delta x_A \sin\alpha}{8L^2} - \theta_A\frac{\Delta x_A\cos\alpha}{8L^2} + \theta_B\frac{\Delta x_B\cos\beta}{8L^2} \\
+  + L_A \left(-\frac{1}{4L^2} + \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{8L^3}\right)
+  + L_B \left(-\frac{1}{4L^2} + \frac{\Delta x_A \sin\alpha-\Delta x_B \sin\beta}{8L^3}\right) \\
+  + L_A \theta_A \frac{\Delta x_A \cos\alpha}{8L^3} - L_A \theta_B \frac{\Delta x_B \cos\beta}{8L^3}
+  + L_B \theta_A \frac{\Delta x_A \cos\alpha}{8L^3} - L_B \theta_B \frac{\Delta x_B \cos\beta}{8L^3} \\
+  + L_A L_B \left(\frac{2}{4L^3} + \frac{3\Delta x_B \sin\beta - 3 \Delta x_A \sin\alpha}{16L^4}\right) \\
+  - L_A L_B \theta_A \frac{3 \Delta x_A \cos\alpha}{16L^4} + L_A L_B \theta_B \frac{3 \Delta x_B \cos\beta}{16L^4}
 \end{multline}
 The resulting average over $\theta_{A(B)}$ and $L_{A(B)}$ can be computed by
-\begin{equation}\label{eq:apx:average-density-element}
+\begin{equation}
   \int_{-\infty}^{\infty} \dd \theta_A \dd \theta_B \dd L_A \dd L_B \, p(\theta_A) p(\theta_B) p(L_A) p(L_B) e^{i \phi}
 \end{equation}
 where $p(\,\cdot\,)$ is a gaussian probability distribution in the form of
 \begin{equation}
   p(x) = \frac{1}{\sqrt{2\pi}\Delta x} e^{-\frac{x^2}{2(\Delta x)^2}}
 \end{equation}
-and $\phi$ is, as seen in the expansions above, linear in $\theta_i$ and $L_i$ with occasional mixed terms.
-These mixed terms (here denoted by $\Delta A,\Delta B$ for either $\Delta\theta$ or $\Delta L$) can be neglected in first order because in the final result, they appear in the form of
+and $\phi$ is the accumulated dynamic phase dependent on the two series expansions above.
+The mixed terms consisting of combinations of $\theta$ and $L$ can be neglected in first order because in the final result, they appear in the form of (notation: $\Delta A,\Delta B$ for either $\Delta\theta$ or $\Delta L$; $a,b$ are constants)
 \begin{equation}
-  \sim \exp{-\frac{a^2(\Delta A)^2}{2b^2(\Delta A)^2(\Delta B)^2 + 2}} \rightarrow 1
+  \sim \exp{-\frac{a^2(\Delta A)^2}{2b^2(\Delta A)^2(\Delta B)^2 + 2}} \xrightarrow{\Delta A,\Delta B \ll 1} 1 .
 \end{equation}
-which tends to one for small variations $\Delta A,\Delta B \ll 1$ ($a,b$ are constants).
 Each averaged element of the density matrix can therefore be analytically calculated using 
-\begin{equation} \label{eq:apx:average-density-element-calculation}
-  \prod_{\Delta A = \{\Delta \theta_{A(B)}, \Delta L_{A(B)}\}} \int_{-\infty}^{\infty} \dd A \, \frac{1}{\sqrt{2\pi}\Delta A} e^{-\frac{A^2}{2 (\Delta A)^2}} e^{i\xi A} e^{i\phi} = \prod_{\Delta A} e^{-\frac{\xi^2 (\Delta A)^2}{2}} e^{i\phi}
+\begin{equation}
+  \prod_{\Delta A = \{\Delta \theta_{A(B)}, \Delta L_{A(B)}\}} \int\limits_{-\infty}^{\infty} \dd A \, \frac{1}{\sqrt{2\pi}\Delta A} e^{-\frac{A^2}{2 (\Delta A)^2}} e^{i\xi A} e^{i\phi} = \prod_{\Delta A} e^{-\frac{\xi^2 (\Delta A)^2}{2}} e^{i\phi} .
 \end{equation}
-where again $\xi$ is the lengthy linearized phase proportional to the series expansions above \textit{and proportional to $t$} and $\phi$ is again the lengthy part of the phase independent of the integration parameter $A$.
 
-As an example, the value of the element $\mean{\rho_{12}}$ is given:
-During time evolution, this element corresponding to $\ketbra{\psi_A^1\psi_B^1}{\psi_A^1\psi_B^1}$ picks up the phase (notation from \cref{sec:4:entanglement-generation})
+The resulting averaged density matrices are given by the following for variations in the angle:
 \begin{equation}
-  \phi = \phi^1_\mathrm{A,Casimir} + \phi^1_\mathrm{B,Casimir} - \phi^1_\mathrm{A,Casimir} - \phi^2_\mathrm{B,Casimir} + \phi^{11}_\mathrm{Gravity} - \phi^{12}_\mathrm{Gravity} .
-\end{equation}
-According to \eqref{eq:apx:average-density-element} and \eqref{eq:apx:average-density-element-calculation}, the average density matrix element can be calculated analytically yielding
-\begin{align} \label{eq:apx:averagted-state-element}
-  \mean{\rho_{12}} \approx & \exp{i \left( -\xi_\mathrm{Casimir}\frac{16\Delta x_B \sin\beta}{(d-2L+2R)^3} + \zeta_\mathrm{Gravity}\frac{\Delta x_B\sin\beta}{4L^2} \right) t + \mathcal{O}(\Delta x_A \Delta x_B)} \\
-  & \exp{-\left(\frac{16\Delta x_B \cos\beta}{(d-2L+2R)^3}\xi_\mathrm{Casimir} - \frac{\Delta x_B \cos\beta}{4L^2}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta \theta_B)^2}{2} t^2} \\
-  & \exp{-\left(\frac{\Delta x_B \sin\beta}{4L^3}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta L_A)^2}{2} t^2} \\
-  & \exp{-\left(\frac{96\Delta x_B \sin\beta}{(d-2L+2R)^4}\xi_\mathrm{Casimir} + \frac{\Delta x_B \sin\beta}{4L^3}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta L_B)^2}{2} t^2}
-\end{align}
-where
-\begin{equation}
-  \xi_\mathrm{Casimir} = \frac{c \pi^3}{720} \left(\frac{\varepsilon_r-1}{\varepsilon_r+1}\right) \varphi(\varepsilon_r) R
-  \quad \text{and}\quad 
-  \zeta_\mathrm{Gravity} = \frac{GM_AM_B}{\hbar}
-\end{equation}
-was used.
-
-In the special case of $\Delta L_A = \Delta L_B$ and $\Delta \theta_A = \Delta \theta_B$ (or due to symmetry the other way around), $\Delta x_A = \Delta x_B$ and $\alpha = \pm \beta \equiv \delta$ the averaged density matrix is given by
-\begin{equation}
-  \mean{\rho} = \frac{1}{4}\begin{pmatrix}
-    1 & e^{i \Delta \phi_1}e^{-\gamma} & e^{i \Delta \phi_2}e^{-\gamma} & e^{i(\Delta \phi_1 + \Delta \phi_2)}e^{-2\gamma}\\
-     & 1 & e^{-i(\Delta \phi_1 - \Delta \phi_2)}e^{-2\gamma} & e^{i \Delta \phi_2}e^{-\gamma} \\
-     & & 1 & e^{i \Delta \phi_1}e^{-\gamma} \\
-     & & & 1
+  \mean{\rho_{\theta}} = \frac{1}{4}\begin{pmatrix}
+    1 & e^{-\xi_B^2\frac{(\Delta \theta_B)^2}{2}t^2} & e^{-\xi_A^2\frac{(\Delta \theta_A)^2}{2}t^2} & e^{-\xi_A^2\frac{(\Delta \theta_A)^2}{2}t^2}e^{-\xi_B^2\frac{(\Delta \theta_B)^2}{2}t^2}\\
+    & 1 & e^{-\xi_A^2\frac{(\Delta \theta_A)^2}{2}t^2}e^{-\xi_B^2\frac{(\Delta \theta_B)^2}{2}t^2} & e^{-\xi_A^2\frac{(\Delta \theta_A)^2}{2}t^2}\\
+    & & 1 & e^{-\xi_B^2\frac{(\Delta \theta_B)^2}{2}t^2}\\
+    & & & 1
   \end{pmatrix}
 \end{equation}
-where $\Delta \phi_{1} = \pm \Delta \phi_{2}$ are the phases due to gravity, dependent on the orientation $\alpha, \beta$ which are in the parallel orientation given by eq. \eqref{eq:2:definition-delta-phi} and
+with the abbreviations ($\delta = \alpha,\beta$)
+\begin{equation}\label{eq:apx:definition-xi}
+  \xi_{A(B)} = \left(\frac{c \pi^3}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r) R \frac{2\Delta x_{A(B)} \cos\delta}{(L-R-d/2)^3} + \frac{G M_A M_B}{\hbar} \frac{\Delta x_{A(B)} \cos\delta}{4L^2}\right)
+\end{equation}
+Similar results for variations in the particle-shield separation $L$ can be obtained:
 \begin{multline}
-  \gamma = \left(\frac{16\Delta x \cos\delta}{(d - 2L + 2R)^3}\xi_\mathrm{Casimir} - \frac{\Delta x \cos\delta}{4 L^3}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta \theta)^2}{2} t^2 \\
-  + \left(\frac{96\Delta x \sin\delta}{(d - 2L + 2R)^4}\xi_\mathrm{Casimir} + \frac{\Delta x \sin\delta}{2 L^3}\zeta_\mathrm{Gravity}\right)^2 \frac{(\Delta L)^2}{2} t^2
+  \mean{\rho_{L}} = \frac{1}{4}\left(\begin{matrix}
+    1 & e^{-\chi_B^2\frac{(\Delta L_A)^2}{2}t^2}e^{-(\zeta_B + \chi_B)^2\frac{(\Delta L_B)^2}{2}t^2} & e^{-(\zeta_A+\chi_A)^2\frac{(\Delta L_A)^2}{2}t^2}e^{-\chi_A^2\frac{(\Delta L_B)^2}{2}t^2} & \dots \\
+    & 1 & e^{-(\chi_A+\zeta_A)^2\frac{(\Delta L_A)^2}{2}t^2}e^{-(\chi_B+\zeta_B)^2\frac{(\Delta L_B)^2}{2}t^2} & \dots\\
+    & & 1 & \dots\\
+    & & & \dots
+  \end{matrix}\right. \\
+  \left.\begin{matrix}
+    \dots & e^{-(\chi_A+\zeta_A)^2\frac{(\Delta L_A)^2}{2}t^2}e^{-(\chi_B+\zeta_B)^2\frac{(\Delta L_B)^2}{2}t^2} \\
+    \dots & e^{-(\zeta_A+\chi_A)^2\frac{(\Delta L_A)^2}{2}t^2}e^{-\chi_A^2\frac{(\Delta L_B)^2}{2}t^2} \\
+    \dots & e^{-\chi_B^2\frac{(\Delta L_A)^2}{2}t^2}e^{-(\zeta_B + \chi_B)^2\frac{(\Delta L_B)^2}{2}t^2} \\
+    \dots & 1
+  \end{matrix}\right)
 \end{multline}
-The resulting logarithmic negativity can be computed with \texttt{Mathematica} using $\Delta \phi$ defined in eq. \eqref{eq:4:delta-phi} to
+with 
 \begin{align}
-  E_N(\mean{\rho}) &\approx \max\left\{0, \log_2\left(e^{-\gamma}\left(\cosh(\gamma) + \abs{\sin(\Delta \phi)}\right)\right)\right\} \\
-  &= \log_2\left(\frac{1}{2}e^{-\gamma}\left(\abs{\sin\Delta \phi-\sinh\gamma} + \abs{\sin\Delta \phi+\sinh\gamma} + 2\cosh\gamma\right)\right)
+  \chi_{A(B)} =& \frac{G M_A M_B}{\hbar}\frac{\Delta x_{A(B)}\sin\delta}{4L^3} \\ \label{eq:apx:definition-zeta}
+  \zeta_{A(B)} =& \frac{c\pi^3}{720}\left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r) R \frac{6\Delta x_{A(B)} \sin\delta}{(L-R-d/s)^4}
 \end{align}
-For general combinations of $\Delta L_A, \Delta L_B, \Delta \theta_A,\Delta \theta_B$, and more complex orientations, the logarithmic negativity of $\mean{\rho}$ was computed numerically.
+The combined mean density matrix is therefore given by
+\begin{equation}
+  \mean{\rho} = \rho_\mathrm{Phase} \odot \mean{\rho_{\theta}} \odot \mean{\rho_{L}}
+\end{equation}
+where the symbol $\odot$ represents the element-wise matrix product (Hadamard product).
+In the special case where $\Delta \theta_A = \Delta \theta_B$ and $\Delta L_A = \Delta L_B$ as well as where both particles are identical, i.e. $\Delta x_A = \Delta x_B$ and $M_A=M_B$ and $\alpha=\pm\beta$, the logarithmic negativity can be obtained analytically.
+Using the approximation $\chi_{A(B)} \ll \zeta_{A(B)}$, which is justified for all separations $R < L \lesssim 40 \si{m}$.
+\begin{equation}
+  \mean{\rho} = \rho_\mathrm{Phases} \odot \frac{1}{4}\begin{pmatrix}
+    1 & e^{-\gamma} & e^{-\gamma} & e^{-2\gamma} \\
+    & 1 & e^{-2\gamma} & e^{-\gamma} \\
+    & & 1 & e^{-\gamma} \\
+    & & & 1
+  \end{pmatrix}
+\end{equation}
+with 
+\begin{equation}\label{eq:apx:stochastic-decoherence}
+  \gamma = \left( \xi^2 \frac{(\Delta \theta)^2}{2} + \zeta^2 \frac{(\Delta L)^2}{2} \right) t^2
+\end{equation}
+The logarithmic negativity is given by ($\phi_{AB}$ from eq. \eqref{eq:apx:phi-AB})
+\begin{align}\label{eq:apx:stochastic-variations-logarithmic-negativity}
+  E_N &= \max\left\{0,\ \log_2\left(e^{-\gamma}\left(\cosh\gamma + \abs{\sin\phi_{AB}}\right)\right)\right\} \\
+  &= \log_2\left\{ \frac{1}{2} e^{-\gamma} \left(\abs{\sin\phi_{AB}-\sinh\gamma} + \abs{\sin\phi_{AB}+\sinh\gamma} + 2\cosh\gamma\right) \right\} .
+\end{align}
+For general combinations of $\Delta L_A, \Delta L_B, \Delta \theta_A, \Delta \theta_B$ and for results without any approximations, the logarithmic negativity was computed numerically. 
 
 
-\section{Density matrix vibrating plate} \label{apx:density-matrix-vibrating-plate}
+
+
+\section{Density matrix for particles in front a vibrating plate} \label{apx:density-matrix-vibrating-plate}
 The separations between the shield and the Particle state $A(B)_i$ in the parallel configuration are given by
 \begin{equation}
   d^i_{A(B)} = L \pm_{A(B)} z \left(\abs{u} \mp_i \abs{\nabla u} \frac{\Delta x}{2}\right)
@@ -111,7 +163,7 @@ where
 \end{equation}
 
 
-\section{Time evolution in front of a thermal plate}\label{apx:thermal-shield-time-evolution}
+\section{Time evolution of two particles in front of a thermal plate}\label{apx:thermal-shield-time-evolution}
 The time evolution operator $\op{U}=e^{-i\op{H}t/\hbar}$ of the hamiltonian eq. \eqref{eq:5:hamiltonian} can be calculated in the interaction picture using the \q{Magnus expansion} \cite{Blanes_2009}.
 In the following calculations, the direct gravitational interactions between the two particles are ignored as they don't depend on the shield vibrations at all. The final evolution due to these couplings were already studied in \cref{cha:entanglement-generation} and can just be added in the end. 
 The interaction picture hamiltonian in the $\{\ket{\psi^1_A\psi^1_B},\ket{\psi^1_A\psi^2_B},\ket{\psi^2_A\psi^1_B},\ket{\psi^2_A\psi^2_B}\}$-basis is given by
