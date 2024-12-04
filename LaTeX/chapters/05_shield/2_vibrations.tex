@@ -34,7 +34,7 @@ The shape of the first 12 modes $(k,l)$ are shown in \cref{fig:5:vibrational-mod
 \end{figure}
 In general, any possible vibration of the plates can be decomposed into a sum of these modes $u_{kl}$.
 The amplitude $\op{z}$ depends on temperature $T$ and is treated as a quantum harmonic oscillator with frequency $\omega_{kl}$.
-The expectation value of the amplitude $\avg{z\op{z}}$ is obviously zero and the variance $(\Delta \op{z})^2 = \avg{\op{z}^2} - \avg{\op{z}}^2$ at temperature $T$ is given by (derivation in \cref{apx:thermal-harmonic-oscillator})
+The expectation value of the amplitude $\avg{\op{z}}$ is obviously zero and the variance $(\Delta \op{z})^2 = \avg{\op{z}^2} - \avg{\op{z}}^2$ at temperature $T$ is given by (derivation in \cref{apx:thermal-harmonic-oscillator})
 \begin{equation}\label{eq:5:amplitude-variance}
   (\Delta \op{z}_{kl})^2_T = \frac{\hbar}{2\tilde{m}\omega_{kl}}\coth(\frac{\hbar \omega_{kl}}{2k_BT}) \approx \frac{k_B T}{\tilde{m}\omega_{kl}^2}
 \end{equation}
@@ -50,19 +50,16 @@ The amplitude scales therefore as $\Delta z_{kl} \propto \omega^{-1}$ at high te
 
 
 \subsection*{The effect of infinite modes}
-For a shield with radius $r_s = 1\si{cm} \gg R$ (referred to as the \q{large shield}) and thickness $d=100\si{nmm}$ made out of Copper with $E = 110\si{GPa}$ and $\nu = 1/3$, the vibrational frequencies for the first few modes are between $11.0\si{s^{-1}}$ for $(1,0)$ up to $1018\si{s^{-1}}$ for $(7,6)$.
+For a shield with radius $r_s = 1\si{cm} \gg R$ (referred to as the \q{large shield}) and thickness $d=100\si{nmm}$ made out of copper with $E = 110\si{GPa}$ and $\nu = 1/3$, the vibrational frequencies for the first few modes are between $11.0\si{s^{-1}}$ for $(1,0)$ up to $1018\si{s^{-1}}$ for $(7,6)$.
 These low frequencies result in vibrational energies $\hbar \omega$ that are much smaller than the thermal energy $k_B T$ at any reasonable temperature.
-Consequently many vibrational modes are highly populated and even for temperatures of $10^{-6}\si{K}$, the first 600 modes are equally populated with probabilities close to $1/Z$, where $Z$ is the partition function
-\begin{equation}
-  Z = \sum_{m\in\{(k,l)\}} e^{-\beta \hbar \omega_m} .
-\end{equation}
+Consequently a lot of vibrational modes are highly populated simultaneously as even for temperatures of $10^{-6}\si{K}$, the first 600 modes are roughly equally populated.
 
-It is possible to determine the asymptotic increase of frequencies $\omega_{kl}$ for high modes $k,l \rightarrow \infty$.
-Using the expansion of the Bessel functions for large arguments \cite[eq. 10.17.3]{DLMF}
+It is possible to determine the asymptotic increase of frequencies $\omega_{kl}$ with the mode numbers $k,l \rightarrow \infty$.
+Using the large-argument-expansion for $x\rightarrow\infty$ of the Bessel functions \cite[eq. 10.17.3]{DLMF}
 \begin{equation}
   J_l(x) \sim \cos(x - \frac{l \pi}{2} - \frac{\pi}{4}) \quad \text{for} \ x \rightarrow \infty
 \end{equation}
-and of the modified Bessel functions for $x\rightarrow\infty$ \cite[eq. 10.40.1]{DLMF}
+and of the modified Bessel functions \cite[eq. 10.40.1]{DLMF}
 \begin{equation}
   I_l(x) \sim \frac{e^x}{\sqrt{2\pi x}} \quad \text{for} \ x \rightarrow \infty
 \end{equation}
@@ -70,16 +67,16 @@ the asymptotic expansion of eq. \eqref{eq:5:bessel-zeros} can be expressed as
 \begin{equation}
   \sim \frac{e^x}{\sqrt{2\pi x}} \left[\cos(x - \frac{l \pi}{2} - \frac{\pi}{4}) + \cos(x - \frac{l \pi}{2} - \frac{3 \pi}{4})\right] = 0 .
 \end{equation}
-For large $k\rightarrow\infty$, the zeros $\tilde{r}_k$ occur periodically.
+Hence, for large $k\rightarrow\infty$, the zeros $\tilde{r}_k$ occur periodically.
 For large orders $l\rightarrow \infty$, the Bessel functions $J_l$ scale like \cite[eq. 10.19.1]{DLMF}
 \begin{equation}
-  J_l(x) \sim \frac{1}{\sqrt{l}} \left(\frac{ex}{2l}\right)^l \quad \text{for} \ l \rightarrow \infty
+  J_l(x) \sim I_l(x) \sim \frac{1}{\sqrt{2\pi l}} \left(\frac{ex}{2l}\right)^l \quad \text{for} \ l \rightarrow \infty ,
 \end{equation}
-implying that the first zero shift outwards with $\tilde{r}_1 \gtrsim 2l/e$.
+implying that the first zero $\tilde{r}_1$ shift outwards with $\tilde{r}_1 \gtrsim 2l/e$.
 For high modes $k$ and $l$ this results in an linear asymptotic distribution of zeros and thus, the frequencies $\omega_{kl}$ scale in the order of $\mathcal{O}((k + l)^2)$.
 
 Since the amplitude scales inversely with frequency $\Delta z_{kl} \propto 1/\omega_{kl}$, higher modes exhibit a quadratic decrease in amplitude.
-Additionally, the shape function $u_{kl}$ of higher modes has more bulges, limiting the amplitude further as the available shield-material is distributed over smaller segments of the plate.
+Additionally, the shape $u_{kl}$ of higher modes has more bulges, limiting the amplitude further as the available shield-material is distributed over smaller segments of the plate.
 These effects combine to ensure that higher-order modes have minimal contributions, allowing numerical calculations to focus on the first few modes.
 Nevertheless, the influence of infinitely many modes can still be approximated asymptotically using the scaling behavior of $\omega_{kl}$.
 

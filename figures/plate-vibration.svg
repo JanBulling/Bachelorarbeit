@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.8166316"
-     inkscape:cx="251.71911"
-     inkscape:cy="229.52948"
+     inkscape:zoom="1.9916593"
+     inkscape:cx="258.82941"
+     inkscape:cy="231.71634"
      inkscape:window-width="2560"
      inkscape:window-height="1494"
      inkscape:window-x="-11"
@@ -93,7 +93,7 @@
        xlink:href="#linearGradient13"
        id="radialGradient5"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.6014868,0.54338856,-0.66418767,0.73520234,134.60512,3.1686643)"
+       gradientTransform="matrix(0.6014868,0.54338856,-0.66418767,0.73520234,134.60512,7.4019979)"
        cx="22.688021"
        cy="25.96224"
        fx="22.688021"
@@ -104,7 +104,7 @@
        xlink:href="#linearGradient13"
        id="radialGradient6"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.6014868,0.54338856,-0.66418767,0.73520234,128.36137,28.675038)"
+       gradientTransform="matrix(0.6014868,0.54338856,-0.66418767,0.73520234,128.36137,32.908374)"
        cx="22.688021"
        cy="25.96224"
        fx="22.688021"
@@ -204,17 +204,17 @@
        style="fill:url(#radialGradient5);fill-opacity:1;stroke-width:0.910539;stroke-miterlimit:3;paint-order:stroke fill markers"
        id="circle5"
        cx="135.54564"
-       cy="38.937042"
+       cy="43.17038"
        r="9.5" />
     <circle
        style="fill:url(#radialGradient6);fill-opacity:1;stroke-width:0.910539;stroke-miterlimit:3;paint-order:stroke fill markers"
        id="circle6"
        cx="129.3019"
-       cy="64.443413"
+       cy="68.67675"
        r="9.5" />
     <g
        id="g7"
-       transform="translate(99.387776,28.795908)">
+       transform="translate(99.387776,33.029244)">
       <circle
          style="fill:#a02c2c;fill-opacity:1;stroke:none;stroke-width:1.84894;stroke-linecap:butt;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
          id="circle7"
@@ -224,7 +224,7 @@
     </g>
     <g
        id="g8"
-       transform="translate(105.63151,3.2895436)">
+       transform="translate(105.63151,7.5228772)">
       <circle
          style="fill:#a02c2c;fill-opacity:1;stroke:none;stroke-width:1.84894;stroke-linecap:butt;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
          id="circle8"
@@ -242,20 +242,20 @@
        id="path9" />
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:2.00001, 0.5;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       d="M 132.42962,12.676714 V 80.136463"
+       d="M 132.42962,16.91005 V 84.369799"
        id="path10" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        id="path28"
        sodipodi:type="arc"
        sodipodi:cx="132.48846"
-       sodipodi:cy="51.53051"
+       sodipodi:cy="55.763847"
        sodipodi:rx="37.758724"
        sodipodi:ry="37.758724"
        sodipodi:start="4.712389"
        sodipodi:end="4.9654617"
        sodipodi:arc-type="arc"
-       d="m 132.48846,13.771786 a 37.758724,37.758724 0 0 1 9.45403,1.202704"
+       d="m 132.48846,18.005123 a 37.758724,37.758724 0 0 1 9.45403,1.202704"
        sodipodi:open="true" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#3e3e3e;stroke-width:0.421616;stroke-miterlimit:3;stroke-dasharray:0.42161599,0.42161599;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
@@ -264,6 +264,10 @@
        height="24.920527"
        x="11.9798"
        y="21.348963" />
+    <path
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.475353;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
+       d="M 9.6167574,36.520586 V 53.589568"
+       id="path6" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);paint-order:stroke fill markers"
        d="M 81.213568,39.043892 C 72.242707,33.504957 66.913887,33.591836 57.441815,33.995756"
@@ -275,10 +279,10 @@
        width="6.0047026"
        height="79.539467"
        x="87.461632"
-       y="10.919736" />
+       y="15.153067" />
     <path
        style="fill:none;fill-opacity:1;stroke:#a02c2c;stroke-width:1;stroke-miterlimit:3;stroke-dasharray:2.00004, 1;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 135.54513,38.937497 -6.243,25.506"
+       d="m 135.54513,43.170833 -6.243,25.506"
        id="path14"
        sodipodi:nodetypes="cc" />
     <rect
@@ -287,23 +291,23 @@
        width="6.0047026"
        height="79.539467"
        x="97.982475"
-       y="10.919736" />
+       y="15.153067" />
     <path
        style="fill:none;fill-opacity:1;stroke:#a02c2c;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:1.00002, 0.5;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       d="m 142.53292,12.549686 -6.83629,26.158292"
+       d="m 142.53292,16.783022 -6.83629,26.158292"
        id="path11"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
-       d="m 95.499315,35.666843 h 6.679225"
+       d="m 95.499315,39.900179 h 6.679225"
        id="path15" />
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9-5);marker-end:url(#marker16-9-5);paint-order:stroke fill markers"
-       d="M 95.166016,50.945424 H 131.04659"
+       d="M 95.166016,55.17876 H 131.04659"
        id="path3-53" />
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
-       d="m 122.17131,67.193813 5.49056,-1.986338"
+       d="m 122.17131,71.427149 5.49056,-1.986338"
        id="path1" />
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker16-9);marker-end:url(#marker16-9);paint-order:stroke fill markers"
@@ -323,25 +327,25 @@
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       x="8.7565374"
-       y="77.311623"
+       x="9.1322813"
+       y="81.805183"
        id="text9"><tspan
          sodipodi:role="line"
          id="tspan9"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
-         x="8.7565374"
-         y="77.311623">$r_s$</tspan></text>
+         x="9.1322813"
+         y="81.805183">$r_s$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       x="134.05919"
-       y="11.255512"
+       x="136.17583"
+       y="16.018009"
        id="text11"><tspan
          sodipodi:role="line"
          id="tspan11"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
-         x="134.05919"
-         y="11.255512">$\Delta\alpha$</tspan></text>
+         x="136.17583"
+         y="16.018009">$\theta$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
@@ -357,35 +361,35 @@
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        x="105.00602"
-       y="36.243267"
+       y="40.476604"
        id="text15"><tspan
          sodipodi:role="line"
          id="tspan15"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
          x="105.00602"
-         y="36.243267">$\Delta L$</tspan></text>
+         y="40.476604">$\Delta L$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        x="108.81434"
-       y="49.549389"
+       y="53.782726"
        id="text3-3"><tspan
          sodipodi:role="line"
          id="tspan3-9"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
          x="108.81434"
-         y="49.549389">$L$</tspan></text>
+         y="53.782726">$L$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        x="116.12086"
-       y="71.568565"
+       y="75.801903"
        id="text1"><tspan
          sodipodi:role="line"
          id="tspan1"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
          x="116.12086"
-         y="71.568565">$R$</tspan></text>
+         y="75.801903">$R$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
@@ -396,6 +400,17 @@
          id="tspan5"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
          x="16.957687"
-         y="52.404682">$a+a^\dagger$</tspan></text>
+         y="52.404682">$z \propto a+a^\dagger$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="5.4687748"
+       y="46.49168"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
+         x="5.4687748"
+         y="46.49168">$r$</tspan></text>
   </g>
 </svg>
