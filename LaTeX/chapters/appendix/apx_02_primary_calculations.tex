@@ -6,7 +6,7 @@ Expanding the separations $1/L^{(ij)}$ between the states $\ket{\psi^{(i)}_{A}}$
   \rho_\mathrm{Phase} = \frac{1}{4} \begin{pmatrix}
     1 & e^{i(\phi_B + \phi_{AB})} & e^{-i(\phi_A - \phi_{AB})} & e^{-i(\phi_A - \phi_{B})} \\
     & 1 & e^{-i(\phi_A + \phi_{B})} & e^{-i(\phi_A + \phi_{AB})} \\
-    & & 1 & e^{i(\phi_B - \phi_{AB})} \\
+    \multicolumn{2}{c}{\multirow{2}{*}{c.c}} & 1 & e^{i(\phi_B - \phi_{AB})} \\
     & & & 1
   \end{pmatrix}
 \end{equation}
@@ -72,10 +72,10 @@ Each averaged element of the density matrix can therefore be analytically calcul
 
 The resulting averaged density matrices are given by the following for variations in the angle:
 \begin{equation}
-  \mean{\rho_{\theta}} = \frac{1}{4}\begin{pmatrix}
+  \mean{\rho_{\theta}} = \begin{pmatrix}
     1 & e^{-\xi_B^2\frac{(\Delta \theta_B)^2}{2}t^2} & e^{-\xi_A^2\frac{(\Delta \theta_A)^2}{2}t^2} & e^{-\xi_A^2\frac{(\Delta \theta_A)^2}{2}t^2}e^{-\xi_B^2\frac{(\Delta \theta_B)^2}{2}t^2}\\
     & 1 & e^{-\xi_A^2\frac{(\Delta \theta_A)^2}{2}t^2}e^{-\xi_B^2\frac{(\Delta \theta_B)^2}{2}t^2} & e^{-\xi_A^2\frac{(\Delta \theta_A)^2}{2}t^2}\\
-    & & 1 & e^{-\xi_B^2\frac{(\Delta \theta_B)^2}{2}t^2}\\
+    \multicolumn{2}{c}{\multirow{2}{*}{c.c}} & 1 & e^{-\xi_B^2\frac{(\Delta \theta_B)^2}{2}t^2}\\
     & & & 1
   \end{pmatrix}
 \end{equation}
@@ -85,10 +85,10 @@ with the abbreviations ($\delta = \alpha,\beta$)
 \end{equation}
 Similar results for variations in the particle-shield separation $L$ can be obtained:
 \begin{multline}
-  \mean{\rho_{L}} = \frac{1}{4}\left(\begin{matrix}
+  \mean{\rho_{L}} = \left(\begin{matrix}
     1 & e^{-\chi_B^2\frac{(\Delta L_A)^2}{2}t^2}e^{-(\zeta_B + \chi_B)^2\frac{(\Delta L_B)^2}{2}t^2} & e^{-(\zeta_A+\chi_A)^2\frac{(\Delta L_A)^2}{2}t^2}e^{-\chi_A^2\frac{(\Delta L_B)^2}{2}t^2} & \dots \\
     & 1 & e^{-(\chi_A+\zeta_A)^2\frac{(\Delta L_A)^2}{2}t^2}e^{-(\chi_B+\zeta_B)^2\frac{(\Delta L_B)^2}{2}t^2} & \dots\\
-    & & 1 & \dots\\
+    \multicolumn{2}{c}{\multirow{2}{*}{c.c}} & 1 & \dots\\
     & & & \dots
   \end{matrix}\right. \\
   \left.\begin{matrix}
@@ -111,10 +111,10 @@ where the symbol $\odot$ represents the element-wise matrix product (Hadamard pr
 In the special case where $\Delta \theta_A = \Delta \theta_B$ and $\Delta L_A = \Delta L_B$ as well as where both particles are identical, i.e. $\Delta x_A = \Delta x_B$ and $M_A=M_B$ and $\alpha=\pm\beta$, the logarithmic negativity can be obtained analytically.
 Using the approximation $\chi_{A(B)} \ll \zeta_{A(B)}$, which is justified for all separations $R < L \lesssim 9.7 \si{m}$.
 \begin{equation}
-  \mean{\rho} = \rho_\mathrm{Phases} \odot \frac{1}{4}\begin{pmatrix}
+  \mean{\rho} = \rho_\mathrm{Phases} \odot \begin{pmatrix}
     1 & e^{-\gamma} & e^{-\gamma} & e^{-2\gamma} \\
     & 1 & e^{-2\gamma} & e^{-\gamma} \\
-    & & 1 & e^{-\gamma} \\
+    \multicolumn{2}{c}{\multirow{2}{*}{c.c}} & 1 & e^{-\gamma} \\
     & & & 1
   \end{pmatrix}
 \end{equation}
@@ -143,7 +143,7 @@ After averaging over $z$ (normally distributed around $\mean{z} = 0$ and std. $\
   \mean{\rho} = \frac{1}{4} \begin{pmatrix}
     1 & e^{i \Delta \phi} e^{- \frac{1}{2} (\xi_\mathrm{Cas})^2 (\Delta z)^2} & e^{i \Delta \phi} e^{- \frac{1}{2} (\xi_\mathrm{Cas})^2 (\Delta z)^2} & 1 \\
     & 1 & e^{- \frac{1}{2} (2 \xi_\mathrm{Cas})^2 (\Delta z)^2} & e^{-i \Delta \phi} e^{- \frac{1}{2} (\xi_\mathrm{Cas})^2(\Delta z)^2} \\
-    & & 1 & e^{-i \Delta \phi} e^{- \frac{1}{2} (\xi_\mathrm{Cas})^2 (\Delta z)^2} \\
+    \multicolumn{2}{c}{\multirow{2}{*}{c.c}} & 1 & e^{-i \Delta \phi} e^{- \frac{1}{2} (\xi_\mathrm{Cas})^2 (\Delta z)^2} \\
     & & & 1
   \end{pmatrix}
 \end{equation}
