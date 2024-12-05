@@ -15,7 +15,7 @@ The integral form reads
 where $\alpha$ is the electric polarizability of the sphere and the integration is performed over all possible interaction frequencies $\omega$ of the electromagnetic field with the materials.
 
 In the \emph{large-separation-limit (LSL)}, where the sphere-plate separation are much larger the the resonant wavelength of the material, the polarizability can be taken as a static constant \cite{Ford_1998,Kamp_2020}.
-In this case, the integral eq. \eqref{eq:3:ford-integral} can be solved analytically by using an exponential convergence factor
+In this case, the integral eq. \eqref{eq:3:ford-integral} can be solved analytically by using an exponential convergence factor resulting in
 \begin{equation}
   F = -\frac{6 \hbar c}{4 \pi L^5} \alpha .
 \end{equation}
@@ -37,12 +37,12 @@ A comparison of the PFA and LSL approximations across all separations is shown i
   \label{fig:3:casimir-behavior}
 \end{figure}
 
-The scaling of $1/L^4$ for large separations can be motivated empirically. Casimir and Polder calculated the potential between two atoms separated by a distance $L$ with polarizability $\alpha_i$ as \cite{Casimir_1948a} \footnote{For two macroscopic spheres, the casimir potential looks identical to eq. \eqref{eq:3:casimir-polder-two-atoms}. The polarizability $\alpha$ is given by eq. \eqref{eq:3:polarizability-sphere}, resulting in a Casimir potential between two identical dielectric spheres in the large separation limit of $-\frac{23 \hbar c}{4\pi L^7}\left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)^2R^6$ \cite{Emig_2007}.}
+The scaling of $1/L^4$ for large separations can additionally be motivated empirically. Casimir and Polder calculated the potential between two atoms separated by a distance $L$ with polarizability $\alpha_i$ as \cite{Casimir_1948a} \footnote{For two macroscopic spheres, the Casimir potential looks identical to eq. \eqref{eq:3:casimir-polder-two-atoms}. The polarizability $\alpha$ is given by eq. \eqref{eq:3:polarizability-sphere}, resulting in a Casimir potential between two identical dielectric spheres in the large separation limit of $-\frac{23 \hbar c}{4\pi L^7}\left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)^2R^6$ \cite{Emig_2007}.}
 \begin{equation}\label{eq:3:casimir-polder-two-atoms}
   E = -\frac{23 \hbar  c \alpha_1 \alpha_2}{4 \pi L^7} .
 \end{equation}
-If both atoms are approximated as spheres with $\alpha \sim R^3$, and one of them is increased to the size of $R \sim L$, the total Casimir-Polder potential between them effectively scales with $\sim R^3/L^4$.
-This approximation corresponds to the limit $L/R \gg 1$ and aligns with the actual scaling of the macroscopic Casimir potential for large separations in eq. \eqref{eq:3:casimir-sphere-plate-LSL}.
+If both atoms are approximated as spheres with $\alpha \sim R^3$ and one of them is increased to the size of $R \sim L$, the total Casimir-Polder potential between them effectively scales with $\sim R^3/L^4$.
+This representation corresponds to the limit $L/R \gg 1$ and aligns with the actual scaling of the macroscopic Casimir potential for large separations in eq. \eqref{eq:3:casimir-sphere-plate-LSL}.
 
 The series expansion in \cref{fig:3:casimir-behavior} suggests, that the proximity-force-approximation is an upper bound for the actual Casimir interaction at all separations. In fact, it can be proven, that the PFA for a superconducting sphere and a plate always predicts a stronger force $\abs{\nabla E}$ than the LSL.
 \begin{theorem}
@@ -67,10 +67,10 @@ The series expansion in \cref{fig:3:casimir-behavior} suggests, that the proximi
     \abs{\nabla E_\mathrm{PFA,\,cond.}} \geq \abs{\nabla E_\mathrm{PFA,\,diel.}} > \abs{\nabla E_\mathrm{LSL}} .
   \end{equation}
   Thus, the PFA provides an upper bound for the Casimir force at all separations.
-  Considering the numerical series expansion, it appears as if the argument would apply to all distances $L/R$ - although this is not mathematically proven here.
+  Considering the numerical series expansion, it appears as if the argument applies at all separations $L/R$ - although this is not mathematically proven here.
 \end{proof}
 \begin{remark}
-  For later calculations, only the difference in the Casimir energy for slightly different separations $L$ and thus effectively the gradient $\nabla E = \dd E / \dd L$ is required. Thus, the proof was given in terms of the Casimir force.
+  For later calculations, only the difference in the Casimir energy for slightly different separations $L$ and thus effectively the gradient $\nabla E = \dd E / \dd L$ is required. Thus, the proof was given in terms of the Casimir force $F= -\nabla E$.
 \end{remark}
 
 For subsequent calculations, the PFA is therefore used as a worst-case approximation of the Casimir energy. Whenever possible, results are cross-verified anc compared with the LSL model.

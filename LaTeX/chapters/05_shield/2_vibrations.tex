@@ -3,11 +3,11 @@
 A spherical plate of radius $r_s$ clamped at its edge, can vibrate in distinct modes characterized by indices $(k,l)$, where $k \in [1,\infty)$ and $l \in [0, \infty)$.
 The exact vibrational frequencies $\omega_{kl}$ and mode shapes $u_{kl}$ are described by Bessel functions.
 In fact, one of the first occurrences of these functions is linked to Euler's study of vibrating perfectly flexible and infinitely thin membranes \cite{Dutka_1995}.
-For a plate of a real material with density $\rho$ and thickness $d$, vibrations are described the differential equation \cite[p. 490]{Rao_2019}
+For a plate of a physical material with density $\rho$ and thickness $d$, vibrations are described by the differential equation \cite[p. 490]{Rao_2019}
 \begin{equation}
   D \nabla^2\nabla^2 u = -\rho d \ddot{u}
 \end{equation} 
-where $D$, a flexural rigidity constant, is dependent on material properties of the plate like Youngs module $E$ and the Poisson ratio $\nu$ as
+where $D$ is a flexural rigidity constant, dependent on material properties of the plate like Youngs module $E$ and the Poisson ratio $\nu$ in the form
 \begin{equation}
   D = \frac{d^3 E}{12(1-\nu^2)} .
 \end{equation}
@@ -36,7 +36,7 @@ In general, any possible vibration of the plates can be decomposed into a sum of
 The amplitude $\op{z}$ depends on temperature $T$ and is treated as a quantum harmonic oscillator with frequency $\omega_{kl}$.
 The expectation value of the amplitude $\avg{\op{z}}$ is obviously zero and the variance $(\Delta \op{z})^2 = \avg{\op{z}^2} - \avg{\op{z}}^2$ at temperature $T$ is given by (derivation in \cref{apx:thermal-harmonic-oscillator})
 \begin{equation}\label{eq:5:amplitude-variance}
-  (\Delta \op{z}_{kl})^2_T = \frac{\hbar}{2\tilde{m}\omega_{kl}}\coth(\frac{\hbar \omega_{kl}}{2k_BT}) \approx \frac{k_B T}{\tilde{m}\omega_{kl}^2}
+  (\Delta \op{z}_{kl})^2_T = \frac{\hbar}{2\tilde{m}\omega_{kl}}\coth(\frac{\hbar \omega_{kl}}{2k_BT}) \approx \frac{k_B T}{\tilde{m}\omega_{kl}^2} ,
 \end{equation}
 where $\hbar\omega \ll k_B T$ was used in the last step and $k_B = 1.3806\times 10^{-23} \si{J/K}$ is the Boltzmann constant.
 The \textit{effective mass} $\tilde{m}$ of the mode, considering the mode's shape, can intuitively be estimated by the average amplitude of the mode 
@@ -45,6 +45,10 @@ The \textit{effective mass} $\tilde{m}$ of the mode, considering the mode's shap
 \end{equation}
 with $m=\rho \pi r_s^2 d$ being the total mass of the plate.
 The amplitude scales therefore as $\Delta z_{kl} \propto \omega^{-1}$ at high temperatures or for low frequencies.
+
+It is additionally interesting to consider the scaling of the amplitudes $\Delta z$ for shields with varying sizes $r_s$.
+According to eq. \eqref{eq:5:vibration-frequency}, the frequency $\omega\propto r_s^{-2}$ increases quadratically as the shield radius decreases.
+Simultaneously, the effective mass $\tilde{m} \sim r_s^2$ in eq. \eqref{eq:5:effective-mass} increases also quadratically with the shield's size, consequently resulting in linear dependence of $\Delta z \sim r_s$ for large temperatures and/or low modes.
 
 
 
@@ -61,25 +65,21 @@ Using the large-argument-expansion for $x\rightarrow\infty$ of the Bessel functi
 \end{equation}
 and of the modified Bessel functions \cite[eq. 10.40.1]{DLMF}
 \begin{equation}
-  I_l(x) \sim \frac{e^x}{\sqrt{2\pi x}} \quad \text{for} \ x \rightarrow \infty
+  I_l(x) \sim \frac{e^x}{\sqrt{2\pi x}} \quad \text{for} \ x \rightarrow \infty,
 \end{equation}
 the asymptotic expansion of eq. \eqref{eq:5:bessel-zeros} can be expressed as
 \begin{equation}
   \sim \frac{e^x}{\sqrt{2\pi x}} \left[\cos(x - \frac{l \pi}{2} - \frac{\pi}{4}) + \cos(x - \frac{l \pi}{2} - \frac{3 \pi}{4})\right] = 0 .
 \end{equation}
 Hence, for large $k\rightarrow\infty$, the zeros $\tilde{r}_k$ occur periodically.
-For large orders $l\rightarrow \infty$, the Bessel functions $J_l$ scale like \cite[eq. 10.19.1]{DLMF}
+For large orders $l\rightarrow \infty$, the Bessel functions $J_l$ and $I_l$ scale like \cite[eq. 10.19.1 and eq. 10.41.1]{DLMF}
 \begin{equation}
   J_l(x) \sim I_l(x) \sim \frac{1}{\sqrt{2\pi l}} \left(\frac{ex}{2l}\right)^l \quad \text{for} \ l \rightarrow \infty ,
 \end{equation}
-implying that the first zero $\tilde{r}_1$ shift outwards with $\tilde{r}_1 \gtrsim 2l/e$.
+implying that the first zero $\tilde{r}_1$ shift outwards by $\tilde{r}_1 \gtrsim 2l/e$.
 For high modes $k$ and $l$ this results in an linear asymptotic distribution of zeros and thus, the frequencies $\omega_{kl}$ scale in the order of $\mathcal{O}((k + l)^2)$.
 
 Since the amplitude scales inversely with frequency $\Delta z_{kl} \propto 1/\omega_{kl}$, higher modes exhibit a quadratic decrease in amplitude.
-Additionally, the shape $u_{kl}$ of higher modes has more bulges, limiting the amplitude further as the available shield-material is distributed over smaller segments of the plate.
-These effects combine to ensure that higher-order modes have minimal contributions, allowing numerical calculations to focus on the first few modes.
+Additionally, the shape $u_{kl}$ of higher modes has more bulges, limiting the amplitude further as the available shield-material is distributed evenly over the plate.
+These effects combined ensure that higher-order modes have minimal contributions, allowing numerical calculations to focus on the first few modes.
 Nevertheless, the influence of infinitely many modes can still be approximated asymptotically using the scaling behavior of $\omega_{kl}$.
-
-It is also interesting to consider the scaling of the amplitudes $\Delta z$ for shields with varying sizes $r_s$.
-According to eq. \eqref{eq:5:vibration-frequency}, the frequency $\omega$ increases quadratically as the shield radius $r_s$ decreases.
-Simultaneously, the effective mass $\tilde{m}$ in eq. \eqref{eq:5:effective-mass} scales also quadratically with the shield's size, consequently resulting in linear dependence of $\Delta z \sim r_s$ for large temperatures and/or low modes.

@@ -58,10 +58,10 @@
     \put(0,0){\includegraphics[width=\unitlength,page=2]{./../figures/simple-problem.pdf}}%
     \put(0.03702317,0.38656897){\color[rgb]{0.62745098,0.17254902,0.17254902}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$M_A$\end{tabular}}}}%
     \put(0.25004257,0.38656897){\color[rgb]{0,0.26666667,0.66666667}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$M_B$\end{tabular}}}}%
-    \put(0.47413899,0.43172902){\color[rgb]{0.62745098,0.17254902,0.17254902}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_A^1}$\end{tabular}}}}%
-    \put(0.48436393,0.12753747){\color[rgb]{0.62745098,0.17254902,0.17254902}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_A^2}$\end{tabular}}}}%
-    \put(0.87035504,0.12242502){\color[rgb]{0,0.26666667,0.66666667}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_B^2}$\end{tabular}}}}%
-    \put(0.87717147,0.44536228){\color[rgb]{0,0.26666667,0.66666667}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_B^1}$\end{tabular}}}}%
+    \put(0.47413899,0.43172902){\color[rgb]{0.62745098,0.17254902,0.17254902}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_A^{(1)}}$\end{tabular}}}}%
+    \put(0.48436393,0.12753747){\color[rgb]{0.62745098,0.17254902,0.17254902}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_A^{(2)}}$\end{tabular}}}}%
+    \put(0.87035504,0.12242502){\color[rgb]{0,0.26666667,0.66666667}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_B^{(2)}}$\end{tabular}}}}%
+    \put(0.87717147,0.44536228){\color[rgb]{0,0.26666667,0.66666667}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\ket{\psi_B^{(1)}}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{./../figures/simple-problem.pdf}}%
     \put(0.13037975,0.16802007){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$2L$\end{tabular}}}}%
     \put(0.91717206,0.30121145){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta x$\end{tabular}}}}%

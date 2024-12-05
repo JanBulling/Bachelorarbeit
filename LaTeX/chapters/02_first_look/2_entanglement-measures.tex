@@ -9,13 +9,13 @@ The partial transpose with respect to a subsystem $i$ can be understood in the s
 It is defined for an arbitrary density operator $\rho = \sum_{ijkl}p^{ij}_{kl}\ketbra{i}{j}\otimes\ketbra{k}{l}$ as $\rho^{\Gamma_A} = \sum_{ijkl}p^{ji}_{kl}\ketbra{i}{j}\otimes\ketbra{k}{l}$.
 To see the necessity of the PPT criterion, consider a separable mixed state $\rho$, which can be generally expressed as 
 \begin{equation}\label{eq:2:separable-state}
-  \rho = \sum p_i \rho_{A}^i\otimes\rho_{B}^i .
+  \rho = \sum p_i \rho_{A}^{(i)}\otimes\rho_{B}^{(i)} .
 \end{equation}
 The partial transpose is in this case trivial:
 \begin{equation}
-  \rho^{\Gamma_A} = \sum p_i (\rho_{A}^i)^T \otimes \rho_{B}^i .
+  \rho^{\Gamma_A} = \sum p_i (\rho_{A}^{(i)})^T \otimes \rho_{B}^{(i)} .
 \end{equation}
-Since the transpose preserves eigenvalues, the transposed subsystem $A$ is still positive $(\rho_{A}^i)^T > 0$ and describes again a valid quantum state. It follows, that $\rho^{\Gamma_A}$ is positive as well.
+Since the transpose preserves eigenvalues, the transposed subsystem $A$ is still positive $(\rho_{A}^{(i)})^T > 0$ and describes again a valid quantum state. It follows, that $\rho^{\Gamma_A}$ is positive as well.
 If somehow $\rho^{\Gamma_A}$ has any negative eigenvalues, this can only mean that the initial state $\rho$ is not separable and cannot be expressed in the form of eq. \eqref{eq:2:separable-state} and the necessity of the criterion is shown.
 
 For quantifying entanglement in a more precise way, a mathematical quantity called \emph{entanglement measure} can be used. A good measure should be able to capture the essential features of entanglement. One can axiomatically state what properties such a measure $E(\rho)$ should have \cite{Plenio_2005a,Horodecki_2009}:

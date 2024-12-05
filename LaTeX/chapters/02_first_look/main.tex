@@ -24,8 +24,8 @@ The interaction Hamiltonian $\op{H}_G$ is described by
   \op{H}_G = - \frac{Gm^2}{\abs{L - (\op{x}_A - \op{x}_B)}} ,
 \end{equation}
 where $G=6.6743 \times 10^{-11} \si{m^3 kg^{-1} s^{-2}}$ is the gravitational constant. 
-The positions $x_A$ and $x_B$ of the both masses $A$ and $B$ have been canonically quantized. If they are delocalized in cat-states $\ket{\psi} = 1/\sqrt{2}\left(\ket{\psi^{(1)}} + \ket{\psi^{(2)}}\right)$, both states are eigenstates of $\op{x}$.
-If $L \gg \abs{\op{x}_A - \op{x}_B}$, the denominator of $\op{H}_G$ can be expanded up to second order in $\op{x}_A - \op{x}_B$. In this thesis, $L$ will be in the $\Si{\mu m}$ and the spatial extension $\Delta x$ is around $500\si{nm}$ \cite{Fein_2019}, which is why this expansion will always be justified.
+The positions $x_A$ and $x_B$ of the both masses $A$ and $B$ have been canonically quantized. The particles are delocalized in the spatial cat-state $\ket{\psi} = 1/\sqrt{2}\left(\ket{\psi^{(1)}} + \ket{\psi^{(2)}}\right)$.
+If $L \gg \abs{\op{x}_A - \op{x}_B}$, the denominator of $\op{H}_G$ can be expanded up to second order in $\op{x}_A - \op{x}_B$. In this thesis, $L$ will be in the $\Si{\mu m}$ regime and the spatial extension $\Delta x$ is around $500\si{nm}$ \cite{Fein_2019}, making this expansion always justified.
 The zeroth order term is just a overall energy offset, the first order term $\propto (\op{x}_A - \op{x}_B)$ as well as the terms $\op{x}^2_i$ result only in a local interaction for each mass separately. The coupling term $ - (\op{x}_A\op{x}_B + \op{x}_B\op{x}_A) = -2\op{x}_A\op{x}_B$ however couples both masses and thus can mediate entanglement. An exemplary calculation of this is demonstrated in \cref{apx:general-state-gravitaional-hamiltonian}.
 
 The observable entanglement is however very weak as it depends on the gravitational coupling strength and quantum states of the masses typically need to have coherence times of order of $100\si{ms}$ to $10\si{s}$, imposing a huge experimental challenge.
@@ -51,7 +51,7 @@ The masses are prepared in a coherent delocalized quantum superposition Schrödi
 The spatial extension size of the superposition is denoted by $\Delta x$.
 With the notation introduced in \cref{fig:2:simple-problem}, the initial state at $t=0$ is given by
 \begin{equation}\label{eq:2:initial-state}
-  \ket{\psi(t=0)} = \frac{1}{2}\left( \ket{\psi_A^1} + \ket{\psi_A^2} \right) \otimes \left( \ket{\psi_B^1} + \ket{\psi_B^2} \right) .
+  \ket{\psi(t=0)} = \frac{1}{2}\left( \ket{\psi_A^{(1)}} + \ket{\psi_A^{(2)}} \right) \otimes \left( \ket{\psi_B^{(1)}} + \ket{\psi_B^{(2)}} \right) .
 \end{equation}
 The state evolves under a Hamiltonian $\op{H}_G$ and after some time the position of each mass is measured and checked for entanglement.
 For now it is assume that all other interactions except gravity are negligible. In reality, electromagnetic forces and Casimir-Polder interactions \cite{Casimir_1948, Casimir_1948a} need to be considered.

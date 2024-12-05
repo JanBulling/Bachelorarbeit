@@ -1,5 +1,5 @@
 \section{Entanglement in front of a thermal shield}\label{sec:5:thermal-entanglement}
-The generation of entanglement between two particles depends heavily on variations in the placement of the particles and the shield, as seen in \cref{cha:entanglement-generation}.
+The generation of entanglement between two particles depends heavily on variations in their initial placement, as seen in \cref{cha:entanglement-generation}.
 Shield vibrations can effectively be understood to alter the separation and angle of the cat-state relative to shield, as depicted in \cref{fig:5:vibrating-translation-to-variations}.
 \begin{figure}[!htbp]
   \centering
@@ -33,8 +33,8 @@ In fact, the critical temperature $T_\mathrm{crit}$ scales with the separation $
 \end{equation}
 The large separations required are consistent with previous findings in \cref{cha:entanglement-generation}, considering that the thermal amplitudes $\Delta z_{1,0} \approx 9 \times 10^{-11}\si{m}$ at $20\si{mK}$ are comparable with the critical values the variation in the shield-particle separation $\Delta L_\mathrm{crit}$.
 Interestingly, these results are unaffected by the shield radius $r_s$, as long as $r_s \gg R$ and the vibrational mode can be locally linearized.
-This invariance arises because the gradient $\abs{\nabla u} \propto 1/r_s$ and $z \propto r_s$ perfectly cancel, leaving $\theta$ independent of $r_s$. 
-When the cat-state orientation is parallel to the shield, the system is very stable against variations in $\Delta L$, leaving the entanglement independent of $r_s$ in first order.
+This invariance arises because the gradient $\abs{\nabla u} \sim 1/r_s$ and $\Delta z \propto r_s$ perfectly cancel, leaving $\theta$ independent of $r_s$. 
+When the cat-state orientation is parallel to the shield, the system is very stable against variations in $\Delta L$, leaving the entanglement generation completely independent of $r_s$ in first order.
 
 However, as seen in \cref{fig:5:entanglement-temperature}, the mode number $(k, l)$ significantly impacts entanglement generation.
 Higher modes correspond to higher vibrational frequencies and smaller amplitudes $\Delta z$, with $T_\mathrm{crit}$ asymptotically scaling as $\mathcal{O}((k + l)^2)$. 
@@ -46,9 +46,9 @@ This behavior is presented in \cref{fig:5:T-crit-modes}.
   \label{fig:5:T-crit-modes}
 \end{figure}
 If the particle is positioned exactly at the center of the shield, only specific symmetric mode shapes with $l=2k+1,\ k\in\mathbb{N}_0$ can induce decoherence.
-For $l > 1$, this effect becomes numerically negligible.
+For $l > 1$, this decoherence effects become numerically negligible and are virtually indistinguishable from $0$.
 If the particle is placed in the worst-case position for the first mode $(1,0)$, which corresponds to the point of maximum gradient $\abs{\nabla u}$ and thus the largest decoherence (approximately at $r \approx 0.527 r_s$), all modes are relevant.
-It becomes clear that only the first few modes significantly affect the entanglement, as higher modes do not disrupt entanglement even at temperatures much higher than those required for entanglement loss.
+It however becomes evident that only the first few modes significantly affect the entanglement, as higher modes do not disrupt entanglement even at temperatures much higher than those required for entanglement loss.
 
 This naive method for calculating the decoherence induced due to the thermal shield is only accurate in the specific cases of a large and slow vibrating shield, as it requires the shield to be treaded as flat and tilted on the scale of the particle.
 Furthermore, due to considering all modes separately, the combined effect is a huge overestimation, as each mode is treaded as maximally displaced simultaneously and no individual dynamics are accounted for.
@@ -139,7 +139,7 @@ The full width at half maximum (FWHM) of these observed peaks is approximated by
 getting smaller at higher temperatures.
 
 The resulting decoherence of multiple modes is given by the sum of all individual modes, where the contributed effect decays rapidly with the mode number, as seen in eq. \eqref{eq:5:effect-of-a-mode}.
-Entanglement as seen without the shield is never reachable due to the quasi-periodicity of the system. The frequency ratios $\omega_i/\omega_j \notin \mathbb{Q}$ for $i\neq j$ \footnote{While not rigorously proven, this conclusion is supported by the transcendental nature of the zeros of the Bessel functions \cite{Lorch_1995} and the non-integer frequency ratio $\omega_{1,0} / \omega_{1,1} \notin \mathbb{Z}$, which on its own should already ensure quasi-periodic behavior.} prevent exact repetition of the resulting sinusoidal summation.
+Entanglement as seen without the shield is never reachable due to the quasi-periodicity of the system. The frequency ratios $\omega_i/\omega_j \notin \mathbb{Q}$ for $i\neq j$ \footnote{While not rigorously proven, this conclusion is supported by the transcendental nature of the zeros of the Bessel functions \cite{Lorch_1995} and the non-integer frequency ratio $\omega_{1,0} / \omega_{1,1} \notin \mathbb{Q}$, which on its own should already ensure quasi-periodic behavior.} prevent exact repetition of the resulting sinusoidal summation.
 The entanglement dynamics of the first 50 vibrational modes combined are shown in \cref{fig:5:entanglement-multiple-modes} .
 \begin{figure}[!htbp]
   \centering

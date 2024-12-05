@@ -9,9 +9,8 @@ In the following section, precisely the dependence of this stability is discusse
 
 
 \subsection{Orientation}
-One of the arguably easiest parameter to change experimentally is the orientation of the superpositions, which is quantified by $\alpha$ and $\beta$ in \cref{fig:4:complete-setup}.
-As already seen in \cref{fig:2:entanglement-dynamics}, the entanglement dynamics are dependent on the orientation.
-In the parallel orientation, the states take twice as long as in the orthogonal orientation to become maximally entangled.
+One of the arguably easiest parameter to change in the experimental setup is the orientation of the cat-state superpositions, which is quantified by $\alpha, \beta \in [0, \pi)$ in \cref{fig:4:complete-setup}.
+As already seen in \cref{fig:2:entanglement-dynamics}, maximal entanglement in the parallel orientation is reached after twice the time compared to the orthogonal orientation.
 In general, it is advantageous to aim for the highest entanglement rate and thus the smallest $t_\mathrm{max}(\alpha, \beta)$, as this requires a shorter coherence time and thus reduces the total time of the experiment.
 The previous results from \cref{cha:first-look} can be further generalized for an arbitrary orientation $\alpha, \beta$. The logarithmic negativity is given by (derived in \cref{apx:entanglement-orientation})
 \begin{equation}
@@ -21,28 +20,28 @@ where $\phi$ is now dependent on the orientation and is defined as (for $\Delta 
 \begin{equation}\label{eq:4:phi-orientation}
   \phi = \frac{G M_A M_B t \Delta x_A \Delta x_B}{8\hbar L^3} \left(\sin\alpha\sin\beta-\frac{1}{2}\cos\alpha\cos\beta\right) .
 \end{equation}
-The maximum entanglement $E_N=1$ is reached for $\Delta\phi = \pm \pi/2$ and thus after a time
+The maximum entanglement $E_N=1$ is reached for $\phi = \pm \pi/2$ and thus after a time
 \begin{equation}\label{eq:4:t-max}
   t_\mathrm{max}(\alpha,\beta) = \frac{4\pi \hbar L^3}{G M_A M_B \Delta x_A \Delta x_B}\abs{\sin\alpha\sin\beta - \frac{1}{2}\cos\alpha\cos\beta}^{-1}.
 \end{equation}
-For some specific symmetric cases, the resulting times for different orientations are shown in \cref{fig:4:t-max-orientation}.
+For the specific symmetric cases $\alpha=\pm \beta$ and $\beta = 0$, the resulting entanglement times are shown in \cref{fig:4:t-max-orientation}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/ideal-entanglement/t-max-orientation.pdf}
   \caption{Time $t_\mathrm{max}$ after which maximum entanglement ($E_N = 1$) is reached for different orientations. Only the most interesting and highly symmetric cases $\alpha=\pm\beta$ and $\beta=0$ are shown. The singularity $t_\mathrm{max} \rightarrow \infty$ for $\beta = 0$ and $\alpha = \pi/2$ is expected. The two other singularities at $\alpha = \beta = 2 \arctan(\sqrt{3} \pm \sqrt{2})$ are explainable by the \q{harmonic mean} in \cref{fig:4:harmonic-mean}.}
   \label{fig:4:t-max-orientation}
 \end{figure}
-The global minima of $t_\mathrm{max}(\alpha,\beta)$ is attained in the orthogonal orientation. This is not surprising considering that this orientation maximizes the \textit{differences in separation distances} between all superposition states.
-Much more interesting and surprising are the unanticipated singularities in \cref{fig:4:t-max-orientation} which appear for 
+The global minima of $t_\mathrm{max}(\alpha,\beta)$ is attained in the orthogonal orientation. This is not surprising considering that this orientation maximizes the \textit{differences in separation distances} between all superposition cat-states.
+Much more interesting and unanticipated are the singularities in \cref{fig:4:t-max-orientation} which appear for 
 \begin{equation}
   \sin\alpha\sin\beta=\frac{1}{2}\cos\alpha\cos\beta .
 \end{equation}
-For $\beta=0$ the singularity at $\alpha=\pi/2$ is not surprising. In this configuration, the distances $\ket{\psi^1_A}\leftrightarrow\ket{\psi^{1,2}_B}$ and $\ket{\psi^2_A}\leftrightarrow\ket{\psi^{1,2}_B}$ are identical and thus these states accumulate the same phases, resulting in a factorable global phase.
+For $\beta=0$ the singularity at $\alpha=\pi/2$ is not surprising. In this configuration, the distances $\ket{\psi^{(1)}_A}\leftrightarrow\ket{\psi^{(1),(2)}_B}$ and $\ket{\psi^{(2)}_A}\leftrightarrow\ket{\psi^{(1),(2)}_B}$ are identical and thus these states accumulate the same phases, resulting in a factorable global phase.
 In the case of $\alpha=\beta$, the two singularities are precisely given in the orientation
 \begin{equation}
   \alpha=\beta=2 \arctan(\sqrt{3}\pm\sqrt{2})\approx 90\deg \pm 54.74\deg .
 \end{equation}
-There does exist a non-obvious geometric interpretation why no entanglement is generated exactly in this configuration, however all 4 separation distances between the states form the \q{harmonic mean} visualized in \cref{fig:4:harmonic-mean}.
+There exists a non-obvious geometric interpretation why no entanglement is generated exactly in this configuration, as all 4 separation distances between the states form the \q{harmonic mean} visualized in \cref{fig:4:harmonic-mean}.
 \begin{figure}[!htbp]
   \centering
   \def\svgwidth{\textwidth}
@@ -51,11 +50,11 @@ There does exist a non-obvious geometric interpretation why no entanglement is g
   \label{fig:4:harmonic-mean}
   % COLORFUL:: $\textcolor[HTML]{aa0000}{\blacksquare} = \displaystyle\frac{2}{\frac{1}{\textcolor[HTML]{0044aa}{\blacksquare}}+\frac{1}{\textcolor[HTML]{447821}{\blacksquare}}}$
 \end{figure}
-Here, in the limit $\Delta x \ll L$ every local phase precisely cancels out resulting in a loss of entanglement. 
-To avoid all these singularities, it is advisable to always take $\alpha=-\beta$, where all orientations result in roughly similar entanglement times $t_\mathrm{max}$, at most only differing by a factor of $2$.
+In the limit $\Delta x \ll L$, all dynamic phases for the different cat-states can be factored in a global phase and thus resulting in a loss of entanglement. 
+To avoid all these singularities, it is advisable to always choose $\alpha=-\beta$, where all orientations result in roughly similar entanglement times $t_\mathrm{max}$, at most only differing by a factor of $2$.
 
-It should come as no surprise that the different orientations exhibit different stabilities. Naturally, one would expect the orthogonal configuration to be much more sensitive to angular variations than the parallel one.
-In contrast, the parallel configuration should be much more stable against variations $L$, as no phase difference is induced between the two superposition states $\ket{\psi^1_{A(B)}}$ and $\ket{\psi^2_{A(B)}}$ of the particle $A$ ($B$).
+It should come by no surprise that the different orientations exhibit different stabilities. Naturally, one would expect the orthogonal configuration to be much more sensitive to angular variations than the parallel one.
+In contrast, the parallel configuration should be much more stable against variations $L$, as no phase difference is induced between the two superposition states $\ket{\psi^{(1)}_{A(B)}}$ and $\ket{\psi^{(2)}_{A(B)}}$ of the particles $A$ and $B$.
 
 The effect of different orientations on the stability against angular variations and the behavior of the critical angular variation $\Delta \theta_\mathrm{crit}$ is shown in \cref{fig:4:theta-crit-orientation}.
 \begin{figure}[!htbp]
@@ -64,7 +63,7 @@ The effect of different orientations on the stability against angular variations
   \caption{Critical angular variation $\Delta \theta_\mathrm{crit}$ for different orientations after the time $t_\mathrm{max}(\alpha, \beta)$ for which maximum entanglement is reached. The \emph{orthogonal orientation} magnified on the right is very stable against angular variations and only numerical methods show a finite stability value. The singularities in the left figure for $\alpha = \beta$ arise from the fact, that these orientations need infinite time to entangle as already seen in \cref{fig:4:t-max-orientation}.}
   \label{fig:4:theta-crit-orientation}
 \end{figure}
-As expected, the orthogonal configuration is the most stable against these kind of variations. This is, because the dephasing ultimately depends on the distance between the state and the shield $L \pm \Delta x/2 \cos\theta \approx L \pm \Delta x/2 (1 - \theta^2/2)$, which is a only second order effect of the angular variations $\theta$.
+As expected, the orthogonal configuration is the most stable against these kind of variations. This is, because the dephasing ultimately depends on the distance between the cat-state and the shield $L \pm \Delta x/2 \cos\theta \approx L \pm \Delta x/2 (1 - \theta^2/2)$, which is a only second order effect of the angular variations $\theta$.
 This explains the apparent \q{infinitely} good stability in the figure, as the analytical solution only uses first order approximations in $\theta$.
 Exact numerical results however cap the stability at $\Delta \theta_\mathrm{crit,\,orthogonal} \approx 7.3\times 10^{-5}\si{rad}$.
 
@@ -75,13 +74,13 @@ Respectively, the stability against distance variations $\Delta L_\mathrm{crit}$
   \caption{Critical distance variation $\Delta L_\mathrm{crit}$ for different orientations after a time $t_\mathrm{max}(\alpha,\beta)$. Here, the \emph{parallel orientation} (magnified on the left) is infinitely stable against placement variations.}
   \label{fig:4:L-crit-orientation}
 \end{figure}
-Again aligning with expectations, the parallel configuration is (in theory) exhibits an infinite stability.
-One however could argue, that a for this to hold, the uncertainties in the angular placement have to be zero. As could be seen in \cref{fig:4:theta-crit-orientation}, these variations are at most around $\sim 5 \times 10^{-5}\si{rad}$ and thus a realistic upper bound for the minimum required distance variations is given by $\Delta L_\mathrm{crit,parallel} = \Delta L_\mathrm{crit}(\alpha \approx 5\times 10^{-5}\si{rad}) \simeq 4\times 10^{-11}\si{m}$.
+Again aligning with expectations, the parallel configuration exhibits an infinite stability.
+One could argue, that a for this to hold, the uncertainties in the angular placement have to be zero. As however seen in \cref{fig:4:theta-crit-orientation}, these variations are at most around $\sim 5 \times 10^{-5}\si{rad}$ and thus a realistic upper bound for the minimum required distance variations is given by $\Delta L_\mathrm{crit,parallel} = \Delta L_\mathrm{crit}(\alpha \approx 5\times 10^{-5}\si{rad}) \simeq 4\times 10^{-11}\si{m}$.
 It is important to keep in mind, that these bounds can be improved substantially by e.g. increasing the separation distance $L$, the particle size $R$ or the superposition size $\Delta x$.
 
 Considering these results, the parallel orientation seems to be the more stable and therefore favorable option, even if the requires coherence times $t_\mathrm{max}$ are twice as long.
 Keeping particle-shield separation variations below $0.01\si{pm}$ in the orthogonal orientation - even smaller than size of a single atom - is extremely challenging,  
-especially under the additional consideration of the thermal vibrations of the shield and the particles, which are in the same order of magnitude as seen later in \cref{cha:the-shield}.
+especially under the additional consideration of the thermal vibrations of the shield, which are in the same order of magnitude as seen later in \cref{cha:the-shield}.
 With this framework on hand, it is possible to generate the stability diagram in \cref{fig:4:optimal-orientation}, showing the optimal orientation in which the most entanglement can be measured.
 For most combinations of $\Delta L$ and $\Delta \theta$, entanglement is exclusively given in either the parallel or orthogonal orientation.
 \begin{figure}[!htbp]
@@ -95,8 +94,8 @@ For most combinations of $\Delta L$ and $\Delta \theta$, entanglement is exclusi
 \newpage
 \subsection{Separation, mass and superposition size}
 It is possible to improve the placement accuracies required in the initial placement of the particles by changing the parameters in \cref{tab:paramters}.
-The particle-shield separation $L$ in particular can be adjusted easily over a wide range and one is only limited in the ability of trapping close to the shield discussed in \cref{sec:4:trapping} and the size of the experimental setup.
-The critical angular variation $\Delta \theta_\mathrm{crit}$ for different $L$ is shown in \cref{fig:4:theta-crit-L}.
+The particle-shield separation $L$ in particular can be adjusted easily over a wide range and one is only limited in the ability of trapping close to the shield (discussed in \cref{sec:4:trapping}) and the size of the experimental setup.
+The scaling of the critical angular variation $\Delta \theta_\mathrm{crit}$ for different $L$ is shown in \cref{fig:4:theta-crit-L}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/theta-variance/theta-crit-L.pdf}
@@ -105,20 +104,20 @@ The critical angular variation $\Delta \theta_\mathrm{crit}$ for different $L$ i
 \end{figure}
 A similar figure can be created for the change of $\Delta L_\mathrm{crit}$, but as already discussed previously, the setup in the parallel orientation is very stable against variations in the separation distance, so only angular variations have to be considered.
 
-It is intuitively clear, that a larger separation improves the stability as the relative effect of the variations $\sim \Delta x \sin\theta \ll L$ decreases and the Casimir potential tends towards zero.
-However, a larger separation also slows down the entanglement generation, as $t_\mathrm{max} \propto L^3$.
+It is intuitively clear, that a larger separation improves the stability as the relative effect of the angular variations $\sim \Delta x \sin\theta \ll L$ decreases and the Casimir potential tends towards zero.
+However, a larger separation also slows down the entanglement generation by $t_\mathrm{max} \propto L^3$.
 The combination of both effects leads to the results shown in \cref{fig:4:theta-crit-L}.
-Both models for the Casimir interaction for either small separations $L \sim R$ (PFA) or large separations $L \gg R$ (LSL) have been considered and the regions of validity are shaded in gray.
-Looking at the dependence of the critical point eq. \eqref{eq:4:critical-point} on the separation, it becomes evident that
+Both models for the Casimir interaction for either small separations $L \sim R$ (PFA) or large separations $L \gg R$ (LSL) have been considered and the regions of validity for each model are shaded in gray.
+Looking at the dependence of the critical point eq. \eqref{eq:4:critical-point} on the separation, it becomes evident that ($\xi$ is given by eq. \eqref{eq:apx:definition-xi})
 \begin{equation}
   \Delta \theta_\mathrm{crit} \sim 1/(\xi t) \sim \frac{(L - R - d/2)^3}{t_\mathrm{max}} \sim \frac{(L - R - d/2)^3}{L^3}
 \end{equation}
-for small separations ($\xi$ is given by eq. \eqref{eq:apx:definition-xi}) and similarly $\Delta \theta_\mathrm{crit} \sim L^2$.
-For these first order approximations, it was used that the Casimir force is much larger than the gravitational interaction for all $L \lesssim 3.2\si{m}$ (in \cref{fig:4:theta-crit-L}, the match of this approximation is $R^2 = 0.99$).
+for small separations and similarly $\Delta \theta_\mathrm{crit} \sim L^2$.
+For this approximations, it was additionally used that the Casimir force is much larger than the gravitational interaction for all $L \lesssim 3.2\si{m}$ (in \cref{fig:4:theta-crit-L}, the match is quantified by $R^2 = 0.99$).
 
 Contrary to $L$, the size of the particle $R$ and thus the mass $M$ cannot be changed easily over a wide range of possible values.
-Estimations suggest, that masses of around $10^{-11}\si{kg} \approx 10^{-3}m_p$ could be possible to use for the detection of gravitationally induced entanglement \cite[Timestamp 51:00]{Aspelmeyer_2024}.
-Nevertheless, the effect of a larger particle on angular variations is observed and shown in \cref{fig:4:theta-crit-mass}.
+Estimations suggest, that masses of around $10^{-11}\si{kg} \approx 5 \times 10^{-4}m_p$ could be possible to use for the detection of gravitationally induced entanglement \cite[Timestamp 51:00]{Aspelmeyer_2024}.
+Nevertheless, the effect of a larger particle on angular variations is analyzed and shown in \cref{fig:4:theta-crit-mass}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/theta-variance/theta-crit-mass.pdf}
@@ -145,7 +144,7 @@ In \cref{fig:4:theta-crit-superposition-size} the effect of the superposition si
 \end{figure}
 A larger superposition would increase the entanglement generation as the relative phase differences between the states increase, leading to $t_\mathrm{max} \propto 1/(\Delta x)^{2}$. 
 Simultaneously, a larger superposition size increases the effect of angular variations, as they depend on $\sim \Delta x \sin(\theta)$.
-The effective scaling of the angular variations is therefore linear $\Delta \theta_\mathrm{crit} \sim \Delta x$, as seen in \cref{fig:4:theta-crit-superposition-size} \footnote{Here it is shown in a double-logarithmic plot. The relation between $\Delta x$ and $\Delta \theta_\mathrm{crit}$ is nevertheless linear, which can be seen with similar arguments as used previously.}.
+The effective scaling of the angular variations is therefore linear $\Delta \theta_\mathrm{crit} \sim \Delta x$, as seen in \cref{fig:4:theta-crit-superposition-size} \footnote{Here it is shown in a double-logarithmic plot. The relation between $\Delta x$ and $\Delta \theta_\mathrm{crit}$ is nevertheless linear.}.
 
 
 

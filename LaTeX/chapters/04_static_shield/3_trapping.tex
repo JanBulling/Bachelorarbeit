@@ -1,6 +1,6 @@
 \section{Trapping the particle}\label{sec:4:trapping}
 The presence of a shield introduces potential challenges to the stability of the particle trap. 
-Levitated particles are typically trapped and cooled in ultra-high vacuum using magnetic, optical, or electrical radiofrequency Paul traps \cite{GonzalezBallestero_2021}.
+Levitated particles are typically trapped and cooled in ultra-high vacuum using magnetic, optical or electrical radiofrequency Paul traps \cite{GonzalezBallestero_2021}.
 These traps differ in the trapping mechanism, but if the particle is cooled close to the ground state, all trapping potentials can be considered \q{harmonic} with trapping frequency $\omega_\mathrm{trap} = 2\pi \times f$.
 The strength of the trapping potential $V \propto f^2$ varies across trap types, with frequencies typically ranging from $1\si{Hz}-1\si{kHz}$ for magnetic traps \cite{Slezak_2018} up to $10\si{kHz}-300\si{kHz}$ for optical traps \cite{GonzalezBallestero_2021}. 
 
@@ -13,9 +13,9 @@ If the particle is positioned close to the shield, the Casimir interaction may d
   \textbf{(b)} Potential with no bounded states. Here, trapping is not possible.}
   \label{fig:4:trap-eigenstates}
 \end{figure}
-The attractive Casimir force shifts the equilibrium trap position closer to the shield by $\Delta x$ given by
+The attractive Casimir force displaces the equilibrium trap position closer to the shield by a distance $\Delta x$ given by
 \begin{equation}
-  \Delta x = \frac{\abs{-\nabla V_\mathrm{Casimir}}}{m (2\pi f)^2} = \frac{2 \hbar c \pi^3}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \frac{R}{\mathscr{L}^3} \frac{1}{m (2\pi f)^2}
+  \Delta x = \frac{\abs{-\nabla V_\mathrm{Casimir}}}{m (2\pi f)^2} = \frac{2 \hbar c \pi^3}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \frac{R}{\mathscr{L}^3} \frac{1}{m (2\pi f)^2} .
 \end{equation}
 For $f=1\si{kHz}$ and $L = 2R = 20\si{\mu m}$, this shift is negligibly small, as it is in the order of $\Delta x \approx 10^{-13}\si{m}$.
 
@@ -23,10 +23,9 @@ To determine the stability of a trapped particle with mass $M \propto R^3$ in a 
 From \cref{fig:4:trap-eigenstates} it becomes clear, that as long as the particles thermal energy is well below $E_0$, the trap is stable and the particle is bound.
 Here, $E_0$ is defined as the local maximum of the potential 
 \begin{equation}
-  E_0 = \max_{L\in(R,L_0)} \left( V_\mathrm{trap} + V_\mathrm{Casimir} \right)
+  E_0 = \max_{L\in(R,L_0)} \left( V_\mathrm{trap} + V_\mathrm{Casimir} \right) .
 \end{equation}
-where $L_0$ is the position where the particle is trapped.
-If no local maximum exists, i.e.
+If no such local maximum exists, i.e.
 \begin{equation}
   \pdv{L} \left( V_\mathrm{trap} + V_\mathrm{Casimir} \right) > 0
 \end{equation}
@@ -56,6 +55,6 @@ The resulting number of bound states is shown in \cref{fig:4:trap-stability} as 
   \caption{Stability diagram for different trapping frequencies $f = \omega/2\pi$ and particle-shield separations $L_0$. The number of bound energy-eigenstates for each combination of $f$ and $L_0$ are calculated using the WKB-approximation. The number of thermally occupied states $\bar{n}$ at different Temperatures is overlaid. As an example, for $f=1\si{Hz}$, $\bar{n}(T=300\si{K})\approx 10^{13}$ states are thermally occupied. All regions below these boundaries are unstable. A increase in the radius $R$ and thus the mass $M$ improves the regions of stability massively.}
   \label{fig:4:trap-stability}
 \end{figure}
-In these calculations, tunneling effects between through the potential boundary at $E_0$ are neglected which should not influence the results much considering the large number of bound eigenstates.
+In these calculations, tunneling effects through the potential boundary at $E_0$ are neglected, as they should not influence the results much considering the large number of bound eigenstates.
 It turns out, that regardless the type of the trap, a successful trapping even at room temperature should be possible as long as the particle is placed appropriately far away from the trap.
 The ability to trap and levitate the masses is therefore not significantly impaired by the presence of the Faraday shield.

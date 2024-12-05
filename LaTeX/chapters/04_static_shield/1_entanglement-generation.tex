@@ -6,46 +6,47 @@ The averaged state $\mean{\rho}$ after multiple measurements is given by
 where $p(\,\cdot\,)$ represents the Gaussian distributions of the random variables 
 $\theta_{A(B)}$ and $L_{A(B)}$ with standard deviations $\Delta \theta$ or $\Delta L$ respectively. 
 $\rho(\theta_A, \theta_B, L_A, L_B)$ denotes the state of a single measurement, dependent on the initial setup of the system.
-The state $\rho_0$ at $t=0$ is given similarly as in eq. \eqref{eq:2:initial-state}.
-Additionally to mutual gravitational coupling, the Casimir interactions of the state $\ket{\psi^{(i)}_{A(B)}}$ ($i = 1, 2$) with the Faraday shield induce the phase $\phi^{(i)}_{A(B),\,\mathrm{Cas}}(t)$.
+The state $\rho_0$ at $t=0$ is given as before by eq. \eqref{eq:2:initial-state}.
+Additionally to mutual gravitational coupling, the Casimir interactions of the state $\ket{\psi^{(i)}_{A(B)}}$ ($i = 1, 2$) with the Faraday shield induce the dynamic phase $\phi^{(i)}_{A(B),\,\mathrm{Cas}}(t)$.
 Using the two different models for the Casimir attraction for large and small separations given by eq. \eqref{eq:3:casimir-sphere-plate-PFA} and eq. \eqref{eq:3:casimir-sphere-plate-PFA}, it follows
 \begin{equation}
   \phi^{(i)}_{A(B),\,\mathrm{Cas}}(t) = \frac{t}{\hbar}
   \begin{cases}
-     \frac{3 \hbar c}{8 \pi} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right) \frac{R^3}{(L^{(i)}_{A(B)})^4} & \text{for large separations (LSL)} \\
-    \frac{\hbar c \pi^3}{720} \varphi(\varepsilon_r) \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \frac{R}{(\mathscr{L}^{(i)}_{A(B)})^2} & \text{for small separations (PFA)}
+     \frac{3 \hbar c}{8 \pi} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right) \frac{R^3}{\left(L^{(i)}_{A(B)}\right)^4} & \text{for large separations (LSL)} \\
+    \frac{\hbar c \pi^3}{720} \varphi(\varepsilon_r) \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \frac{R}{\left(\mathscr{L}^{(i)}_{A(B)}\right)^2} & \text{for small separations (PFA) .}
   \end{cases}
 \end{equation}
 Here, $L^{(i)}_{A(B)}$ and $\mathscr{L}^{(i)}_{A(B)} = L^{(i)}_{A(B)}-R$ are the  distances between the particles and the shield's surface given by
 \begin{align}\label{eq:4:L-casimir}
-  L^{(i)}_{A} &= L + L_{A} - \frac{d}{2} \pm_i \frac{\Delta x_{A}}{2} \sin(\alpha + \theta_{A}) \\
+  L^{(i)}_{A} &= L + L_{A} - \frac{d}{2} \pm_i \frac{\Delta x_{A}}{2} \sin(\alpha + \theta_{A}) \quad \quad \text{and} \\
   L^{(i)}_{B} &= L + L_{B} - \frac{d}{2} \mp_i \frac{\Delta x_{B}}{2} \sin(\beta + \theta_{B})
 \end{align}
-where $\pm_i$ distinct between the two cat-states of a single particle.
+where $\pm_i = -(-1)^{i}$ distinct between the two cat-states of a single particle.
 The phase imprinted by the mutual gravitational interactions between states $\ket{\psi^{(i)}_A}\otimes\ket{\psi^{(j)}_B}$ is given analogue to the previous calculations in \cref{cha:first-look} as
 \begin{equation}\label{eq:4:phi-grav}
   \phi^{(ij)}_\mathrm{Grav}(t) = \frac{t}{\hbar} \frac{G M_A M_B}{L^{(ij)}} .
 \end{equation}
-The distance $L^{(ij)}$ between the states $A^{(i)}$ and $B^{(j)}$ is given by
+The separation $L^{(ij)}$ between the particle cat-states $A^{(i)}$ and $B^{(j)}$ is given by
 \begin{multline}\label{eq:4:L-gravity}
-  L^{(ij)} = \sqrt{\left(2L + L_A + L_B \pm \frac{\Delta x_A}{2}\sin(\alpha + \theta_A) \mp \frac{\Delta x_B}{2}\sin(\beta + \theta_B)\right)^2 +} \\ \overline{\left(\frac{\Delta x_A}{2}\cos(\alpha + \theta_A) \pm \frac{\Delta x_B}{2}\cos(\beta + \theta_B)\right)^2} .
+  L^{(ij)} = \sqrt{\left(2L + L_A + L_B \pm_i \frac{\Delta x_A}{2}\sin(\alpha + \theta_A) \mp_j \frac{\Delta x_B}{2}\sin(\beta + \theta_B)\right)^2 +} \\ \overline{\left(\frac{\Delta x_A}{2}\cos(\alpha + \theta_A) \mp_{i=j} \frac{\Delta x_B}{2}\cos(\beta + \theta_B)\right)^2}
 \end{multline}
+with $\mp_{i=j} = +(-1)^{\delta_{ij}}$.
 Expanding to first order in $\Delta x_{A(B)} \ll L$, $\theta_{A(B)} \ll 1$ and $L_{A(B)} \ll 1$ (which is justified as seen in the following), the averaged evolved state 
-$\mean{\rho}$ in eq. \eqref{eq:4:average-density} is analytically solvable, as shown in \cref{apx:placement-average-density-matrix}.
-Assuming $\Delta \theta_A = \Delta \theta_B \equiv \Delta\theta$ and $\Delta L_A = \Delta L_B \equiv \Delta L$, the off-diagonal elements (the so-called \textit{coherences}) decay as
+$\mean{\rho}$ in eq. \eqref{eq:4:average-density} is analytically obtainable, as shown in \cref{apx:placement-average-density-matrix}.
+Assuming $\Delta \theta_A = \Delta \theta_B \equiv \Delta\theta$ and $\Delta L_A = \Delta L_B \equiv \Delta L$, the off-diagonal elements (the so-called \textit{coherences}) decay with
 \begin{equation}\label{eq:4:average-density-element}
   \mean{\rho_{kl}} = \frac{1}{4} e^{i \Delta \phi_{kl}(t)} \exp{-\frac{(\xi_{kl})^2}{2} (\Delta\theta)^2 t^2} \exp{-\frac{(\zeta_{kl})^2}{2} (\Delta L)^2 t^2}
 \end{equation}
-where $\Delta \phi$, $\xi$ and $\zeta$ are substitutes for lengthy expressions given by eq. \eqref{eq:apx:phi-definition}, eq. \eqref{eq:apx:definition-xi} and eq. \eqref{eq:apx:definition-zeta}, which are dependent on system parameters.
+where $\Delta \phi$, $\xi$ and $\zeta$ are substitutes for lengthy expressions given by eq. \eqref{eq:apx:phi-definition}, eq. \eqref{eq:apx:definition-xi} and eq. \eqref{eq:apx:definition-zeta} in the appendix and are dependent on system parameters.
 For $\Delta \theta, \Delta L \rightarrow \infty$ or $t\rightarrow \infty$, coherences vanish, resulting in a maximally mixed state with $\tr\rho^2 = 1/4$ - which is not entangled.
 For large variations in the initial placement of the particles, one therefore expects the loss of entanglement.
 
-In special cases of two identical particles and $\alpha=\pm\beta$, the logarithmic negativity is approximated by
+In the special case of two identical particles and $\alpha=\pm\beta$, the logarithmic negativity is approximated in first order by
 \begin{equation}\label{eq:4:log-neg-analytical}
   E_N(\mean{\rho}) = \max\left\{ 0,\ \log_2\left(e^{-\gamma}\left(\cosh\gamma + \abs{\sin \phi}\right)\right) \right\}
 \end{equation}
-where the decoherences $\gamma = \left(\xi^2(\Delta \theta)^2/2 + \zeta^2(\Delta L)^2/2\right)t^2$ due to variations in the initial placement is derived in eq. \eqref{eq:apx:stochastic-decoherence} and the phase $\phi$ is given by eq. \eqref{eq:4:phi-orientation} in the next section.
-Numeric results confirm the first order approximation and are shown in \cref{fig:4:EN-variations} for different values of $\Delta \theta$ and $\Delta L$ in the parallel orientation.
+where the decoherences $\gamma = \left(\xi^2(\Delta \theta)^2/2 + \zeta^2(\Delta L)^2/2\right)t^2$ are shown in eq. \eqref{eq:apx:stochastic-decoherence} and the phase $\phi$ is given by eq. \eqref{eq:4:phi-orientation} in the next section.
+Numeric results confirm the first order approximation and are shown in \cref{fig:4:EN-variations} for different values of $\Delta \theta$ and $\Delta L$ in the parallel configuration.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=\textwidth]{./../figures/theta-variance/EN-deltaTheta-deltaL.pdf}
@@ -77,18 +78,18 @@ For the used parameters shown in \cref{tab:paramters}, the threshold is around $
   \label{tab:paramters}
 \end{table}
 For all these calculations, the radius of the particles was set to $R=10^{-5}\si{m} = 10\si{\mu m}$ with corresponding masses $M=4/3 \pi R^3 \rho_\mathrm{Silica} \approx 1.1\times 10^{-11}\si{kg}$.
-A particle-shield separation of $L=2R$ and a superposition site of $\Delta x = 100\si{nm}$ were chosen. In the rest of this thesis, if not otherwise specified, these parameters are used as a default.
+A particle-shield separation of $L=2R$ and a superposition size of $\Delta x = 100\si{nm}$ were chosen. In the rest of this thesis, if not otherwise specified, these parameters are used as a default.
 For convenient retrieval, they are collectively displayed in \cref{tab:paramters}.
 
 These values agree with the parameter regime typically considered for such experiments \cite[Timestamp: 51:00]{Aspelmeyer_2024}, as they result in a low one-run duration of $t_\mathrm{max}\approx 258\si{ms}$.
 Other proposals suggest a similar parameter set generally differing only by single orders of magnitude (see e.g. the Tab. 1 in Ref. \cite{Rijavec_2021}).
-It is important however to note,  that these parameters are orders of magnitude beyond current experimental capabilities:
-The largest mass studied in matter-wave interferometry is about $4\times 10^{-23}\si{kg}$ \cite{Fein_2019} with an superposition size of $\Delta x \gtrsim 500\si{nm}$.
-In solid-state mechanical systems, quantum control and ground-state cooling have been demonstrated with masses of $10^{-13}\si{kg}$ \cite{OConnell_2010} and $10^{-8}\si{kg}$ \cite{Bild_2023} for mechanical oscillators coupled to superconducting qubits, or $10^{-11}\si{kg}$ \cite{Lee_2011} for entangled diamonds, although with very short coherence times $\lesssim 1\si{\mu s}$.
-Also very impressive and notable is the cooling of the $\sim 40\si{kg}$ LIGO mirrors close to their quantum ground state \cite{Whittle_2021}.
-In contrast, the smallest mass with a measurable gravitational coupling is around $92 \si{mg}$ \cite{Westphal_2021}.
-The field of levitated nano-particles bridge molecular superposition and mechanical systems, offering exceptional quantum control, high force sensitivity and long coherence times up to seconds \cite{Aspelmeyer_2024}.
-Thus many proposals aim to measure quantum entanglement due to gravity between trapped particles \cite{Krisnanda_2020}.
+It is important however to note, that these parameters far beyond current experimental capabilities:
+The largest mass studied in matter-wave interferometry is about $4\times 10^{-23}\si{kg}$ \cite{Fein_2019} with a spatial superposition size of $\Delta x \gtrsim 500\si{nm}$.
+In solid-state mechanical systems, quantum control and ground-state cooling have been demonstrated with masses of $10^{-13}\si{kg}$ for mechanical oscillators coupled to superconducting qubits \cite{OConnell_2010}; entangled diamonds with $10^{-11}\si{kg}$ have been observed \cite{Lee_2011} and masses of $10^{-8}\si{kg}$ have been prepared in motional center-of-mass cat-states \cite{Bild_2023}, although with very short coherence times $\lesssim 1\si{\mu s}$.
+Also impressive and notable is the cooling of the $\sim 40\si{kg}$ LIGO mirrors to only very few occupied phonon states \cite{Whittle_2021}.
+In contrast, the smallest mass with a measurable gravitational force is around $92 \si{mg}$ \cite{Westphal_2021}.
+The field of levitated nano-particles has the potential to bridge molecular superposition and mechanical systems, offering exceptional quantum control, high force sensitivity and long coherence times up to seconds \cite{Aspelmeyer_2024}.
+Thus many proposals aim to measure quantum entanglement due to gravity between trapped and levitated particles \cite{Krisnanda_2020,GonzalezBallestero_2021}.
 
 Nonetheless, the required accuracy in the placement of the particles appears very challenging experimentally.
 However, looking at \cref{fig:4:EN-variations}, for shorter times $t<t_\mathrm{max}$, greater variations in particle placement can be tolerated at the cost of reduced entanglement.

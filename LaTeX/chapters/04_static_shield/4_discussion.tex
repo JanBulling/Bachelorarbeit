@@ -1,14 +1,14 @@
 \section{Discussions}\label{sec:4:discussion}
 The preceding results highlight, that the proposed Faraday shield in experiments on measuring gravitationally induced entanglement entail significant engineering challenges, particularly due to the strict accuracy requirements for particle placement.
 Variations must be minimized to a precision of approximately $\Delta L \simeq 10^{-10}\si{m}$ and $\Delta \theta \simeq 10^{-9}\si{rad}$, which are extremely stringent.
-Adjustments to the experimental parameters in \cref{tab:paramters} have to be made, where especially the separation distance $L$ or the orientation are easy to change.
+Adjustments to the experimental parameters in \cref{tab:paramters} have to be made, where especially the separation distance $L$ and the orientation are easy changeable.
 
 The parallel configuration is very stable against variations in the distance and might therefore be favorable (see in \cref{fig:4:optimal-orientation}).
 The separation $L$ can be freely chosen and larger distances reduces the effect of placement variations as seen in \cref{fig:4:theta-crit-L} but substantially increases the required coherence time $t_\mathrm{max} \propto L^3$.
 
 It could also be argued that at a distance of $L \geq 100\si{\mu m} = 10 R$ (compare to \cref{sec:2:experimental-problems}), the Faraday shield would no longer be required because the Casimir forces are approximately ten times weaker than gravitational interactions.
 However, the loss of entanglement due to angular and distance variations is not purely due to the Casimir forces between the particle and the shield.
-The gravitational coupling also depends on the placement, so that a complete removal of the shield does not fully eliminate the placement accuracy.
+The gravitational coupling also depends on the placement, so that a complete removal of the shield does not fully eliminate the need for high placement accuracy.
 Without the shield and by gravitational interaction alone, the critical variations are given by $\Delta \theta_\mathrm{crit,\,ideal} = 1.1 \times 10^{-3}\si{rad}$ and $\Delta L_\mathrm{crit,\,ideal} = 7\times 10^{-4}\si{m}$, which should not pose an engineering problem.
 
 Other parameters, such as particle size and superposition size, may not be easily adjustable without increasing the complexity of quantum control.
@@ -24,14 +24,15 @@ Without specific constraints, a general optimization is impossible because (if t
 With constraints such as target coherence time $t_\mathrm{target}$ and/or a minimum placement accuracy, the required sphere-plate separation $L$ as well as maximum measurable entanglement can be determined using the following steps:
 \begin{enumerate}
   \item Lets assume that the size of the particle $R$ and consequently the mass $M=4/3 \pi R^3 \rho_\mathrm{Silica}$ as well as the superposition size $\Delta x$ are fixed. An increase in either of them would have a positive effect of the optimization goal stated above, as the time $t_\mathrm{max}$ decreases and the stability against placement variations increases simultaneously.
+  \item Given placement accuracies in angular and separation variations determine the optimal orientation $\alpha,\beta$ of the setup as seen in \cref{fig:4:optimal-orientation}. Experimentally reachable coherence times may influence this decision slightly by taking \cref{fig:4:t-max-orientation} into account. Most likely, the most stable orientation is going to be the parallel one with $\alpha = \beta = 0$.
   \item The following ratio given by the entanglement rate eq. \eqref{eq:4:t-max}
   \begin{equation}
-    \frac{M^2 (\Delta x)^2}{L^3}t_\mathrm{max} = \frac{8 \pi \hbar}{G} \approx 4 \times 10^{-23} \si{kg^2 s/m}
+    \frac{M^2 (\Delta x)^2}{L^3}t_\mathrm{max} = \frac{4 \pi \hbar}{G}\abs{\sin\alpha\sin\beta-\frac{1}{2}\cos\alpha\cos\beta}^{-1} \sim 10^{-23} \si{kg^2 s/m}
   \end{equation} 
-  is fixed \cite{Aspelmeyer_2024}. In orthogonal configurations, this constant would reduce by a factor of $1/2$.
-  \item In general it is possible to measure at a earlier time $t_\mathrm{target} = \tau t_\mathrm{max}$ (i.e. the coherence time) with $\tau \leq 1$, where less entanglement has been generated but a larger stability against placement variations can be tolerated (see \cref{fig:4:time-delta-theta}). Putting all assumptions together, the ratio
+  is fixed therefore \cite{Aspelmeyer_2024}.
+  \item In general it is possible to measure at a earlier time $t_\mathrm{target} = \tau t_\mathrm{max}$ (i.e. the coherence time) with $\tau \leq 1$, where less entanglement has been generated but a larger stability against placement variations can be tolerated (see \cref{fig:4:time-delta-theta}). Putting all assumptions together, the product
   \begin{equation}\label{eq:4:fixed-ratio}
-    \frac{t_\mathrm{target}}{\tau L^3} = \frac{8\pi \hbar}{G} \frac{1}{M^2 (\Delta x)^2} = \mathrm{const.}
+    \tau L^3 = \frac{t_\mathrm{target} G M^2 (\Delta x)^2}{8\pi \hbar} = \mathrm{const.}
   \end{equation}
   of measurement time and particle-shield separation is constant.
   \item In the parallel orientation, the distance variations don't matter as the system is very stable against variations in the particle-shield separation. The critical angular variation however scales like $\Delta \theta_\mathrm{crit} \sim (L-R)^3/L^3$ for small distances and like $\Delta \theta_\mathrm{crit} \sim L^2$ at larger distances as shown in \cref{fig:4:theta-crit-L}. It is therefore possible to determine the minimum separation $L_\mathrm{min} > R$ for a given placement accuracy.
