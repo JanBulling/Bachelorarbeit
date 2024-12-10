@@ -39,8 +39,8 @@ where $\norm{A}_1 = \tr\abs{A} = \tr \sqrt{A^\dagger A}$ is the trace norm. The 
 \begin{equation}\label{eq:2:logarithmic-negativity}
   E_N(\rho) = \log_2\norm{\rho^{\Gamma_A}}_1 .
 \end{equation}
-The monotonicity of the logarithm implies, that $E_N$ is an entanglement monotone as well.
-Furthermore it is noteworthy, that $\norm{\rho^{\Gamma_A}} = \norm{\rho^{\Gamma_B}}$ as will be shown below. Therefore, the logarithmic negativity is symmetric under exchange of to the subsystem.
+The monotonicity of the logarithm implies that $E_N$ is an entanglement monotone as well.
+Furthermore, it is noteworthy, that $\norm{\rho^{\Gamma_A}} = \norm{\rho^{\Gamma_B}}$ as will be shown below. Therefore, the logarithmic negativity is symmetric under exchange of to the subsystem.
 
 \begin{proposition}
   a) The partial transpose w.r.t. subsystem $A$ is equal to the transposed partial transpose w.r.t. subsystem $B$: $\rho^{\Gamma_A} = (\rho^{\Gamma_B})^T$. 
@@ -82,7 +82,7 @@ If the eigenvalues of $\rho$ are known, the logarithmic negativity can be direct
 \end{equation}
 \end{proposition}
 \begin{proof}
-  The proof is in parts given by Vidal and Werner \cite{Vidal_2001}. It is known that the density matrix is hermitian: $\rho = \rho^\dagger$. Using \cref{lemma:trace-norm-hermitian}, the trace norm of the density matrix is is given as $\norm{\rho}_1=\sum \lambda_i = \tr \rho = 1$. The partial transpose $\rho^{\Gamma}$ obviously also satisfies $\tr \rho^{\Gamma} = 1$ but might have negative eigenvalues. Since $\rho^{\Gamma}$ is still hermitian, the trace norm is given by
+  The proof is in parts given by Vidal and Werner \cite{Vidal_2001}. It is known that the density matrix is hermitian: $\rho = \rho^\dagger$. Using \cref{lemma:trace-norm-hermitian}, the trace norm of the density matrix is given as $\norm{\rho}_1=\sum \lambda_i = \tr \rho = 1$. The partial transpose $\rho^{\Gamma}$ obviously also satisfies $\tr \rho^{\Gamma} = 1$ but might have negative eigenvalues. Since $\rho^{\Gamma}$ is still hermitian, the trace norm is given by
   \begin{equation*}
     \norm{\rho^{\Gamma}}_1 = \sum_i\abs{\lambda_i} = \sum_{\lambda_i \ge 0} \lambda_i + \sum_{\lambda_i < 0} \abs{\lambda_i} = \sum_i \lambda_i + 2\sum_{\lambda_i < 0} \abs{\lambda_i} = 1 + 2\sum_{\lambda_i < 0} \abs{\lambda_i} ,
   \end{equation*}
@@ -116,6 +116,6 @@ The time $t_\mathrm{max,\,parallel}$ at which the states are maximally entangled
 In the orthogonal orientation, this point in time is reached twice as fast \cite{Pedernales_2023}. This is because in this orientation, the difference in distances between the cat-states is maximized and consequently the relative dynamical phase build-up is faster compared to the parallel orientation resulting in a faster entanglement rate.
 
 This suggests, that the orthogonal orientation might be beneficial as it requires shorter coherence times. This effect is studied in more detail in \cref{sec:4:optimal-setup}.
-To give an estimation of the coherence times needed, consider two identical silica nano-sphere with density $\rho=2648\si{kg/m^3}$ and radius $R=10^{-5}\si{m}=10\si{\mu m}$ separated by a distance $2L = 4R$.
+To give an estimation of the coherence times needed, consider two identical silica nano-spheres with densities $\rho=2648\si{kg/m^3}$ and radii $R=10^{-5}\si{m}=10\si{\mu m}$ separated by a distance $2L = 4R$.
 The superposition size is in the order of $100\si{nm}$.
-The maximum entanglement in the parallel configuration is reached after a time $t_\mathrm{max,\,parallel} \approx 258\si{ms}$ which is a quite long and challenging experimentally considering that usual in the order of nano-seconds \cite{OConnell_2010}.
+The maximum entanglement in the parallel configuration is reached after a time $t_\mathrm{max,\,parallel} \approx 258\si{ms}$ which is quite long and challenging experimentally considering that possible coherence times are currently only in the order of micro-seconds \cite{OConnell_2010}.

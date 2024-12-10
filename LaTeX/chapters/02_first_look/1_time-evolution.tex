@@ -4,7 +4,7 @@ The time evolution of a quantum system is governed by the Schrödinger-equation
 \begin{equation}
   i\hbar \pdv{t} \ket{\psi(t)} = \op{H} \ket{\psi(t)}
 \end{equation}
-where in this case the interaction Hamiltonian responsible for the entanglement dynamics is given by $\op{H} = \op{V}$ eq. \eqref{eq:2:newtonian-potential}.
+where in this case the interaction Hamiltonian responsible for the entanglement dynamics is given by $\op{H} = \op{V}$ in eq. \eqref{eq:2:newtonian-potential}.
 The eigenbasis of $\op{V}$ is given by $\left\{ \ket{\psi_A^{(1)}}, \ket{\psi_A^{(2)}} \right\}\otimes \left\{ \ket{\psi_B^{(1)}}, \ket{\psi_B^{(2)}} \right\}$, as all these states are eigenstates of the distance operator $\op{L}$
 \begin{equation}
   \op{V} \ket{\psi^{(i)}_A} \otimes \ket{\psi^{(j)}_B} = -\frac{G M_A M_B}{2L^{(ij)}} \ket{\psi^{(i)}_A} \otimes \ket{\psi^{(j)}_B} .
@@ -20,13 +20,13 @@ It is possible to express the state using the dynamically accumulated phases $\p
     e^{i\phi^{(11)}} \ket{\psi_A^{(1)} \psi_B^{(1)}} 
     + e^{i\phi^{(12)}} \ket{\psi_A^{(1)} \psi_B^{(2)}}
     + e^{i\phi^{(21)}} \ket{\psi_A^{(2)} \psi_B^{(1)}} 
-    + e^{i\phi^{(22)}} \ket{\psi_A^{(2)} \psi_B^{(2)}} \bigr) ,
+    + e^{i\phi^{(22)}} \ket{\psi_A^{(2)} \psi_B^{(2)}} \bigr) .
 \end{equation}
 The phases $\phi^{(ij)}$ in the specific setup shown in \cref{fig:2:simple-problem} are given by
 \begin{align}
   \phi \equiv \phi^{(11)} = \phi^{(22)} = \frac{G M_A M_B}{2\hbar L}t 
   \qquad \text{and} \qquad 
-  \phi^{(12)} = \phi^{(21)} = \frac{G M_A M_B}{\hbar \sqrt{4L^2 + (\Delta x)^2}}t .
+  \phi^{(12)} = \phi^{(21)} = \frac{G M_A M_B}{\hbar \sqrt{4L^2 + (\Delta x)^2}}t ,
 \end{align}
 By expanding the phases for small superposition sizes $\Delta x \ll L$, the global phase $\phi$ can be factored out of the evolved state
 \begin{equation}\label{eq:2:definition-delta-phi}
@@ -41,6 +41,5 @@ which ultimately can be written in the form
 One can see immediately that in general, the resulting state cannot be written as a product state, hence it is entangled.
 This is of course only the case, if $\Delta \phi \neq k\pi$ with integer $k\in \mathbb{N}$.
 
-In order 
-In order to assess quantitatively how entangled the state $\ket{\psi(t)}$ after time $t$ is, a more sophisticated measure is required. 
-One possible measure is the \q{logarithmic negativity}, which is used in the rest of this work.
+In order to assess quantitatively how entangled the state $\ket{\psi(t)}$ is after time $t$, a more sophisticated measure is required. 
+One possible measure is the \q{logarithmic negativity}, which is introduced in the next section and used in the rest of this work.

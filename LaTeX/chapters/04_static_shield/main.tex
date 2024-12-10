@@ -44,7 +44,7 @@ After $N$ measurements, the sample average is given by
 \begin{equation}
   \bar{\rho} = \frac{1}{N} \sum_{k=1}^{N} \rho(X_k)
 \end{equation}
-where $\rho(X)$ depends on the random variable $X \in \{\theta_{A(B)}, L_{A(B)}\}$ and $X_k$ is the $k$-th sample drawn from the normal distribution $\mathcal{N}(0, (\Delta X)^2)$ \footnote{Here it isn't strictly required that $X_k$ are normally distributed. As long as they are i.i.d. random variables, any distribution is sufficient for the following argumentation \cite[p. 1195]{Riley_2018}.}.
+where $\rho(X)$ depends on the random variable $X \in \{\theta_{A(B)}, L_{A(B)}\}$ and $X_k$ is the $k$-th sample drawn from the normal distribution $\mathcal{N}(0, (\Delta X)^2)$ \footnote{Here it is not strictly required that $X_k$ are normally distributed. As long as they are i.i.d. random variables, any distribution is sufficient for the following argumentation \cite[p. 1195]{Riley_2018}.}.
 As $N \rightarrow \infty$, the law of large numbers and in particular the central limit theorem (CLT) ensures that $\bar{\rho} \rightarrow \mean{\rho}$ \cite[p. 1195]{Riley_2018}.
 According to the CLT, the sample average $\bar{\rho}(X)$ fluctuates around $\mean{\rho}$ with a standard deviation given by the Berry-Esseen theorem for independent and identically distributed random variables $X_k$ by $\sigma \sim N^{-1/2}$ \cite{Berry_1941}.
 Thus, if the placements of the particles in each measurement are completely independent from each other, the rate of convergence to the ideal mean $\mean{\rho}$ is governed by $\mathcal{O}(1/\sqrt{N})$.

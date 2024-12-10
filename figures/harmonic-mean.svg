@@ -27,8 +27,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.8028258"
-     inkscape:cx="347.78734"
-     inkscape:cy="33.003743"
+     inkscape:cx="263.19792"
+     inkscape:cy="166.12809"
      inkscape:window-width="2560"
      inkscape:window-height="1494"
      inkscape:window-x="-11"
@@ -42,11 +42,11 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#aa0000;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="fill:none;stroke:#1f77b4;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
        d="M 11.540487,8.3321545 H 44.022133"
        id="path1" />
     <path
-       style="fill:none;stroke:#aa0000;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="fill:none;stroke:#1f77b4;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
        d="M 2.953086,20.331166 H 35.434732"
        id="path2" />
     <path
@@ -60,11 +60,11 @@
        id="path4"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#0044aa;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="fill:none;stroke:#2ca02c;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
        d="M 11.769131,8.3698945 35.474212,20.410173"
        id="path5" />
     <path
-       style="fill:none;stroke:#447821;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="fill:none;stroke:#ff7f0e;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
        d="M 3.275279,20.287954 43.781968,8.2927205"
        id="path6" />
     <text
@@ -129,13 +129,13 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#aa0000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#1f77b4;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        x="24.586876"
        y="6.8780417"
        id="text8"><tspan
          sodipodi:role="line"
          id="tspan8"
-         style="fill:#aa0000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
+         style="fill:#1f77b4;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
          x="24.586876"
          y="6.8780417">$2L$</tspan></text>
     <path
@@ -164,20 +164,21 @@
          y="15.152598">$35.26\deg$</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
-       x="64.305626"
-       y="17.830172"
-       id="text10"><tspan
+       style="font-size:2.55626px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.053138;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       x="106.65305"
+       y="10.766592"
+       id="text10"
+       transform="scale(0.60384117,1.6560646)"><tspan
          sodipodi:role="line"
          id="tspan10"
-         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.088;stroke-dasharray:none"
-         x="64.305626"
-         y="17.830172">$<tspan
-   style="fill:#aa0000"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.053138;stroke-dasharray:none"
+         x="106.65305"
+         y="10.766592">$<tspan
+   style="fill:#1f77b4;fill-opacity:1;stroke-width:0.053138"
    id="tspan11">\blacksquare</tspan> = \displaystyle\frac{2}{\frac{1}{<tspan
-   style="fill:#0044aa"
+   style="fill:#2ca02c;fill-opacity:1;stroke-width:0.053138"
    id="tspan12">\blacksquare</tspan>}+\frac{1}{<tspan
-   style="fill:#447821"
+   style="fill:#ff7f0e;fill-opacity:1;stroke-width:0.053138"
    id="tspan13">\blacksquare</tspan>}}$</tspan></text>
     <text
        xml:space="preserve"
@@ -191,11 +192,11 @@
          x="61.431656"
          y="8.8223095">Harmonic mean:</tspan></text>
     <path
-       style="fill:none;stroke:#447821;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="fill:none;stroke:#ff7f0e;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
        d="m 94.363508,31.151359 37.939332,-0.0025"
        id="path15" />
     <path
-       style="fill:none;stroke:#0044aa;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="fill:none;stroke:#2ca02c;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
        d="m 132.3029,31.153155 23.87746,-0.0061"
        id="path16" />
     <path
@@ -237,7 +238,7 @@
        id="path22"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#aa0000;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers"
+       style="fill:none;stroke:#1f77b4;stroke-width:0.7;stroke-miterlimit:3;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke fill markers;stroke-opacity:1"
        d="M 125.71681,29.599621 132.2583,1.171802"
        id="path14" />
     <g

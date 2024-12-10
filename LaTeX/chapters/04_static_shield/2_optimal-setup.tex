@@ -9,7 +9,7 @@ In the following section, precisely the dependence of this stability is discusse
 
 
 \subsection{Orientation}
-One of the arguably easiest parameter to change in the experimental setup is the orientation of the cat-state superpositions, which is quantified by $\alpha, \beta \in [0, \pi)$ in \cref{fig:4:complete-setup}.
+One of the arguably easiest parameters to change in the experimental setup is the orientation of the cat-state superpositions, which is quantified by $\alpha, \beta \in [0, \pi)$ in \cref{fig:4:complete-setup}.
 As already seen in \cref{fig:2:entanglement-dynamics}, maximal entanglement in the parallel orientation is reached after twice the time compared to the orthogonal orientation.
 In general, it is advantageous to aim for the highest entanglement rate and thus the smallest $t_\mathrm{max}(\alpha, \beta)$, as this requires a shorter coherence time and thus reduces the total time of the experiment.
 The previous results from \cref{cha:first-look} can be further generalized for an arbitrary orientation $\alpha, \beta$. The logarithmic negativity is given by (derived in \cref{apx:entanglement-orientation})
@@ -18,7 +18,7 @@ The previous results from \cref{cha:first-look} can be further generalized for a
 \end{equation}
 where $\phi$ is now dependent on the orientation and is defined as (for $\Delta x \ll L$)
 \begin{equation}\label{eq:4:phi-orientation}
-  \phi = \frac{G M_A M_B t \Delta x_A \Delta x_B}{8\hbar L^3} \left(\sin\alpha\sin\beta-\frac{1}{2}\cos\alpha\cos\beta\right) .
+  \phi = \frac{G M_A M_B \Delta x_A \Delta x_B}{8\hbar L^3} t \left(\sin\alpha\sin\beta-\frac{1}{2}\cos\alpha\cos\beta\right) .
 \end{equation}
 The maximum entanglement $E_N=1$ is reached for $\phi = \pm \pi/2$ and thus after a time
 \begin{equation}\label{eq:4:t-max}
@@ -139,7 +139,7 @@ In \cref{fig:4:theta-crit-superposition-size} the effect of the superposition si
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/theta-variance/theta-crit-superpos-size.pdf}
-  \caption{Effect of the superposition size $\Delta x$ on the critical angular stability $\Delta \theta_\mathrm{crit}$ after a time $t_\mathrm{max}(\Delta x)$. For $\Delta x \gtrsim R$, numerical results are used. In the lower left, the time till maximum entanglement $t_\mathrm{max} \propto (\Delta x)^{-2}$ is shown. For $\Delta x \ll R$, the resulting relation between $\Delta x$ and $\Delta \theta_\mathrm{crit}$ is linear.}
+  \caption{Effect of the superposition size $\Delta x$ on the critical angular stability $\Delta \theta_\mathrm{crit}$ after a time $t_\mathrm{max}(\Delta x)$. For $\Delta x \gtrsim R$, numerical results are used. In the lower left, the time $t_\mathrm{max} \propto (\Delta x)^{-2}$ is shown, until maximum entanglement is reached. For $\Delta x \ll R$, the resulting relation between $\Delta x$ and $\Delta \theta_\mathrm{crit}$ is linear.}
   \label{fig:4:theta-crit-superposition-size}
 \end{figure}
 A larger superposition would increase the entanglement generation as the relative phase differences between the states increase, leading to $t_\mathrm{max} \propto 1/(\Delta x)^{2}$. 
