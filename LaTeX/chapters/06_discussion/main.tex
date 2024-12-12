@@ -25,16 +25,23 @@ However, the findings in Ref. \cite{Pedernales_2023} suggest that the results de
 Other forms of decoherence, such as undamped vibrations of the setup (potentially due to complex cooling mechanisms like dilution refrigerators) and black-body radiation of the particles can also be considered.
 It is possible to estimate the decoherence due to thermal radiation \cite[p. 127-136]{Schlosshauer_2007} between the cat-states as well as with the thermal environment at temperature $T$ as \cite{RomeroIsart_2011}
 \begin{equation}
-  \Gamma_\mathrm{decoh.,\ black-body} \propto 1 - \exp{-\frac{(\Delta x)^2}{\lambda^2_\mathrm{th}}} \sim (\Delta x)^2
+  \Gamma_\mathrm{decoh.,\ black-body} = \Gamma_0\left[1 - \exp{-\frac{(\Delta x)^2}{\lambda^2_\mathrm{th}}}\right] \sim (\Delta x)^2
 \end{equation}
-where $\lambda_\mathrm{th} = \pi^{2/3} \hbar c / k_B T$ is the thermal wavelength with values of $\lambda_\mathrm{th} \approx 1\si{mm}$ at $4\si{K}$. 
+where $\lambda_\mathrm{th} = \pi^{2/3} \hbar c / k_B T$ is the thermal wavelength with values of $\lambda_\mathrm{th} \approx 1\si{mm}$ at $4\si{K}$ and (for $\mathfrak{Im}(\varepsilon_r)\approx 0$, since Silica is transparent)
+\begin{equation}
+  \Gamma_0 = \frac{8! \cdot 8 \zeta(9)R^6c}{9\pi} \left(\frac{k_B T}{\hbar c}\right)^7 \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)^2 \approx 1.7 \times 10^{5} \si{s^{-1}} .
+\end{equation}
+It follows that $\Gamma_\mathrm{decoh.,\ black-body} \ll \Gamma_\mathrm{Gravity}$.
 For $\Delta x \ll \lambda_\mathrm{th}$, the decoherence scales quadratically in $\Delta x$, resulting in a similar increase as the gravitational entanglement rate $\Gamma_\mathrm{Gravity}$ from eq. \eqref{eq:5:entanglement-rate-gravity}.
 For very large superposition sizes, decoherence stays constant resulting in a domination of gravitational entanglement generation.
 Other forms of decoherence like collisions with air molecules can similarly be considered and thus a required vacuum pressure can be estimated.
 
 Analogous to variations in the initial particle placement for each run, variations in other parameters, such as the measurement time (i.e. the time of gravitational interaction between the states) can be examined.
 A brief investigation of this effect was presented in Ref. \cite{Nguyen_2020}, showing results consistent with those obtained in this thesis.
-
+The varying gravitational effects of surrounding masses must also be considered, as they can influence the entanglement generation differently during each measurement run. For instance, the gravitational attraction exerted by the Moon on the masses is $10^7$ times stronger than their mutual gravitational interaction.
+Variations in the Moon-Earth distance over time can alter this attraction and result in additional decoherence.
+Even changes in atmospheric conditions might need to be accounted for as different densities due to temperature fluctuations would exert different gravitational attractions.
+ 
 Another avenue worth looking into with potentially large improvements on the experimental evidence of entanglement lies in the analysis of the measurement data.
 If the initial placement parameters for each experimental run are either fully known or a skewed probability distribution of possible values can be specified, the stochastic decoherence effects can most likely be partially accounted for.
 How precisely this could be could be achieved and what maximal placement variations can then be tolerated could be valuable information for the practical experimental implementation.
