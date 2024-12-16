@@ -1,39 +1,38 @@
 \chapter{The particle in front of a static shield}\label{cha:entanglement-generation}
 
-The generalized setup of the system described in \cref{cha:first-look} with the addition of a conducting Faraday shield is shown in \cref{fig:4:complete-setup}. As before, the particles $A$ and $B$ are delocalized in spatial cat-states with superposition sizes $\Delta x_A$ and $\Delta x_B$ respectively.
-\begin{figure}[!htbp]
+The generalized configuration of the system described in \cref{cha:first-look} with the inclusion of a conducting Faraday shield is shown in \cref{fig:4:complete-setup}. 
+\begin{figure}[!bhtp]
   \centering
   \def\svgwidth{\textwidth}
   \input{./../figures/problem.pdf_tex}
-  \caption{Schematic experimental setup for detecting gravitationally induced entanglement between particles $A$ and $B$ with radius $R$, separated by a distance $2L + L_A + L_B$. Their orientations are defined by angles $\alpha$ and $\beta$, with small variations $\theta_{A(B)}$. All variations are assumed to be normally distributed around zero with standard deviation $\Delta L_{A(B)}$ and $\Delta \theta_{A(B)}$. The particles are delocalized in cat-states with size $\Delta x_{A(B)}$ between states $\ket{\psi_{A(B)}^1}$ and $\ket{\psi_{A(B)}^2}$. A conducting Faraday shield of thickness $d$ is centrally placed.}
+  \caption{Schematic representation of the experimental setup for detecting gravitationally induced entanglement between particles $A$ and $B$ with radius $R$ separated by a distance $2L + L_A + L_B$. Their respective orientations relative to the shield are specified by angles $\alpha$ and $\beta$, subject to small random variations $\theta_{A(B)}$. All variations are modeled with a normal distribution around zero with standard deviation $\Delta L_{A(B)}$ and $\Delta \theta_{A(B)}$. Each particle is in a delocalized cat-state with a size $\Delta x_{A(B)}$ between states $\ket{\psi_{A(B)}^1}$ and $\ket{\psi_{A(B)}^2}$. A conducting Faraday shield of thickness $d$ is placed in the center.}
   \label{fig:4:complete-setup}
 \end{figure}
-They are positioned at a distance $L$ from the Faraday-shield with the cat-state superpositions oriented at angles $\alpha,\beta\in[0,\pi)$ relative to it.
-We define the configuration with $\alpha=\beta=0$ as the \q{parallel orientation} and $\alpha = \beta = \pi/2$ as the \q{orthogonal orientation}.
+Similar to the prior arrangement, particles $A$ and $B$ are prepared in delocalized spatial Schrödinger-cat states with superposition sizes $\Delta x_A$ and $\Delta x_B$ respectively.
+They are positioned at a distance $L$ from the shield, with their cat-state superpositions aligned at angles $\alpha,\beta\in[0,\pi)$ relative to it.
+The special case $\alpha=\beta=0$ defines the \q{parallel orientation}, while $\alpha = \beta = \pi/2$ defines the \q{orthogonal orientation}.
 
-If gravity is assumed to be able to mediate entanglement, particles $A$ and $B$ can get entangled.
-Placing a Faraday shield in the center between the masses should not substantially influence the gravitational entanglement generation.
-However, Casimir interactions between the newly placed shield and particles must be accounted for, especially at small separations.
-These interactions contribute only phase shifts to individual cat-states, but do not couple the particles and thus cannot generate additional entanglement - assuming a static shield e.g. at zero temperature.
+Under the assumptions that gravity can mediate entanglement, particles $A$ and $B$ can get entangled.
+Casimir interactions between the particles and the newly introduced shield must additionally be considered, especially at small separations.
+These interactions contribute only phase shifts to individual cat-states, but do not couple the particles and hence cannot generate entanglement - assuming a static shield e.q. at zero temperature.
 
-For a complete picture, experimental challenges and limitations have to be considered. 
-The question remains open on how to verify gravitational entanglement between the two particles.
-One possibility is to find a suitable entanglement witness \cite{Bose_2017,Chevalier_2020}, which requires knowledge about the specific implementation of the experiment.
-In this thesis, it will be assumed that the full density
-matrix of the state is accessible and the entanglement will be quantified with the logarithmic negativity introduced in \cref{sec:2:entanglement-measures}.
-Furthermore, the simplifying assumption is made, that each cat-state is confined in a truncated two-dimensional Hilbert space, as only the dynamic relative phase differences between two such states are of interest.
-Consequently, the density matrix has 16 entries, of which only 9 are independent, making reconstruction possible using known matrix properties (e.g., hermiticity $\rho^\dagger = \rho$ and $\tr \rho = 1$).
-Accurate tomography requires numerous measurements due to quantum probabilistic behavior. 
-From run to run, the placement angle $\alpha + \theta_A$ or $\beta + \theta_B$ as well as the separation distances $L + L_A$ or $L + L_B$ in the setup will vary, resulting in a mixed initial state $\rho_0$.
+Experimental considerations pose additional complexities, particularly concerning the detection of entanglement. 
+One proposed solution involves employing an entanglement witness \cite{Bose_2017, Chevalier_2020}, whose selection depends on the experimental specifics. 
+For simplicity, in this thesis it is assumed that the full density matrix of the system is accessible and entanglement is quantified with the logarithmic negativity introduced in \cref{sec:2:entanglement-measures}.
+Furthermore, the analysis confines each cat-state to a truncated two-dimensional Hilbert space, as only the relative dynamic phase differences between two such states are of interest.
+Consequently, the density matrix has 16 entries, of which only nine are independent, making reconstruction possible using known matrix properties (e.g., hermiticity $\rho^\dagger = \rho$ and normalization $\tr \rho = 1$).
+Precise state tomography, however, requires numerous measurements due to quantum probabilistic behavior.
+Stochastic variability in the placements across runs - expressed by angular variations $\alpha + \theta_A$ and $\beta + \theta_B$ or by variations in the particle-shield separation $L + L_A$ and $L + L_B$ - leads to an initially mixed state $\rho_0$.
+Even with exact particle placement, thermal vibrations of the shield induce further variations in particle-shield separation, analyzed in \cref{cha:the-shield}.
 Other experimental noise sources, such as variations in the measurement timing, have been considered previously in Ref. \cite{Nguyen_2020}.
-Even if it was possible to place the particles at the exact same position for each measurement, thermal vibrations of the shield induce noisy variations in the particle-shield separation, analyzed in \cref{cha:the-shield}.
+
 If the random variable $X \in \{\theta_{A}, \theta_{B}, L_{A}, L_{B}\}$ is subject to statistical variations, the resulting mixed state can be described by
 \begin{equation}
   \rho = \int\limits_{-\infty}^{\infty} \dd X \frac{1}{\sqrt{2\pi}\Delta X} e^{-X^2/2(\Delta X)^2} \ketbra{\psi_X} ,
 \end{equation}
-where $\ket{\psi_X}$ is the evolved pure state of a single measurement dependent on the random variable $X$.
-These variations are assumed to be normally distributed with mean $\mean{X} = 0$ and standard deviation $\Delta X$ on the basis of the central limit theorem \cite[p. 1195]{Riley_2018}.
-While correlations between $\theta_{A(B)}$ and $L_{A(B)}$ are possible, for now they are assumed to be uncorrelated as a worst-case estimation.
+where $\ket{\psi_X}$ is the pure state of a single measurement dependent on the random variable $X$.
+Placement variations are assumed to be normally distributed with mean $\mean{X} = 0$ and standard deviation $\Delta X$ on the basis of the central limit theorem \cite[p. 1195]{Riley_2018}.
+While potential correlations between $\theta_{A(B)}$ and $L_{A(B)}$ are possible, they are initially assumed negligible to yield a conservative estimate.
 In \cref{cha:the-shield} during the analysis of thermal vibrations of the Faraday shield, cases involving correlated variables due to thermal shield vibrations are analyzed.
 
 

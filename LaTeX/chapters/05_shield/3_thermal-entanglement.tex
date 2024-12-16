@@ -5,7 +5,7 @@ Shield vibrations can effectively be understood to alter the separation and angl
   \centering
   \def\svgwidth{\textwidth}
   \input{./../figures/plate-vibration.pdf_tex}
-  \caption{For a large ($r_s \gg R$) and locally linearizable shield, thermal vibrations with amplitude $z$ can be interpreted as a static shield where particle $A$ (shown in red) is positioned at $L+\Delta L$ with angle $\theta$ and particle $B$ at $L-\Delta L$ with angle $-\theta$. Both variations depend solely on the vibrational amplitude. At low vibrational frequencies ($1/\omega \approx t_\mathrm{max}$), the amplitude remains nearly static during an experimental run, with thermal fluctuations distributed around $\mean{z}=0$ and variance $\Delta z$ given by eq. \eqref{eq:5:amplitude-variance}. The particles are placed at a distance $r$ away from the shield's center. Especially the cases $r=0$ and $r=0.527r_s$, where the gradient of the first mode $(1,0)$ is maximized, are considered.}
+  \caption{For a large ($r_s \gg R$) and locally linearizable shield, thermal vibrations with amplitude $z$ can be interpreted as a static shield where particle $A$ (shown in red) is positioned at $L+\Delta L$ with angle $\theta$ and particle $B$ at $L-\Delta L$ with angle $-\theta$. Both variations depend solely on the vibrational amplitude. At low vibrational frequencies ($1/\omega \approx t_\mathrm{max}$), the amplitude remains nearly static during an experimental run, with thermal fluctuations distributed around $\mean{\op{z}}=0$ and variance $\Delta \op{z}$ given by eq. \eqref{eq:5:amplitude-variance}. The particles are placed at a distance $r$ away from the shield's center. Especially the cases $r=0$ and $r\approx 0.527r_s$, where the gradient of the first mode $(1,0)$ is maximized, are considered.}
   \label{fig:5:vibrating-translation-to-variations}
 \end{figure}
 This approximation is only valid for shields significantly larger than the particle radius ($r_s \gg R$) and for low vibrational frequencies ($1/\omega \approx t_\mathrm{max}$), effectively capturing the impact of the first vibrational modes for small $l$ and $k$.
@@ -23,13 +23,13 @@ The resulting entanglement, quantified by logarithmic negativity as a function o
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/vibrations/log-neg-shield-vibrations-T.pdf}
-  \caption{Entanglement between the particles (parallel orientation) near a thermal shield at different temperatures $T$ for selected vibrational modes. At a critical temperature $T_\mathrm{crit,kl}$, entanglement is lost if mode $(k, l)$ is present. This critical point shifts with greater particle-shield separations, following $T_\mathrm{crit} \propto L^4$.}
+  \caption{Entanglement after a time $t_\mathrm{max}$ at different temperatures $T$. The particle (parameters given in \cref{tab:paramters}) is placed in front of a thermal shield, vibrating in selected modes $(k,l)$, at a position $r \approx 0.527 r_s$, where the effect of the first mode $(1,0)$ is maximized. The solid lines show the generated entanglement for $L=2R=20\si{\mu m}$ whereas the dashed lines show the entanglement for $L=10R$. At a critical temperature $T_\mathrm{crit} \propto L^4$, entanglement is lost.}
   \label{fig:5:entanglement-temperature}
 \end{figure}
 At typical experimental temperatures, entanglement in the presence of the mode $(1,0)$ is observable only at large particle-shield separations.
-In fact, the critical temperature $T_\mathrm{crit}$ scales with the separation $L$ in the large-separation-limit (LSL) as:
+In fact, the critical temperature $T_\mathrm{crit}$ scales with the separation $L$ in the large-separation-limit (LSL) as (see \cref{eq:apx:decoherence-naive-vibration})
 \begin{equation}
-  T_\mathrm{crit} \sim (\Delta z_\mathrm{crit})^2 \sim \left(\frac{L^5}{t_\mathrm{max}} \right)^2 \sim L^4 .
+  T_\mathrm{crit} = \frac{\tilde{m} \omega^2_{kl}}{k_B}(\Delta z_\mathrm{crit})^2 \sim \left(\frac{L^5}{t_\mathrm{max}} \right)^2 \sim L^4 .
 \end{equation}
 The large separations required are consistent with previous findings in \cref{cha:entanglement-generation}, considering that the thermal amplitudes $\Delta z_{1,0} \approx 9 \times 10^{-11}\si{m}$ at $20\si{mK}$ are comparable with the critical values the variation in the shield-particle separation $\Delta L_\mathrm{crit}$.
 Interestingly, these results are unaffected by the shield radius $r_s$, as long as $r_s \gg R$ and the vibrational mode can be locally linearized.
@@ -46,9 +46,10 @@ This behavior is presented in \cref{fig:5:T-crit-modes}.
   \label{fig:5:T-crit-modes}
 \end{figure}
 If the particle is positioned exactly at the center of the shield, only specific symmetric mode shapes with $l=2k+1,\ k\in\mathbb{N}_0$ can induce decoherence.
-For $l > 1$, this decoherence effects become numerically negligible and are virtually indistinguishable from $0$.
+For $l > 1$, this decoherence effects become numerically indistinguishable from $0$.
 If the particle is placed in the worst-case position for the first mode $(1,0)$, which corresponds to the point of maximum gradient $\abs{\nabla u}$ and thus the largest decoherence (approximately at $r \approx 0.527 r_s$), all modes are relevant.
-It however becomes evident that only the first few modes significantly affect the entanglement, as higher modes do not disrupt entanglement even at temperatures much higher than those required for entanglement loss.
+It becomes evident, that only the first few vibrational modes significantly affect the entanglement generation.
+The critical temperature for higher order modes increases and thus the generation of entanglement is not influenced by these vibrations even at reasonable high temperatures.
 
 This naive method for calculating the decoherence induced due to the thermal shield is only accurate in the specific cases of a large and slow vibrating shield, as it requires the shield to be treaded as flat and tilted on the scale of the particle.
 Furthermore, due to considering all modes separately, the combined effect is a huge overestimation, as each mode is treaded as maximally displaced simultaneously and no individual dynamics are accounted for.
@@ -77,11 +78,11 @@ between the states $\ket{\psi^{(i)}_A}$ and $\ket{\psi^{(j)}_B}$ ($i,j = 1,2$) i
 The shield's thermal vibrations have no influence on this coupling, hence the gravitational interaction is the same as already discussed in \cref{cha:entanglement-generation}.
 Gravitational effects arising from the attraction due to the non-zero mass of the shield are omitted in these calculations because they are weaker by a factor of $10^7$ compared to the Casimir interactions, as calculated in \cref{subsec:5:shield-gravitation}.
 
-The interaction between the state $\ket{\psi^{(i)}_{A(B)}}$ and the shield is described by the term 
+The Casimir interaction strength $V^{(i)}_\mathrm{A(B),m,Cas}$ between the state $\ket{\psi^{(i)}_{A(B)}}$ and the shield is described by the term 
 \begin{equation}
-  \frac{\hbar c \pi^3}{720}\left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \frac{R}{(\mathscr{L} + \op{z}_m u_m(r^{(i)}_{A(B)}))^2}
+  V^{(i)}_\mathrm{A(B),m,Cas} = \frac{\hbar c \pi^3}{720}\left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \frac{R}{\left(\mathscr{L} + \op{z}_m u_m\left(r^{(i)}_{A(B)}\right)\right)^2}
 \end{equation}
-which is dependent on the mode $m$ and the mode shape $\op{z}_m u_m$ at the position $r^{(i)}_{A(B)}$ of the cat-state in front of the shield, where $\op{z} = \sqrt{\hbar/2\tilde{m}\omega_m}(\op{a}_m + \op{a}^\dagger_m)$ is the amplitude of the vibration.
+which is dependent on the mode $m$ and the mode displacement $\op{z}_m u_m$ at the position $r^{(i)}_{A(B)}$ of the cat-state, where $\op{z} = \sqrt{\hbar/2\tilde{m}\omega_m}(\op{a}_m + \op{a}^\dagger_m)$ is the amplitude of the vibration.
 Expanding the term in first order in $\op{z}$ and ignoring the zeroth-order term, which is constant and thus equal to a global phase at the end of the calculations, the Casimir coupling in the Hamiltonian eq. \eqref{eq:5:hamiltonian} is given by
 \begin{equation}
   g^{(i)}_\mathrm{A(B),m,Cas} = g_\mathrm{PFA} \frac{2 u_m(r^{(i)}_{A(B)})}{\mathscr{L}^3} \sqrt{\frac{\hbar}{2\tilde{m}\omega_m}}
@@ -100,19 +101,27 @@ After time $t$, tracing out the thermal shield yields the evolved two-particle s
   \rho_\mathrm{sys.}(t) = \tr_\mathrm{th}\left(\op{U}(t) \, \rho_0 \, \op{U}^\dagger(t)\right) .
 \end{equation}
 The time evolution is computed in \cref{apx:thermal-shield-time-evolution} and is given by
+% \begin{equation}
+%   \rho_\mathrm{system}(t) = \frac{1}{4} \begin{pmatrix}
+%     1 & e^{i\phi_{11,12}} e^{-\gamma_{11,12}} & e^{i\phi_{11,21}} e^{-\gamma_{11,21}} & e^{i\phi_{11,22}} e^{-\gamma_{11,22}} \\
+%     & 1 & e^{i\phi_{12,21}} e^{-\gamma_{12,21}} & e^{i\phi_{12,22}} e^{-\gamma_{12,22}} \\
+%     \multicolumn{2}{c}{\multirow{2}{*}{c.c}} & 1 & e^{i\phi_{21,22}} e^{-\gamma_{21,22}} \\
+%     & & & 1 \\
+%   \end{pmatrix}
+% \end{equation}
 \begin{equation}
   \rho_\mathrm{system}(t) = \frac{1}{4} \begin{pmatrix}
     1 & e^{i\phi_{11,12}} e^{-\gamma_{11,12}} & e^{i\phi_{11,21}} e^{-\gamma_{11,21}} & e^{i\phi_{11,22}} e^{-\gamma_{11,22}} \\
-    & 1 & e^{i\phi_{12,21}} e^{-\gamma_{12,21}} & e^{i\phi_{12,22}} e^{-\gamma_{12,22}} \\
-    \multicolumn{2}{c}{\multirow{2}{*}{c.c}} & 1 & e^{i\phi_{21,22}} e^{-\gamma_{21,22}} \\
-    & & & 1 \\
+    e^{i\phi_{12,11}} e^{-\gamma_{12,11}} & 1 & e^{i\phi_{12,21}} e^{-\gamma_{12,21}} & e^{i\phi_{12,22}} e^{-\gamma_{12,22}} \\
+    e^{i\phi_{21,11}} e^{-\gamma_{21,11}} & e^{i\phi_{21,12}} e^{-\gamma_{21,12}} & 1 & e^{i\phi_{21,22}} e^{-\gamma_{21,22}} \\
+    e^{i\phi_{22,11}} e^{-\gamma_{22,11}} & e^{i\phi_{22,12}} e^{-\gamma_{22,12}} & e^{i\phi_{22,21}} e^{-\gamma_{22,21}} & 1 \\
   \end{pmatrix}
 \end{equation}
 with the decoherence terms
 \begin{equation}\label{eq:5:analytical-decoherence}
   \gamma_{ii',jj'} = \sum_m \frac{4}{\hbar^2\omega_m^2} \abs{(g^{(i)}_\mathrm{A,m,Cas} + g^{(i')}_\mathrm{B,m,Cas}) - (g^{(j)}_\mathrm{A,m,Cas} + g^{(j')}_\mathrm{B,m,Cas})}^2 \sin^2\left(\frac{\omega_m t}{2}\right) \left[\bar{n} + \frac{1}{2}\right]
 \end{equation}
-and the phases (where the gravitational part is already given by eq. \eqref{eq:2:evolved-state})
+and the phases
 \begin{multline}\label{eq:5:analytical-phases}
   \phi_{ii',jj'} = \sum_m \frac{1}{\hbar} \left( g^{(ii')}_\mathrm{Grav} - g^{(jj')}_\mathrm{Grav} \right) t \\
   + \frac{\sin(\omega_m t)+\omega_m t}{\hbar^2\omega_m^2}\left[(g^{(i)}_\mathrm{A,m,Cas} + g^{(i')}_\mathrm{B,m,Cas})^2 - (g^{(j)}_\mathrm{A,m,Cas} + g^{(j')}_\mathrm{B,m,Cas})^2\right] .
@@ -123,7 +132,7 @@ It is therefore possible to estimate the combined effect of the first $N$ modes 
 \begin{equation}\label{eq:5:effect-of-a-mode}
   \sim \frac{1}{\zeta(8)} \sum_{n=1}^{N} \frac{1}{n^8}
 \end{equation}
-where $\zeta$ is the Riemann zeta function. The sum eq. \eqref{eq:5:effect-of-a-mode} converges very fast, even for small $N$.
+where $\zeta$ is the Riemann zeta function. The sum eq. \eqref{eq:5:effect-of-a-mode} converges very fast to $1$, even for small $N$.
 At specific times $t=2\pi k/\omega_m, \ k\in\mathbb{N}$, the decoherence from mode $m$ vanishes, leading to entanglement values close to the ideal case, aligning with the findings in Ref. \cite{Pedernales_2022}.
 This periodic behavior is confirmed in \cref{fig:5:entanglement-time-single-mode}, showing a measurable amount of entanglement only close to these specific times.
 \begin{figure}[!htbp]
@@ -139,7 +148,7 @@ The full width at half maximum (FWHM) of these observed peaks is approximated by
 getting smaller at higher temperatures.
 
 The resulting decoherence of multiple modes is given by the sum of all individual modes, where the contributed effect decays rapidly with the mode number, as seen in eq. \eqref{eq:5:effect-of-a-mode}.
-Entanglement as seen without the shield is never reachable due to the quasi-periodicity of the system. The frequency ratios $\omega_i/\omega_j \notin \mathbb{Q}$ for $i\neq j$ \footnote{While not rigorously proven, this conclusion is supported by the transcendental nature of the zeros of the Bessel functions \cite{Lorch_1995} and the non-integer frequency ratio $\omega_{1,0} / \omega_{1,1} \notin \mathbb{Q}$, which on its own should already ensure quasi-periodic behavior.} prevent exact repetition of the resulting sinusoidal summation.
+Entanglement as seen without the shield is never reachable due to the quasi-periodicity of the system. The frequency ratios $\omega_i/\omega_j \notin \mathbb{Q}$ for $i\neq j$ \footnote{While not rigorously proven, this conclusion is supported by the transcendental nature of the zeros of the Bessel functions \cite{Lorch_1995}.} prevent exact repetition of the resulting sinusoidal summation.
 The entanglement dynamics of the first 50 vibrational modes combined are shown in \cref{fig:5:entanglement-multiple-modes} .
 \begin{figure}[!htbp]
   \centering

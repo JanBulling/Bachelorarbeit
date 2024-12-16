@@ -61,7 +61,7 @@
     \put(0.66657452,0.44299144){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Delta L$\end{tabular}}}}%
     \put(0.69074959,0.35852465){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L$\end{tabular}}}}%
     \put(0.73713112,0.21874769){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$R$\end{tabular}}}}%
-    \put(0.1076468,0.36727242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$z \propto a+a^\dagger$\end{tabular}}}}%
+    \put(0.1076468,0.36727242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\op{z} \propto \op{a}+\op{a}^\dagger$\end{tabular}}}}%
     \put(0.03471559,0.40480795){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$r$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

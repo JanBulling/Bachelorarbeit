@@ -1,8 +1,8 @@
 \section{Thickness and size of the shield}\label{sec:5:shield-size}
-The thickness $d$ and the radius $r_s$ of the spherical shield can be estimated by considering the properties of a physical conductive material with high electrical conductivity $\sigma$.
-Even a superconducting shield could be considered for an almost perfect shielding of electromagnetic fields.
+The required thickness $d$ and the radius $r_s$ of the spherical shield to effectively block electromagnetic interactions between the particles can be estimated by analyzing the properties of a physical conductive material with high electric conductivity $\sigma$.
+For an almost perfect shielding, a superconducting shield may be considerable as well.
 The transmission $T$ of electromagnetic waves through a physical shield is given by \cite{Vandenbosch_2022}
-\begin{equation}
+\begin{equation}\label{eq:5:shield-transmission}
   T = \abs{\frac{\vec{E}_\mathrm{after}}{\vec{E}_\mathrm{before}}} = \frac{2}{Z_0 \sigma d}
 \end{equation}
 where $Z_0 = 377\si{\Omega}$ is the impedance of free space (assuming the shield is placed in a vacuum or in air).
@@ -21,8 +21,8 @@ For gravitational interactions, the entanglement rate in the parallel orientatio
   \Gamma_\mathrm{Gravity} = \frac{G M_A M_B \Delta x_A \Delta x_B}{16 \hbar L^3 \log 2} = \frac{G \pi^2 R^6 \rho_\mathrm{Silica}^2 (\Delta x)^2}{9 \hbar L^3 \log 2} .
 \end{equation}
 where in the last step $M_A = M_B = 4/3 \pi R^3 \rho_\mathrm{Silica}$ and $\Delta x_A = \Delta x_B \equiv \Delta x$ was used.
-The entanglement rate for non-gravitational interactions, such as Coulomb or Casimir forces, must be significantly smaller than the gravitational entanglement rate, ideally by a factor $\chi > 1$.
-This ensures that the measured entanglement is primarily due to gravitational interactions.
+The entanglement rate for non-gravitational interactions, such as Coulomb or Casimir forces, must be significantly smaller than the gravitational entanglement rate, ideally by a factor $\chi \gg 1$.
+This ensures that any measured entanglement is primarily due to gravitational interactions.
 In the following sections, estimations about the thickness and size of the shield are made, to effectively screen Coulomb and Casimir forces.
 
 
@@ -33,13 +33,13 @@ The Coulomb interaction potential between two charged particles is given by
 \begin{equation}
   V = \frac{1}{4\pi\varepsilon_0} \frac{q_A q_B}{2L}
 \end{equation}
-where $\varepsilon_0 = 8.8542\times 10^{-12}\si{A^2 s^4 m^{-3} kg^{-1}}$ is the permittivity of free space and $\abs{q_{A(B)}} = e = 1.6022\times 10^{-19}\si{C}$ the charge of particle $A$ and $B$ respectively.
+where $\varepsilon_0 = 8.8542\times 10^{-12}\si{A^2 s^4 m^{-3} kg^{-1}}$ is the permittivity of free space and we assume that each particle caries one electron charge $\abs{q_{A(B)}} = e = 1.6022\times 10^{-19}\si{C}$.
 This interaction mimics the form of the gravitational potential and can similarly induce entanglement with a entanglement rate
 \begin{equation}\label{eq:5:entanglement-rate-coulomb}
   \Gamma_\mathrm{Coulomb} = \frac{T \abs{q_A q_B} (\Delta x)^2}{64 \pi \varepsilon_0 \hbar L^3 \log 2} .
 \end{equation}
 The shield suppresses the coupling by a factor of $T$.
-Requiring $\Gamma_\mathrm{Gravity} > \chi \Gamma_\mathrm{Coulomb}$, the minimum thickness of the shield can be calculated as
+Requiring $\Gamma_\mathrm{Gravity} > \chi \Gamma_\mathrm{Coulomb}$, the minimum thickness of the shield can be calculated by using eq. \eqref{eq:5:shield-transmission} as
 \begin{align}\label{eq:5:coulomb-gravity-condition}
   T \frac{\abs{q_A q_B}}{64 \pi \varepsilon_0} \chi \, &< \, \frac{G \pi^2 R^6 \rho_\mathrm{Silica}^2}{9} \\
   \Longleftrightarrow \quad\quad\quad\quad d \, &> \, \frac{9}{32}\frac{1}{Z_0 \sigma} \frac{1}{\pi^3 \varepsilon_0 G \rho_\mathrm{Silica}^2} \frac{e^2}{R^6} \chi .
@@ -69,7 +69,7 @@ Modifying eq. \eqref{eq:5:coulomb-gravity-condition}, a minimum effectiveness $\
 \end{equation}
 can be approximated.
 Using again the parameters from \cref{tab:paramters}, a minimum shielding of $\eta_\mathrm{min} \gtrsim 0.99997$ and thus a radius of $r_s \gtrsim 28000 L \approx 60\si{cm}$ is required.
-Such a shield is too large for all practical purposes and it might be beneficial to choose heavier masses ($\tilde{M} \sim 4 M$) to reduce the shield size to the orders of $\sim 1\si{cm}$.
+Depending on the experimental setup, such a shield might be too large for all practical purposes and it may be beneficial to choose heavier masses ($\tilde{M} \sim 4 M$) to reduce the shield size to the orders of $\sim 1\si{cm}$.
 Due to practicality, a shield with $r_s = 1\si{cm}$ is used in the following calculations.
 Uncharged particles would eliminate the Coulomb interactions and therefore reducing the shield's size and thickness to only shield mutual Casimir interactions.
 
@@ -78,7 +78,7 @@ Uncharged particles would eliminate the Coulomb interactions and therefore reduc
 
 \subsection{Shielding Casimir-Interactions}
 Similarly to Coulomb interactions, it is possible to to estimate the required thickness for a shield to sufficiently block Casimir interactions.
-The Casimir potential between the spheres with radius $R$ separated by $2L$ is given by \cite{Emig_2007}
+The Casimir potential between the spheres with radius $R$ separated by $2L$ is given in first order by \cite{Emig_2007}
 \begin{equation}
   V = -\frac{23 \hbar c}{4\pi \cdot 128 L^7} \left( \frac{\varepsilon_r - 1}{\varepsilon_r + 2} \right)^2 R^6 .
 \end{equation}
@@ -90,8 +90,9 @@ The dependence on $T^2$ arises because Casimir forces are second order effects i
 Requiring gravitational entanglement generation to dominate, $\Gamma_\mathrm{Gravity} > \chi \Gamma_\mathrm{Casimir}$, leads to
 \begin{align}
   T^2 \frac{161 c R^6}{4096 \pi L^6} \left( \frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)^2 \chi \, &< \, \frac{G \pi^2 \rho_\mathrm{Silica}^2 R^6}{9\hbar} \\
-  \Longleftrightarrow \quad\quad\quad\  d \, &> \, \sqrt{\frac{1449}{4096} \frac{c \hbar}{G \pi^3}} \frac{2}{Z_0 \sigma \rho L^3} \frac{\varepsilon_r - 1}{\varepsilon_r + 2} \sqrt{\chi} .
+  \Longleftrightarrow \quad\quad\quad\  d \, &> \, \sqrt{\frac{1449}{4096} \frac{c \hbar}{G \pi^3}} \frac{2}{Z_0 \sigma \rho L^3} \frac{\varepsilon_r - 1}{\varepsilon_r + 2} \sqrt{\chi} ,
 \end{align}
+where again $T = 2/Z_0 \sigma d$ from eq. \eqref{eq:5:shield-transmission} was used.
 For large separations, the shield thickness can be arbitrarily low, as Casimir forces vanish and at separations of $L\gtrsim 100\si{\mu m}$, the shield might not be required at all (compare \cref{sec:2:experimental-problems}).
 Assuming two identical silica nano-spheres with parameters given by \cref{tab:paramters}, the required minimum thickness is between $4\times 10^{-11}\si{m} \sqrt{\chi}$ at $4\si{K}$ and $10 \si{nm} \sqrt{\chi}$ at room temperature.
 This is much thinner than what is required for shielding Coulomb interactions.
@@ -118,6 +119,6 @@ The total attractive force between the mass and the shield with radius $r_s$ is 
 \begin{equation}
   F_z = GM \rho_\mathrm{Cu} d L \int\limits_{0}^{r_s} \dd r \int\limits_{0}^{2\pi} \dd \varphi \, \frac{r}{(r^2 + L^2)^{3/2}} = 2\pi G M \rho_\mathrm{Cu} d \left(1 - \frac{L}{\sqrt{L^2 + r_s^2}}\right) .
 \end{equation}
-For large shields $r_s \gg L$ this is independent of the particle-shield separation $L$.
-For a shield with thickness $d = 100\si{nm}$ and the usual silica particle from \cref{tab:paramters}, the attraction force is around $F_\mathrm{particle-shield} \approx 4.1\times 10^{-24} \si{N}$ which is comparable with the attraction gravitational attraction force between the two particles themselves at $F_\mathrm{particle-particle} \approx 5.0 \times 10^{-24}\si{N}$ but is much weaker than the Casimir attraction between the particle and the shield with $F_\mathrm{Casimir} \approx 1.4 \times 10^{-17} \si{N}$.
+For large shields $r_s \rightarrow \infty$ this is independent of the particle-shield separation $L$.
+For a shield with thickness $d = 100\si{nm}$ and a silica particle with parameters given in \cref{tab:paramters}, the attraction force is around $F_\mathrm{particle-shield} \approx 4.1\times 10^{-24} \si{N}$ which is comparable with the attraction gravitational attraction force between the two particles themselves at $F_\mathrm{particle-particle} \approx 5.0 \times 10^{-24}\si{N}$ but is much weaker than the Casimir attraction between the particle and the shield with $F_\mathrm{Casimir} \approx 1.4 \times 10^{-17} \si{N}$.
 Therefore, the gravitational effect of the shield can be neglected in all practical calculations.

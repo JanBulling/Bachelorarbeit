@@ -25,16 +25,16 @@ Here, $\tilde{r}_k$ is the $k$-th root of the equation
 \end{equation}
 The phases $\phi_1$ and $\phi_2$ 
 are determined by initial conditions and represent rotational and temporal offsets.
-The shape of the first 12 modes $(k,l)$ are shown in \cref{fig:5:vibrational-modes}.
+The shape $u_{kl}$ of the first 12 modes $(k,l)$ at time $t=(\pi n - \phi_2) / \omega_{kl},\ n\in\mathbb{Z}$ are shown in \cref{fig:5:vibrational-modes}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/vibrations/vibrational-modes-rd_bu.pdf}
-  \caption{Shape of the first 12 modes $(k,l)$ ($k \geq 1$ and $l \geq 0$) of a vibrating spherical plate fixed at the edge with $r_s/d = 1000$.}
+  \caption{Shape $u_{kl}$ of the first 12 modes $(k,l)$ ($k \geq 1$ and $l \geq 0$) of a vibrating spherical plate clamped at its edge after a time $t=(\pi n - \phi_2) / \omega_{kl},\ n\in\mathbb{Z}$ with $r_s/d = 1000$.}
   \label{fig:5:vibrational-modes}
 \end{figure}
 In general, any possible vibration of the plates can be decomposed into a sum of these modes $u_{kl}$.
-The amplitude $\op{z}$ depends on temperature $T$ and is treated as a quantum harmonic oscillator with frequency $\omega_{kl}$.
-The expectation value of the amplitude $\avg{\op{z}}$ is obviously zero and the variance $(\Delta \op{z})^2 = \avg{\op{z}^2} - \avg{\op{z}}^2$ at temperature $T$ is given by (derivation in \cref{apx:thermal-harmonic-oscillator})
+The amplitude $\op{z}_{kl}$ depends on temperature $T$ and is treated as the position operator of a quantum harmonic oscillator with frequency $\omega_{kl}$.
+The expectation value of the amplitude $\avg{\op{z}}$ is obviously zero and the variance $(\Delta \op{z})^2 = \avg{\op{z}^2} - \avg{\op{z}}^2$ of a thermally occupied harmonic oscillator at temperature $T$ is given by (derivation in \cref{apx:thermal-harmonic-oscillator})
 \begin{equation}\label{eq:5:amplitude-variance}
   (\Delta \op{z}_{kl})^2_T = \frac{\hbar}{2\tilde{m}\omega_{kl}}\coth(\frac{\hbar \omega_{kl}}{2k_BT}) \approx \frac{k_B T}{\tilde{m}\omega_{kl}^2} ,
 \end{equation}
@@ -48,17 +48,17 @@ The amplitude scales therefore as $\Delta z_{kl} \propto \omega^{-1}$ at high te
 
 It is additionally interesting to consider the scaling of the amplitudes $\Delta z$ for shields with varying sizes $r_s$.
 According to eq. \eqref{eq:5:vibration-frequency}, the frequency $\omega\propto r_s^{-2}$ increases quadratically as the shield radius decreases.
-Simultaneously, the effective mass $\tilde{m} \sim r_s^2$ in eq. \eqref{eq:5:effective-mass} increases also quadratically with the shield's size, consequently resulting in linear dependence of $\Delta z \sim r_s$ for large temperatures and/or low modes.
+Simultaneously, the effective mass $\tilde{m} \sim r_s^2$ in eq. \eqref{eq:5:effective-mass} increases also quadratically with the shield's size, consequently resulting in linear dependence of $\Delta z \sim r_s$ for $\hbar \omega \ll k_B T$.
 
 
 
 
 \subsection*{The effect of infinite modes}
-For a shield with radius $r_s = 1\si{cm} \gg R$ (referred to as the \q{large shield}) and thickness $d=100\si{nm}$ made out of copper with $E = 110\si{GPa}$ and $\nu = 1/3$, the vibrational frequencies for the first few modes are between $11.0\si{s^{-1}}$ for $(1,0)$ up to $1018\si{s^{-1}}$ for $(7,6)$.
+For a shield with radius $r_s = 1\si{cm} \gg R$ (referred to as the \q{large shield}) and thickness $d=100\si{nm}$ made out of copper with $E = 110\si{GPa}$ and $\nu = 1/3$, the vibrational frequencies for the first few modes are between $f_{1,0}=1.8 \si{Hz}$ for $(1,0)$ up to $f_{7,6} = 162 \si{Hz}$ for $(7,6)$.
 These low frequencies result in vibrational energies $\hbar \omega$ that are much smaller than the thermal energy $k_B T$ at any reasonable temperature.
 Consequently a lot of vibrational modes are highly populated simultaneously as even for temperatures of $10^{-6}\si{K}$, the first 600 modes are roughly equally populated.
 
-It is possible to determine the asymptotic increase of frequencies $\omega_{kl}$ with the mode numbers $k,l \rightarrow \infty$.
+It is possible to determine the asymptotic scaling of $\omega_{kl}$ in the limit $k,l \rightarrow \infty$.
 Using the large-argument-expansion for $x\rightarrow\infty$ of the Bessel functions \cite[eq. 10.17.3]{DLMF}
 \begin{equation}
   J_l(x) \sim \cos(x - \frac{l \pi}{2} - \frac{\pi}{4}) \quad \text{for} \ x \rightarrow \infty
@@ -80,6 +80,7 @@ implying that the first zero $\tilde{r}_1$ shift outwards by $\tilde{r}_1 \gtrsi
 For high modes $k$ and $l$ this results in an linear asymptotic distribution of zeros and thus, the frequencies $\omega_{kl}$ scale in the order of $\mathcal{O}((k + l)^2)$.
 
 Since the amplitude scales inversely with frequency $\Delta z_{kl} \propto 1/\omega_{kl}$, higher modes exhibit a quadratic decrease in amplitude.
-Additionally, the shape $u_{kl}$ of higher modes has more bulges, limiting the amplitude further as the available shield-material is distributed evenly over the plate.
-These effects combined ensure that higher-order modes have minimal contributions, allowing numerical calculations to focus on the first few modes.
+% Additionally, the shape $u_{kl}$ of higher modes has more bulges, limiting the amplitude further as the available shield-material is distributed evenly over the plate.
+% These effects combined ensure that higher-order modes have minimal contributions, allowing numerical calculations to focus on the first few modes.
+This effect ensures that higher-order modes have minimal contributions, allowing numerical calculations to focus on the first few modes.
 Nevertheless, the influence of infinitely many modes can still be approximated asymptotically using the scaling behavior of $\omega_{kl}$.

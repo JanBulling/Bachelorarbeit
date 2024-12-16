@@ -150,17 +150,21 @@ After averaging over $z$ (normally distributed around $\mean{z} = 0$ and std. $\
 with
 \begin{align}
   \Delta \phi &= \frac{G M_A M_B}{\hbar} \left(\frac{1}{4L^2} - \frac{1}{\sqrt{2L + (\Delta x)^2}}\right) t \\
-  \xi_\mathrm{Cas} &= \frac{c \pi^3 R}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r)\cdot \frac{2 \abs{\nabla u} \Delta x}{\mathscr{L}^3} t
+  \xi_\mathrm{Cas} &= \begin{cases}
+    \frac{c \pi^3 R}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r)\cdot \frac{2 \abs{\nabla u} \Delta x}{\mathscr{L}^3} t & \text{in the PFA for }L / R \approx 1 \\
+    \frac{3c R^3}{8\pi} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 2}\right)\frac{4\abs{\nabla u}\Delta x}{L^5}t & \text{in the LSL for } L / R \gg 1
+  \end{cases}
 \end{align}
 which is only dependent on the gradient of the shape $\abs{\nabla u}$.
 The logarithmic negativity is given by
 \begin{equation}\label{eq:apx:en-thermal-shield}
   E_N(\mean{\rho}) = \log_2\left\{\frac{1}{4}\left(3 + e^{-4 \gamma}+\sqrt{(1-e^{-4\gamma})^2 + 16e^{-2\gamma}\sin^2\Delta\phi}\right)\right\}
 \end{equation}
-where 
-\begin{equation}
+with 
+\begin{equation}\label{eq:apx:decoherence-naive-vibration}
   \gamma = \frac{1}{2}(\xi_\mathrm{Cas})^2(\Delta z)^2 .
 \end{equation}
+It follows, that for large $\gamma$ and thus $(\Delta z)_\mathrm{crit} \sim 1/\xi_\mathrm{Cas}$, no entanglement is observable.
 
 
 \section{Time evolution of two particles in front of a thermal plate}\label{apx:thermal-shield-time-evolution}
