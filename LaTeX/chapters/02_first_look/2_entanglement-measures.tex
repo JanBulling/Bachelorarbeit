@@ -2,11 +2,11 @@
 Checking whether an arbitrary state $\rho$ is entangled or not is no easy task. In fact, this problem is known to be NP-hard \cite{Gurvits_2003}.
 A state $\rho_{AB} \in \mathcal{H}_A\otimes\mathcal{H}_B$ is called entangled, if it is \emph{non-separable}, that is, it cannot be expressed as a tensor product of two subsystems $\rho_A \in \mathcal{H}_A$ and $\rho_B \in \mathcal{H}_B$.
 Only for specific cases - like the case of two qubits or qubit-qutrit - a simple sufficient criterion for determining the separability of a general mixed state is known:
-The positive partial transpose (PPT) criterion states, that if the partial transpose of the density matrix is positive ($\rho^{\Gamma_A} > 0$ \footnote{A matrix is defined as positive (\q{positive definite}), if all eigenvalues are positive.}), the state $\rho$ is separable \cite{Horodecki_2009,Plenio_2005a}.
+The positive partial transpose (PPT) criterion states, that if the partial transpose of the density matrix is positive ($\rho^{\Gamma_A} \geq 0$) \footnote{An $n \times n$ hermitian matrix $M$ is defined as positive (\q{positive semi-definite}), if $\vec{z}^*M\vec{z} \geq 0$ for all $\vec{z}\in\mathbb{C}^n \ \backslash \ \{0\}$; i.e. if and only if all eigenvalues are non-negative.}, the state $\rho$ is separable \cite{Horodecki_2009,Plenio_2005a}.
 In other words, if $\rho^{\Gamma_A}$ has negative eigenvalues, $\rho$ is guaranteed to describe an entangled state.
 The inverse is true, if and only if the dimension of $\rho_A\otimes\rho_B$ is $2\times2$ or $3\times2$ \cite{Horodecki_2009} - otherwise, only having non-negative eigenvalues doesn't necessarily result in an unentangled system.
 The partial transpose with respect to a subsystem $i$ can be understood in the same way as the partial trace, where the operation (in this case the transform) is performed only on indices corresponding the subsystem $\rho_i$.
-It is defined for an arbitrary density operator $\rho = \sum_{ijkl}p^{ij}_{kl}\ketbra{i}{j}\otimes\ketbra{k}{l}$ as $\rho^{\Gamma_A} = \sum_{ijkl}p^{ji}_{kl}\ketbra{i}{j}\otimes\ketbra{k}{l}$.
+It is defined for an arbitrary density matrix $\rho = \sum_{ijkl}p^{ij}_{kl}\ketbra{i}{j}\otimes\ketbra{k}{l}$ as $\rho^{\Gamma_A} = \sum_{ijkl}p^{ji}_{kl}\ketbra{i}{j}\otimes\ketbra{k}{l}$.
 To see the necessity of the PPT criterion, consider a separable mixed state $\rho$, which can be generally expressed as 
 \begin{equation}\label{eq:2:separable-state}
   \rho = \sum p_i \rho_{A}^{(i)}\otimes\rho_{B}^{(i)} .
@@ -15,23 +15,24 @@ The partial transpose is in this case trivial:
 \begin{equation}
   \rho^{\Gamma_A} = \sum p_i (\rho_{A}^{(i)})^T \otimes \rho_{B}^{(i)} .
 \end{equation}
-Since the transpose preserves eigenvalues, the transposed subsystem $A$ is still positive $(\rho_{A}^{(i)})^T > 0$ and describes again a valid quantum state. It follows, that $\rho^{\Gamma_A}$ is positive as well.
+Since the transpose preserves eigenvalues, the transposed subsystem $A$ is still positive, $(\rho_{A}^{(i)})^T \geq 0$, and describes again a valid quantum state. It follows, that $\rho^{\Gamma_A}$ is positive as well.
 If somehow $\rho^{\Gamma_A}$ has any negative eigenvalues, this can only mean that the initial state $\rho$ is not separable and cannot be expressed in the form of eq. \eqref{eq:2:separable-state} and the necessity of the criterion is shown.
 
-For quantifying entanglement in a more precise way, a mathematical quantity called \emph{entanglement measure} can be used. A good measure should be able to capture the essential features of entanglement. One can axiomatically state what properties such a measure $E(\rho)$ should have \cite{Plenio_2005a,Horodecki_2009}:
+For quantifying entanglement in a more precise way, a sophisticated \emph{entanglement measure} can be used. A good measure should be able to capture the essential features of entanglement. One can axiomatically state what properties such a measure $E(\rho)$ should have \cite{Plenio_2005a,Horodecki_2009}:
 \begin{description}
   \item[Normalization] An entanglement measure should be a map from a state to a positive real number:
   \begin{equation}
-    \rho \rightarrow E(\rho) \in \mathbb{R}^+
+    \rho \rightarrow E(\rho) \geq 0
   \end{equation}
   where usually the maximally entangled state has $E=1$.
   \item[Monotonicity under LOCC] $E$ should not increase under local operations and classical communications. This is the most important postulate for an entanglement measure and often cited as the \textit{only} required postulate.
-  \item[Vanishing on separable states] $E(\rho)=0$ if $\rho$ is separable
-  \item[] Often one finds additional properties useful like \textit{convexity} $E(\sum p_i \rho_i) \leq \sum p_i E(\rho_i)$ or (full) \textit{additivity} $E(\rho \otimes \sigma) = E(\rho) + E(\sigma)$.
+  \item[Vanishing on separable states] $E(\rho)=0$ if $\rho$ is separable.
 \end{description}
+Often one finds additional properties useful like \textit{convexity} $E(\sum p_i \rho_i) \leq \sum p_i E(\rho_i)$ or (full) \textit{additivity} $E(\rho \otimes \sigma) = E(\rho) + E(\sigma)$.
+
 A function that satisfies these conditions is often called an \textit{entanglement monotone}.
 
-The \emph{negativity} $\mathcal{N}$ is such an entanglement monotone \cite{Vidal_2001,Plenio_2005a} that used the PPT criterion to determine if a state is entangled or not. It is defined as 
+The \emph{negativity} $\mathcal{N}$ is such an entanglement monotone \cite{Vidal_2001,Plenio_2005a} that uses the PPT criterion to determine if a state is entangled or not. It is defined as 
 \begin{equation}\label{eq:2:negativity}
   \mathcal{N} = \frac{\norm{\rho^{\Gamma_A}}_1 - 1}{2}
 \end{equation}
@@ -40,7 +41,7 @@ where $\norm{A}_1 = \tr\abs{A} = \tr \sqrt{A^\dagger A}$ is the trace norm. The 
   E_N(\rho) = \log_2\norm{\rho^{\Gamma_A}}_1 .
 \end{equation}
 The monotonicity of the logarithm implies that $E_N$ is an entanglement monotone as well.
-Furthermore, it is noteworthy, that $\norm{\rho^{\Gamma_A}} = \norm{\rho^{\Gamma_B}}$ as will be shown below. Therefore, the logarithmic negativity is symmetric under exchange of to the subsystem.
+Furthermore, it is noteworthy, that $\norm{\rho^{\Gamma_A}} = \norm{\rho^{\Gamma_B}}$ as will be shown below. Therefore, the logarithmic negativity is symmetric under exchange of the subsystem.
 
 \begin{proposition}
   a) The partial transpose w.r.t. subsystem $A$ is equal to the transposed partial transpose w.r.t. subsystem $B$: $\rho^{\Gamma_A} = (\rho^{\Gamma_B})^T$. 
@@ -49,15 +50,15 @@ Furthermore, it is noteworthy, that $\norm{\rho^{\Gamma_A}} = \norm{\rho^{\Gamma
 \begin{proof}
   a) A general density matrix $\rho$ can be expressed as
   \begin{equation*}
-    \rho = \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{i}{j}_A\otimes\ketbra{k}{l}_B
+    \rho = \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{i}{j}_A\otimes\ketbra{k}{l}_B .
   \end{equation*}
   The partial transpose with respect to subsystem $B$ is then defined as 
   \begin{equation*}
-    \rho^{\Gamma_B} \equiv \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{i}{j}_A\otimes\left(\ketbra{k}{l}_B\right)^T = \sum_{i,j,k,l} c_{ij,kl} \ketbra{i}{j}_A\otimes\ketbra{l}{k}_B
+    \rho^{\Gamma_B} \equiv \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{i}{j}_A\otimes\left(\ketbra{k}{l}_B\right)^T = \sum_{i,j,k,l} c_{ij,kl} \ketbra{i}{j}_A\otimes\ketbra{l}{k}_B .
   \end{equation*}
   The complete transpose of this is
   \begin{equation*}
-    (\rho^{\Gamma_B})^T = \sum_{i,j,k,l} \rho_{ij,kl} \left(\ketbra{i}{j}_A\right)^T\otimes\left(\ketbra{l}{k}_B\right)^T = \sum_{i,j,k,l} c_{ij,kl} \ketbra{j}{i}_A\otimes\ketbra{k}{l}_B \equiv \rho^{\Gamma_A}
+    (\rho^{\Gamma_B})^T = \sum_{i,j,k,l} \rho_{ij,kl} \left(\ketbra{i}{j}_A\right)^T\otimes\left(\ketbra{l}{k}_B\right)^T = \sum_{i,j,k,l} c_{ij,kl} \ketbra{j}{i}_A\otimes\ketbra{k}{l}_B \equiv \rho^{\Gamma_A} .
   \end{equation*}
   b) Clear by a) and by using \cref{lemma:trace-norm-hermitian} and the fact that the eigenvalues of a square matrix $A$ and $A^T$ are equal.
 \end{proof}
@@ -69,7 +70,7 @@ If the eigenvalues of $\rho$ are known, the logarithmic negativity can be direct
   The trace norm $\norm{A}_1 \equiv \tr \sqrt{A^\dagger A}$ of a hermitian matrix $A$ is equal to the sum of the absolute eigenvalues of $A$.
 \end{lemma}
 \begin{proof}
-  This can be immediately seen by the spectral decomposition $\operatorname{\lambda}(A) = \{\lambda_1,...\}$:
+  This can be immediately seen by the spectral decomposition $\operatorname{\lambda}(A) = \{\lambda_1,...\}$ and the hermitian property $A^\dagger A = AA^\dagger = A^2$:
   \begin{equation*}
     \tr \sqrt{A^\dagger A} = \tr \sqrt{A^2} = \tr{U\sqrt{\diag(\lambda_1, \dots)^2}U^\dagger} = \sum_i \sqrt{\lambda_i^2} = \sum_i \abs{\lambda_i}.
   \end{equation*}

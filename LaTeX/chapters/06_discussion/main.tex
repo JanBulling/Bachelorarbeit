@@ -7,41 +7,43 @@ A common approach to prevent electromagnetic interactions such as short-range Ca
 In this thesis, it was shown by calculating the relative dynamical phase build-up, that Casimir interactions between two macroscopic Schrödinger-cat states and a conducting Faraday shield can destroy all measurable entanglement, if small stochastic variations in the initial setup or thermal vibrations of the shield are present.
 Placement accuracies in the initialization of the cat-states should stay below a threshold, depending on the achievable magnitudes in superposition size and particle masses, usually well below $\Delta \theta \lesssim 10^{-8}\si{rad}$ and $\Delta L \lesssim 10^{-9}\si{m}$.
 To mitigate the decoherence effects of the thermal shield, measuring at very precise points in time is required, where particularly the effects of the first vibrational mode are minimized.
-The calculated bounds for the placement parameters and the measurement accuracy appear to be very difficult up to practically impossible to implement experimentally in near future.
+The calculated bounds for the placement parameters and the measurement accuracy appear to be very difficult up to practically impossible to implement experimentally in the near future.
 
-Enhancements in entanglement generation are achievable by increasing the mass or superposition size of the particles or by optimizing particle-shield separations.
-While a Faraday shield enables closer particle placement by mitigating inter-particle Casimir forces, its effectiveness is conditional, as some parameter regimes favor setups without the shield.
-A strategy for optimal parameter selection, tailored to experimental constraints on state preparation and placement accuracy are presented in \cref{sec:4:discussion}.
+Enhancements in entanglement generation are achievable by either increasing the mass or superposition size of the particles or by optimizing the particle-shield separation.
+While a Faraday shield enables closer particle placements by mitigating inter-particle Casimir forces, its effectiveness is conditional as some parameter regimes favor setups without the shield.
+A strategy for optimal parameter selection, tailored to experimental constraints on state preparation and placement accuracy was presented in \cref{sec:4:discussion}.
 By choosing the shield as small as possible and temperatures as low as physically reachable, decoherence effects of the thermal shield weakens, improving entanglement generation.
-Uncharged particles - requiring a much smaller shield - emerge as particularly favorable.
+Uncharged particles, requiring a much smaller shield, emerged as particularly favorable.
 
-Future theoretical studies could benefit from incorporating squeezed gaussian states \cite[p. 33-64]{Serafini_2017} or other forms of imperfect squeezed states in the analysis, which are again stochastically distributed over multiple experimental runs.
+Future theoretical studies could benefit from incorporating squeezed gaussian states \cite[p. 33-64]{Serafini_2017} or alternative delocalized states in the analysis.
 Most realizations of spatial superpositions of massive objects, especially in the world of high mass levitated particles, are going to be ideally imperfect squeezed gaussian states \cite[Timestamp: 23:00]{Aspelmeyer_2024} as they can be naturally prepared by ground state cooling in a harmonic trap \cite{Weiss_2021}.
-However, the findings in Ref. \cite{Pedernales_2023} suggest that the results derived for Schrödinger-cat-states in the center-of-mass position should remain largely applicable.
+However, the findings in Ref. \cite{Pedernales_2023} suggest that the results derived for Schrödinger-cat states in the center-of-mass position should remain largely applicable.
 
-Other forms of decoherence, such as undamped vibrations of the setup (potentially due to complex cooling mechanisms like dilution refrigerators) and black-body radiation of the particles can also be considered.
-It is possible to estimate the decoherence due to thermal radiation \cite[p. 127-136]{Schlosshauer_2007} between the cat-states as well as with the thermal environment at temperature $T$ as \cite{RomeroIsart_2011}
+Other forms of decoherence, such as undamped vibrations of the setup (potentially due to complex cooling mechanisms) and black-body radiation between the particles can also be considered.
+It is possible to estimate the decoherence due to thermal radiation \cite[p. 127-136]{Schlosshauer_2007} between the cat states at temperature $T$ by \cite{RomeroIsart_2011}
 \begin{equation}
   \Gamma_\mathrm{decoh.,\ black-body} = \Gamma_0\left[1 - \exp{-\frac{(\Delta x)^2}{\lambda^2_\mathrm{th}}}\right] \sim (\Delta x)^2
 \end{equation}
-where $\lambda_\mathrm{th} = \pi^{2/3} \hbar c / k_B T$ is the thermal wavelength with values of $\lambda_\mathrm{th} \approx 1\si{mm}$ at $4\si{K}$ and (for $\mathfrak{Im}(\varepsilon_r)\approx 0$, since Silica is transparent)
+where $\lambda_\mathrm{th} = \pi^{2/3} \hbar c / k_B T$ is the thermal wavelength with values of $\lambda_\mathrm{th} \approx 1\si{mm}$ at $4\si{K}$ and (for $\mathfrak{Im}(\varepsilon_r)\approx 0$, since silica is transparent)
 \begin{equation}
   \Gamma_0 = \frac{8! \cdot 8 \zeta(9)R^6c}{9\pi} \left(\frac{k_B T}{\hbar c}\right)^7 \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)^2 \approx 1.7 \times 10^{5} \si{s^{-1}} .
 \end{equation}
 It follows that $\Gamma_\mathrm{decoh.,\ black-body} \ll \Gamma_\mathrm{Gravity}$ in the parameter regime given by \cref{tab:paramters}.
-For $\Delta x \ll \lambda_\mathrm{th}$, the decoherence scales quadratically in $\Delta x$, resulting in a similar increase as the gravitational entanglement rate $\Gamma_\mathrm{Gravity}$ from eq. \eqref{eq:5:entanglement-rate-gravity}.
-For very large superposition sizes, decoherence stays constant resulting in a domination of gravitational entanglement generation.
-Other forms of decoherence like collisions with air molecules can similarly be accounted for and thus a required vacuum pressure can be estimated.
+For very large superposition sizes, decoherence stays constant ($\Gamma_\mathrm{decoh.}\sim \Gamma_0$) resulting in a domination of gravitational entanglement generation.
+Other forms of decoherence, like collisions with air molecules, can similarly be accounted for and thus a required vacuum pressure can be estimated.
 
-Analogous to variations in the initial particle placement for each run, variations in other parameters, such as the measurement time (i.e. the time of gravitational interaction between the states) can be examined.
+Analogous to variations in the initial particle placement for each run, variations in other parameters, such as the measurement time (i.e. the time of gravitational interaction between the states), can be examined.
 A brief investigation of this effect was presented in Ref. \cite{Nguyen_2020}, showing results consistent with those obtained in this thesis.
-The varying gravitational effects of surrounding masses must also be considered, as they can influence the entanglement generation differently during each measurement run. For instance, the gravitational attraction exerted by the Moon on the masses is $10^7$ times stronger than their mutual gravitational interaction.
-Variations in the Moon-Earth distance over time can alter this attraction and result in additional decoherence.
+The varying gravitational effects of non-stationary surrounding masses must also be considered, as they can influence the entanglement generation differently during each measurement run. For instance, the gravitational attraction exerted by the moon on the masses is $10^7$ times stronger than their mutual gravitational interaction.
+Variations in the moon-earth distance over a lunar period can alter this attraction over multiple runs and result in additional effective decoherence.
 Even changes in atmospheric conditions might need to be accounted for as different densities due to temperature fluctuations would exert different gravitational attractions.
- 
-Another avenue worth looking into with potentially large improvements on the experimental evidence of entanglement lies in the analysis of the measurement data.
-If the initial placement parameters for each experimental run are either fully known or a skewed probability distribution of possible values can be specified, the stochastic decoherence effects can most likely be partially accounted for.
-How precisely this can be achieved and what maximal placement variations can then be tolerated could be valuable information for the practical experimental implementation.
+
+Advanced data analysis methodologies present further promising avenues for reducing the effective decoherences due to stochastic particle placements.
+By measuring initial placement parameters each run or establishing skewed probabilistic distribution models, decoherence effects might be partially accounted for. The calculations in this thesis are therefore potentially just an overestimation. 
+
+Given the existence of geometries that exhibit either attractive or repulsive Casimir forces \cite{Boyer_1968}, it is reasonable to hypothesize the existence of shapes with significantly reduced or even negligible Casimir interaction.
+Such bodies would offer clear advantages, including reduced unwanted entanglement generation between the particles, potentially eliminating the necessity of the Faraday shield.
+However, identifying such geometries and reliably fabricating nanoparticles in them at the micrometer scale is by no means trivial.
 
 The findings in this thesis have broader implications beyond gravitationally induced entanglement, as a new method for the precise measurement of Casimir forces can be developed utilizing spatial delocalizations.
 The idea of using levitated particles for observing Casimir interactions is a current research topic \cite{Xu_2024}.
