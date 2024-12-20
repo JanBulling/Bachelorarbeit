@@ -1,23 +1,24 @@
 \chapter{A first look}\label{cha:first-look}
 
 Testing the quantum nature of gravity is no easy task and many proposals seek to detect gravitationally induced entanglement between two masses \cite{Marletto_2017,Krisnanda_2020,Chevalier_2020,Pedernales_2019,Bose_2017} as a form of proof. 
-For all these proposals, gravity is assumed to be mediated by a gravitational field - either classical, described by the metric tensor in general relativity or by a quantum entity.
-During a time evolution, this field (like any other external field) can only perform local operations (LO) on the states of the test masses.
+For all these proposals, gravity is assumed to be mediated by a gravitational field - either classical, for example as described by the metric tensor in general relativity or by a quantum entity.
+It is assumed that during a time evolution, this field typically appears to perform local operations (LO) on the states of the individual test masses.
 This has repeatedly been seen in different experiments like in the observation of the gravitational Aharonov-Bohm effect \cite{Overstreet_2022} or in gravitationally induced quantum interference with neutrons influenced by earth's gravitational field \cite{Colella_1975}.
+However, a non-local interaction may still appear as local when only one of the interacting particles is considered, so these experiments represent only circumstantial evidence.
 If gravity is now assumed to behave classically, its propagation between masses can be described by a classical communication (CC) channel \cite{Lami_2024}.
 These LOCC operations however cannot turn an initially unentangled state into an entangled one \cite{Horodecki_2009, Plenio_2005a}.
 It immediately follows, that if one measures the involved masses to be entangled after a mutual gravitational interaction, gravity necessarily has to be non-LOCC in some way.
-Whether this directly implies the \textit{quantum nature of gravity} is a hot topic of debate \cite{Hall_2018}.
+Whether this directly implies the \textit{quantum nature of gravity} is a hot topic of debate \cite{Hall_2018, MartinMartinez_2023}.
 It is important to note, that the opposite of this statement is not true. Measuring unentangled masses does not directly imply the classicality of the gravitational field.
-This can be seen by considering operations that are non-LOCC and also produce unentangled states like for example the swap operation $\ket{\psi}_A\ket{\phi}_B \rightarrow \ket{\phi}_A\ket{\psi}_B$. This operation obviously can't induce entanglement to initially unentangled states, but requires the exchange of quantum information between them - which is not possible using classical communication alone.
+This can be seen by considering operations that are non-LOCC and still cannot produce entanglement like for example the swap operation $\ket{\psi}_A\ket{\phi}_B \rightarrow \ket{\phi}_A\ket{\psi}_B$. This operation obviously can't induce entanglement to initially unentangled states, but requires the exchange of quantum information between them - which is not possible using LOCC operations alone.
 In other words: If one prepares masses initially in a pure product state and measures \textit{any} state which cannot be obtained by LOCC-operations after some finite time evolution, it is impossible for gravity to be classical. One can even go so far and define the term \emph{quantum gravity} as any interaction mediated by gravity, that cannot be described by LOCC operations alone \cite{Lami_2024}.
 
 A plausible and logical idea for an experiment to test for gravitationally induced entanglement was suggested by Feynman during a discussion session at the 1957 \q{Conference on the Role of Gravitation in Physics} at Chapel Hill, North Carolina \cite[p. 247-260]{Rickles_2011} and is described in this chapter.
-It requires the generation of coherent quantum superpositions of the center-of-mass degree of freedom for two massive objects either in so-called Schrödinger-cat states or squeezed gaussian states \cite{Bose_2017, Pedernales_2023}.
-Both masses are separated by a small distance $L$ such that gravity has a notable effect after a set time.
+It requires the generation of coherent quantum superpositions of the center-of-mass degree of freedom for two massive objects either in so-called Schrödinger-cat states or squeezed gaussian states \cite{Bose_2017, Pedernales_2023,Krisnanda_2020}.
+Both masses are separated by a small distance $L$, such that gravity has a notable effect after a set time.
 Ignoring non-gravitational couplings, the mutual gravitational interaction should entangle the masses - of course only \textit{if gravity behaves quantum}.
 There exist criticizing arguments, that entanglement generation does not strictly require a quantum nature of gravity and other classical mechanisms could induce entanglement as well \cite{Reginatto_2019}.
-In the low energy limit $E\lesssim m_p c^2 \sim 10^{19}\si{GeV}$ and for close separations, the gravitational interaction can be described by an instantaneous Newtonian $1/r$ potential acting on the center-of-mass positions \cite{Carney_2018,Pedernales_2023,Christodoulou_2022}.
+In the low energy limit $E\lesssim m_p c^2 \sim 10^{19}\si{GeV}$ and for close separations, standard quantization techniques can be applied for the gravitational field, resulting in a quantized instantaneous Newtonian $1/r$ potential acting on the center-of-mass positions \cite{Carney_2018,Pedernales_2023,Christodoulou_2022}.
 Spatial superpositions lead to superpositions of the metric and consequently - in the non-relativistic limit - to a superposed Newtonian potential.
 The interaction Hamiltonian $\op{H}_G$ is described by
 \begin{equation}\label{eq:2:gravity-hamiltonian}
@@ -25,19 +26,19 @@ The interaction Hamiltonian $\op{H}_G$ is described by
 \end{equation}
 where $G=6.6743 \times 10^{-11} \si{m^3 kg^{-1} s^{-2}}$ is the gravitational constant. 
 The positions $x_A$ and $x_B$ of the both masses $A$ and $B$ have been canonically quantized. The particles are initially delocalized in the spatial cat-states $\ket{\psi} = 1/\sqrt{2}\left(\ket{\psi^{(1)}} + \ket{\psi^{(2)}}\right)$.
-If $L \gg \abs{\op{x}_A - \op{x}_B}$, the denominator of $\op{H}_G$ can be expanded up to second order in $\op{x}_A - \op{x}_B$. In this thesis, $L$ will be in the $10\si{\mu m}$ regime and the spatial extension $\Delta x$ is around $500\si{nm}$ \cite{Fein_2019}, making this expansion always justified.
+If $L \gg \mean{\abs{\op{x}_A - \op{x}_B}}$, the denominator of $\op{H}_G$ can be expanded up to second order in $\op{x}_A - \op{x}_B$. In this thesis, $L$ will be in the $10\si{\mu m}$ regime and the spatial extension $\Delta x$ is around $100\si{nm}$, making this expansion always justified.
 The zeroth order term is just an overall energy offset, the first order term $\propto (\op{x}_A - \op{x}_B)$ as well as the terms $\op{x}^2_i$ result only in a local interaction for each mass separately. The coupling term $ - (\op{x}_A\op{x}_B + \op{x}_B\op{x}_A) = -2\op{x}_A\op{x}_B$ however couples both masses and thus can mediate entanglement. An exemplary calculation of this is demonstrated in \cref{apx:general-state-gravitaional-hamiltonian}.
 
-The observable entanglement is however very weak as it depends on the gravitational coupling strength $\sim G$ and thus, typically coherence times in order of $100\si{ms}$ to $100\si{s}$ are required, imposing a huge experimental challenge.
+The observable entanglement is however very weak as it depends on the gravitational coupling strength $\sim G$ and thus, for typically considered parameters, coherence times in order of $100\si{ms}$ to $100\si{s}$ are required for sufficient entanglement generation, imposing huge experimental challenges.
 As will be shown in the next section the entanglement rate between two massive particles increases with the spatial width of the wave functions $\Delta x$ and their mass $M$.
 To contextualize: The most massive object ever put into a spatial superposition in matter-wave interferometry is in the order of $4\times 10^{-23}\si{kg}$ \cite{Fein_2019} whereas the smallest object whose gravitational field has been measured was just below $100\si{mg}$ \cite{Westphal_2021} - a difference of 19 orders of magnitude.
 Levitated particles pose a promising platform for bridging this gap: As the name suggests, the test masses are levitated and are therefore well-decoupled from their environment in ultra high vacuums, where even collisions with single air molecules can be prevented.
-Furthermore, there are multiple proposals on how to prepare the spatial superpositions required experimentally \cite{Bose_2017,Krisnanda_2020,Marletto_2017}.
+Furthermore, there are multiple proposals on how to prepare the spatial superpositions experimentally \cite{Bose_2017,Krisnanda_2020,Marletto_2017}.
 One possibility is to use spin degrees of freedoms in a Stern-Gerlach apparatus with a magnetic field gradient \cite{Bose_2017}.
-Alternatively, a 1D harmonic potential \cite{Krisnanda_2020} or a double-well potential can be used for trapping levitated particles and ground-state cooling can create spatially delocalized states.
+Alternatively, a double-well potential can be used for trapping levitated particles and ground-state cooling can create spatially delocalized states.
 In this thesis, it is assumed that all required states and superpositions can be prepared experimentally.
 
-One of the most prominent proposals to test gravity for quantum features is described in Ref. \cite{Bose_2017} and is depicted in \cref{fig:2:simple-problem}.
+One proposal to test gravity for quantum features is described in Ref. \cite{Bose_2017} and is depicted in \cref{fig:2:simple-problem}.
 \begin{figure}[!htbp]
   \centering
   \def\svgwidth{\textwidth}
@@ -50,12 +51,13 @@ The masses are prepared in a coherent delocalized quantum superposition of Schr�
 The spatial extension size of the superposition is denoted by $\Delta x$.
 With the notation introduced in \cref{fig:2:simple-problem}, the initial state at $t=0$ is given by
 \begin{equation}\label{eq:2:initial-state}
-  \ket{\psi(t=0)} = \frac{1}{2}\left( \ket{\psi_A^{(1)}} + \ket{\psi_A^{(2)}} \right) \otimes \left( \ket{\psi_B^{(1)}} + \ket{\psi_B^{(2)}} \right) .
+  \ket{\psi(t=0)} = \frac{1}{2}\left( \ket{\psi_A^{(1)}} + \ket{\psi_A^{(2)}} \right) \otimes \left( \ket{\psi_B^{(1)}} + \ket{\psi_B^{(2)}} \right) ,
 \end{equation}
+where the states $\braket{\psi^{(i)}_{A(B)}}{\psi^{(j)}_{A(B)}}=\delta_{ij}$ ($i,j=1,2$) for both masses $A$ and $B$ are, for simplicity, assumed to be orthonormal.
 The state evolves under a Hamiltonian $\op{H}_G$ and after some time the position of each mass is measured and checked for entanglement.
-For now it is assumed that all other interactions except gravity are negligible. In reality, electromagnetic forces and Casimir-Polder interactions \cite{Casimir_1948, Casimir_1948a} need to be considered.
-On the time scales of the experiment, the acceleration of the masses due to the mutual gravitational attraction can be neglected \footnote{Take for example a silica sphere ($\rho = 2648 \si{kg/m^3}$) with $R=10^{-5}\si{m}$ separated by $2L=4R$. The mutual gravitational acceleration for each sphere is around $a=GM/(2L)^2 = 5 \times 10^{-13}\si{m/s^2}$ which, for $t\sim 1 \si{s}$, results in a displacement of $\sim 10^{-13}\si{m}$ which is much smaller than typical variances of the ground state $\Delta x \sim 100\si{nm}$ \cite{Fein_2019}.}.
-Therefore, the gravitational potential can be assumed to be static and $\abs{L-(\op{x}_A - \op{x}_B)}$ can be replaced by the distance operator $\op{L}$
+For now it is assumed that all other interactions except gravity are negligible. In reality, electromagnetic forces such as Casimir-Polder interactions \cite{Casimir_1948, Casimir_1948a} need to be considered.
+On the time scales of the experiment, the acceleration of the masses due to the mutual gravitational attraction can be neglected\footnote{Take for example a silica sphere ($\rho = 2648 \si{kg/m^3}$) with $R=10^{-5}\si{m}$ separated by $2L=4R$. The mutual gravitational acceleration for each sphere is around $a=GM/(2L)^2 = 5 \times 10^{-13}\si{m/s^2}$ which, ignoring the trapping potential and for $t\sim 1 \si{s}$, results in a displacement of $\sim 10^{-13}\si{m}$ which is much smaller than typical variances of the ground state $\Delta x \sim 100\si{nm}$ \cite{Fein_2019}.}.
+Therefore $\abs{L-(\op{x}_A - \op{x}_B)}$ can be replaced by the distance operator $\op{L}$
 \begin{equation}\label{eq:2:newtonian-potential}
   \op{V} = -\frac{G M_A M_B}{\abs{\op{L}}} .
 \end{equation}

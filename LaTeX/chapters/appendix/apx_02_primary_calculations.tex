@@ -56,19 +56,21 @@ The resulting average over $\theta_{A(B)}$ and $L_{A(B)}$ can be computed by
 \begin{equation}
   \int_{-\infty}^{\infty} \dd \theta_A \dd \theta_B \dd L_A \dd L_B \, p(\theta_A) p(\theta_B) p(L_A) p(L_B) e^{i \phi}
 \end{equation}
-where $p(\,\cdot\,)$ is a gaussian probability distribution in the form of
+where $p(\,\cdot\,)$ is a Gaussian probability distribution in the form of
 \begin{equation}
   p(x) = \frac{1}{\sqrt{2\pi}\Delta x} e^{-\frac{x^2}{2(\Delta x)^2}}
 \end{equation}
 and $\phi$ is the accumulated dynamic phase dependent on the two series expansions above.
 The mixed terms consisting of combinations of $\theta$ and $L$ can be neglected in first order because in the final result, they appear in the form of (notation: $\Delta A,\Delta B$ for either $\Delta\theta$ or $\Delta L$; $a,b$ are constants)
 \begin{equation}
-  \sim \exp{-\frac{a^2(\Delta A)^2}{2b^2(\Delta A)^2(\Delta B)^2 + 2}} \xrightarrow{\Delta A,\Delta B \ll 1} 1 .
+  \sim \exp{-\frac{a^2(\Delta A)^2}{2b^2(\Delta A)^2(\Delta B)^2 + 2}} \xrightarrow{\Delta A,\Delta B \ll 1} 1 ,
 \end{equation}
+decaying much faster than the relevant terms $\sim \exp{-(\Delta A)^2}$.
 Each averaged element of the density matrix can therefore be analytically calculated using 
 \begin{equation}
-  \prod_{\Delta A = \{\Delta \theta_{A(B)}, \Delta L_{A(B)}\}} \int\limits_{-\infty}^{\infty} \dd A \, \frac{1}{\sqrt{2\pi}\Delta A} e^{-\frac{A^2}{2 (\Delta A)^2}} e^{i\xi A} e^{i\phi} = \prod_{\Delta A} e^{-\frac{\xi^2 (\Delta A)^2}{2}} e^{i\phi} .
+  \prod_{\Delta A = \{\Delta \theta_{A(B)}, \Delta L_{A(B)}\}} \int\limits_{-\infty}^{\infty} \dd A \, \frac{1}{\sqrt{2\pi}\Delta A} e^{-\frac{A^2}{2 (\Delta A)^2}} e^{i\xi A} e^{i\tilde{\phi}} = \prod_{\Delta A} e^{-\frac{\xi^2 (\Delta A)^2}{2}} e^{i\tilde{\phi}} ,
 \end{equation}
+where $\tilde{\phi}$ are phase components independent of $A$, in particular representing the gravitational interaction considered in \cref{apx:entanglement-orientation}.
 
 The resulting averaged density matrices are given by the following for variations in the angle:
 \begin{equation}
@@ -179,7 +181,7 @@ The interaction picture hamiltonian in the $\{\ket{\psi^1_A\psi^1_B},\ket{\psi^1
     & & & g^2_\mathrm{A,m} + g^2_\mathrm{B,m}
   \end{pmatrix}(\op{a}e^{-i\omega_m t}+\op{a}^\dagger e^{i\omega_m t})
 \end{equation}
-The operator at the beginning is referred to as $\op{G}$ in the following.
+The 4-dimensional operator at the beginning of the equation is referred to as $\op{G}$ in the following.
 The time evolution in the Magnus expansion here given by \cite{Blanes_2009}
 \begin{equation}
   \op{U}(t) = \exp{-\frac{i}{\hbar}\int_{0}^{t}\dd t_1 \op{H}_\mathrm{int}(t)-\frac{1}{2\hbar^2}\int_{0}^{t}\dd t_1 \int_{0}^{t_1}\dd t_2 [\op{H}_\mathrm{int}(t_1),\op{H}_\mathrm{int}(t_2)]} .

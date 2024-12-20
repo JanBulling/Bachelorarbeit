@@ -3,14 +3,14 @@
 There does not exist a closed form expression for the Casimir energy between a dielectric sphere with radius $R$ and dielectric constant $\varepsilon_r$ in front of a conducting plate that is applicable at all sphere-plate separations $L/R$.
 In the limit of small separations, the proximity force approximation from \cref{sec:3:pfa} is valid and yields for dielectric or conducting spheres
 \begin{align}\label{eq:3:casimir-sphere-plate-PFA}
-  &E_\mathrm{PFA} = -\frac{\hbar c \pi^3}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r) \frac{R}{\mathscr{L}^2} \sim \frac{1}{(L-R)^2} \quad\quad \text{for}\ L/R \approx 1 \\ \label{eq:3:casimir-sphere-plate-PFA-conducting}
+  &E_\mathrm{PFA} = -\frac{\hbar c \pi^3}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right)\varphi(\varepsilon_r) \frac{R}{\mathscr{L}^2} \propto \frac{1}{(L-R)^2} \quad\quad \text{for}\ L/R \approx 1 \\ \label{eq:3:casimir-sphere-plate-PFA-conducting}
   &E_\mathrm{PFA,\,cond.} = E_\mathrm{PFA}(\varepsilon_r \rightarrow \infty) = -\frac{\hbar c \pi^3}{720} \frac{R}{\mathscr{L}^2} .
 \end{align}
 For arbitrary separations, the Casimir energy can only be expressed as an infinite series \cite{Emig_2007,Emig_2007a} or in terms of an integral \cite{Ford_1998}.
 The integral form reads
 \begin{multline}\label{eq:3:ford-integral}
-  F = - \frac{\hbar c}{4 \pi L^4} \int_{0}^{\infty} \dd \omega \, \alpha(\omega) \left[3\sin 2 \omega L - 6L\omega \cos 2 \omega L \right. \\ 
-  \left. - 6L^2\omega^2 \sin 2 \omega L + 4L^3\omega^3 \cos 2 \omega L\right].
+  F = - \frac{\hbar}{4 \pi L^4} \int_{0}^{\infty} \dd \omega \, \alpha(\omega) \left[3\sin(\frac{2 \omega L}{c}) - 6\frac{L\omega}{c} \cos(\frac{2 \omega L}{c}) \right. \\ 
+  \left. - 6\frac{L^2\omega^2}{c^2} \sin(\frac{2 \omega L}{c}) + 4\frac{L^3\omega^3}{c^3} \cos(\frac{2 \omega L}{c})\right].
 \end{multline}
 where $\alpha$ is the electric polarizability of the sphere and the integration is performed over all possible interaction frequencies $\omega$ of the electromagnetic field with the materials.
 
@@ -44,9 +44,9 @@ The scaling of $1/L^4$ for large separations can additionally be motivated empir
 If both atoms are approximated as spheres with $\alpha \sim R^3$ and one of them is increased to the size of $R \sim L$, the total Casimir-Polder potential between them effectively scales with $\sim R^3/L^4$.
 This representation corresponds to the limit $L/R \gg 1$ and aligns with the actual scaling of the macroscopic Casimir potential for large separations in eq. \eqref{eq:3:casimir-sphere-plate-LSL}.
 
-The series expansion in \cref{fig:3:casimir-behavior} suggests, that the proximity-force-approximation is an upper bound for the actual Casimir interaction at all separations. In fact, it can be proven that the PFA for a superconducting sphere and a plate always predicts a stronger force $\abs{\nabla E}$ than the LSL.
+The series expansion in \cref{fig:3:casimir-behavior} suggests, that the proximity-force-approximation is an upper bound for the actual Casimir interaction at all separations. In fact, it can be proven that the PFA for a conducting sphere and a plate always predicts a stronger force $\abs{\nabla E}$ than the LSL.
 \begin{theorem}
-  The Casimir force in the PFA-model eq. \eqref{eq:3:casimir-sphere-plate-PFA} between a superconducting sphere ($\varepsilon_r \rightarrow \infty$) and a perfectly conducting plate is an upper bound for the LSL eq. \eqref{eq:3:casimir-sphere-plate-LSL}.
+  The Casimir force in the PFA-model eq. \eqref{eq:3:casimir-sphere-plate-PFA} between a conducting sphere ($\varepsilon_r \rightarrow \infty$) and a conducting plate is an upper bound for the LSL eq. \eqref{eq:3:casimir-sphere-plate-LSL}.
 \end{theorem}
 \begin{proof}
   The proof is given in the following steps: \textbf{(a)} first it is shown that $\abs{\nabla E_\mathrm{PFA}} > \abs{\nabla E_\mathrm{LSL}}$ for arbitrary dielectric spheres, then it will be shown \textbf{(b)} that $\abs{\nabla E_\mathrm{PFA,\,cond.}} \geq \abs{\nabla E_\mathrm{PFA,\,diel.}}$.

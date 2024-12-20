@@ -1,17 +1,18 @@
+\newpage
 \section{Thermal shield vibrations}\label{sec:5:thermal-vibrations}
 
-A spherical plate of radius $r_s$ clamped at its edge, can vibrate in distinct modes characterized by indices $(k,l)$, where $k \in [1,\infty)$ and $l \in [0, \infty)$.
+A circular plate of radius $r_s$ clamped at its edge, can vibrate in distinct modes characterized by indices $(k,l)$, where $k \in [1,\infty)$ and $l \in [0, \infty)$.
 The exact vibrational frequencies $\omega_{kl}$ and mode shapes $u_{kl}$ are described by Bessel functions.
 In fact, one of the first occurrences of these functions is linked to Euler's study of vibrating perfectly flexible and infinitely thin membranes \cite{Dutka_1995}.
 For a plate of a physical material with density $\rho$ and thickness $d$, vibrations are described by the differential equation \cite[p. 490]{Rao_2019}
 \begin{equation}
-  D \nabla^2\nabla^2 u = -\rho d \ddot{u}
+  D \nabla^4 u = -\rho d \ddot{u}
 \end{equation} 
 where $D$ is a flexural rigidity constant, dependent on material properties of the plate like Young's modulus $E$ and the Poisson ratio $\nu$ in the form
 \begin{equation}
   D = \frac{d^3 E}{12(1-\nu^2)} .
 \end{equation}
-The general solution of this differential equation is expressed terms of Bessel functions as (derived in Ref. \cite[p. 490-495]{Rao_2019}) 
+The general solution of this differential equation is expressed in terms of Bessel functions as (derived in Ref. \cite[p. 490-495]{Rao_2019}) 
 \begin{equation}
   u_{kl}(r, \theta, t) = \left[J_l(\beta_k r) - \frac{J_l(\beta_k r_s)}{I_l(\beta_k r_s)}I_l(\beta_k r)\right]\cos(l\theta+\phi_1)\sin(\omega_{kl}t+\phi_2)
 \end{equation}

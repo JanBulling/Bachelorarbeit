@@ -53,7 +53,7 @@ There exists a non-obvious geometric interpretation why no entanglement is gener
 In the limit $\Delta x \ll L$, all dynamic phases for the different cat-states can be factored in a global phase and thus resulting in a loss of entanglement. 
 To avoid all these singularities, it is advisable to always choose $\alpha=-\beta$, where all orientations result in roughly similar entanglement times $t_\mathrm{max}$, at most only differing by a factor of $2$.
 
-It should come by no surprise that the different orientations exhibit different stabilities. Naturally, one would expect the orthogonal configuration to be much more sensitive to angular variations than the parallel one.
+It should come by no surprise that the different orientations exhibit different stabilities. Naturally, one would expect the parallel configuration to be much more sensitive to angular variations than the orthogonal one.
 In contrast, the parallel configuration should be much more stable against variations $L$, as no phase difference is induced between the two superposition states $\ket{\psi^{(1)}_{A(B)}}$ and $\ket{\psi^{(2)}_{A(B)}}$ of the particles $A$ and $B$.
 
 The effect of different orientations on the stability against angular variations and the behavior of the critical angular variation $\Delta \theta_\mathrm{crit}$ is shown in \cref{fig:4:theta-crit-orientation}.
@@ -78,7 +78,7 @@ Again aligning with expectations, the parallel configuration exhibits an infinit
 One could argue, that a for this to hold, the uncertainties in the angular placement have to be zero. As however seen in \cref{fig:4:theta-crit-orientation}, these variations are at most around $\sim 5 \times 10^{-5}\si{rad}$ and thus a realistic upper bound for the minimum required distance variations is given by $\Delta L_\mathrm{crit,parallel} = \Delta L_\mathrm{crit}(\alpha \approx 5\times 10^{-5}\si{rad}) \simeq 4\times 10^{-11}\si{m}$.
 It is important to keep in mind, that these bounds can be improved substantially by e.g. increasing the separation distance $L$, the particle size $R$ or the superposition size $\Delta x$.
 
-Considering these results, the parallel orientation seems to be the more stable and therefore favorable option, even if the requires coherence times $t_\mathrm{max}$ are twice as long.
+Considering these results, the parallel orientation seems to be the more stable and therefore favorable option, even if the required coherence times $t_\mathrm{max}$ are twice as long.
 Keeping particle-shield separation variations below $0.01\si{pm}$ in the orthogonal orientation - even smaller than size of a single atom - is extremely challenging,  
 especially under the additional consideration of the thermal vibrations of the shield, which are in the same order of magnitude as seen later in \cref{cha:the-shield}.
 With this framework on hand, it is possible to generate the stability diagram in \cref{fig:4:optimal-orientation}, showing the optimal orientation in which the most entanglement can be measured.
@@ -86,7 +86,7 @@ For most combinations of $\Delta L$ and $\Delta \theta$, entanglement is exclusi
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/optimize/optimized-orientation-advanced.pdf}
-  \caption{Optimal and most stable configuration for the orientation of the cat-states relative to the shield for different variations in the angle $\Delta \theta$ and in the separation distance $\Delta L$. The used parameters for the particle are shown in \cref{tab:paramters} and e.g. larger separations $L$ would improve the stability boundaries significantly. Both models for the Casimir interactions are shown. In regions where entanglement is given regardless of the orientation (the bottom left), the the favorable orientation with \q{more} entanglement is colored. The blue dotted line corresponds to the realistic upper bound discussed in the text, where an additional angular variation of $5 \times 10^{-5}\si{rad}$ as a worst-case estimation is assumed.}
+  \caption{Optimal and most stable configuration for the orientation of the cat-states relative to the shield for different variations in the angle $\Delta \theta$ and in the separation distance $\Delta L$. The used parameters for the particle are shown in \cref{tab:paramters} and e.g. larger separations $L$ would improve the stability boundaries significantly. Both models for the Casimir interactions are shown. In regions where entanglement is given regardless of the orientation (bottom left), the the favorable orientation with \q{more} entanglement is colored. The blue dotted line corresponds to the realistic upper bound discussed in the text, where an additional angular variation of $5 \times 10^{-5}\si{rad}$ as a worst-case estimation is assumed.}
   \label{fig:4:optimal-orientation}
 \end{figure}
 
@@ -95,11 +95,11 @@ For most combinations of $\Delta L$ and $\Delta \theta$, entanglement is exclusi
 \subsection{Separation, mass and superposition size}
 It is possible to improve the placement accuracies required in the initial placement of the particles by changing the parameters in \cref{tab:paramters}.
 The particle-shield separation $L$ in particular can be adjusted easily over a wide range and one is only limited in the ability of trapping close to the shield (discussed in \cref{sec:4:trapping}) and the size of the experimental setup.
-The scaling of the critical angular variation $\Delta \theta_\mathrm{crit}$ for different $L$ is shown in \cref{fig:4:theta-crit-L}.
+The scaling of the critical angular variation $\Delta \theta_\mathrm{crit}$, above which no entanglement is generated anymore, for different $L$ is shown in \cref{fig:4:theta-crit-L}.
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/theta-variance/theta-crit-L.pdf}
-  \caption{Stability against angular variations for increasing separation distances $L$ in units of $R=10\si{\mu m}$ after a time $t_\mathrm{max}(L)$. The dependence on the radius can be seen in \cref{fig:4:theta-crit-mass}. Two models for the casimir-interaction are shown: The proximity-force-approximation (PFA) and the large-separation-limit (LSL). The regions outside the models validity are indicated with dashed lines. In the bottom right the time $t_\mathrm{max}(L) \propto L^3$ is shown.}
+  \caption{Stability against angular variations for increasing separation distances $L$ in units of $R=10\si{\mu m}$ after a time $t_\mathrm{max}(L)$. The dependence on the radius can be seen in \cref{fig:4:theta-crit-mass}. Two models for the Casimir-interaction are shown: The proximity-force-approximation (PFA) and the large-separation-limit (LSL). The regions outside the models validity are indicated with dashed lines. In the bottom right the time $t_\mathrm{max}(L) \propto L^3$ is shown.}
   \label{fig:4:theta-crit-L}
 \end{figure}
 A similar figure can be created for the change of $\Delta L_\mathrm{crit}$, but as already discussed previously, the setup in the parallel orientation is very stable against variations in the separation distance, so only angular variations have to be considered.
@@ -121,12 +121,12 @@ Nevertheless, the effect of a larger particle on angular variations is analyzed 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/theta-variance/theta-crit-mass.pdf}
-  \caption{Critical angular variation $\Delta \theta_\mathrm{crit}$ for different sized particles after a time $t_\mathrm{max}(M)$. The mass of the corresponding particle in units of the Planck mass $m_p = \sqrt{\hbar c / G} \approx 2.176\times 10^{-8}\si{kg}$ is given on the top axis. For particles as large as the separation $R = L$, the surface-to-surface separation is almost zero, resulting in large casimir forces and thus no entanglement.}
+  \caption{Critical angular variation $\Delta \theta_\mathrm{crit}$ for different sized particles after a time $t_\mathrm{max}(M)$. The mass of the corresponding particle in units of the Planck mass $m_p = \sqrt{\hbar c / G} \approx 2.176\times 10^{-8}\si{kg}$ is given on the top axis. For particles as large as the separation $R = L$, the surface-to-surface separation is almost zero, resulting in large Casimir forces and thus no entanglement.}
   \label{fig:4:theta-crit-mass}
 \end{figure}
 The particles are most likely made out of silica ($\mathrm{SiO_2}$) with density $\rho_\mathrm{Silica} = 2648\si{kg/m^3}$, as this material has been widely used in experiments on levitated nanoparticles \cite{Grass_2016,Slezak_2018}.
 Denser materials like lead or osmium \cite{Krisnanda_2020} in magnetic traps could potentially be considered as the required particle radius and the number of atoms in a single particle are reduced.
-The entanglement generation fastens substantially for larger particles as $t_\mathrm{max}$ scales with $M^{-2}$ and thus effectively with $R^{-6}$.
+The entanglement generation fastens substantially for larger particles as $t_\mathrm{max}$ scales with $M^{-2}$ and thus effectively with $R^{-6}$ (of course only if $L$ is independent of $R$).
 The dependence of $\Delta \theta_\mathrm{crit}$ on $R$ can be determined in first order to
 \begin{equation}
   \Delta \theta_\mathrm{crit} \sim \frac{(L - R - d/2)^3}{R t_\mathrm{max}} \sim \frac{(L - R - d/2)^3 R^6}{R L^3 }
@@ -134,7 +134,7 @@ The dependence of $\Delta \theta_\mathrm{crit}$ on $R$ can be determined in firs
 for small separations and in the special case where $L \propto R$, a scaling of $\Delta \theta_\mathrm{crit} \sim (R - d/2)^3 R^2$ is expected.
 Both cases are shown in \cref{fig:4:theta-crit-mass}.
 
-Similarly to the particles size, the spatial extension of the coherent superposition of the center-of-mass motion $\Delta x$ can most likely not be changed substantially. The delocalizations are, considering the current record in matter-wave experiments of $500\si{nm}$ for $4\times 10^{-23}\si{kg}$ \cite{Fein_2019}, smaller than the particles radius. 
+Similarly to the particles size, the spatial extension of the coherent superposition of the center-of-mass motion $\Delta x$ can most likely not be changed substantially. The delocalizations are, considering the current record in matter-wave experiments of $500\si{nm}$ for $4\times 10^{-23}\si{kg}$ \cite{Fein_2019}. It remains to be seen what superposition sizes are possible to create using levitated particles.  
 In \cref{fig:4:theta-crit-superposition-size} the effect of the superposition size on the critical angular variation is shown.
 \begin{figure}[!htbp]
   \centering

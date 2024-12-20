@@ -58,7 +58,7 @@ In reality, the displacements of multiple simultaneously occurring modes can can
 
 \subsection{Analytic dynamics}\label{subsec:5:entanglement-analytical}
 The effect of the thermal shield on entanglement generation between the two delocalized particles can be calculated analytically.
-The Hamiltonian governing the interactions between the two particles with each other and with the thermal shield is given by
+The Hamiltonian governing the interactions between the two particles with each other and each of them with the thermal shield is given by (in the linearized regime)
 \begin{align}\label{eq:5:hamiltonian}
   \begin{split}
     \op{H} = &\sum_{\substack{m\in\{(k,l)\}\\ k \geq 1,\ l \geq 0}} \biggl\{ \hbar \omega_m \left(\op{a}^\dagger_m \op{a}_m + \frac{1}{2}\right) \\
@@ -89,8 +89,8 @@ Expanding the term in first order in $\op{z}$ and ignoring the zeroth-order term
   \quad \text{with} \quad 
   g_\mathrm{PFA} = \frac{\hbar c \pi^3 R}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) .
 \end{equation} 
-The combined system of the two particles $\rho_\mathrm{sys.} \in \mathcal{H}_\mathrm{sys.}$ and the thermal modes $\rho_\mathrm{th} = \bigotimes_m \rho_\mathrm{th, m} \in \mathcal{H}_\mathrm{th}$ evolves under the hamiltonian starting in the initial state $\rho_0 = \rho_\mathrm{th} \otimes \rho_\mathrm{sys.}$. 
-The initial state of the two particles $\rho_\mathrm{sys.}$ is given by eq. \eqref{eq:2:initial-state} and $\rho_\mathrm{th,m}$ is the thermal state of vibrational mode $m$, which can be represented either in the number basis $\{\ket{n}\}$ or in the coherent state basis $\{\ket{\alpha}\}$ as \cite{Steiner_2024}
+The combined system of the two particles $\rho_\mathrm{sys} \in \mathcal{H}_\mathrm{sys}$ and the thermal modes $\rho_\mathrm{th} = \bigotimes_m \rho_\mathrm{th, m} \in \mathcal{H}_\mathrm{th}$ evolves under the Hamiltonian starting in the initial state $\rho_0 = \rho_\mathrm{th} \otimes \rho_\mathrm{sys}$. 
+The initial state of the two particles $\rho_\mathrm{sys}$ is given by eq. \eqref{eq:2:initial-state} and $\rho_\mathrm{th,m}$ is the thermal state of vibrational mode $m$, which can be represented either in the number basis $\{\ket{n}\}$ or in the coherent state basis $\{\ket{\alpha}\}$ as \cite{Steiner_2024}
 \begin{equation}
   \rho_\mathrm{th,m} = \frac{1}{Z} \sum_{n=1}^\infty e^{-\beta \hbar \omega_m (n + 1/2)} \ketbra{n} = \int \dd \alpha^2 \frac{1}{\pi \bar{n}} e^{-\frac{\abs{\alpha}^2}{\bar{n}}} \ketbra{\alpha} .
 \end{equation} 
@@ -98,7 +98,7 @@ Here, $Z = \tr e^{-\beta \hbar \omega_m (\op{n}+1/2)} = e^{-\beta \hbar \omega_m
 
 After time $t$, tracing out the thermal shield yields the evolved two-particle system
 \begin{equation}
-  \rho_\mathrm{sys.}(t) = \tr_\mathrm{th}\left(\op{U}(t) \, \rho_0 \, \op{U}^\dagger(t)\right) .
+  \rho_\mathrm{sys}(t) = \tr_\mathrm{th}\left(\op{U}(t) \, \rho_0 \, \op{U}^\dagger(t)\right) .
 \end{equation}
 The time evolution is computed in \cref{apx:thermal-shield-time-evolution} and is given by
 % \begin{equation}
@@ -110,7 +110,7 @@ The time evolution is computed in \cref{apx:thermal-shield-time-evolution} and i
 %   \end{pmatrix}
 % \end{equation}
 \begin{equation}
-  \rho_\mathrm{system}(t) = \frac{1}{4} \begin{pmatrix}
+  \rho_\mathrm{sys}(t) = \frac{1}{4} \begin{pmatrix}
     1 & e^{i\phi_{11,12}} e^{-\gamma_{11,12}} & e^{i\phi_{11,21}} e^{-\gamma_{11,21}} & e^{i\phi_{11,22}} e^{-\gamma_{11,22}} \\
     e^{i\phi_{12,11}} e^{-\gamma_{12,11}} & 1 & e^{i\phi_{12,21}} e^{-\gamma_{12,21}} & e^{i\phi_{12,22}} e^{-\gamma_{12,22}} \\
     e^{i\phi_{21,11}} e^{-\gamma_{21,11}} & e^{i\phi_{21,12}} e^{-\gamma_{21,12}} & 1 & e^{i\phi_{21,22}} e^{-\gamma_{21,22}} \\
@@ -182,7 +182,7 @@ Numeric calculations show, that even for shields as large as $r_s = 5\si{mm}$, e
 \subsubsection*{Indirect entanglement through the shield}
 
 Examining the phases $\phi_{ii',jj'}$ in eq. \eqref{eq:5:analytical-phases} reveals that, similar to the gravitational force, the Casimir interaction between the particle and the shield can induce entanglement between the particles. This occurs as both particles couple to the shield via Casimir interactions, enabling indirect interaction between them.
-However, the resulting amount of entanglement is very small, as evident from the dependence on $1/\hbar^2$ in eq. \eqref{eq:5:analytical-phases}.
+However, the resulting amount of entanglement is very small, as evident from the dependence on $1/\omega_m^2$ in eq. \eqref{eq:5:analytical-phases}.
 While negligible at larger separations, Casimir-induced indirect entanglement could become significant at very small distances where the Casimir forces are much stronger than the gravitational interaction. 
 This is particularly relevant if the entanglement generated via Casimir interactions approaches that due to gravity. 
 The relative strength can be estimated by comparing the term corresponding to the gravitational interaction with the Casimir terms in eq. \eqref{eq:5:analytical-phases}:

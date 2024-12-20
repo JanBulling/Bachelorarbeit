@@ -2,15 +2,16 @@
 Checking whether an arbitrary state $\rho$ is entangled or not is no easy task. In fact, this problem is known to be NP-hard \cite{Gurvits_2003}.
 A state $\rho_{AB} \in \mathcal{H}_A\otimes\mathcal{H}_B$ is called entangled, if it is \emph{non-separable}, that is, it cannot be expressed as a tensor product of two subsystems $\rho_A \in \mathcal{H}_A$ and $\rho_B \in \mathcal{H}_B$.
 Only for specific cases - like the case of two qubits or qubit-qutrit - a simple sufficient criterion for determining the separability of a general mixed state is known:
-The positive partial transpose (PPT) criterion states, that if the partial transpose of the density matrix is positive ($\rho^{\Gamma_A} \geq 0$) \footnote{An $n \times n$ hermitian matrix $M$ is defined as positive (\q{positive semi-definite}), if $\vec{z}^*M\vec{z} \geq 0$ for all $\vec{z}\in\mathbb{C}^n \ \backslash \ \{0\}$; i.e. if and only if all eigenvalues are non-negative.}, the state $\rho$ is separable \cite{Horodecki_2009,Plenio_2005a}.
+The positive partial transpose (PPT) criterion states, that if the partial transpose of the density matrix is positive ($\rho^{\Gamma_A} \geq 0$) \footnote{An $n \times n$ Hermitian matrix $M$ is defined as positive (\q{positive semi-definite}), if $\vec{z}^*M\vec{z} \geq 0$ for all $\vec{z}\in\mathbb{C}^n \ \backslash \ \{0\}$; i.e. if and only if all eigenvalues are non-negative.}, the state $\rho$ is separable \cite{Horodecki_2009,Plenio_2005a}.
 In other words, if $\rho^{\Gamma_A}$ has negative eigenvalues, $\rho$ is guaranteed to describe an entangled state.
 The inverse is true, if and only if the dimension of $\rho_A\otimes\rho_B$ is $2\times2$ or $3\times2$ \cite{Horodecki_2009} - otherwise, only having non-negative eigenvalues doesn't necessarily result in an unentangled system.
 The partial transpose with respect to a subsystem $i$ can be understood in the same way as the partial trace, where the operation (in this case the transform) is performed only on indices corresponding the subsystem $\rho_i$.
 It is defined for an arbitrary density matrix $\rho = \sum_{ijkl}p^{ij}_{kl}\ketbra{i}{j}\otimes\ketbra{k}{l}$ as $\rho^{\Gamma_A} = \sum_{ijkl}p^{ji}_{kl}\ketbra{i}{j}\otimes\ketbra{k}{l}$.
 To see the necessity of the PPT criterion, consider a separable mixed state $\rho$, which can be generally expressed as 
 \begin{equation}\label{eq:2:separable-state}
-  \rho = \sum p_i \rho_{A}^{(i)}\otimes\rho_{B}^{(i)} .
+  \rho = \sum p_i \rho_{A}^{(i)}\otimes\rho_{B}^{(i)} ,
 \end{equation}
+with $\sum p_i = 1$ and $\rho^(i)_A$ as well as $\rho^{(i)}_B$ are well-defined density matrices.
 The partial transpose is in this case trivial:
 \begin{equation}
   \rho^{\Gamma_A} = \sum p_i (\rho_{A}^{(i)})^T \otimes \rho_{B}^{(i)} .
@@ -54,11 +55,11 @@ Furthermore, it is noteworthy, that $\norm{\rho^{\Gamma_A}} = \norm{\rho^{\Gamma
   \end{equation*}
   The partial transpose with respect to subsystem $B$ is then defined as 
   \begin{equation*}
-    \rho^{\Gamma_B} \equiv \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{i}{j}_A\otimes\left(\ketbra{k}{l}_B\right)^T = \sum_{i,j,k,l} c_{ij,kl} \ketbra{i}{j}_A\otimes\ketbra{l}{k}_B .
+    \rho^{\Gamma_B} \equiv \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{i}{j}_A\otimes\left(\ketbra{k}{l}_B\right)^T = \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{i}{j}_A\otimes\ketbra{l}{k}_B .
   \end{equation*}
   The complete transpose of this is
   \begin{equation*}
-    (\rho^{\Gamma_B})^T = \sum_{i,j,k,l} \rho_{ij,kl} \left(\ketbra{i}{j}_A\right)^T\otimes\left(\ketbra{l}{k}_B\right)^T = \sum_{i,j,k,l} c_{ij,kl} \ketbra{j}{i}_A\otimes\ketbra{k}{l}_B \equiv \rho^{\Gamma_A} .
+    (\rho^{\Gamma_B})^T = \sum_{i,j,k,l} \rho_{ij,kl} \left(\ketbra{i}{j}_A\right)^T\otimes\left(\ketbra{l}{k}_B\right)^T = \sum_{i,j,k,l} \rho_{ij,kl} \ketbra{j}{i}_A\otimes\ketbra{k}{l}_B \equiv \rho^{\Gamma_A} .
   \end{equation*}
   b) Clear by a) and by using \cref{lemma:trace-norm-hermitian} and the fact that the eigenvalues of a square matrix $A$ and $A^T$ are equal.
 \end{proof}
@@ -67,10 +68,10 @@ The logarithmic negativity is very easy to calculate compared to other entanglem
 If the eigenvalues of $\rho$ are known, the logarithmic negativity can be directly computed, as will be demonstrated below. Since this thesis focuses on low-dimensional $4 \times 4$ systems, single eigenvalues can be determined with low effort analytically as well as numerically with great stability.
 
 \begin{lemma}\label{lemma:trace-norm-hermitian}
-  The trace norm $\norm{A}_1 \equiv \tr \sqrt{A^\dagger A}$ of a hermitian matrix $A$ is equal to the sum of the absolute eigenvalues of $A$.
+  The trace norm $\norm{A}_1 \equiv \tr \sqrt{A^\dagger A}$ of a Hermitian matrix $A$ is equal to the sum of the absolute eigenvalues of $A$.
 \end{lemma}
 \begin{proof}
-  This can be immediately seen by the spectral decomposition $\operatorname{\lambda}(A) = \{\lambda_1,...\}$ and the hermitian property $A^\dagger A = AA^\dagger = A^2$:
+  This can be immediately seen by the spectral decomposition $\operatorname{\lambda}(A) = \{\lambda_1,...\}$ and the Hermitian property $A^\dagger A = AA^\dagger = A^2$:
   \begin{equation*}
     \tr \sqrt{A^\dagger A} = \tr \sqrt{A^2} = \tr{U\sqrt{\diag(\lambda_1, \dots)^2}U^\dagger} = \sum_i \sqrt{\lambda_i^2} = \sum_i \abs{\lambda_i}.
   \end{equation*}
@@ -119,4 +120,4 @@ In the orthogonal orientation, this point in time is reached twice as fast \cite
 This suggests, that the orthogonal orientation might be beneficial as it requires shorter coherence times. This effect is studied in more detail in \cref{sec:4:optimal-setup}.
 To give an estimation of the coherence times needed, consider two identical silica nano-spheres with densities $\rho=2648\si{kg/m^3}$ and radii $R=10^{-5}\si{m}=10\si{\mu m}$ separated by a distance $2L = 4R$.
 The superposition size is in the order of $100\si{nm}$.
-The maximum entanglement in the parallel configuration is reached after a time $t_\mathrm{max,\,parallel} \approx 258\si{ms}$ which is quite long and challenging experimentally considering that possible coherence times are currently only in the order of micro-seconds \cite{OConnell_2010}.
+The maximum entanglement in the parallel configuration is reached after a time $t_\mathrm{max,\,parallel} \approx 258\si{ms}$ which is quite long and challenging experimentally.

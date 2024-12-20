@@ -8,12 +8,12 @@ If the particle is positioned close to the shield, the Casimir interaction may d
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=\textwidth]{./../figures/others/trapping-potential-eigenstates.pdf}
-  \caption{Visualization of the potential as an overlay of the harmonic trapping potential $V_\mathrm{trap} = m (2\pi f)^2 L^2 / 2$ and the casimir potential $V_\mathrm{Casimir}$. $f$ is the trapping frequency and $L_0$ the position of the trap. In red, eigenstates of the potential are visualized offset by the eigen-energies.
+  \caption{Visualization of the potential as an overlay of the harmonic trapping potential $V_\mathrm{trap} = m (2\pi f)^2 L^2 / 2$ and the Casimir potential $V_\mathrm{Casimir}$. $f$ is the trapping frequency and $L_0$ the position of the trap. In red, eigenstates of the potential are visualized offset by the eigen-energies.
   \textbf{(a)} Almost harmonic bounded potential which can hold the particle, if its energy is less than $E_0$.
   \textbf{(b)} Potential with no bounded states. Here, trapping is not possible.}
   \label{fig:4:trap-eigenstates}
 \end{figure}
-The attractive Casimir force displaces the equilibrium trap position closer to the shield by a distance $\Delta x$ given by
+The attractive Casimir force $-\nabla V_\mathrm{Casimir}$ displaces the equilibrium trap position closer to the shield by a distance $\Delta x$ given by
 \begin{equation}
   \Delta x = \frac{\abs{-\nabla V_\mathrm{Casimir}}}{m (2\pi f)^2} = \frac{2 \hbar c \pi^3}{720} \left(\frac{\varepsilon_r - 1}{\varepsilon_r + 1}\right) \varphi(\varepsilon_r) \frac{R}{\mathscr{L}^3} \frac{1}{m (2\pi f)^2} .
 \end{equation}
@@ -23,11 +23,11 @@ To determine the stability of a trapped particle with mass $M \propto R^3$ in a 
 From \cref{fig:4:trap-eigenstates} it becomes clear, that as long as the particles thermal energy is well below $E_0$, the trap is stable and the particle is bound.
 Here, $E_0$ is defined as the local maximum of the potential 
 \begin{equation}
-  E_0 = \max_{L\in(R,L_0)} \left( V_\mathrm{trap} + V_\mathrm{Casimir} \right) .
+  E_0 = \max_{\substack{L\in(R,L_0) \\ \partial_L V(L) = 0}} \left( V_\mathrm{trap} + V_\mathrm{Casimir} \right) .
 \end{equation}
 If no such local maximum exists, i.e.
 \begin{equation}
-  \pdv{L} \left( V_\mathrm{trap} + V_\mathrm{Casimir} \right) > 0
+  \pdv{L} \left( V_\mathrm{trap} + V_\mathrm{Casimir} \right) \neq 0
 \end{equation}
 for all $L \in (R, L_0)$, the trap is unstable.
 Regions of instability are shown in white in the stability diagram \cref{fig:4:trap-stability}.
@@ -38,7 +38,7 @@ At a temperature $T$ on average
 \end{equation}
 states are occupied, where $\beta = 1/k_B T$ and $\omega = 2\pi f$. This is true, as long as the potential is assumed to be harmonic, which is, as seen shortly, a good approximation.
 To find the number of possible bound energy-eigenstates in the potential, the \emph{WKB-approximation} is used.
-In this approximation, the energy of the $n$-th eigenstate of a smooth and appropriately slow varying potential $V(x)$ can be calculated using \cite[p. 163]{Schleich_2001}
+In this approximation, the energy $E$ of the $n$-th eigenstate of a smooth and appropriately slow varying potential $V(x)$ can be calculated using \cite[p. 163]{Schleich_2001}
 \begin{equation}
   \int\limits_{x_1}^{x_2} \dd x \, \sqrt{2m(E-V(x))} = \left(n + \frac{1}{2}\right)\pi\hbar ,
 \end{equation}
